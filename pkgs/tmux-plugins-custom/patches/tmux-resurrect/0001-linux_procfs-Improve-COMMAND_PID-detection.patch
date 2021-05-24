@@ -1,0 +1,50 @@
+From c5dbf61f59ad6fff2d3ba0ddde9e8021330b4547 Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Wed, 12 Feb 2020 10:02:30 +0100
+Subject: [PATCH 1/2] linux_procfs: Improve COMMAND_PID detection
+
+Signed-off-by: Michael Adler <therisen06@gmail.com>
+---
+ save_command_strategies/linux_procfs.sh | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+
+diff --git a/save_command_strategies/linux_procfs.sh b/save_command_strategies/linux_procfs.sh
+index ff8231f..daffe12 100755
+--- a/save_command_strategies/linux_procfs.sh
++++ b/save_command_strategies/linux_procfs.sh
+@@ -3,7 +3,6 @@
+ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ 
+ PANE_PID="$1"
+-COMMAND_PID=$(pgrep -P $PANE_PID)
+ 
+ exit_safely_if_empty_ppid() {
+ 	if [ -z "$PANE_PID" ]; then
+@@ -11,9 +10,22 @@ exit_safely_if_empty_ppid() {
+ 	fi
+ }
+ 
++get_children() {
++  ps -ao "ppid pid" | sed "s/^ *//" | grep "^$1" | awk '{print $2;}'
++}
++
+ full_command() {
+-	[[ -z "$COMMAND_PID" ]] && exit 0
+-	cat /proc/${COMMAND_PID}/cmdline | xargs -0 printf "%q "
++  echo "PANE_PID: $PANE_PID" >> /tmp/resurrect.log
++  for PID in $(get_children $PANE_PID); do
++    echo "       Checking cmdline of $PID" >> /tmp/resurrect.log
++    local CHILDREN_CHILDREN=$(get_children $PID)
++    if [[ ! -z $CHILDREN_CHILDREN ]]; then
++      echo "       CHILDREN_CHILDREN: $CHILDREN_CHILDREN"  >> /tmp/resurrect.log
++      cat /proc/${CHILDREN_CHILDREN}/cmdline | xargs -0 printf "%q "
++    else
++      cat /proc/${PID}/cmdline | xargs -0 printf "%q "
++    fi
++  done
+ }
+ 
+ main() {
+-- 
+2.31.1
+

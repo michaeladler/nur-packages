@@ -1,0 +1,98 @@
+{
+    "git-buildpackage": {
+        "branch": "master",
+        "description": " Suite to help with Debian (and RPM) packages in Git repositories",
+        "homepage": "https://honk.sigxcpu.org/piki/projects/git-buildpackage/",
+        "owner": "agx",
+        "repo": "git-buildpackage",
+        "rev": "3a6b6299e69cf563c518dddacd19c32050e19b9c",
+        "sha256": "036m73k1fbd69n3y9q0ynv018mlys84sb0dq73h77qw705dhhgfm",
+        "type": "tarball",
+        "url": "https://github.com/agx/git-buildpackage/archive/3a6b6299e69cf563c518dddacd19c32050e19b9c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "luaprompt": {
+        "branch": "master",
+        "description": "An embeddable Lua command prompt as well as a stand-alone interpreter with pretty-printing and autocompletion.",
+        "homepage": null,
+        "owner": "dpapavas",
+        "repo": "luaprompt",
+        "rev": "ef260d2176fbb8c07b585db18c85ff7c0b81589b",
+        "sha256": "12dl9nzjvy1hl0f2pg1qjkakqa51py4ad9s7y4h9gy3kh14bc560",
+        "type": "tarball",
+        "url": "https://github.com/dpapavas/luaprompt/archive/ef260d2176fbb8c07b585db18c85ff7c0b81589b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "mutt-filters": {
+        "branch": "master",
+        "description": "Forked from git://git.dollyfish.net.nz/mutt-filters - which seems to have disapeared",
+        "homepage": null,
+        "owner": "terabyte",
+        "repo": "mutt-filters",
+        "rev": "f6835454e806d4d385da5fd83c20fd74ff3fa2d2",
+        "sha256": "0gmldqyrb6iilvf9r55kyhv50ca9ghpxsxxb5cxd3rpsv2l8b8h9",
+        "type": "tarball",
+        "url": "https://github.com/terabyte/mutt-filters/archive/f6835454e806d4d385da5fd83c20fd74ff3fa2d2.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "neomutt": {
+        "branch": "master",
+        "description": ":email: Teaching an Old Dog New Tricks -- IRC: #neomutt on irc.freenode.net",
+        "homepage": "https://neomutt.org/",
+        "owner": "neomutt",
+        "repo": "neomutt",
+        "rev": "5add8d48584126d9320e8d85cf6b1b6d9b24e7c4",
+        "sha256": "0lg9fi9yq823ajm8b6lg3njdiy0fhzvfxq14vjp082kiiy3zkh7q",
+        "type": "tarball",
+        "url": "https://github.com/neomutt/neomutt/archive/5add8d48584126d9320e8d85cf6b1b6d9b24e7c4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "neovim": {
+        "branch": "master",
+        "description": "Vim-fork focused on extensibility and usability",
+        "homepage": "https://neovim.io",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "0a653f7ab98dfc05bf0532b9f81bc19377031900",
+        "sha256": "0bc2lh942f6wihf79qhhplmbkkgb4bqk7g20n2vsni2wfvipa24x",
+        "type": "tarball",
+        "url": "https://github.com/neovim/neovim/archive/0a653f7ab98dfc05bf0532b9f81bc19377031900.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "94080ae8286024820c570a2a24ed7c36d7ad04a9",
+        "sha256": "0wlk52zwlrq727x3z1vg9d9qq4zw62ab5jzg4068iqb6hyb0cr0w",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/94080ae8286024820c570a2a24ed7c36d7ad04a9.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "oelint-adv": {
+        "branch": "master",
+        "description": "Advanced oelint",
+        "homepage": null,
+        "owner": "priv-kweihmann",
+        "repo": "oelint-adv",
+        "rev": "d481a6149c5bd5b25b006371feda5bda02d0aa2b",
+        "sha256": "00dc5sq6xkfm6gh0wvm2bc8x2b1h3bf977lk0dqm8awfkzgpkj3i",
+        "type": "tarball",
+        "url": "https://github.com/priv-kweihmann/oelint-adv/archive/d481a6149c5bd5b25b006371feda5bda02d0aa2b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "oelint-parser": {
+        "branch": "main",
+        "description": "alternative parser for bitbake recipes",
+        "homepage": null,
+        "owner": "priv-kweihmann",
+        "repo": "oelint-parser",
+        "rev": "4acd43708cfb845393dfd94fd00e342568d436e6",
+        "sha256": "028hn8wf19crnahrnb2j0h728x2avww3iwcd9ahm0nl08hy1530p",
+        "type": "tarball",
+        "url": "https://github.com/priv-kweihmann/oelint-parser/archive/4acd43708cfb845393dfd94fd00e342568d436e6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

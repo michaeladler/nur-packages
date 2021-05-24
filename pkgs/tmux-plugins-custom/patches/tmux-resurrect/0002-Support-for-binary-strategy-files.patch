@@ -1,0 +1,35 @@
+From 79d9254474ff9fdfad58cb37e4c0aa6a231ee55d Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Tue, 2 Feb 2021 23:39:53 +0100
+Subject: [PATCH 2/2] Support for binary strategy files
+
+Signed-off-by: Michael Adler <therisen06@gmail.com>
+---
+ scripts/save.sh | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/save.sh b/scripts/save.sh
+index 08647a7..9a1f9b9 100755
+--- a/scripts/save.sh
++++ b/scripts/save.sh
+@@ -96,10 +96,15 @@ _save_command_strategy_file() {
+ 	local save_command_strategy="$(get_tmux_option "$save_command_strategy_option" "$default_save_command_strategy")"
+ 	local strategy_file="$CURRENT_DIR/../save_command_strategies/${save_command_strategy}.sh"
+ 	local default_strategy_file="$CURRENT_DIR/../save_command_strategies/${default_save_command_strategy}.sh"
+-	if [ -e "$strategy_file" ]; then # strategy file exists?
++	if [ -x "$strategy_file" ]; then # strategy file exists?
+ 		echo "$strategy_file"
+ 	else
+-		echo "$default_strategy_file"
++		local cmd=$(command -v "${save_command_strategy}")
++		if [ -x "$cmd" ]; then
++			echo "$cmd"
++		else
++			echo "$default_strategy_file"
++		fi
+ 	fi
+ }
+ 
+-- 
+2.31.1
+

@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "dense-analysis",
         "repo": "ale",
-        "rev": "93f80ea7677df8584246262c67dd8575bd98dbeb",
-        "sha256": "0iqdnzv7hhkm5adl7qja2w64jj6w3sf5bai4zzpwmhzk0pp9c483",
+        "rev": "3f386ae5e988d6e1b39332a760f9e990d2df7f31",
+        "sha256": "1n5ygdvg5skjs4lxqi258grhwsr0652lip123xhqjfgrhgqsp5pw",
         "type": "tarball",
-        "url": "https://github.com/dense-analysis/ale/archive/93f80ea7677df8584246262c67dd8575bd98dbeb.tar.gz",
+        "url": "https://github.com/dense-analysis/ale/archive/3f386ae5e988d6e1b39332a760f9e990d2df7f31.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "barbar-nvim": {
@@ -209,10 +209,10 @@
         "homepage": "",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "ab94420372ae29d97072051914e85be6a94e6736",
-        "sha256": "14kh31dvicdx69fggx2namgbfx8ba3g9f102ncdgla4ps3kgwrb3",
+        "rev": "6a25eb0d3fc77cd1b9ff11446dc52d50bc482155",
+        "sha256": "0chb6d3v2n5wka4fgw49rzxqd1vwl7mwwb5z13hvylxbad098n1l",
         "type": "tarball",
-        "url": "https://github.com/neovim/nvim-lspconfig/archive/ab94420372ae29d97072051914e85be6a94e6736.tar.gz",
+        "url": "https://github.com/neovim/nvim-lspconfig/archive/6a25eb0d3fc77cd1b9ff11446dc52d50bc482155.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nvim-peekup": {

@@ -41,10 +41,10 @@
         "homepage": "https://neomutt.org/",
         "owner": "neomutt",
         "repo": "neomutt",
-        "rev": "5add8d48584126d9320e8d85cf6b1b6d9b24e7c4",
-        "sha256": "0lg9fi9yq823ajm8b6lg3njdiy0fhzvfxq14vjp082kiiy3zkh7q",
+        "rev": "11f4b5132398b301150fabaa8ad78cac7e0cd32d",
+        "sha256": "074bfpc4mmzpjmnzr7lqy818vfp47ngxzdb57m4s6d4wq7fmmfa4",
         "type": "tarball",
-        "url": "https://github.com/neomutt/neomutt/archive/5add8d48584126d9320e8d85cf6b1b6d9b24e7c4.tar.gz",
+        "url": "https://github.com/neomutt/neomutt/archive/11f4b5132398b301150fabaa8ad78cac7e0cd32d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "neovim": {
@@ -53,10 +53,10 @@
         "homepage": "https://neovim.io",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "0a653f7ab98dfc05bf0532b9f81bc19377031900",
-        "sha256": "0bc2lh942f6wihf79qhhplmbkkgb4bqk7g20n2vsni2wfvipa24x",
+        "rev": "a282a177d3320db25fa8f854cbcdbe0bc6abde7f",
+        "sha256": "03ckzr75jf1mps0y3v9rj2jifsfapkpqyxaw1rs5ify9zdmja593",
         "type": "tarball",
-        "url": "https://github.com/neovim/neovim/archive/0a653f7ab98dfc05bf0532b9f81bc19377031900.tar.gz",
+        "url": "https://github.com/neovim/neovim/archive/a282a177d3320db25fa8f854cbcdbe0bc6abde7f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -77,10 +77,10 @@
         "homepage": null,
         "owner": "priv-kweihmann",
         "repo": "oelint-adv",
-        "rev": "d481a6149c5bd5b25b006371feda5bda02d0aa2b",
-        "sha256": "00dc5sq6xkfm6gh0wvm2bc8x2b1h3bf977lk0dqm8awfkzgpkj3i",
+        "rev": "ac0b59e2f11dd6b241fc241eb8f6a20ad618f6a3",
+        "sha256": "10dhsjskcfch9r0m1hl0cnyc1yqbd8pg9b1cillx7zwa76f2ydqx",
         "type": "tarball",
-        "url": "https://github.com/priv-kweihmann/oelint-adv/archive/d481a6149c5bd5b25b006371feda5bda02d0aa2b.tar.gz",
+        "url": "https://github.com/priv-kweihmann/oelint-adv/archive/ac0b59e2f11dd6b241fc241eb8f6a20ad618f6a3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "oelint-parser": {

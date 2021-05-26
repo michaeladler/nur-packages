@@ -25,6 +25,8 @@
         packages = {
           afew = callPackage ./pkgs/afew { };
           cpio = callPackage ./pkgs/cpio { };
+          dwm = callPackage ./pkgs/dwm { inherit sources; };
+          dwmblocks = callPackage ./pkgs/dwmblocks { inherit sources; };
           luaprompt = callPackage ./pkgs/luaprompt { inherit sources; };
           neomutt-nightly =
             callPackage ./pkgs/neomutt-nightly { inherit sources; };

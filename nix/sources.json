@@ -1,4 +1,28 @@
 {
+    "dwm": {
+        "branch": "master",
+        "description": "Luke's build of dwm",
+        "homepage": null,
+        "owner": "LukeSmithxyz",
+        "repo": "dwm",
+        "rev": "eab52c4f48c0fcfd7c78d41418f2e10dc1b48ed2",
+        "sha256": "1dazcwm3l9nnx1h6yv4snr8q4v548b7ri6lly1s7f55nwjwzbyni",
+        "type": "tarball",
+        "url": "https://github.com/LukeSmithxyz/dwm/archive/eab52c4f48c0fcfd7c78d41418f2e10dc1b48ed2.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "dwmblocks": {
+        "branch": "master",
+        "description": "My status bar: my build of the modular dwmblocks",
+        "homepage": null,
+        "owner": "lukesmithxyz",
+        "repo": "dwmblocks",
+        "rev": "ea5afdccbd23d61e70f3ef62aabd9b6726b2c20f",
+        "sha256": "1f3d933zxh3xca971xhzbkflnkimgvdjfl8pvmv0kjxn9sgq567g",
+        "type": "tarball",
+        "url": "https://github.com/lukesmithxyz/dwmblocks/archive/ea5afdccbd23d61e70f3ef62aabd9b6726b2c20f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "git-buildpackage": {
         "branch": "master",
         "description": " Suite to help with Debian (and RPM) packages in Git repositories",

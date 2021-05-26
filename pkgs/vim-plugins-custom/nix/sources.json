@@ -233,10 +233,10 @@
         "homepage": "",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "db7f10370d3815988f933de2b4e2e7e17b2754b2",
-        "sha256": "08iikpalazb071hjqlp3wg22s7jn68v2cdanjw9cmh4wp2ba1s4s",
+        "rev": "6c2ff319b311fed0160875b878811431399889cf",
+        "sha256": "0vl782k8p5l2gm3y247a70ksrdn863gsv1z47frfnpq30ayxz0mx",
         "type": "tarball",
-        "url": "https://github.com/nvim-treesitter/nvim-treesitter/archive/db7f10370d3815988f933de2b4e2e7e17b2754b2.tar.gz",
+        "url": "https://github.com/nvim-treesitter/nvim-treesitter/archive/6c2ff319b311fed0160875b878811431399889cf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nvim-treesitter-refactor": {
@@ -461,10 +461,10 @@
         "homepage": "https://www.patreon.com/bhcleek",
         "owner": "fatih",
         "repo": "vim-go",
-        "rev": "92328dcface63223fc7b0a1a61377e4dcf942582",
-        "sha256": "1fqhif14whq8rpadx8wqmbba1rb2vwaxld2s5p87kf9kn9g12yiw",
+        "rev": "70cd0009f89d8d4ed0e36924e5a3d58f14e88c34",
+        "sha256": "11kh7yvwvbw9lwhzmgqg87gigpq264laks4qjrvfcq1p2p6w6cwn",
         "type": "tarball",
-        "url": "https://github.com/fatih/vim-go/archive/92328dcface63223fc7b0a1a61377e4dcf942582.tar.gz",
+        "url": "https://github.com/fatih/vim-go/archive/70cd0009f89d8d4ed0e36924e5a3d58f14e88c34.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-ingo-library": {

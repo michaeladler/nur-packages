@@ -36,6 +36,7 @@
             };
           oelint-adv = callPackage ./pkgs/oelint-adv { inherit sources; };
           python3-gbp = callPackage ./pkgs/python3-gbp { inherit sources; };
+          st = callPackage ./pkgs/st { inherit sources; };
           vcalendar-filter =
             callPackage ./pkgs/vcalendar-filter { inherit sources; };
           zig-nightly = callPackage ./pkgs/zig-nightly { };

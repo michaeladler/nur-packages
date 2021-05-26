@@ -118,5 +118,17 @@
         "type": "tarball",
         "url": "https://github.com/priv-kweihmann/oelint-parser/archive/4acd43708cfb845393dfd94fd00e342568d436e6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "st": {
+        "branch": "master",
+        "description": "Luke's fork of the suckless simple terminal (st) with vim bindings and Xresource compatibility.",
+        "homepage": "",
+        "owner": "LukeSmithxyz",
+        "repo": "st",
+        "rev": "ecd5e3f7984e194fe9d6956b2057be064d194895",
+        "sha256": "05w49mjxl5lfxxbhhcnhph7zv740hkyc97b0va09q9pr077xbvz6",
+        "type": "tarball",
+        "url": "https://github.com/LukeSmithxyz/st/archive/ecd5e3f7984e194fe9d6956b2057be064d194895.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

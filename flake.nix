@@ -40,6 +40,7 @@
           vcalendar-filter =
             callPackage ./pkgs/vcalendar-filter { inherit sources; };
           zig-nightly = callPackage ./pkgs/zig-nightly { };
+          zzz = callPackage ./pkgs/zzz { };
         };
 
         defaultPackage = packages.luaprompt;

@@ -1,4 +1,4 @@
-{ sources, stdenv, lib, patchelf, fetchFromGitHub, neovim-unwrapped
+{ sources, stdenv, lib, makeWrapper, fetchFromGitHub, neovim-unwrapped
 , tree-sitter }:
 
 neovim-unwrapped.overrideAttrs (oa: {
@@ -7,16 +7,19 @@ neovim-unwrapped.overrideAttrs (oa: {
   # see also https://github.com/rvolosatovs/nixpkgs/tree/update/neovim
   src = fetchFromGitHub { inherit (sources.neovim) owner repo rev sha256; };
 
-  nativeBuildInputs = oa.nativeBuildInputs ++ [ patchelf ];
+  nativeBuildInputs = oa.nativeBuildInputs ++ [ makeWrapper ];
 
   buildInputs = oa.buildInputs ++ ([ tree-sitter ]);
 
   propagatedBuildInputs = [ stdenv.cc.cc.lib ];
 
-  # some plugins assume libstdc++.so.6 is available (e.g. using libuv's uv_dlopen)
-  postFixup = ''
-    patchelf --set-rpath "${stdenv.cc.cc.lib}/lib:$(patchelf --print-rpath "$out/bin/nvim")" \
-      "$out/bin/nvim"
+  # plugins assume libstdc++.so.6 is available (e.g. using libuv's uv_dlopen)
+  # TODO: use wrapperArgs in wrapNeovim and re-export customized wrapNeovim
+  postInstall = ''
+    wrapProgram $out/bin/nvim \
+      --prefix LD_PRELOAD : ${
+        lib.makeLibraryPath [ stdenv.cc.cc.lib ]
+      }/libstdc++.so.6
   '';
 
   cmakeFlags = oa.cmakeFlags ++ [

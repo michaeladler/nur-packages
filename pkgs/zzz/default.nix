@@ -1,21 +1,29 @@
-{ stdenv, lib, fetchurl }:
+{ stdenv, lib, fetchurl, installShellFiles }:
 
-stdenv.mkDerivation rec {
+let
+  manpage = fetchurl {
+    url =
+      "https://github.com/void-linux/void-runit/raw/42ca737148ea530dad5945af1a4eb7e471e8b637/zzz.8";
+    sha256 = "b254aeefd1736fac9123bdcc9b22269e4fed42e8699648b8b4f045b2b12a41b5";
+  };
+
+in stdenv.mkDerivation rec {
   name = "zzz";
   version = "2020-10-01";
 
   src = fetchurl {
     url =
-      "https://raw.githubusercontent.com/void-linux/void-runit/7e5c4cfe0d8f7b2e9aa5e031582c99f2687b1633/zzz";
+      "https://github.com/void-linux/void-runit/raw/42ca737148ea530dad5945af1a4eb7e471e8b637/zzz";
     sha256 = "79402d8d147b61f4f4033aa183ff37f8ce02097e2624c3a8770834fe7a4ea01e";
   };
 
-  #phases = [ "unpackPhase" "installPhase" ];
+  nativeBuildInputs = [ installShellFiles ];
 
   unpackPhase = "cp $src zzz";
 
   installPhase = ''
     install -D -m 0755 zzz $out/bin/zzz
+    installManPage ${manpage}
   '';
 
   meta = with lib; {

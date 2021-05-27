@@ -1,3 +1,6 @@
+[![Build](https://github.com/michaeladler/nur-packages/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/michaeladler/nur-packages/actions/workflows/build.yml)
+[![Update](https://github.com/michaeladler/nur-packages/actions/workflows/update.yml/badge.svg)](https://github.com/michaeladler/nur-packages/actions/workflows/update.yml)
+
 # nur-packages
 
 This repository hosts my Nix packages bundled in a [Nix flake](https://nixos.wiki/wiki/Flakes).

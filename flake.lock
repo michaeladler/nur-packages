@@ -306,11 +306,11 @@
     "neomutt-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1622073442,
-        "narHash": "sha256-6zvfNYpo2HoI6pjuCGelZRzhY61+kembR24u9L6kLo0=",
+        "lastModified": 1622118408,
+        "narHash": "sha256-8Dz2t703xIbRE1jmePTmacq3YO2poTBX5+CWus157ro=",
         "owner": "neomutt",
         "repo": "neomutt",
-        "rev": "b18b3e7687907d20b0e5373bc238e73c79c5bfa7",
+        "rev": "78b5f471cb4c17617dd8ed57ceb61dd51c67b6bd",
         "type": "github"
       },
       "original": {

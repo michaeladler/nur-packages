@@ -25,6 +25,9 @@ in stdenv.mkDerivation rec {
     # prefix install-location with $(DESTDIR)
     sed -ri 's:\$\((BIN|LIB|MAN1)DIR\):\$(DESTDIR)\$(\1DIR):g' Makefile
 
+    # replace /usr/bin/install with 'install' and rely on PATH
+    sed -i Makefile -e 's/^INSTALL=.*/INSTALL=install/'
+
     sed -i luap.lua -e "s#/usr/bin/env lua#${luajit}/bin/luajit#"
   '';
 

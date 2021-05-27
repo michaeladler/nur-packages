@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "dense-analysis",
         "repo": "ale",
-        "rev": "f53431331e2e2030a84de081baec93aad1e62363",
-        "sha256": "10sh6cw9lyrnx72mq5in5c1q4zi8ha491fmq8419y7cn4vij0ha1",
+        "rev": "a02a4f2811f810877f3c3859cca963f9578ff94a",
+        "sha256": "0c96zhz8ia1yfgv58jrib49kp250kilv2awr2jgnriqznkl9l4h9",
         "type": "tarball",
-        "url": "https://github.com/dense-analysis/ale/archive/f53431331e2e2030a84de081baec93aad1e62363.tar.gz",
+        "url": "https://github.com/dense-analysis/ale/archive/a02a4f2811f810877f3c3859cca963f9578ff94a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "barbar-nvim": {

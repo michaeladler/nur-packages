@@ -34,7 +34,26 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "zls-source": "zls-source"
+      }
+    },
+    "zls-source": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1621842765,
+        "narHash": "sha256-45w4CqjWgNOpuKmFvrNkM+PY6m/u6YYbziV2Zt8EqRg=",
+        "ref": "master",
+        "rev": "affbd2de6b2de4d60a0627f28ac7d55273f36464",
+        "revCount": 752,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/zigtools/zls.git"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/zigtools/zls.git"
       }
     }
   },

@@ -4,7 +4,14 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  outputs = { self, nixpkgs, flake-utils }:
+  inputs.zls-source = {
+    url = "https://github.com/zigtools/zls.git";
+    type = "git";
+    flake = false;
+    submodules = true;
+  };
+
+  outputs = { self, nixpkgs, flake-utils, zls-source }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -23,7 +30,7 @@
         # https://github.com/numtide/flake-utils/pull/29#issuecomment-817652939
         legacyPackages = { inherit vim-plugins-custom tmux-plugins-custom; };
 
-        packages = flake-utils.lib.flattenTree {
+        packages = flake-utils.lib.flattenTree rec {
           inherit vim-plugins-custom tmux-plugins-custom;
 
           afew = callPackage ./pkgs/afew { };
@@ -43,6 +50,10 @@
           vcalendar-filter =
             callPackage ./pkgs/vcalendar-filter { inherit sources; };
           zig-nightly = callPackage ./pkgs/zig-nightly { };
+          zls = callPackage ./pkgs/zls {
+            src = zls-source;
+            zig = zig-nightly;
+          };
           zzz = callPackage ./pkgs/zzz { };
         };
 

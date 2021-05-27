@@ -65,10 +65,10 @@
         "homepage": "https://neomutt.org/",
         "owner": "neomutt",
         "repo": "neomutt",
-        "rev": "11f4b5132398b301150fabaa8ad78cac7e0cd32d",
-        "sha256": "074bfpc4mmzpjmnzr7lqy818vfp47ngxzdb57m4s6d4wq7fmmfa4",
+        "rev": "b18b3e7687907d20b0e5373bc238e73c79c5bfa7",
+        "sha256": "139fljzg8bkf8ydyk4bymmiy2735lmkhivlqx847mn38i8sxyfzb",
         "type": "tarball",
-        "url": "https://github.com/neomutt/neomutt/archive/11f4b5132398b301150fabaa8ad78cac7e0cd32d.tar.gz",
+        "url": "https://github.com/neomutt/neomutt/archive/b18b3e7687907d20b0e5373bc238e73c79c5bfa7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "neovim": {
@@ -77,10 +77,10 @@
         "homepage": "https://neovim.io",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "a282a177d3320db25fa8f854cbcdbe0bc6abde7f",
-        "sha256": "03ckzr75jf1mps0y3v9rj2jifsfapkpqyxaw1rs5ify9zdmja593",
+        "rev": "192f89ea1bdb86e8d12a9940872f92f0fc88b300",
+        "sha256": "1k6mz9m9l662wk09qd83qh6chb4iik3slb60ylvpllp4bfhi417p",
         "type": "tarball",
-        "url": "https://github.com/neovim/neovim/archive/a282a177d3320db25fa8f854cbcdbe0bc6abde7f.tar.gz",
+        "url": "https://github.com/neovim/neovim/archive/192f89ea1bdb86e8d12a9940872f92f0fc88b300.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {

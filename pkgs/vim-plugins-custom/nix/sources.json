@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "dense-analysis",
         "repo": "ale",
-        "rev": "3f386ae5e988d6e1b39332a760f9e990d2df7f31",
-        "sha256": "1n5ygdvg5skjs4lxqi258grhwsr0652lip123xhqjfgrhgqsp5pw",
+        "rev": "f53431331e2e2030a84de081baec93aad1e62363",
+        "sha256": "10sh6cw9lyrnx72mq5in5c1q4zi8ha491fmq8419y7cn4vij0ha1",
         "type": "tarball",
-        "url": "https://github.com/dense-analysis/ale/archive/3f386ae5e988d6e1b39332a760f9e990d2df7f31.tar.gz",
+        "url": "https://github.com/dense-analysis/ale/archive/f53431331e2e2030a84de081baec93aad1e62363.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "barbar-nvim": {
@@ -185,10 +185,10 @@
         "homepage": "",
         "owner": "hrsh7th",
         "repo": "nvim-compe",
-        "rev": "5001cd7632b50b65f04d59af85a9dd199ea73b3a",
-        "sha256": "0zb6ckn02kd8i0pd6ds0zl369mrr3p9wf0abyba5pgyzl9k4vp42",
+        "rev": "c7cd3bf1380ce3c6ef2a55537ace40c3a3897c50",
+        "sha256": "0pqka3wi169l8d58hlixhyi9yng62p1ic6fnl2vgbydi72xd1ngd",
         "type": "tarball",
-        "url": "https://github.com/hrsh7th/nvim-compe/archive/5001cd7632b50b65f04d59af85a9dd199ea73b3a.tar.gz",
+        "url": "https://github.com/hrsh7th/nvim-compe/archive/c7cd3bf1380ce3c6ef2a55537ace40c3a3897c50.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nvim-lightbulb": {
@@ -341,10 +341,10 @@
         "homepage": "",
         "owner": "nvim-telescope",
         "repo": "telescope.nvim",
-        "rev": "69eb5eacff421e05aeb1e02ff97ef64bfd955c53",
-        "sha256": "1yn5hzv57lld6zpxd7cqnjhj3qb5l9ngnnrb9kfp6c6gy137wlj8",
+        "rev": "b06e17e4a1b59a0a39863e6fa38fc83020b826e7",
+        "sha256": "00am8206qc3h29a8w9rzab5r4wpd9xphsi1llbnry447amlg6510",
         "type": "tarball",
-        "url": "https://github.com/nvim-telescope/telescope.nvim/archive/69eb5eacff421e05aeb1e02ff97ef64bfd955c53.tar.gz",
+        "url": "https://github.com/nvim-telescope/telescope.nvim/archive/b06e17e4a1b59a0a39863e6fa38fc83020b826e7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "undotree": {
@@ -461,10 +461,10 @@
         "homepage": "https://www.patreon.com/bhcleek",
         "owner": "fatih",
         "repo": "vim-go",
-        "rev": "70cd0009f89d8d4ed0e36924e5a3d58f14e88c34",
-        "sha256": "11kh7yvwvbw9lwhzmgqg87gigpq264laks4qjrvfcq1p2p6w6cwn",
+        "rev": "696c4a4ef79fc1fb8f090353cf404df95614ce46",
+        "sha256": "1z811b62f5pafv3zmqjjcvmphikml8hzspdb7nvkyrr561awzwab",
         "type": "tarball",
-        "url": "https://github.com/fatih/vim-go/archive/70cd0009f89d8d4ed0e36924e5a3d58f14e88c34.tar.gz",
+        "url": "https://github.com/fatih/vim-go/archive/696c4a4ef79fc1fb8f090353cf404df95614ce46.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-ingo-library": {

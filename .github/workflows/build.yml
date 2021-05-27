@@ -1,0 +1,20 @@
+name: Build Workflow
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cachix/install-nix-action@v13
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+      - uses: cachix/cachix-action@v10
+        with:
+          name: nur-packages
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+      - name: build
+        run: ./.ci/build.sh
+

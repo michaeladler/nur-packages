@@ -5,7 +5,7 @@ stdenvNoCC.mkDerivation {
   inherit src;
 
   name = "zls";
-  version = src.lastModified;
+  version = toString src.lastModifiedDate;
 
   nativeBuildInputs = [ zig ];
   dontConfigure = true;

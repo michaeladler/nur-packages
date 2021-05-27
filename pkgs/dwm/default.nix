@@ -1,8 +1,9 @@
-{ sources, pkgs, fetchFromGitHub }:
+{ src, pkgs, fetchFromGitHub }:
 
 pkgs.dwm.overrideAttrs (old: {
+  inherit src;
 
-  src = fetchFromGitHub (with sources.dwm; { inherit owner repo rev sha256; });
+  version = toString src.lastModifiedDate;
 
   patches = [
     ./patches/0001-cyclelayout.patch

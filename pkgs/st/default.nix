@@ -1,12 +1,12 @@
-{ sources, pkgs, fetchFromGitHub, harfbuzz, glibcLocales, makeWrapper }:
+{ src, pkgs, fetchFromGitHub, harfbuzz, glibcLocales, makeWrapper }:
 
 pkgs.st.overrideAttrs (old: {
+  inherit src;
+  version = toString src.lastModifiedDate;
 
   buildInputs = old.buildInputs ++ [ harfbuzz ];
 
   nativeBuildInputs = old.nativeBuildInputs ++ [ makeWrapper ];
-
-  src = fetchFromGitHub (with sources.st; { inherit owner repo rev sha256; });
 
   postPatch = ''
     # skip terminfo which conflicts with ncurses

@@ -1,4 +1,4 @@
-{ callPackage, config, lib, vimUtils, vim }:
+{ sources, callPackage, config, lib, vimUtils, vim }:
 
 let
 
@@ -9,7 +9,7 @@ let
   initialPackages = self: {};
 
   plugins = callPackage ./generated.nix {
-    inherit buildVimPluginFrom2Nix;
+    inherit sources buildVimPluginFrom2Nix;
   };
 
   # TL;DR

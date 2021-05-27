@@ -1,16 +1,14 @@
-{ sources, glibcLocales
+{ src, glibcLocales
 , lib, stdenv, fetchFromGitHub, gettext, makeWrapper, tcl, which
 , ncurses, perl , gpgme, libidn, libxml2, notmuch, openssl
 , lmdb, libxslt, docbook_xsl, docbook_xml_dtd_42, w3m, mailcap, sqlite, zlib
 }:
 
-let metadata = sources.neomutt; in
-
 stdenv.mkDerivation rec {
-  version = "git";
-  pname = "neomutt";
+  inherit src;
 
-  src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+  pname = "neomutt";
+  version = toString src.lastModifiedDate;
 
   buildInputs = [
     gpgme libidn ncurses

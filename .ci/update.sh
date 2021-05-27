@@ -13,15 +13,11 @@ export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 set -x
 git diff --exit-code >/dev/null
 
-[ -n "${GITHUB_TOKEN:-}" ] || {
-    echo "WARN: Please provide GITHUB_TOKEN to avoid rate-limiting"
-    exit 1
-}
+mkdir -p ~/.config/nix
+printf "access-tokens = github.com=%s" "$GITHUB_TOKEN" >>~/.config/nix/nix.conf
+chmod 600 ~/.config/nix/nix.conf
 
 (cd "$ROOT_DIR" && nix --experimental-features "nix-command flakes" flake update) &
-(cd "$ROOT_DIR" && niv update) &
-(cd "$ROOT_DIR/pkgs/tmux-plugins-custom" && niv update) &
-(cd "$ROOT_DIR/pkgs/vim-plugins-custom" && niv update) &
 (cd "$ROOT_DIR/pkgs/zig-nightly" && ./update.sh) &
 
 wait

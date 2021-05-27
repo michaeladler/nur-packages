@@ -1,11 +1,17 @@
-{ sources, stdenv, lib, makeWrapper, fetchFromGitHub, neovim-unwrapped
-, tree-sitter }:
+{ src
+, stdenv
+, lib
+, makeWrapper
+, fetchFromGitHub
+, neovim-unwrapped
+, tree-sitter
+}:
 
+# based on https://github.com/neovim/neovim/blob/master/contrib/flake.nix, but improved
+# see also https://github.com/rvolosatovs/nixpkgs/tree/update/neovim
 neovim-unwrapped.overrideAttrs (oa: {
-  version = "0.5";
-  # based on https://github.com/neovim/neovim/blob/master/contrib/flake.nix, but improved
-  # see also https://github.com/rvolosatovs/nixpkgs/tree/update/neovim
-  src = fetchFromGitHub { inherit (sources.neovim) owner repo rev sha256; };
+  inherit src;
+  version = toString src.lastModifiedDate;
 
   nativeBuildInputs = oa.nativeBuildInputs ++ [ makeWrapper ];
 

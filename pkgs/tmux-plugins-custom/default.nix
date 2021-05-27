@@ -1,8 +1,7 @@
-{ lib, fetchFromGitHub, pkgs, stdenv }:
+{ sources, lib, fetchFromGitHub, pkgs, stdenv }:
 
 let
   rtpPath = "share/tmux-plugins";
-  sources = import ./nix/sources.nix;
 
   addRtp = path: rtpFilePath: attrs: derivation:
     derivation // {
@@ -41,16 +40,12 @@ let
       }));
 
 in rec {
-  inherit mkTmuxPlugin;
 
-  mkDerivation = throw
-    "tmuxPlugins.mkDerivation is deprecated, use tmuxPlugins.mkTmuxPlugin instead"; # added 2021-03-14
-
-  continuum = mkTmuxPlugin (let metadata = sources.tmux-continuum;
+  continuum = mkTmuxPlugin (let src = sources.tmux-continuum-src;
   in {
+    inherit src;
     pluginName = "continuum";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
     meta = {
       homepage = "https://github.com/tmux-plugins/tmux-continuum";
       description = "continous saving of tmux environment";
@@ -70,18 +65,18 @@ in rec {
     };
   });
 
-  copycat = mkTmuxPlugin (let metadata = sources.tmux-copycat;
+  copycat = mkTmuxPlugin (let src = sources.tmux-copycat-src;
   in {
+    inherit src;
     pluginName = "copycat";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
   });
 
-  dracula = mkTmuxPlugin (let metadata = sources.tmux-dracula;
+  dracula = mkTmuxPlugin (let src = sources.tmux-dracula-src;
   in {
+    inherit src;
     pluginName = "dracula";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
     meta = with lib; {
       homepage = "https://draculatheme.com/tmux";
       description = "A feature packed Dracula theme for tmux!";
@@ -91,18 +86,18 @@ in rec {
     };
   });
 
-  open = mkTmuxPlugin (let metadata = sources.tmux-open;
+  open = mkTmuxPlugin (let src = sources.tmux-open-src;
   in {
+    inherit src;
     pluginName = "open";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
   });
 
-  resurrect = mkTmuxPlugin (let metadata = sources.tmux-resurrect;
+  resurrect = mkTmuxPlugin (let src = sources.tmux-resurrect-src;
   in {
+    inherit src;
     pluginName = "resurrect";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
 
     patches = [
       ./patches/tmux-resurrect/0001-linux_procfs-Improve-COMMAND_PID-detection.patch
@@ -136,28 +131,28 @@ in rec {
     };
   });
 
-  sensible = mkTmuxPlugin (let metadata = sources.tmux-sensible;
+  sensible = mkTmuxPlugin (let src = sources.tmux-sensible-src;
   in {
+    inherit src;
     pluginName = "sensible";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
     postInstall = lib.optionalString stdenv.isDarwin ''
       sed -e 's:reattach-to-user-namespace:${pkgs.reattach-to-user-namespace}/bin/reattach-to-user-namespace:g' -i $target/sensible.tmux
     '';
   });
 
-  sessionist = mkTmuxPlugin (let metadata = sources.tmux-sessionist;
+  sessionist = mkTmuxPlugin (let src = sources.tmux-sessionist-src;
   in {
+    inherit src;
     pluginName = "sessionist";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
   });
 
-  tilish = mkTmuxPlugin (let metadata = sources.tmux-tilish;
+  tilish = mkTmuxPlugin (let src = sources.tmux-tilish-src;
   in {
+    inherit src;
     pluginName = "tilish";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+    version = toString src.lastModifiedDate;
 
     meta = with lib; {
       homepage = "https://github.com/jabirali/tmux-tilish";
@@ -168,27 +163,27 @@ in rec {
     };
   });
 
-  vim-tmux-navigator = mkTmuxPlugin (let metadata = sources.vim-tmux-navigator;
+  vim-tmux-navigator = mkTmuxPlugin (let src = sources.vim-tmux-navigator-src;
   in {
+    inherit src;
+    version = toString src.lastModifiedDate;
     pluginName = "vim-tmux-navigator";
     rtpFilePath = "vim-tmux-navigator.tmux";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
   });
 
-  yank = mkTmuxPlugin (let metadata = sources.tmux-yank;
+  yank = mkTmuxPlugin (let src = sources.tmux-yank-src;
   in {
+    inherit src;
+    version = toString src.lastModifiedDate;
     pluginName = "yank";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
   });
 
-  tmux-fzf = mkTmuxPlugin (let metadata = sources.tmux-fzf;
+  tmux-fzf = mkTmuxPlugin (let src = sources.tmux-fzf-src;
   in {
+    inherit src;
+    version = toString src.lastModifiedDate;
     pluginName = "tmux-fzf";
     rtpFilePath = "main.tmux";
-    version = "HEAD";
-    src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
     postInstall = ''
       find $target -type f -print0 | xargs -0 sed -i -e 's|fzf |${pkgs.fzf}/bin/fzf |g'
       find $target -type f -print0 | xargs -0 sed -i -e 's|sed |${pkgs.gnused}/bin/sed |g'

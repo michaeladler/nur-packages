@@ -1,8 +1,7 @@
-{ sources, pkgs, fetchFromGitHub }:
+{ src, pkgs, fetchFromGitHub }:
 
 pkgs.dwmblocks.overrideAttrs (old: {
+  inherit src;
 
-  src = fetchFromGitHub
-    (with sources.dwmblocks; { inherit owner repo rev sha256; });
-
+  version = toString src.lastModifiedDate;
 })

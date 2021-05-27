@@ -1,19 +1,18 @@
-{ sources, stdenv, lib, callPackage, fetchFromGitHub, python3Packages }:
+{ src, stdenv, lib, callPackage, fetchFromGitHub, python3Packages, python3-oelint-parser }:
 
 let
-  metadata = sources.oelint-adv;
   buildPythonPackage = python3Packages;
   fetchPypi = python3Packages.fetchPypi;
-  python3-oelint-parser = callPackage ./oelint-parser.nix { inherit sources; };
 
-in python3Packages.buildPythonPackage rec {
-  name = "oelint-adv-${version}";
-  version = "HEAD";
+in
+python3Packages.buildPythonPackage rec {
+  inherit src;
+
+  pname = "oelint-adv";
+  version = toString src.lastModifiedDate;
 
   propagatedBuildInputs = [ python3-oelint-parser ]
     ++ (with python3Packages; [ urllib3 anytree colorama ]);
-
-  src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
 
   meta = with lib; {
     homepage = "https://github.com/priv-kweihmann/oelint-adv";

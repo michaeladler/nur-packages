@@ -1,15 +1,14 @@
-{ sources, stdenv, lib, fetchFromGitHub, python3, debian_devscripts }:
+{ src, stdenv, lib, fetchFromGitHub, python3, debian_devscripts }:
 
 let
-  metadata = sources.git-buildpackage;
   buildPythonPackage = python3.pkgs.buildPythonPackage;
   fetchPypi = python3.pkgs.fetchPypi;
 
 in buildPythonPackage rec {
-  pname = "gbp";
-  version = "HEAD";
+  inherit src;
 
-  src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+  pname = "git-buildpackage";
+  version = toString src.lastModifiedDate;
 
   propagatedBuildInputs = (with python3.pkgs; [ dateutil ])
     ++ [ debian_devscripts ];

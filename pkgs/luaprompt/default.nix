@@ -1,20 +1,23 @@
-{ sources, stdenv, lib, fetchFromGitHub, pkgconfig, makeWrapper, luajit
-, luajitPackages, readline }:
+{ src
+, stdenv
+, lib
+, fetchFromGitHub
+, pkgconfig
+, makeWrapper
+, luajit
+, luajitPackages
+, readline
+}:
 
-let
-  inherit (luajitPackages) argparse;
-  metadata = sources.luaprompt;
-
-in stdenv.mkDerivation rec {
+stdenv.mkDerivation rec {
+  inherit src;
 
   pname = "luaprompt";
-  version = "HEAD";
-
-  src = fetchFromGitHub (with metadata; { inherit owner repo rev sha256; });
+  version = toString src.lastModifiedDate;
 
   nativeBuildInputs = [ pkgconfig makeWrapper ];
 
-  buildInputs = [ luajit readline argparse ];
+  buildInputs = [ luajit readline luajitPackages.argparse ];
 
   makeFlags = [ "DESTDIR=$(out)" "PREFIX=" "MANDIR=man" ];
 

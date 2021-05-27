@@ -1,5 +1,6 @@
 #!/usr/bin/env nix-shell
 #!nix-shell -p git -p nixUnstable -p niv -p curl -p jq -p bash -i bash
+# shellcheck shell=bash
 set -eu -o pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 ROOT_DIR="${DIR}/.."
@@ -30,9 +31,8 @@ if [[ -z "$(git diff --exit-code)" ]]; then
 else
     pushd "$ROOT_DIR"
     nix --experimental-features "nix-command flakes" flake check
-    popd
     git commit -am 'choire: update packages'
-    git push "https://$GITHUB_TOKEN@github.com/michaeladler/nur-packages" HEAD:master
+    popd
 fi
 
 exit 0

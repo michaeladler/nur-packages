@@ -526,7 +526,7 @@
       legacyPackages = {
         vim-plugins-custom =
           recurseIntoAttrs (callPackage ./pkgs/vim-plugins-custom { sources = vim-plugin-sources; });
-        tmux-plugins-custom = callPackage ./pkgs/tmux-plugins-custom { sources = tmux-plugin-sources; };
+        tmux-plugins-custom = recurseIntoAttrs (callPackage ./pkgs/tmux-plugins-custom { sources = tmux-plugin-sources; });
       };
 
       packages = flake-utils.lib.flattenTree rec {

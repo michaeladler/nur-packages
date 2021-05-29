@@ -19,13 +19,12 @@ neovim-unwrapped.overrideAttrs (oa: {
 
   propagatedBuildInputs = [ stdenv.cc.cc.lib ];
 
-  # plugins assume libstdc++.so.6 is available (e.g. using libuv's uv_dlopen)
+  # some plugins assume libstdc++.so.6 is available (e.g. using libuv's uv_dlopen)
   # TODO: use wrapperArgs in wrapNeovim and re-export customized wrapNeovim
-  postInstall = ''
+  postInstall = oa.postInstall + ''
+
     wrapProgram $out/bin/nvim \
-      --prefix LD_PRELOAD : ${
-        lib.makeLibraryPath [ stdenv.cc.cc.lib ]
-      }/libstdc++.so.6
+      --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ stdenv.cc.cc.lib ]}
   '';
 
   cmakeFlags = oa.cmakeFlags ++ [

@@ -322,11 +322,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1622215488,
-        "narHash": "sha256-Zd1ddYAFH5FG2zyu4oGDSFiZVLz4qR8JS5Lh1tCLYJs=",
+        "lastModified": 1622347770,
+        "narHash": "sha256-reuhbVHdVGwvxyGq8fo/i1fVwqsoswQDb/YasgSPJ8k=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "43956dea55a49a847a0f2e5d9e0f48384cb34635",
+        "rev": "3cd688ff775a50808eb7d260e540038cc32b4a40",
         "type": "github"
       },
       "original": {
@@ -776,11 +776,11 @@
     "tmux-fzf-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1621084720,
-        "narHash": "sha256-KvM3LIcx1jaRdsnEp1yHzETwOhtJBOAEGf4gVNe90wQ=",
+        "lastModified": 1622284685,
+        "narHash": "sha256-HWXSgJFzCQELfnLtRuQ9TX+pG4dhiuNb3W6qcnEyBPA=",
         "owner": "sainnhe",
         "repo": "tmux-fzf",
-        "rev": "98cd3116c40ee8105a6eff5b1196ecd1d6c0c0f5",
+        "rev": "6e70fc5a75c1315cc8f33a6ca44c0f557f1d2de2",
         "type": "github"
       },
       "original": {
@@ -1288,11 +1288,11 @@
     "vim-tmux-navigator-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1605195214,
-        "narHash": "sha256-Vgdxuh7JMLN4clW7xXzNwQPUbw6P+4xJSsu0nQxMQZw=",
+        "lastModified": 1622294799,
+        "narHash": "sha256-wmRKZY3+OTkaFUEjwaHeDMgbj2e2G+/0cWdj5y8vrHc=",
         "owner": "christoomey",
         "repo": "vim-tmux-navigator",
-        "rev": "6a1e58c3ca3bc7acca36c90521b3dfae83b2a602",
+        "rev": "0cabb1ef01af0986b7bf6fb7acf631debdbbb470",
         "type": "github"
       },
       "original": {

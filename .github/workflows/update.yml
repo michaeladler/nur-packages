@@ -4,7 +4,8 @@ name: Update
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 5 * * *'
+    # NB: jobs may be delayed a couple of hours
+    - cron:  '0 0 * * *'
 
 jobs:
   update:

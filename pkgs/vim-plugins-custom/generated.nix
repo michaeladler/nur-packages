@@ -109,6 +109,13 @@ final: prev:
     meta.homepage = "https://github.com/hrsh7th/nvim-compe/";
   });
 
+  completion-nvim =  buildVimPluginFrom2Nix (let src = sources.completion-nvim-src; in {
+    pname = "completion-nvim";
+    inherit src;
+    version = toString src.lastModifiedDate;
+    meta.homepage = "https://github.com/nvim-lua/completion-nvim";
+  });
+
   nvim-lightbulb =  buildVimPluginFrom2Nix (let src = sources.nvim-lightbulb-src; in {
     pname = "nvim-lightbulb";
     inherit src;

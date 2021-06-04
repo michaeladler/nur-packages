@@ -64,6 +64,22 @@
         "type": "github"
       }
     },
+    "completion-nvim-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1622569563,
+        "narHash": "sha256-KiAkAY0a8ZrBavmFTaGxQOxBcEECPUC9AiC8A7OuZVw=",
+        "owner": "nvim-lua",
+        "repo": "completion-nvim",
+        "rev": "c8db953a8e9f4bc8183e31831297cf84d6f521b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "completion-nvim",
+        "type": "github"
+      }
+    },
     "detectindent-src": {
       "flake": false,
       "locked": {
@@ -322,11 +338,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1622688009,
+        "lastModified": 1622824117,
         "narHash": "sha256-UofNYOoNgpZMNrrdMKjuIuA+9QO2Juiz2cJL/D7lWhU=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "7d4f890aa92a1d961c5a048486adf9195427e940",
+        "rev": "ca802046bf0667b211f72330619a18fec3fea5f0",
         "type": "github"
       },
       "original": {
@@ -337,11 +353,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1622395800,
-        "narHash": "sha256-F7O9U3u19HPC1NHiKKYKNrdfSg1D0jWr3/fp+ef8R70=",
+        "lastModified": 1622674414,
+        "narHash": "sha256-XbG11UG5fQvCqo/jsj0W9BWvIortrDuH2EIIt8jds78=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7e9e1b6351bb4acc71f88d3fc4defa3fa899e121",
+        "rev": "2a1c29ef4bacac06f9b677931027bf053952618c",
         "type": "github"
       },
       "original": {
@@ -450,11 +466,11 @@
     "nvim-treesitter-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1622734137,
-        "narHash": "sha256-TsEu9n2s1hRKTDf2hdnwkQ3J2jPTNVzc9kjVbDow90o=",
+        "lastModified": 1622788216,
+        "narHash": "sha256-UasOQr4pEPCb3NQ7XLaLKJwceMdEfwCKf2QuFCb1rSA=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "99ea1fc22af7c5463c063a62581079d6fcd0490d",
+        "rev": "8e53e706e56dced8a686c522317642e9cc1e7a0e",
         "type": "github"
       },
       "original": {
@@ -581,6 +597,7 @@
         "FixCursorHold-nvim-src": "FixCursorHold-nvim-src",
         "ale-src": "ale-src",
         "barbar-nvim-src": "barbar-nvim-src",
+        "completion-nvim-src": "completion-nvim-src",
         "detectindent-src": "detectindent-src",
         "diffconflicts-src": "diffconflicts-src",
         "dwm-src": "dwm-src",
@@ -1032,11 +1049,11 @@
     "vim-go-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1622075053,
-        "narHash": "sha256-S/HPVTAlZz+3Patd/SGidUZ462ZS4vrHduoWJ8wKAf0=",
+        "lastModified": 1622785264,
+        "narHash": "sha256-Pr9feALow/hv1lg2rIy7d5oMBs3iYh8MDH3srdV/r/U=",
         "owner": "fatih",
         "repo": "vim-go",
-        "rev": "696c4a4ef79fc1fb8f090353cf404df95614ce46",
+        "rev": "edd8c160e54c2861a617777192a48d0a64704192",
         "type": "github"
       },
       "original": {
@@ -1384,11 +1401,11 @@
     "zls-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1621842765,
-        "narHash": "sha256-45w4CqjWgNOpuKmFvrNkM+PY6m/u6YYbziV2Zt8EqRg=",
+        "lastModified": 1622804771,
+        "narHash": "sha256-lOsY2hjbISUB4t4nAq823Roq/r3sc/r9DxM9KOORSO0=",
         "ref": "master",
-        "rev": "affbd2de6b2de4d60a0627f28ac7d55273f36464",
-        "revCount": 752,
+        "rev": "b756ed4da59cb0ec419a4010ab6f870c1924924f",
+        "revCount": 753,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/zigtools/zls.git"

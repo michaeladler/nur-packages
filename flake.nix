@@ -192,6 +192,11 @@
     flake = false;
   };
 
+  inputs.completion-nvim-src = {
+    url = "github:nvim-lua/completion-nvim";
+    flake = false;
+  };
+
   inputs.nvim-lightbulb-src = {
     url = "github:kosayoda/nvim-lightbulb";
     flake = false;
@@ -457,6 +462,7 @@
     , neoformat-src
     , nvim-colorizer-lua-src
     , nvim-compe-src
+    , completion-nvim-src
     , nvim-lightbulb-src
     , nvim-lspconfig-src
     , nvim-peekup-src
@@ -513,7 +519,7 @@
         inherit tmux-continuum-src tmux-copycat-src tmux-dracula-src tmux-fzf-src tmux-open-src tmux-resurrect-src tmux-sensible-src tmux-sessionist-src tmux-tilish-src tmux-yank-src vim-tmux-navigator-src;
       };
       vim-plugin-sources = {
-        inherit FTerm-nvim-src FixCursorHold-nvim-src ale-src barbar-nvim-src detectindent-src diffconflicts-src editorconfig-vim-src file-line-src friendly-snippets-src galaxyline-nvim-src gina-vim-src indent-guides-nvim-src neoformat-src nvim-colorizer-lua-src nvim-compe-src nvim-lightbulb-src nvim-lspconfig-src nvim-peekup-src nvim-treesitter-src nvim-treesitter-refactor-src nvim-treesitter-textobjects-src nvim-web-devicons-src papercolor-theme-src plenary-nvim-src popup-nvim-src rust-vim-src tabular-src telescope-nvim-src undotree-src vim-SpellCheck-src vim-better-whitespace-src vim-bitbake-src vim-boxdraw-src vim-commentary-src vim-cool-src vim-dispatch-src vim-enmasse-src vim-go-src vim-ingo-library-src vim-json-src vim-lastplace-src vim-markdown-src vim-nix-src vim-obsession-src vim-pandoc-src vim-pandoc-syntax-src vim-prosession-src vim-repeat-src vim-sensible-src vim-sneak-src vim-spellsync-src vim-startuptime-src vim-surround-src vim-tmux-navigator-src vim-toml-src vim-vinegar-src vim-vsnip-src vim-which-key-src zig-vim-src;
+        inherit FTerm-nvim-src FixCursorHold-nvim-src ale-src barbar-nvim-src detectindent-src diffconflicts-src editorconfig-vim-src file-line-src friendly-snippets-src galaxyline-nvim-src gina-vim-src indent-guides-nvim-src neoformat-src nvim-colorizer-lua-src nvim-compe-src completion-nvim-src nvim-lightbulb-src nvim-lspconfig-src nvim-peekup-src nvim-treesitter-src nvim-treesitter-refactor-src nvim-treesitter-textobjects-src nvim-web-devicons-src papercolor-theme-src plenary-nvim-src popup-nvim-src rust-vim-src tabular-src telescope-nvim-src undotree-src vim-SpellCheck-src vim-better-whitespace-src vim-bitbake-src vim-boxdraw-src vim-commentary-src vim-cool-src vim-dispatch-src vim-enmasse-src vim-go-src vim-ingo-library-src vim-json-src vim-lastplace-src vim-markdown-src vim-nix-src vim-obsession-src vim-pandoc-src vim-pandoc-syntax-src vim-prosession-src vim-repeat-src vim-sensible-src vim-sneak-src vim-spellsync-src vim-startuptime-src vim-surround-src vim-tmux-navigator-src vim-toml-src vim-vinegar-src vim-vsnip-src vim-which-key-src zig-vim-src;
       };
 
     in

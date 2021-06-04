@@ -121,38 +121,4 @@ self: super: {
     dependencies = with self; [ vim-pandoc-syntax ];
   });
 
-  # change the go_bin_path to point to a path in the nix store. See the code in
-  # fatih/vim-go here
-  # https://github.com/fatih/vim-go/blob/155836d47052ea9c9bac81ba3e937f6f22c8e384/autoload/go/path.vim#L154-L159
-  vim-go = super.vim-go.overrideAttrs (old:
-    let
-      binPath = lib.makeBinPath [
-        asmfmt
-        delve
-        errcheck
-        go-motion
-        go-tools
-        gocode
-        gocode-gomod
-        godef
-        gogetdoc
-        golint
-        golangci-lint
-        gomodifytags
-        gopls
-        gotags
-        gotools
-        iferr
-        impl
-        reftools
-      ];
-    in
-    {
-      postPatch = ''
-        ${gnused}/bin/sed \
-          -Ee 's@"go_bin_path", ""@"go_bin_path", "${binPath}"@g' \
-          -i autoload/go/config.vim
-      '';
-    });
-
 }

@@ -109,6 +109,13 @@ final: prev:
     meta.homepage = "https://github.com/hrsh7th/nvim-compe/";
   });
 
+  completion-buffers = buildVimPluginFrom2Nix (let src = sources.completion-buffers-src; in {
+    pname = "completion-buffers";
+    inherit src;
+    version = toString src.lastModifiedDate;
+    meta.homepage = "https://github.com/steelso/completion-buffers";
+  });
+
   completion-nvim =  buildVimPluginFrom2Nix (let src = sources.completion-nvim-src; in {
     pname = "completion-nvim";
     inherit src;

@@ -64,6 +64,22 @@
         "type": "github"
       }
     },
+    "completion-buffers-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1610899484,
+        "narHash": "sha256-0M+CENXL1g3y+z3KfuSlGcHC4LRn5u1JpodmyYavPZM=",
+        "owner": "steelsojka",
+        "repo": "completion-buffers",
+        "rev": "c36871b2a44b59761387f4972c617b44dcec5e75",
+        "type": "github"
+      },
+      "original": {
+        "owner": "steelsojka",
+        "repo": "completion-buffers",
+        "type": "github"
+      }
+    },
     "completion-nvim-src": {
       "flake": false,
       "locked": {
@@ -597,6 +613,7 @@
         "FixCursorHold-nvim-src": "FixCursorHold-nvim-src",
         "ale-src": "ale-src",
         "barbar-nvim-src": "barbar-nvim-src",
+        "completion-buffers-src": "completion-buffers-src",
         "completion-nvim-src": "completion-nvim-src",
         "detectindent-src": "detectindent-src",
         "diffconflicts-src": "diffconflicts-src",

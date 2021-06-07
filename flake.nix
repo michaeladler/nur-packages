@@ -4,6 +4,11 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
+  inputs.rnix-lsp-src = {
+    url = "github:nix-community/rnix-lsp";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   inputs.dwm-src = {
     url = "github:LukeSmithxyz/dwm";
     flake = false;
@@ -427,6 +432,8 @@
     { self
     , nixpkgs
     , flake-utils
+
+      # sources
     , dwm-src
     , dwmblocks-src
     , git-buildpackage-src
@@ -436,6 +443,7 @@
     , neovim-src
     , oelint-adv-src
     , oelint-parser-src
+    , rnix-lsp-src
     , st-src
     , zls-src
 
@@ -561,6 +569,7 @@
           inherit python3-oelint-parser;
           src = oelint-adv-src;
         };
+        rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;
         st = callPackage ./pkgs/st { src = st-src; };
         vcalendar-filter =
           callPackage ./pkgs/vcalendar-filter { src = mutt-filters-src; };

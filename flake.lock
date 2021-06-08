@@ -748,7 +748,8 @@
         "vim-which-key-src": "vim-which-key-src",
         "zig-vim-src": "zig-vim-src",
         "zls-src": "zls-src",
-        "zsh-pandoc-completion-src": "zsh-pandoc-completion-src"
+        "zsh-pandoc-completion-src": "zsh-pandoc-completion-src",
+        "zsh-vi-mode-src": "zsh-vi-mode-src"
       }
     },
     "rust-vim-src": {
@@ -1517,6 +1518,22 @@
       "original": {
         "owner": "srijanshetty",
         "repo": "zsh-pandoc-completion",
+        "type": "github"
+      }
+    },
+    "zsh-vi-mode-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1623142497,
+        "narHash": "sha256-/TsUdyNOxA0fbrDOllaxHZbCN8C37/8y2sbQPADbOSg=",
+        "owner": "jeffreytse",
+        "repo": "zsh-vi-mode",
+        "rev": "9178e6bea2c8b4f7e998e59ef755820e761610c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jeffreytse",
+        "repo": "zsh-vi-mode",
         "type": "github"
       }
     }

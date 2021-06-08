@@ -4,6 +4,11 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
+  inputs.zsh-vi-mode-src = {
+    url = "github:jeffreytse/zsh-vi-mode";
+    flake = false;
+  };
+
   inputs.zsh-pandoc-completion-src = {
     url = "github:srijanshetty/zsh-pandoc-completion";
     flake = false;
@@ -454,6 +459,7 @@
 
       # zsh plugins
     , zsh-pandoc-completion-src
+    , zsh-vi-mode-src
 
       # tmux plugins
     , tmux-continuum-src
@@ -587,6 +593,7 @@
           zig = zig-nightly;
         };
         zsh-pandoc-completion = callPackage ./pkgs/zsh-pandoc-completion { src = zsh-pandoc-completion-src; };
+        zsh-vi-mode = callPackage ./pkgs/zsh-vi-mode { src = zsh-vi-mode-src; };
         zzz = callPackage ./pkgs/zzz { };
       };
 

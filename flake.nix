@@ -4,6 +4,11 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
+  inputs.zsh-pandoc-completion-src = {
+    url = "github:srijanshetty/zsh-pandoc-completion";
+    flake = false;
+  };
+
   inputs.rnix-lsp-src = {
     url = "github:nix-community/rnix-lsp";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -447,6 +452,9 @@
     , st-src
     , zls-src
 
+      # zsh plugins
+    , zsh-pandoc-completion-src
+
       # tmux plugins
     , tmux-continuum-src
     , tmux-copycat-src
@@ -578,6 +586,7 @@
           src = zls-src;
           zig = zig-nightly;
         };
+        zsh-pandoc-completion = callPackage ./pkgs/zsh-pandoc-completion { src = zsh-pandoc-completion-src; };
         zzz = callPackage ./pkgs/zzz { };
       };
 

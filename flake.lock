@@ -356,11 +356,11 @@
     "neomutt-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1623073710,
-        "narHash": "sha256-VZA99wez+O2qeks7ognnT22DdSE3YfG9aAUFJQqLfas=",
+        "lastModified": 1623163417,
+        "narHash": "sha256-HExiDZJo2HeHBAGHzV445Pwze2d2qC1jO2Vrw7nwFy8=",
         "owner": "neomutt",
         "repo": "neomutt",
-        "rev": "8f2d1cbfd92e7aa0af798e65b3055e17c45323db",
+        "rev": "013b1ae9fb42e27aa6ccc6cd43b30645d478a13c",
         "type": "github"
       },
       "original": {
@@ -387,11 +387,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1623084146,
-        "narHash": "sha256-oWsOzM4PVW2fsMAKFzR/o0LQ4FqHNMeELjpU/ALda3Y=",
+        "lastModified": 1623106773,
+        "narHash": "sha256-lsKXMbqTaB110nhNjEeBGIlPiaQbgKF+tBN0F43An80=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "12e7af1cfb3ab5bbbbd1d213a0b17c11ce9d3f2f",
+        "rev": "840f6883fc5b445038fc6d170b38b42658fca1c8",
         "type": "github"
       },
       "original": {
@@ -434,11 +434,11 @@
     "nvim-compe-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1622632254,
-        "narHash": "sha256-xLZcl5/5CU4PAWkljn98HTFlmYWl7Iji68pHqpbPzqo=",
+        "lastModified": 1623147546,
+        "narHash": "sha256-qLQ+fAEuM9joF8S9BVmD7MxOYh2BwfbqiJnZs1ogE5E=",
         "owner": "hrsh7th",
         "repo": "nvim-compe",
-        "rev": "310488302c6532646adfe8228e40187a80b36ac5",
+        "rev": "c459c3f3a18c7ff7a312593c481af2b90fa01655",
         "type": "github"
       },
       "original": {
@@ -747,7 +747,8 @@
         "vim-vsnip-src": "vim-vsnip-src",
         "vim-which-key-src": "vim-which-key-src",
         "zig-vim-src": "zig-vim-src",
-        "zls-src": "zls-src"
+        "zls-src": "zls-src",
+        "zsh-pandoc-completion-src": "zsh-pandoc-completion-src"
       }
     },
     "rust-vim-src": {
@@ -817,11 +818,11 @@
     "tmux-continuum-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1619602145,
-        "narHash": "sha256-F46ZEDqcXtEMbb/hmsSn3E/B61PsZ0cMuCkAPCqX8S8=",
+        "lastModified": 1623141460,
+        "narHash": "sha256-8HSZKbSY+NmCq1vCiaFk7e2XOzGiaGnbOOZWG3OH+4M=",
         "owner": "tmux-plugins",
         "repo": "tmux-continuum",
-        "rev": "c7f12ce82529f60bffde71a511530068b5cb1152",
+        "rev": "6e58336c288958a3b1ff7773fb945770126db16e",
         "type": "github"
       },
       "original": {
@@ -1501,6 +1502,22 @@
         "submodules": true,
         "type": "git",
         "url": "https://github.com/zigtools/zls.git"
+      }
+    },
+    "zsh-pandoc-completion-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1562436440,
+        "narHash": "sha256-KJXiY2mBIGV8G+HZPLl2niIWOhcpPMDY18fjl/q4dcg=",
+        "owner": "srijanshetty",
+        "repo": "zsh-pandoc-completion",
+        "rev": "dbaa23ceef8472d845e0c8dab3ef493fd76a9f47",
+        "type": "github"
+      },
+      "original": {
+        "owner": "srijanshetty",
+        "repo": "zsh-pandoc-completion",
+        "type": "github"
       }
     }
   },

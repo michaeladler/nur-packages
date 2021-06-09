@@ -592,8 +592,8 @@
           src = zls-src;
           zig = zig-nightly;
         };
-        zsh-pandoc-completion = callPackage ./pkgs/zsh-pandoc-completion { src = zsh-pandoc-completion-src; };
-        zsh-vi-mode = callPackage ./pkgs/zsh-vi-mode { src = zsh-vi-mode-src; };
+        zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { src = zsh-pandoc-completion-src; };
+        zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { src = zsh-vi-mode-src; };
         zzz = callPackage ./pkgs/zzz { };
       };
 

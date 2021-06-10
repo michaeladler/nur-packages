@@ -18,7 +18,7 @@ stdenvNoCC.mkDerivation rec {
     plugindir="$out/share/zsh/site-functions"
 
     mkdir -p "$plugindir"
-    cp -r -- {,_,-}fast-* *chroma themes "$plugindir"/
+    cp -r -- {,_,-,.}fast-* *chroma themes "$plugindir"/
   '';
 
   meta = with lib; {

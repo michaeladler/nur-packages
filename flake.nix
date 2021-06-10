@@ -578,11 +578,12 @@
           callPackage ./pkgs/neovim-nightly/unwrapped.nix {
             src = neovim-src;
           };
-        python3-oelint-parser = callPackage ./pkgs/python3-oelint-parser { src = oelint-parser-src; };
+        nix-direnv = callPackage ./pkgs/nix-direnv { nix-direnv-upstream = pkgs.nix-direnv; };
         oelint-adv = callPackage ./pkgs/oelint-adv {
           inherit python3-oelint-parser;
           src = oelint-adv-src;
         };
+        python3-oelint-parser = callPackage ./pkgs/python3-oelint-parser { src = oelint-parser-src; };
         rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;
         st = callPackage ./pkgs/st { src = st-src; };
         vcalendar-filter =

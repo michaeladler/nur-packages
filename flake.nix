@@ -4,16 +4,6 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs.zsh-vi-mode-src = {
-    url = "github:jeffreytse/zsh-vi-mode";
-    flake = false;
-  };
-
-  inputs.zsh-pandoc-completion-src = {
-    url = "github:srijanshetty/zsh-pandoc-completion";
-    flake = false;
-  };
-
   inputs.rnix-lsp-src = {
     url = "github:nix-community/rnix-lsp";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -457,10 +447,6 @@
     , st-src
     , zls-src
 
-      # zsh plugins
-    , zsh-pandoc-completion-src
-    , zsh-vi-mode-src
-
       # tmux plugins
     , tmux-continuum-src
     , tmux-copycat-src
@@ -593,14 +579,13 @@
           src = zls-src;
           zig = zig-nightly;
         };
-        zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { src = zsh-pandoc-completion-src; };
-        zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { src = zsh-vi-mode-src; };
         zzz = callPackage ./pkgs/zzz { };
-
 
         # TODO: move this to an overlay
         zsh-fast-syntax-highlighting = callPackage ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting { };
         zsh-autosuggestions = callPackage ./pkgs/zsh-plugins/zsh-autosuggestions { };
+        zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { };
+        zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { };
       };
 
       defaultPackage = packages.luaprompt;

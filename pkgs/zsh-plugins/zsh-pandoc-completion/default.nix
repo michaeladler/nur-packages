@@ -1,10 +1,15 @@
-{ src, stdenv, lib, installShellFiles }:
+{ stdenv, lib, fetchFromGitHub, installShellFiles }:
 
 stdenv.mkDerivation {
   pname = "zsh-pandoc-completion";
-  version = toString src.lastModifiedDate;
+  version = "2019-07-06";
 
-  inherit src;
+  src = fetchFromGitHub {
+    owner = "srijanshetty";
+    repo = "zsh-pandoc-completion";
+    rev = "dbaa23ceef8472d845e0c8dab3ef493fd76a9f47";
+    sha256 = "1j3mp3x9gqy7szcc0g192wx1c8lyfswkrng13dy6a841d5iy5598";
+  };
 
   nativeBuildInputs = [ installShellFiles ];
 

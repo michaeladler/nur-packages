@@ -747,9 +747,7 @@
         "vim-vsnip-src": "vim-vsnip-src",
         "vim-which-key-src": "vim-which-key-src",
         "zig-vim-src": "zig-vim-src",
-        "zls-src": "zls-src",
-        "zsh-pandoc-completion-src": "zsh-pandoc-completion-src",
-        "zsh-vi-mode-src": "zsh-vi-mode-src"
+        "zls-src": "zls-src"
       }
     },
     "rust-vim-src": {
@@ -1503,38 +1501,6 @@
         "submodules": true,
         "type": "git",
         "url": "https://github.com/zigtools/zls.git"
-      }
-    },
-    "zsh-pandoc-completion-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1562436440,
-        "narHash": "sha256-KJXiY2mBIGV8G+HZPLl2niIWOhcpPMDY18fjl/q4dcg=",
-        "owner": "srijanshetty",
-        "repo": "zsh-pandoc-completion",
-        "rev": "dbaa23ceef8472d845e0c8dab3ef493fd76a9f47",
-        "type": "github"
-      },
-      "original": {
-        "owner": "srijanshetty",
-        "repo": "zsh-pandoc-completion",
-        "type": "github"
-      }
-    },
-    "zsh-vi-mode-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1623142497,
-        "narHash": "sha256-/TsUdyNOxA0fbrDOllaxHZbCN8C37/8y2sbQPADbOSg=",
-        "owner": "jeffreytse",
-        "repo": "zsh-vi-mode",
-        "rev": "9178e6bea2c8b4f7e998e59ef755820e761610c7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jeffreytse",
-        "repo": "zsh-vi-mode",
-        "type": "github"
       }
     }
   },

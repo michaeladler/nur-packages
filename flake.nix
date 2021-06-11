@@ -595,9 +595,12 @@
         };
         zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { src = zsh-pandoc-completion-src; };
         zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { src = zsh-vi-mode-src; };
+        zzz = callPackage ./pkgs/zzz { };
+
+
         # TODO: move this to an overlay
         zsh-fast-syntax-highlighting = callPackage ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting { };
-        zzz = callPackage ./pkgs/zzz { };
+        zsh-autosuggestions = callPackage ./pkgs/zsh-plugins/zsh-autosuggestions { };
       };
 
       defaultPackage = packages.luaprompt;

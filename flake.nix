@@ -9,16 +9,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.dwm-src = {
-    url = "github:LukeSmithxyz/dwm";
-    flake = false;
-  };
-
-  inputs.dwmblocks-src = {
-    url = "github:lukesmithxyz/dwmblocks";
-    flake = false;
-  };
-
   inputs.git-buildpackage-src = {
     url = "github:agx/git-buildpackage";
     flake = false;
@@ -51,11 +41,6 @@
 
   inputs.oelint-parser-src = {
     url = "github:priv-kweihmann/oelint-parser";
-    flake = false;
-  };
-
-  inputs.st-src = {
-    url = "github:LukeSmithxyz/st";
     flake = false;
   };
 
@@ -434,8 +419,6 @@
     , flake-utils
 
       # sources
-    , dwm-src
-    , dwmblocks-src
     , git-buildpackage-src
     , luaprompt-src
     , mutt-filters-src
@@ -444,7 +427,6 @@
     , oelint-adv-src
     , oelint-parser-src
     , rnix-lsp-src
-    , st-src
     , zls-src
 
       # tmux plugins
@@ -554,8 +536,8 @@
 
         afew = callPackage ./pkgs/afew { };
         cpio = callPackage ./pkgs/cpio { };
-        dwm = callPackage ./pkgs/dwm { src = dwm-src; };
-        dwmblocks = callPackage ./pkgs/dwmblocks { src = dwmblocks-src; };
+        dwm = callPackage ./pkgs/dwm { };
+        dwmblocks = callPackage ./pkgs/dwmblocks { };
         git-buildpackage = callPackage ./pkgs/git-buildpackage { src = git-buildpackage-src; };
         luaprompt = callPackage ./pkgs/luaprompt { src = luaprompt-src; };
         neomutt-nightly =
@@ -571,7 +553,7 @@
         };
         python3-oelint-parser = callPackage ./pkgs/python3-oelint-parser { src = oelint-parser-src; };
         rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;
-        st = callPackage ./pkgs/st { src = st-src; };
+        st = callPackage ./pkgs/st { };
         vcalendar-filter =
           callPackage ./pkgs/vcalendar-filter { src = mutt-filters-src; };
         zig-nightly = callPackage ./pkgs/zig-nightly { };

@@ -128,38 +128,6 @@
         "type": "github"
       }
     },
-    "dwm-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1621601185,
-        "narHash": "sha256-0fr1ueS2FHd08JSamM9CpGyCUbaabG9g6NYmOipnX7U=",
-        "owner": "LukeSmithxyz",
-        "repo": "dwm",
-        "rev": "eab52c4f48c0fcfd7c78d41418f2e10dc1b48ed2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "LukeSmithxyz",
-        "repo": "dwm",
-        "type": "github"
-      }
-    },
-    "dwmblocks-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1621789432,
-        "narHash": "sha256-75iCn062ywl23RdRJ9t+NU5L3Vwf9nCSYn3A/sdIbbg=",
-        "owner": "lukesmithxyz",
-        "repo": "dwmblocks",
-        "rev": "ea5afdccbd23d61e70f3ef62aabd9b6726b2c20f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "lukesmithxyz",
-        "repo": "dwmblocks",
-        "type": "github"
-      }
-    },
     "editorconfig-vim-src": {
       "flake": false,
       "locked": {
@@ -671,8 +639,6 @@
         "completion-nvim-src": "completion-nvim-src",
         "detectindent-src": "detectindent-src",
         "diffconflicts-src": "diffconflicts-src",
-        "dwm-src": "dwm-src",
-        "dwmblocks-src": "dwmblocks-src",
         "editorconfig-vim-src": "editorconfig-vim-src",
         "file-line-src": "file-line-src",
         "flake-utils": "flake-utils",
@@ -703,7 +669,6 @@
         "popup-nvim-src": "popup-nvim-src",
         "rnix-lsp-src": "rnix-lsp-src",
         "rust-vim-src": "rust-vim-src",
-        "st-src": "st-src",
         "tabular-src": "tabular-src",
         "telescope-nvim-src": "telescope-nvim-src",
         "tmux-continuum-src": "tmux-continuum-src",
@@ -763,22 +728,6 @@
       "original": {
         "owner": "rust-lang",
         "repo": "rust.vim",
-        "type": "github"
-      }
-    },
-    "st-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1622722191,
-        "narHash": "sha256-GtW4WXHQjn0enqU4hE3Mb2OX0H1wMV2qKlmMpENsyNs=",
-        "owner": "LukeSmithxyz",
-        "repo": "st",
-        "rev": "0af4782a47cc1b0918bdc41fb61b1a5d358f75f6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "LukeSmithxyz",
-        "repo": "st",
         "type": "github"
       }
     },

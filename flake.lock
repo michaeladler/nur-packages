@@ -223,22 +223,6 @@
         "type": "github"
       }
     },
-    "git-buildpackage-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1622370779,
-        "narHash": "sha256-D2dV9VOfNL2y3tNIm13/wJXSJGZLkjC5zRb9FQLGEZU=",
-        "owner": "agx",
-        "repo": "git-buildpackage",
-        "rev": "31512472ba7d7a914c0871e0ae4d6316041f8da3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "agx",
-        "repo": "git-buildpackage",
-        "type": "github"
-      }
-    },
     "indent-guides-nvim-src": {
       "flake": false,
       "locked": {
@@ -645,7 +629,6 @@
         "friendly-snippets-src": "friendly-snippets-src",
         "galaxyline-nvim-src": "galaxyline-nvim-src",
         "gina-vim-src": "gina-vim-src",
-        "git-buildpackage-src": "git-buildpackage-src",
         "indent-guides-nvim-src": "indent-guides-nvim-src",
         "luaprompt-src": "luaprompt-src",
         "mutt-filters-src": "mutt-filters-src",

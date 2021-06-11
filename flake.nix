@@ -9,11 +9,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.git-buildpackage-src = {
-    url = "github:agx/git-buildpackage";
-    flake = false;
-  };
-
   inputs.luaprompt-src = {
     url = "github:dpapavas/luaprompt";
     flake = false;
@@ -419,7 +414,6 @@
     , flake-utils
 
       # sources
-    , git-buildpackage-src
     , luaprompt-src
     , mutt-filters-src
     , neomutt-src
@@ -538,7 +532,6 @@
         cpio = callPackage ./pkgs/cpio { };
         dwm = callPackage ./pkgs/dwm { };
         dwmblocks = callPackage ./pkgs/dwmblocks { };
-        git-buildpackage = callPackage ./pkgs/git-buildpackage { src = git-buildpackage-src; };
         luaprompt = callPackage ./pkgs/luaprompt { src = luaprompt-src; };
         neomutt-nightly =
           callPackage ./pkgs/neomutt-nightly { src = neomutt-src; };

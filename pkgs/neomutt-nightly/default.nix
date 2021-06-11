@@ -5,10 +5,15 @@
 }:
 
 stdenv.mkDerivation rec {
-  inherit src;
-
   pname = "neomutt";
-  version = toString src.lastModifiedDate;
+  version = "2021-06-11";
+
+  src = fetchFromGitHub {
+    owner = "neomutt";
+    repo = "neomutt";
+    rev = "6372098bb28bb0517e72aa45eae1ebd56f4908ef";
+    sha256 = "0p6yz82m1y8xbjzva85ksf3gmnsyxjgarv3n3fdxzvqgpi42a2sh";
+  };
 
   buildInputs = [
     gpgme libidn ncurses

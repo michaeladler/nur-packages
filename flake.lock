@@ -273,38 +273,6 @@
         "type": "github"
       }
     },
-    "neomutt-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1623405620,
-        "narHash": "sha256-KTpAt8V4vl+y3+GwNXqzf36h0Diuqdxmx9OXQcA5BIQ=",
-        "owner": "neomutt",
-        "repo": "neomutt",
-        "rev": "07670c8524d3da817899ba411af6a22845cef37c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "neomutt",
-        "repo": "neomutt",
-        "type": "github"
-      }
-    },
-    "neovim-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1623422056,
-        "narHash": "sha256-zyXt6NlJbSszWwtWlzT6MLdYRR2Orik7dlearpAv2mg=",
-        "owner": "neovim",
-        "repo": "neovim",
-        "rev": "fa768152dc5523ce7656a55253a626eea5180396",
-        "type": "github"
-      },
-      "original": {
-        "owner": "neovim",
-        "repo": "neovim",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1623176226,
@@ -599,8 +567,6 @@
         "gina-vim-src": "gina-vim-src",
         "indent-guides-nvim-src": "indent-guides-nvim-src",
         "neoformat-src": "neoformat-src",
-        "neomutt-src": "neomutt-src",
-        "neovim-src": "neovim-src",
         "nixpkgs": "nixpkgs",
         "nvim-colorizer-lua-src": "nvim-colorizer-lua-src",
         "nvim-compe-src": "nvim-compe-src",

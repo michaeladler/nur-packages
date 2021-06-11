@@ -9,16 +9,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.neomutt-src = {
-    url = "github:neomutt/neomutt";
-    flake = false;
-  };
-
-  inputs.neovim-src = {
-    url = "github:neovim/neovim";
-    flake = false;
-  };
-
   inputs.oelint-adv-src = {
     url = "github:priv-kweihmann/oelint-adv";
     flake = false;
@@ -404,8 +394,6 @@
     , flake-utils
 
       # sources
-    , neomutt-src
-    , neovim-src
     , oelint-adv-src
     , oelint-parser-src
     , rnix-lsp-src
@@ -521,12 +509,8 @@
         dwm = callPackage ./pkgs/dwm { };
         dwmblocks = callPackage ./pkgs/dwmblocks { };
         luaprompt = callPackage ./pkgs/luaprompt { };
-        neomutt-nightly =
-          callPackage ./pkgs/neomutt-nightly { src = neomutt-src; };
-        neovim-nightly-unwrapped =
-          callPackage ./pkgs/neovim-nightly/unwrapped.nix {
-            src = neovim-src;
-          };
+        neomutt-nightly = callPackage ./pkgs/neomutt-nightly { };
+        neovim-nightly-unwrapped = callPackage ./pkgs/neovim-nightly/unwrapped.nix { };
         nix-direnv = callPackage ./pkgs/nix-direnv { nix-direnv-upstream = pkgs.nix-direnv; };
         oelint-adv = callPackage ./pkgs/oelint-adv {
           inherit python3-oelint-parser;

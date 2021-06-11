@@ -2,10 +2,16 @@
 
 # https://github.com/zigtools/zls/blob/master/default.nix
 stdenvNoCC.mkDerivation {
-  inherit src;
-
   name = "zls";
-  version = toString src.lastModifiedDate;
+  version = "2021-06-06";
+
+  src = fetchFromGitHub {
+    owner = "zigtools";
+    repo = "zls";
+    rev = "39d87188647bd8c8eed304ee18f2dd1df6942f60";
+    sha256 = "07m4s4b63lyjbxkmby4zy7cy9z2cdlw8m0145x7gv40mrg9pjqyv";
+    fetchSubmodules = true;
+  };
 
   nativeBuildInputs = [ zig ];
   dontConfigure = true;

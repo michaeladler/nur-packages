@@ -19,13 +19,6 @@
     flake = false;
   };
 
-  inputs.zls-src = {
-    url = "https://github.com/zigtools/zls.git";
-    type = "git";
-    flake = false;
-    submodules = true;
-  };
-
   ###############################################################################
   ## tmux plugins
   inputs.tmux-continuum-src = {
@@ -397,7 +390,6 @@
     , oelint-adv-src
     , oelint-parser-src
     , rnix-lsp-src
-    , zls-src
 
       # tmux plugins
     , tmux-continuum-src
@@ -521,10 +513,7 @@
         st = callPackage ./pkgs/st { };
         vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
         zig-nightly = callPackage ./pkgs/zig-nightly { };
-        zls = callPackage ./pkgs/zls {
-          src = zls-src;
-          zig = zig-nightly;
-        };
+        zls = callPackage ./pkgs/zls { zig = zig-nightly; };
         zzz = callPackage ./pkgs/zzz { };
 
         # TODO: move this to an overlay

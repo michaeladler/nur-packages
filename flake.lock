@@ -626,8 +626,7 @@
         "vim-vinegar-src": "vim-vinegar-src",
         "vim-vsnip-src": "vim-vsnip-src",
         "vim-which-key-src": "vim-which-key-src",
-        "zig-vim-src": "zig-vim-src",
-        "zls-src": "zls-src"
+        "zig-vim-src": "zig-vim-src"
       }
     },
     "rust-vim-src": {
@@ -1347,24 +1346,6 @@
         "owner": "ziglang",
         "repo": "zig.vim",
         "type": "github"
-      }
-    },
-    "zls-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1622931690,
-        "narHash": "sha256-22N508sVkP1OLySAijhtTPzk2fGf+FVnX9LTYRbRpB4=",
-        "ref": "master",
-        "rev": "39d87188647bd8c8eed304ee18f2dd1df6942f60",
-        "revCount": 758,
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/zigtools/zls.git"
-      },
-      "original": {
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/zigtools/zls.git"
       }
     }
   },

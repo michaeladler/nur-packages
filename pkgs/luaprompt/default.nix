@@ -1,5 +1,4 @@
-{ src
-, stdenv
+{ stdenv
 , lib
 , fetchFromGitHub
 , pkgconfig
@@ -10,10 +9,16 @@
 }:
 
 stdenv.mkDerivation rec {
-  inherit src;
 
   pname = "luaprompt";
-  version = toString src.lastModifiedDate;
+  version = "2015-11-19";
+
+  src = fetchFromGitHub {
+    owner = "dpapavas";
+    repo = "luaprompt";
+    rev = "ef260d2176fbb8c07b585db18c85ff7c0b81589b";
+    sha256 = "12dl9nzjvy1hl0f2pg1qjkakqa51py4ad9s7y4h9gy3kh14bc560";
+  };
 
   nativeBuildInputs = [ pkgconfig makeWrapper ];
 
@@ -47,7 +52,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/dpapavas/luaprompt";
     license = licenses.mit;
     platforms = platforms.unix;
-    maintainers = [ "Michael Adler" ];
   };
 
 }

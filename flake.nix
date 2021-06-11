@@ -9,16 +9,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.luaprompt-src = {
-    url = "github:dpapavas/luaprompt";
-    flake = false;
-  };
-
-  inputs.mutt-filters-src = {
-    url = "github:terabyte/mutt-filters";
-    flake = false;
-  };
-
   inputs.neomutt-src = {
     url = "github:neomutt/neomutt";
     flake = false;
@@ -414,8 +404,6 @@
     , flake-utils
 
       # sources
-    , luaprompt-src
-    , mutt-filters-src
     , neomutt-src
     , neovim-src
     , oelint-adv-src
@@ -532,7 +520,7 @@
         cpio = callPackage ./pkgs/cpio { };
         dwm = callPackage ./pkgs/dwm { };
         dwmblocks = callPackage ./pkgs/dwmblocks { };
-        luaprompt = callPackage ./pkgs/luaprompt { src = luaprompt-src; };
+        luaprompt = callPackage ./pkgs/luaprompt { };
         neomutt-nightly =
           callPackage ./pkgs/neomutt-nightly { src = neomutt-src; };
         neovim-nightly-unwrapped =
@@ -547,8 +535,7 @@
         python3-oelint-parser = callPackage ./pkgs/python3-oelint-parser { src = oelint-parser-src; };
         rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;
         st = callPackage ./pkgs/st { };
-        vcalendar-filter =
-          callPackage ./pkgs/vcalendar-filter { src = mutt-filters-src; };
+        vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
         zig-nightly = callPackage ./pkgs/zig-nightly { };
         zls = callPackage ./pkgs/zls {
           src = zls-src;

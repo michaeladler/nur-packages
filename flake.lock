@@ -239,38 +239,6 @@
         "type": "github"
       }
     },
-    "luaprompt-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1447953293,
-        "narHash": "sha256-wBS2SIBz+Jcg8Uenpoi/oSg81ZQ4vCscoDD4Lb9NtIk=",
-        "owner": "dpapavas",
-        "repo": "luaprompt",
-        "rev": "ef260d2176fbb8c07b585db18c85ff7c0b81589b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dpapavas",
-        "repo": "luaprompt",
-        "type": "github"
-      }
-    },
-    "mutt-filters-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1465331476,
-        "narHash": "sha256-CaKFqNj65tE6K6t33S98STFQNvSzlJzcpjGalT1utD4=",
-        "owner": "terabyte",
-        "repo": "mutt-filters",
-        "rev": "f6835454e806d4d385da5fd83c20fd74ff3fa2d2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "terabyte",
-        "repo": "mutt-filters",
-        "type": "github"
-      }
-    },
     "naersk": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
@@ -630,8 +598,6 @@
         "galaxyline-nvim-src": "galaxyline-nvim-src",
         "gina-vim-src": "gina-vim-src",
         "indent-guides-nvim-src": "indent-guides-nvim-src",
-        "luaprompt-src": "luaprompt-src",
-        "mutt-filters-src": "mutt-filters-src",
         "neoformat-src": "neoformat-src",
         "neomutt-src": "neomutt-src",
         "neovim-src": "neovim-src",

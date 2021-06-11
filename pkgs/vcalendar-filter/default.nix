@@ -1,14 +1,20 @@
-{ src, lib, stdenv, fetchFromGitHub, perl, buildPerlPackage, perlPackages }:
+{ lib, stdenv, fetchFromGitHub, perl, buildPerlPackage, perlPackages }:
 
 with lib;
 
 let metadata = sources.mutt-filters;
 
-in buildPerlPackage rec {
-  inherit src;
-
+in
+buildPerlPackage rec {
   pname = "vcalendar-filter";
-  version = toString src.lastModifiedDate;
+  version = "2016-06-07";
+
+  src = fetchFromGitHub {
+    owner = "terabyte";
+    repo = "mutt-filters";
+    rev = "f6835454e806d4d385da5fd83c20fd74ff3fa2d2";
+    sha256 = "0gmldqyrb6iilvf9r55kyhv50ca9ghpxsxxb5cxd3rpsv2l8b8h9";
+  };
 
   buildInputs = [ perl ];
   propagatedBuildInputs = with perlPackages; [ DataICal TextAutoformat ];

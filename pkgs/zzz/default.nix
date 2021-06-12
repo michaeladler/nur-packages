@@ -4,7 +4,7 @@ let
   manpage = fetchurl {
     url =
       "https://github.com/void-linux/void-runit/raw/42ca737148ea530dad5945af1a4eb7e471e8b637/zzz.8";
-    sha256 = "b254aeefd1736fac9123bdcc9b22269e4fed42e8699648b8b4f045b2b12a41b5";
+    sha256 = "1da15aqv4ighnjw4i5k9x11fskwy4qi9pk5x4f8sqvvks7pswm5j";
   };
 
 in stdenv.mkDerivation rec {
@@ -14,7 +14,7 @@ in stdenv.mkDerivation rec {
   src = fetchurl {
     url =
       "https://github.com/void-linux/void-runit/raw/42ca737148ea530dad5945af1a4eb7e471e8b637/zzz";
-    sha256 = "79402d8d147b61f4f4033aa183ff37f8ce02097e2624c3a8770834fe7a4ea01e";
+    sha256 = "07m09rxgwd08fylc6916gq4h5kpq6zzq789s0gsg8qbv2j6jsh3r";
   };
 
   nativeBuildInputs = [ installShellFiles ];

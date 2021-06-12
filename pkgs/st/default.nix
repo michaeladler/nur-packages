@@ -1,6 +1,6 @@
-{ src, pkgs, fetchFromGitHub, harfbuzz, glibcLocales, makeWrapper }:
+{ orig, fetchFromGitHub, harfbuzz, glibcLocales, makeWrapper }:
 
-pkgs.st.overrideAttrs (old: {
+orig.overrideAttrs (old: {
   version = "2021-06-03";
 
   src = fetchFromGitHub {

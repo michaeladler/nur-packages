@@ -447,38 +447,6 @@
         "type": "github"
       }
     },
-    "oelint-adv-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1623350894,
-        "narHash": "sha256-Vm0pIspTw/SNJ6e/Ab4kSpxpdEYoCAxfvgkzA9hC2C8=",
-        "owner": "priv-kweihmann",
-        "repo": "oelint-adv",
-        "rev": "02a15e9406af5747e38537e69116e8797d3bb2bd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "priv-kweihmann",
-        "repo": "oelint-adv",
-        "type": "github"
-      }
-    },
-    "oelint-parser-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1622886353,
-        "narHash": "sha256-awjXnQWiMuWtbWG/xSSPi11T7GJIdXjqkE9wDurv8b0=",
-        "owner": "priv-kweihmann",
-        "repo": "oelint-parser",
-        "rev": "3811959428f5b8881ad968cd0c197f62ce1b5839",
-        "type": "github"
-      },
-      "original": {
-        "owner": "priv-kweihmann",
-        "repo": "oelint-parser",
-        "type": "github"
-      }
-    },
     "papercolor-theme-src": {
       "flake": false,
       "locked": {
@@ -577,8 +545,6 @@
         "nvim-treesitter-src": "nvim-treesitter-src",
         "nvim-treesitter-textobjects-src": "nvim-treesitter-textobjects-src",
         "nvim-web-devicons-src": "nvim-web-devicons-src",
-        "oelint-adv-src": "oelint-adv-src",
-        "oelint-parser-src": "oelint-parser-src",
         "papercolor-theme-src": "papercolor-theme-src",
         "plenary-nvim-src": "plenary-nvim-src",
         "popup-nvim-src": "popup-nvim-src",

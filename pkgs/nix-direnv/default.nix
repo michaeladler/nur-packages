@@ -3,13 +3,13 @@
 , nixStable
 , nixUnstable
 , enableFlakes ? true
-, nix-direnv-upstream
+, orig
 }:
 
 let
   nix = if enableFlakes then nixUnstable else nixStable;
 in
-nix-direnv-upstream.overrideAttrs (oa: {
+orig.overrideAttrs (oa: {
 
   postPatch = ''
     sed -i "1a NIX_BIN_PREFIX=${nix}/bin/" direnvrc

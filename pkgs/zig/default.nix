@@ -4,7 +4,7 @@ let zig_versions = with builtins; fromJSON (readFile ./index.json);
 
 in stdenv.mkDerivation rec {
 
-  pname = "zig-nightly";
+  pname = "zig";
   version = zig_versions.version;
 
   src = with builtins;

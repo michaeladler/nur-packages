@@ -9,16 +9,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.oelint-adv-src = {
-    url = "github:priv-kweihmann/oelint-adv";
-    flake = false;
-  };
-
-  inputs.oelint-parser-src = {
-    url = "github:priv-kweihmann/oelint-parser";
-    flake = false;
-  };
-
   ###############################################################################
   ## tmux plugins
   inputs.tmux-continuum-src = {
@@ -385,10 +375,6 @@
     { self
     , nixpkgs
     , flake-utils
-
-      # sources
-    , oelint-adv-src
-    , oelint-parser-src
     , rnix-lsp-src
 
       # tmux plugins
@@ -467,11 +453,16 @@
     , zig-vim-src
 
     }:
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+
+    {
+      overlay = import ./overlay.nix;
+    } // (flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
     let
-      pkgs = nixpkgs.legacyPackages.${system};
-      callPackage = nixpkgs.legacyPackages.${system}.callPackage;
-      recurseIntoAttrs = nixpkgs.legacyPackages.${system}.recurseIntoAttrs;
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ self.overlay ];
+      };
+      callPackage = pkgs.callPackage;
 
       tmux-plugin-sources = {
         inherit tmux-continuum-src tmux-copycat-src tmux-dracula-src tmux-fzf-src tmux-open-src tmux-resurrect-src tmux-sensible-src tmux-sessionist-src tmux-tilish-src tmux-yank-src vim-tmux-navigator-src;
@@ -489,41 +480,43 @@
       # https://github.com/numtide/flake-utils/pull/29#issuecomment-817652939
       legacyPackages = {
         vim-plugins-custom =
-          recurseIntoAttrs (callPackage ./pkgs/vim-plugins-custom { sources = vim-plugin-sources; });
-        tmux-plugins-custom = recurseIntoAttrs (callPackage ./pkgs/tmux-plugins-custom { sources = tmux-plugin-sources; });
+          pkgs.recurseIntoAttrs (callPackage ./pkgs/vim-plugins-custom { sources = vim-plugin-sources; });
+        tmux-plugins-custom = pkgs.recurseIntoAttrs (callPackage ./pkgs/tmux-plugins-custom { sources = tmux-plugin-sources; });
       };
 
       packages = flake-utils.lib.flattenTree rec {
         inherit (legacyPackages) vim-plugins-custom tmux-plugins-custom;
 
-        afew = callPackage ./pkgs/afew { };
-        cpio = callPackage ./pkgs/cpio { };
-        dwm = callPackage ./pkgs/dwm { };
-        dwmblocks = callPackage ./pkgs/dwmblocks { };
-        luaprompt = callPackage ./pkgs/luaprompt { };
-        neomutt-nightly = callPackage ./pkgs/neomutt-nightly { };
-        neovim-nightly-unwrapped = callPackage ./pkgs/neovim-nightly/unwrapped.nix { };
-        nix-direnv = callPackage ./pkgs/nix-direnv { nix-direnv-upstream = pkgs.nix-direnv; };
-        oelint-adv = callPackage ./pkgs/oelint-adv {
-          inherit python3-oelint-parser;
-          src = oelint-adv-src;
-        };
-        python3-oelint-parser = callPackage ./pkgs/python3-oelint-parser { src = oelint-parser-src; };
+        afew = pkgs.afew;
+        cpio = pkgs.cpio;
+        luaprompt = pkgs.luaprompt;
+        neomutt = pkgs.neomutt;
+        neovim-unwrapped = pkgs.neovim-unwrapped;
+        nix-direnv = pkgs.nix-direnv;
         rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;
-        st = callPackage ./pkgs/st { };
-        vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
-        zig-nightly = callPackage ./pkgs/zig-nightly { };
-        zls = callPackage ./pkgs/zls { zig = zig-nightly; };
-        zzz = callPackage ./pkgs/zzz { };
+        vcalendar-filter = pkgs.vcalendar-filter;
+        zig = pkgs.zig;
+        zls = pkgs.zls;
+        zzz = pkgs.zzz;
+        oelint-adv = pkgs.oelint-adv;
 
-        # TODO: move this to an overlay
-        zsh-fast-syntax-highlighting = callPackage ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting { };
-        zsh-autosuggestions = callPackage ./pkgs/zsh-plugins/zsh-autosuggestions { };
-        zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { };
-        zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { };
+        ###############################################################################
+        ## wm
+        ###############################################################################
+        dwm = pkgs.dwm;
+        dwmblocks = pkgs.dwmblocks;
+        st = pkgs.st;
+
+        ###############################################################################
+        ## zsh plugins
+        ###############################################################################
+        zsh-autosuggestions = pkgs.zsh-autosuggestions;
+        zsh-fast-syntax-highlighting = pkgs.zsh-fast-syntax-highlighting;
+        zsh-pandoc-completion = pkgs.zsh-pandoc-completion;
+        zsh-vi-mode = pkgs.zsh-vi-mode;
       };
 
-      defaultPackage = packages.luaprompt;
+      defaultPackage = pkgs.hello;
 
-    });
+    }));
 }

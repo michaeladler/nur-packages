@@ -1,6 +1,6 @@
-{ pkgs, fetchFromGitHub }:
+{ orig, fetchFromGitHub }:
 
-pkgs.zsh-autosuggestions.overrideAttrs (old: {
+orig.overrideAttrs (old: {
 
   version = "2021-06-04";
 

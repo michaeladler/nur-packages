@@ -3,12 +3,12 @@
 , makeWrapper
 , fetchFromGitHub
 , tree-sitter
-, pkgs
+, orig
 }:
 
 # based on https://github.com/neovim/neovim/blob/master/contrib/flake.nix, but improved
 # see also https://github.com/rvolosatovs/nixpkgs/tree/update/neovim
-pkgs.neovim-unwrapped.overrideAttrs (oa: {
+orig.overrideAttrs (oa: {
   version = "2021-06-11";
 
   src = fetchFromGitHub {

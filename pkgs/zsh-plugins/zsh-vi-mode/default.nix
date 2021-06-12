@@ -1,6 +1,6 @@
-{ stdenv, lib, fetchFromGitHub }:
+{ stdenvNoCC, lib, fetchFromGitHub }:
 
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   pname = "zsh-vi-mode";
   version = "2021-06-08";
 

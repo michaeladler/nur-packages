@@ -1,6 +1,6 @@
-{ stdenv, lib, fetchFromGitHub, installShellFiles }:
+{ stdenvNoCC, lib, fetchFromGitHub, installShellFiles }:
 
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   pname = "zsh-pandoc-completion";
   version = "2019-07-06";
 

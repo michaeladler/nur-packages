@@ -1,4 +1,4 @@
-{ src, stdenvNoCC, fetchFromGitHub, zig, extraConfig ? { } }:
+{ stdenvNoCC, fetchFromGitHub, zig, extraConfig ? { } }:
 
 # https://github.com/zigtools/zls/blob/master/default.nix
 stdenvNoCC.mkDerivation {

@@ -1,7 +1,6 @@
-{ src, pkgs, fetchFromGitHub }:
+{ orig, fetchFromGitHub }:
 
-pkgs.dwmblocks.overrideAttrs (old: {
-
+orig.overrideAttrs (old: {
   version = "2021-05-23";
 
   src = fetchFromGitHub {

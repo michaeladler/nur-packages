@@ -3,7 +3,7 @@
 # shellcheck shell=bash
 set -eu -o pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
-ROOT_DIR="${DIR}/.."
+ROOT_DIR=$(readlink -f "${DIR}/..")
 
 set -x
 git diff --exit-code >/dev/null
@@ -13,8 +13,11 @@ printf "access-tokens = github.com=%s" "$GITHUB_TOKEN" >>~/.config/nix/nix.conf
 chmod 600 ~/.config/nix/nix.conf
 
 (cd "$ROOT_DIR" && nix --experimental-features "nix-command flakes" flake update) &
-(cd "$ROOT_DIR/pkgs/zig-nightly" && ./update.sh) &
-(find "$ROOT_DIR/pkgs/zsh-plugins" -name default.nix -print0 | xargs -0 update-nix-fetchgit) &
+(cd "$ROOT_DIR/pkgs/zig" && ./update.sh) &
+(find "$ROOT_DIR/pkgs" -name '*.nix' | grep -v -E '(zig|zsh-plugins|tmux-plugins)' | while read fname; do
+    echo updating "$fname"
+    update-nix-fetchgit "$fname"
+done)
 
 wait
 

@@ -1,6 +1,8 @@
 { orig, fetchFromGitHub, harfbuzz, glibcLocales, makeWrapper }:
 
 orig.overrideAttrs (old: {
+  outputs = [ "out" "terminfo" ];
+
   version = "2021-06-03";
 
   src = fetchFromGitHub {
@@ -25,6 +27,11 @@ orig.overrideAttrs (old: {
 
   postInstall = ''
     wrapProgram "$out/bin/st" --set LOCALE_ARCHIVE ${glibcLocales}/lib/locale/locale-archive
+
+    install -dm 755 "$terminfo/share/terminfo/s/"
+    tic -sx -o "$terminfo/share/terminfo" st.info
+    mkdir -p $out/nix-support
+    echo "$terminfo" >> $out/nix-support/propagated-user-env-packages
   '';
 
 })

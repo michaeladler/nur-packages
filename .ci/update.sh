@@ -14,7 +14,7 @@ chmod 600 ~/.config/nix/nix.conf
 
 (cd "$ROOT_DIR" && nix --experimental-features "nix-command flakes" flake update) &
 (cd "$ROOT_DIR/pkgs/zig" && ./update.sh) &
-(find "$ROOT_DIR/pkgs" -name '*.nix' | grep -v -E '(zig|zsh-plugins)' | while read fname; do
+(find "$ROOT_DIR/pkgs" -name '*.nix' | grep -v 'zig' | while read fname; do
     echo updating "$fname"
     update-nix-fetchgit "$fname"
 done)

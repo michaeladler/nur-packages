@@ -31,5 +31,6 @@ rec {
   oelint-adv = callPackage ./pkgs/oelint-adv { };
 
   tmuxPlugins = prev.tmuxPlugins // (callPackage ./pkgs/tmux-plugins { orig = prev.tmuxPlugins; });
+  vimPlugins = prev.vimPlugins // (prev.recurseIntoAttrs (callPackage ./pkgs/vim-plugins { orig = prev.vimPlugins; }));
 
 }

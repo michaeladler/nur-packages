@@ -5,7 +5,7 @@ let
   callPackage = prev.callPackage;
 in
 
-rec {
+{
 
   neomutt = callPackage ./pkgs/neomutt { };
   neovim-unwrapped = callPackage ./pkgs/neovim/unwrapped.nix { orig = prev.neovim-unwrapped; };

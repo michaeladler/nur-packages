@@ -1,9 +1,7 @@
-{ stdenvNoCC, lib, fetchFromGitHub }:
+{ orig, fetchFromGitHub }:
 
-stdenvNoCC.mkDerivation rec {
-  pname = "zsh-fast-syntax-highlighting";
+orig.overrideAttrs (old: {
   version = "2021-05-14";
-
   src = fetchFromGitHub {
     owner = "zdharma";
     repo = "fast-syntax-highlighting";
@@ -11,9 +9,7 @@ stdenvNoCC.mkDerivation rec {
     sha256 = "0m102makrfz1ibxq8rx77nngjyhdqrm8hsrr9342zzhq1nf4wxxc";
   };
 
-  dontConfigure = true;
-  dontBuild = true;
-
+  # remove this once it has landed in nixpkgs
   installPhase = ''
     plugindir="$out/share/zsh/site-functions"
 
@@ -21,10 +17,4 @@ stdenvNoCC.mkDerivation rec {
     cp -r -- {,_,-,.}fast-* *chroma themes "$plugindir"/
   '';
 
-  meta = with lib; {
-    description = "Syntax-highlighting for Zshell";
-    homepage = "https://github.com/zdharma/fast-syntax-highlighting";
-    license = licenses.bsd3;
-    platforms = platforms.unix;
-  };
-}
+})

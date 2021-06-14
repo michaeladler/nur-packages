@@ -1,0 +1,123 @@
+{ orig, fetchFromGitHub }:
+
+rec {
+
+  continuum = orig.continuum.overrideAttrs (oa: {
+    version = "2021-06-08";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-continuum";
+      rev = "6e58336c288958a3b1ff7773fb945770126db16e";
+      sha256 = "10zvhxrinmp673dnjs5264xrgvgdcjhqkhjvmf1dky4qnhlrjx7h";
+    };
+  });
+
+  copycat = orig.copycat.overrideAttrs (oa: {
+    version = "2020-07-24";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-copycat";
+      rev = "d7f7e6c1de0bc0d6915f4beea5be6a8a42045c09";
+      sha256 = "0nclcmrk0dpa2y9d94xvyfz416xqkslzlfgdj3z8yb6a8vz2xlyr";
+    };
+  });
+
+  dracula = orig.dracula.overrideAttrs (oa: {
+    version = "2021-04-03";
+    src = fetchFromGitHub {
+      owner = "dracula";
+      repo = "tmux";
+      rev = "f508a8907fdd93c6890ee4c412090df90cab3543";
+      sha256 = "1b0m741c9cva9s2fw6af9vg18mgv6r5ffws2snlwnwlzvmcqbrdz";
+    };
+  });
+
+  open = orig.open.overrideAttrs (oa: {
+    version = "2020-08-08";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-open";
+      rev = "5b09bd955292ae33ef6d3519df09b5bc1b0ff49e";
+      sha256 = "1xqkb85yvq7kasgkwjd9ilz5rky8v6dhc33q7k5rqarh7sn5nxxj";
+    };
+  });
+
+  resurrect = orig.resurrect.overrideAttrs (oa: {
+    version = "2021-03-18";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-resurrect";
+      rev = "abbc4fbfc4a51948478d6b05f0c0d554111663a8";
+      sha256 = "077xk332wd9awwhv32p5hnw7s70881aa4jcaf1nqms64z4gjdswh";
+    };
+
+    patches = [
+      ./patches/tmux-resurrect/0001-linux_procfs-Improve-COMMAND_PID-detection.patch
+      ./patches/tmux-resurrect/0002-Support-for-binary-strategy-files.patch
+    ];
+  });
+
+  sensible = orig.sensible.overrideAttrs (oa: {
+    version = "2021-05-20";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-sensible";
+      rev = "989d09249e9389604a68d281c999978f6231431b";
+      sha256 = "0l1gl1wsd69l5z8zf6mp23x170iyzk5y00pxp3x7f73z7796i9ak";
+    };
+  });
+
+  sessionist = orig.sessionist.overrideAttrs (oa: {
+    pluginName = "sessionist";
+    version = "2017-12-03";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-sessionist";
+      rev = "09ec86be38eae98ffc27bd0dde605ed10ae0dc89";
+      sha256 = "030q2mmj8akbc26jnqn8n7fckg1025p0ildx4wr401b6p1snnlw4";
+    };
+  });
+
+  tilish = orig.tilish.overrideAttrs (oa: {
+    pluginName = "tilish";
+    version = "2020-08-12";
+    src = fetchFromGitHub {
+      owner = "jabirali";
+      repo = "tmux-tilish";
+      rev = "73d2404cdc0ef6bd7fbc8982edae0b0e2a4dd860";
+      sha256 = "1x58h3bg9d69j40fh8rcjpxvg0i6j04pj8p3jk57l3cghxis5j05";
+    };
+  });
+
+
+  vim-tmux-navigator = orig.vim-tmux-navigator.overrideAttrs (oa: {
+    version = "2021-05-29";
+    src = fetchFromGitHub {
+      owner = "christoomey";
+      repo = "vim-tmux-navigator";
+      rev = "0cabb1ef01af0986b7bf6fb7acf631debdbbb470";
+      sha256 = "0xxc5wpyfqv7f7sfy6xncy7ipj0cvshw28s12ld3jfgyimjllr62";
+    };
+  });
+
+  yank = orig.yank.overrideAttrs (oa: {
+    version = "2020-10-02";
+    src = fetchFromGitHub {
+      owner = "tmux-plugins";
+      repo = "tmux-yank";
+      rev = "1b1a436e19f095ae8f825243dbe29800a8acd25c";
+      sha256 = "02v6g6wrqzzjk4l2mcna1lg8100g5h88phy9g6f6rbcqzw2y86w5";
+    };
+  });
+
+  tmux-fzf = orig.tmux-fzf.overrideAttrs (oa: {
+    version = "2021-05-29";
+    src = fetchFromGitHub {
+      owner = "sainnhe";
+      repo = "tmux-fzf";
+      rev = "6e70fc5a75c1315cc8f33a6ca44c0f557f1d2de2";
+      sha256 = "1w0469qp5akfvmdy72k1hwdsjzsd7pj4dvbjgq5h22bkj60d4r8x";
+    };
+  });
+
+}

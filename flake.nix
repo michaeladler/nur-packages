@@ -10,59 +10,6 @@
   };
 
   ###############################################################################
-  ## tmux plugins
-  inputs.tmux-continuum-src = {
-    url = "github:tmux-plugins/tmux-continuum";
-    flake = false;
-  };
-
-  inputs.tmux-copycat-src = {
-    url = "github:tmux-plugins/tmux-copycat";
-    flake = false;
-  };
-
-  inputs.tmux-dracula-src = {
-    url = "github:dracula/tmux";
-    flake = false;
-  };
-
-  inputs.tmux-fzf-src = {
-    url = "github:sainnhe/tmux-fzf";
-    flake = false;
-  };
-
-  inputs.tmux-open-src = {
-    url = "github:tmux-plugins/tmux-open";
-    flake = false;
-  };
-
-  inputs.tmux-resurrect-src = {
-    url = "github:tmux-plugins/tmux-resurrect";
-    flake = false;
-  };
-
-  inputs.tmux-sensible-src = {
-    url = "github:tmux-plugins/tmux-sensible";
-    flake = false;
-  };
-
-  inputs.tmux-sessionist-src = {
-    url = "github:tmux-plugins/tmux-sessionist";
-    flake = false;
-  };
-
-  inputs.tmux-tilish-src = {
-    url = "github:jabirali/tmux-tilish";
-    flake = false;
-  };
-
-  inputs.tmux-yank-src = {
-    url = "github:tmux-plugins/tmux-yank";
-    flake = false;
-  };
-  ###############################################################################
-
-  ###############################################################################
   ## vim plugins
   ###############################################################################
   inputs.FTerm-nvim-src = {
@@ -377,18 +324,6 @@
     , flake-utils
     , rnix-lsp-src
 
-      # tmux plugins
-    , tmux-continuum-src
-    , tmux-copycat-src
-    , tmux-dracula-src
-    , tmux-fzf-src
-    , tmux-open-src
-    , tmux-resurrect-src
-    , tmux-sensible-src
-    , tmux-sessionist-src
-    , tmux-tilish-src
-    , tmux-yank-src
-
       # vim-plugins
     , FTerm-nvim-src
     , FixCursorHold-nvim-src
@@ -464,9 +399,6 @@
       };
       callPackage = pkgs.callPackage;
 
-      tmux-plugin-sources = {
-        inherit tmux-continuum-src tmux-copycat-src tmux-dracula-src tmux-fzf-src tmux-open-src tmux-resurrect-src tmux-sensible-src tmux-sessionist-src tmux-tilish-src tmux-yank-src vim-tmux-navigator-src;
-      };
       vim-plugin-sources = {
         inherit FTerm-nvim-src FixCursorHold-nvim-src ale-src barbar-nvim-src detectindent-src diffconflicts-src editorconfig-vim-src file-line-src friendly-snippets-src galaxyline-nvim-src gina-vim-src indent-guides-nvim-src neoformat-src nvim-colorizer-lua-src nvim-compe-src completion-nvim-src completion-buffers-src nvim-lightbulb-src nvim-lspconfig-src nvim-peekup-src nvim-treesitter-src nvim-treesitter-refactor-src nvim-treesitter-textobjects-src nvim-web-devicons-src papercolor-theme-src plenary-nvim-src popup-nvim-src rust-vim-src tabular-src telescope-nvim-src undotree-src vim-SpellCheck-src vim-better-whitespace-src vim-bitbake-src vim-boxdraw-src vim-commentary-src vim-cool-src vim-dispatch-src vim-enmasse-src vim-go-src vim-ingo-library-src vim-json-src vim-lastplace-src vim-markdown-src vim-nix-src vim-obsession-src vim-pandoc-src vim-pandoc-syntax-src vim-prosession-src vim-repeat-src vim-sensible-src vim-sneak-src vim-spellsync-src vim-startuptime-src vim-surround-src vim-tmux-navigator-src vim-toml-src vim-vinegar-src vim-vsnip-src vim-which-key-src zig-vim-src;
       };
@@ -481,11 +413,11 @@
       legacyPackages = {
         vim-plugins-custom =
           pkgs.recurseIntoAttrs (callPackage ./pkgs/vim-plugins-custom { sources = vim-plugin-sources; });
-        tmux-plugins-custom = pkgs.recurseIntoAttrs (callPackage ./pkgs/tmux-plugins-custom { sources = tmux-plugin-sources; });
+        tmuxPlugins = pkgs.tmuxPlugins;
       };
 
       packages = flake-utils.lib.flattenTree rec {
-        inherit (legacyPackages) vim-plugins-custom tmux-plugins-custom;
+        inherit (legacyPackages) vim-plugins-custom;
 
         afew = pkgs.afew;
         cpio = pkgs.cpio;

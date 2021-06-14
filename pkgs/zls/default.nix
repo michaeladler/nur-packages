@@ -3,13 +3,13 @@
 # https://github.com/zigtools/zls/blob/master/default.nix
 stdenvNoCC.mkDerivation {
   name = "zls";
-  version = "2021-06-06";
+  version = "2021-06-13";
 
   src = fetchFromGitHub {
     owner = "zigtools";
     repo = "zls";
-    rev = "39d87188647bd8c8eed304ee18f2dd1df6942f60";
-    sha256 = "07m4s4b63lyjbxkmby4zy7cy9z2cdlw8m0145x7gv40mrg9pjqyv";
+    rev = "66d629f3f2dfba0aa2d010290b7178a6db116fea";
+    sha256 = "04q6p6g46c0h3s51s6lkiml243m23xq51a04h5b4dzp6hq6s3lvm";
     fetchSubmodules = true;
   };
 

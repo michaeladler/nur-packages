@@ -30,6 +30,6 @@ rec {
   zzz = callPackage ./pkgs/zzz { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };
 
-  tmux-plugins = callPackage ./pkgs/tmux-plugins { orig = prev.tmux-plugins; };
+  tmuxPlugins = prev.tmuxPlugins // (callPackage ./pkgs/tmux-plugins { orig = prev.tmuxPlugins; });
 
 }

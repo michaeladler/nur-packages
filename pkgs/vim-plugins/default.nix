@@ -92,8 +92,8 @@ rec {
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "f31935c6e0976b4c2c995e1f9b80d09b6fa127bc";
-      sha256 = "04i6l3wnl47bcbmhvllq7xhpr3lckzs7ggka0pgnxczdgs6nf9an";
+      rev = "79c9af46e51a584fb7e18789e2322351e672821f";
+      sha256 = "0ahb5vid06ks42x45rcybynkfy5x6k81962qwcikq9hwhj8x1hhk";
     };
   });
 

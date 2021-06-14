@@ -11,8 +11,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "neomutt";
     repo = "neomutt";
-    rev = "2121a033752ac783e108479c2dd6842eb9e314a2";
-    sha256 = "1783wgvwxhh5svlniqm5xkiyvqyg286blixwpm8gbaak490gzh7c";
+    rev = "e088e4bf180e5a4d54f3075262f411923270b6f6";
+    sha256 = "186g7sp5gamgkx33f3wxic5iknkzl0v5f2w1gayl4cszy9qqwzw6";
   };
 
   buildInputs = [

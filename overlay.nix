@@ -24,6 +24,7 @@ in
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   zzz = callPackage ./pkgs/zzz { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };
+  fstabfmt = callPackage ./pkgs/fstabfmt { };
 
   afew = (import ./pkgs/afew) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;

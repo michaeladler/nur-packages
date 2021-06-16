@@ -39,37 +39,8 @@
       };
 
       packages = flake-utils.lib.flattenTree {
-
-        afew = pkgs.afew;
-        cpio = pkgs.cpio;
-        luaprompt = pkgs.luaprompt;
-        neovim-unwrapped = pkgs.neovim-unwrapped;
-        nix-direnv = pkgs.nix-direnv;
-        rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;
-        vcalendar-filter = pkgs.vcalendar-filter;
-        zig = pkgs.zig;
-        zls = pkgs.zls;
-        zzz = pkgs.zzz;
-        oelint-adv = pkgs.oelint-adv;
-
-        # attrsets
-        myTmuxPlugins = pkgs.myTmuxPlugins;
-        myVimPlugins = pkgs.myVimPlugins;
-
-        ###############################################################################
-        ## wm
-        ###############################################################################
-        dwm = pkgs.dwm;
-        dwmblocks = pkgs.dwmblocks;
-        st = pkgs.st;
-
-        ###############################################################################
-        ## zsh plugins
-        ###############################################################################
-        zsh-autosuggestions = pkgs.zsh-autosuggestions;
-        zsh-fast-syntax-highlighting = pkgs.zsh-fast-syntax-highlighting;
-        zsh-pandoc-completion = pkgs.zsh-pandoc-completion;
-        zsh-vi-mode = pkgs.zsh-vi-mode;
+        inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
+        inherit (pkgs) afew cpio luaprompt neovim-unwrapped nix-direnv vcalendar-filter zig zls zzz fstabfmt myTmuxPlugins myVimPlugins dwm dwmblocks st zsh-autosuggestions zsh-fast-syntax-highlighting zsh-pandoc-completion zsh-vi-mode;
       };
 
       defaultPackage = pkgs.hello;

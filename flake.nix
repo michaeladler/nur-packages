@@ -43,7 +43,6 @@
         afew = pkgs.afew;
         cpio = pkgs.cpio;
         luaprompt = pkgs.luaprompt;
-        neomutt = pkgs.neomutt;
         neovim-unwrapped = pkgs.neovim-unwrapped;
         nix-direnv = pkgs.nix-direnv;
         rnix-lsp = rnix-lsp-src.packages.x86_64-linux.rnix-lsp;

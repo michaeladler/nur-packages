@@ -7,7 +7,6 @@ in
 
 {
 
-  neomutt = callPackage ./pkgs/neomutt { };
   neovim-unwrapped = callPackage ./pkgs/neovim/unwrapped.nix { orig = prev.neovim-unwrapped; };
 
   zsh-autosuggestions = callPackage ./pkgs/zsh-plugins/zsh-autosuggestions { orig = prev.zsh-autosuggestions; };

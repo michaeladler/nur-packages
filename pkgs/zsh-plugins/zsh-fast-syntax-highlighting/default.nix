@@ -1,8 +1,8 @@
-{ orig, fetchFromGitHub }:
+final: prev:
 
-orig.overrideAttrs (old: {
+prev.zsh-fast-syntax-highlighting.overrideAttrs (old: {
   version = "2021-05-14";
-  src = fetchFromGitHub {
+  src = prev.fetchFromGitHub {
     owner = "zdharma";
     repo = "fast-syntax-highlighting";
     rev = "817916dfa907d179f0d46d8de355e883cf67bd97";

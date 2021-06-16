@@ -1,6 +1,6 @@
-{ orig }:
+final: prev:
 
-orig.overrideAttrs (oa: rec {
+prev.afew.overrideAttrs (oa: rec {
   patches = (oa.patches or [ ]) ++
     [
       ./0001-Fix-MailMover.patch

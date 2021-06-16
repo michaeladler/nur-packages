@@ -1,9 +1,9 @@
-{ orig, fetchFromGitHub }:
+final: prev:
 
-orig.overrideAttrs (old: {
+prev.dwmblocks.overrideAttrs (old: {
   version = "2021-05-23";
 
-  src = fetchFromGitHub {
+  src = prev.fetchFromGitHub {
     owner = "lukesmithxyz";
     repo = "dwmblocks";
     rev = "ea5afdccbd23d61e70f3ef62aabd9b6726b2c20f";

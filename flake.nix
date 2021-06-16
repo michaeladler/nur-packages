@@ -52,6 +52,10 @@
         zzz = pkgs.zzz;
         oelint-adv = pkgs.oelint-adv;
 
+        # attrsets
+        myTmuxPlugins = pkgs.myTmuxPlugins;
+        myVimPlugins = pkgs.myVimPlugins;
+
         ###############################################################################
         ## wm
         ###############################################################################

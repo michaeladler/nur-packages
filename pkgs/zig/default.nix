@@ -1,17 +1,19 @@
-{ stdenv, lib, ... }:
+final: prev:
 
-let zig_versions = with builtins; fromJSON (readFile ./index.json);
+let zig_versions = with builtins; fromJSON (readFile ./index.json); in
 
-in stdenv.mkDerivation rec {
+prev.zig.overrideAttrs (old: {
 
   pname = "zig";
   version = zig_versions.version;
 
-  src = with builtins;
-    fetchurl {
-      url = zig_versions.x86_64-linux.tarball;
-      sha256 = zig_versions.x86_64-linux.shasum;
-    };
+  src = builtins.fetchurl {
+    url = zig_versions.x86_64-linux.tarball;
+    sha256 = zig_versions.x86_64-linux.shasum;
+  };
+
+  nativeBuildInputs = [ ];
+  buildInputs = [ ];
 
   installPhase = ''
     mkdir -p "$out/bin"
@@ -20,13 +22,4 @@ in stdenv.mkDerivation rec {
     ln -s "$out/zig" "$out/bin/zig"
   '';
 
-  meta = with lib; {
-    description =
-      "Programming languaged designed for robustness, optimality, and clarity";
-    homepage = "https://ziglang.org/";
-    license = licenses.mit;
-    platforms = platforms.unix;
-    maintainers = [ maintainers.andrewrk ];
-  };
-
-}
+})

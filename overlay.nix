@@ -2,33 +2,36 @@ final: prev:
 
 let
   fetchFromGitHub = prev.fetchFromGitHub;
-  callPackage = prev.callPackage;
+  callPackage = final.callPackage;
 in
 
 {
+  neovim-unwrapped = (import ./pkgs/neovim/unwrapped.nix) final prev;
 
-  neovim-unwrapped = callPackage ./pkgs/neovim/unwrapped.nix { orig = prev.neovim-unwrapped; };
-
-  zsh-autosuggestions = callPackage ./pkgs/zsh-plugins/zsh-autosuggestions { orig = prev.zsh-autosuggestions; };
-  zsh-fast-syntax-highlighting = callPackage ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting { orig = prev.zsh-fast-syntax-highlighting; };
+  zsh-autosuggestions = (import ./pkgs/zsh-plugins/zsh-autosuggestions) final prev;
+  zsh-fast-syntax-highlighting = (import ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting) final prev;
   zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { };
   zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { };
 
-  zig = callPackage ./pkgs/zig { };
-  zls = callPackage ./pkgs/zls { };
+  zig = (import ./pkgs/zig) final prev;
+  zls = (import ./pkgs/zls) final prev;
 
-  dwm = callPackage ./pkgs/dwm { orig = prev.dwm; };
-  dwmblocks = callPackage ./pkgs/dwmblocks { orig = prev.dwmblocks; };
-  st = callPackage ./pkgs/st { orig = prev.st; };
+  dwm = (import ./pkgs/dwm) final prev;
+  dwmblocks = (import ./pkgs/dwmblocks) final prev;
+  st = (import ./pkgs/st) final prev;
 
   luaprompt = callPackage ./pkgs/luaprompt { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
-  afew = callPackage ./pkgs/afew { orig = prev.afew; };
-  nix-direnv = callPackage ./pkgs/nix-direnv { orig = prev.nix-direnv; };
   zzz = callPackage ./pkgs/zzz { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };
 
-  tmuxPlugins = prev.tmuxPlugins // (callPackage ./pkgs/tmux-plugins { orig = prev.tmuxPlugins; });
-  vimPlugins = prev.vimPlugins // (prev.recurseIntoAttrs (callPackage ./pkgs/vim-plugins { orig = prev.vimPlugins; }));
+  afew = (import ./pkgs/afew) final prev;
+  nix-direnv = (import ./pkgs/nix-direnv) final prev;
+
+  myTmuxPlugins = callPackage ./pkgs/tmux-plugins { orig = prev.tmuxPlugins; };
+  tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
+
+  myVimPlugins = prev.recurseIntoAttrs (callPackage ./pkgs/vim-plugins { orig = prev.vimPlugins; });
+  vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
 }

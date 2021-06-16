@@ -1,10 +1,10 @@
-{ orig, fetchFromGitHub }:
+final: prev:
 
-orig.overrideAttrs (old: {
+prev.zsh-autosuggestions.overrideAttrs (old: {
 
   version = "2021-06-04";
 
-  src = fetchFromGitHub {
+  src = prev.fetchFromGitHub {
     owner = "zsh-users";
     repo = "zsh-autosuggestions";
     rev = "a411ef3e0992d4839f0732ebeb9823024afaaaa8";

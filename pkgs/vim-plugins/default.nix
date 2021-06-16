@@ -128,12 +128,12 @@ rec {
   });
 
   nvim-lspconfig = orig.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-06-14";
+    version = "2021-06-15";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "64a9af6efd6f737866a5f768bb93f8fea1b36809";
-      sha256 = "1ddvsmsh4vwas250kpjj11bzl1mmq68zafm1msg5lshzhm1xin42";
+      rev = "ef1ea929affe8462f8efca80138e5bd38f28598e";
+      sha256 = "12chdk6j1aj23h86rbibc6h6h8vfgki162vrxka9i6kya2ajr987";
     };
   });
 
@@ -152,8 +152,8 @@ rec {
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "9d64c2f6677c22b8a5e5082f8a6da45d1034a278";
-      sha256 = "0kpnr2v76qpby1gr1j7ffkcjhbxpkkn759000p8j0pj222rl2cwy";
+      rev = "84015ac3c7e3f6a05482a26b78a072f8242e62c7";
+      sha256 = "170ldagz7d3fnd050jpz0dxjm64lr9biqr7qixc8gfgav664b5ib";
     };
   });
 
@@ -438,12 +438,12 @@ rec {
   });
 
   zig-vim = orig.zig-vim.overrideAttrs (old: {
-    version = "2021-06-13";
+    version = "2021-06-15";
     src = fetchFromGitHub {
       owner = "ziglang";
       repo = "zig.vim";
-      rev = "e9da826f95d50835e283dc8215e3748ab72ae5e5";
-      sha256 = "1nw7i4sf8w2gy5v5w5d39xnsynh13j67s58dqcald39gfb00bwys";
+      rev = "c339f13d9e840a9b4e392d104f9a0a2960f4a49a";
+      sha256 = "1w8127zhzz74gzclg5bv4kl11cwhi48wqqc1x176rsrlac7qfpp1";
     };
   });
 

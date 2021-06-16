@@ -70,7 +70,7 @@ stdenv.mkDerivation rec {
   NIX_LDFLAGS = "-lidn";
 
   postInstall = ''
-    wrapProgram "$out/bin/neomutt" --prefix PATH : "$out/libexec/neomutt" --set LOCALE_ARCHIVE ${glibcLocales}/lib/locale/locale-archive
+    wrapProgram "$out/bin/neomutt" --prefix PATH : "$out/libexec/neomutt"
   '';
 
   doCheck = true;

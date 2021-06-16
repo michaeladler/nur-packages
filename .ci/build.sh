@@ -11,4 +11,4 @@ set -x
 cd "$ROOT_DIR"
 
 PKGS=$(bash $DIR/extract_pkg_names.sh | sed -E -e 's/(.*)/.#\1/' | tr '\n' ' ')
-nix --experimental-features "nix-command flakes" build $PKGS
+nix --experimental-features "nix-command flakes" build --no-link $PKGS

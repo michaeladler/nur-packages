@@ -3,6 +3,7 @@ cpio
 dwm
 dwmblocks
 fstabfmt
+goofys
 luaprompt
 myTmuxPlugins/continuum
 myTmuxPlugins/copycat

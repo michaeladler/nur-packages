@@ -1,11 +1,13 @@
-{ orig, vimUtils, vim, fetchFromGitHub }:
+final: prev:
 
 let
-  inherit (vimUtils.override { inherit vim; }) buildVimPluginFrom2Nix;
+  inherit (prev.vimUtils.override { inherit (prev.vim); }) buildVimPluginFrom2Nix;
+  fetchFromGitHub = prev.fetchFromGitHub;
 in
-rec {
 
-  ale = orig.ale.overrideAttrs (old: {
+{
+
+  ale = prev.vimPlugins.ale.overrideAttrs (old: {
     version = "2021-05-27";
     src = fetchFromGitHub {
       owner = "dense-analysis";
@@ -16,7 +18,7 @@ rec {
     };
   });
 
-  barbar-nvim = orig.barbar-nvim.overrideAttrs (old: {
+  barbar-nvim = prev.vimPlugins.barbar-nvim.overrideAttrs (old: {
     version = "2021-06-12";
     src = fetchFromGitHub {
       owner = "romgrk";
@@ -26,7 +28,7 @@ rec {
     };
   });
 
-  editorconfig-vim = orig.editorconfig-vim.overrideAttrs (old: {
+  editorconfig-vim = prev.vimPlugins.editorconfig-vim.overrideAttrs (old: {
     version = "2021-04-04";
     src = fetchFromGitHub {
       owner = "editorconfig";
@@ -37,7 +39,7 @@ rec {
     };
   });
 
-  file-line = orig.file-line.overrideAttrs (old: {
+  file-line = prev.vimPlugins.file-line.overrideAttrs (old: {
     version = "2016-10-20";
     src = fetchFromGitHub {
       owner = "bogado";
@@ -47,7 +49,7 @@ rec {
     };
   });
 
-  friendly-snippets = orig.friendly-snippets.overrideAttrs (old: {
+  friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
     version = "2021-06-12";
     src = fetchFromGitHub {
       owner = "rafamadriz";
@@ -57,7 +59,7 @@ rec {
     };
   });
 
-  gina-vim = orig.gina-vim.overrideAttrs (old: {
+  gina-vim = prev.vimPlugins.gina-vim.overrideAttrs (old: {
     version = "2021-06-12";
     src = fetchFromGitHub {
       owner = "lambdalisue";
@@ -67,7 +69,7 @@ rec {
     };
   });
 
-  neoformat = orig.neoformat.overrideAttrs (old: {
+  neoformat = prev.vimPlugins.neoformat.overrideAttrs (old: {
     version = "2021-04-19";
     src = fetchFromGitHub {
       owner = "sbdchd";
@@ -77,7 +79,7 @@ rec {
     };
   });
 
-  nvim-colorizer-lua = orig.nvim-colorizer-lua.overrideAttrs (old: {
+  nvim-colorizer-lua = prev.vimPlugins.nvim-colorizer-lua.overrideAttrs (old: {
     version = "2020-06-11";
     src = fetchFromGitHub {
       owner = "norcalli";
@@ -87,7 +89,7 @@ rec {
     };
   });
 
-  nvim-compe = orig.nvim-compe.overrideAttrs (old: {
+  nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
     version = "2021-06-14";
     src = fetchFromGitHub {
       owner = "hrsh7th";
@@ -97,7 +99,7 @@ rec {
     };
   });
 
-  completion-buffers = orig.completion-buffers.overrideAttrs (old: {
+  completion-buffers = prev.vimPlugins.completion-buffers.overrideAttrs (old: {
     version = "2021-01-17";
     src = fetchFromGitHub {
       owner = "steelsojka";
@@ -107,7 +109,7 @@ rec {
     };
   });
 
-  completion-nvim = orig.completion-nvim.overrideAttrs (old: {
+  completion-nvim = prev.vimPlugins.completion-nvim.overrideAttrs (old: {
     version = "2021-06-01";
     src = fetchFromGitHub {
       owner = "nvim-lua";
@@ -117,7 +119,7 @@ rec {
     };
   });
 
-  nvim-lightbulb = orig.nvim-lightbulb.overrideAttrs (old: {
+  nvim-lightbulb = prev.vimPlugins.nvim-lightbulb.overrideAttrs (old: {
     version = "2021-06-05";
     src = fetchFromGitHub {
       owner = "kosayoda";
@@ -127,7 +129,7 @@ rec {
     };
   });
 
-  nvim-lspconfig = orig.nvim-lspconfig.overrideAttrs (old: {
+  nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
     version = "2021-06-15";
     src = fetchFromGitHub {
       owner = "neovim";
@@ -137,7 +139,7 @@ rec {
     };
   });
 
-  nvim-peekup = orig.nvim-peekup.overrideAttrs (old: {
+  nvim-peekup = prev.vimPlugins.nvim-peekup.overrideAttrs (old: {
     version = "2021-04-04";
     src = fetchFromGitHub {
       owner = "gennaro-tedesco";
@@ -147,7 +149,7 @@ rec {
     };
   });
 
-  nvim-treesitter = orig.nvim-treesitter.overrideAttrs (old: {
+  nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
     version = "2021-06-15";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
@@ -157,7 +159,7 @@ rec {
     };
   });
 
-  nvim-treesitter-refactor = orig.nvim-treesitter-refactor.overrideAttrs (old: {
+  nvim-treesitter-refactor = prev.vimPlugins.nvim-treesitter-refactor.overrideAttrs (old: {
     version = "2021-05-03";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
@@ -167,7 +169,7 @@ rec {
     };
   });
 
-  nvim-treesitter-textobjects = orig.nvim-treesitter-textobjects.overrideAttrs (old: {
+  nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
     version = "2021-06-09";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
@@ -177,7 +179,7 @@ rec {
     };
   });
 
-  papercolor-theme = orig.papercolor-theme.overrideAttrs (old: {
+  papercolor-theme = prev.vimPlugins.papercolor-theme.overrideAttrs (old: {
     version = "2020-12-04";
     src = fetchFromGitHub {
       owner = "NLKNguyen";
@@ -187,7 +189,7 @@ rec {
     };
   });
 
-  plenary-nvim = orig.plenary-nvim.overrideAttrs (old: {
+  plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
     version = "2021-06-09";
     src = fetchFromGitHub {
       owner = "nvim-lua";
@@ -197,7 +199,7 @@ rec {
     };
   });
 
-  popup-nvim = orig.popup-nvim.overrideAttrs (old: {
+  popup-nvim = prev.vimPlugins.popup-nvim.overrideAttrs (old: {
     version = "2021-05-08";
     src = fetchFromGitHub {
       owner = "nvim-lua";
@@ -207,7 +209,7 @@ rec {
     };
   });
 
-  rust-vim = orig.rust-vim.overrideAttrs (old: {
+  rust-vim = prev.vimPlugins.rust-vim.overrideAttrs (old: {
     version = "2021-02-16";
     src = fetchFromGitHub {
       owner = "rust-lang";
@@ -217,7 +219,7 @@ rec {
     };
   });
 
-  tabular = orig.tabular.overrideAttrs (old: {
+  tabular = prev.vimPlugins.tabular.overrideAttrs (old: {
     version = "2019-02-19";
     src = fetchFromGitHub {
       owner = "godlygeek";
@@ -227,7 +229,7 @@ rec {
     };
   });
 
-  telescope-nvim = orig.telescope-nvim.overrideAttrs (old: {
+  telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
     version = "2021-06-14";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
@@ -237,7 +239,7 @@ rec {
     };
   });
 
-  undotree = orig.undotree.overrideAttrs (old: {
+  undotree = prev.vimPlugins.undotree.overrideAttrs (old: {
     version = "2021-05-28";
     src = fetchFromGitHub {
       owner = "mbbill";
@@ -247,7 +249,7 @@ rec {
     };
   });
 
-  vim-better-whitespace = orig.vim-better-whitespace.overrideAttrs (old: {
+  vim-better-whitespace = prev.vimPlugins.vim-better-whitespace.overrideAttrs (old: {
     version = "2020-03-24";
     src = fetchFromGitHub {
       owner = "ntpeters";
@@ -257,7 +259,7 @@ rec {
     };
   });
 
-  vim-commentary = orig.vim-commentary.overrideAttrs (old: {
+  vim-commentary = prev.vimPlugins.vim-commentary.overrideAttrs (old: {
     version = "2021-03-22";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -267,7 +269,7 @@ rec {
     };
   });
 
-  vim-cool = orig.vim-cool.overrideAttrs (old: {
+  vim-cool = prev.vimPlugins.vim-cool.overrideAttrs (old: {
     version = "2020-04-18";
     src = fetchFromGitHub {
       owner = "romainl";
@@ -277,7 +279,7 @@ rec {
     };
   });
 
-  vim-dispatch = orig.vim-dispatch.overrideAttrs (old: {
+  vim-dispatch = prev.vimPlugins.vim-dispatch.overrideAttrs (old: {
     version = "2021-04-17";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -287,7 +289,7 @@ rec {
     };
   });
 
-  vim-json = orig.vim-json.overrideAttrs (old: {
+  vim-json = prev.vimPlugins.vim-json.overrideAttrs (old: {
     version = "2018-01-10";
     src = fetchFromGitHub {
       owner = "elzr";
@@ -297,7 +299,7 @@ rec {
     };
   });
 
-  vim-lastplace = orig.vim-lastplace.overrideAttrs (old: {
+  vim-lastplace = prev.vimPlugins.vim-lastplace.overrideAttrs (old: {
     version = "2021-03-29";
     src = fetchFromGitHub {
       owner = "farmergreg";
@@ -307,7 +309,7 @@ rec {
     };
   });
 
-  vim-nix = orig.vim-nix.overrideAttrs (old: {
+  vim-nix = prev.vimPlugins.vim-nix.overrideAttrs (old: {
     version = "2021-05-28";
     src = fetchFromGitHub {
       owner = "LnL7";
@@ -317,7 +319,7 @@ rec {
     };
   });
 
-  vim-obsession = orig.vim-obsession.overrideAttrs (old: {
+  vim-obsession = prev.vimPlugins.vim-obsession.overrideAttrs (old: {
     version = "2021-03-22";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -327,7 +329,7 @@ rec {
     };
   });
 
-  vim-prosession = orig.vim-prosession.overrideAttrs (old: {
+  vim-prosession = prev.vimPlugins.vim-prosession.overrideAttrs (old: {
     version = "2021-03-21";
     src = fetchFromGitHub {
       owner = "dhruvasagar";
@@ -337,7 +339,7 @@ rec {
     };
   });
 
-  vim-repeat = orig.vim-repeat.overrideAttrs (old: {
+  vim-repeat = prev.vimPlugins.vim-repeat.overrideAttrs (old: {
     version = "2021-01-24";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -347,7 +349,7 @@ rec {
     };
   });
 
-  vim-sensible = orig.vim-sensible.overrideAttrs (old: {
+  vim-sensible = prev.vimPlugins.vim-sensible.overrideAttrs (old: {
     version = "2019-11-24";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -357,7 +359,7 @@ rec {
     };
   });
 
-  vim-sneak = orig.vim-sneak.overrideAttrs (old: {
+  vim-sneak = prev.vimPlugins.vim-sneak.overrideAttrs (old: {
     version = "2020-08-31";
     src = fetchFromGitHub {
       owner = "justinmk";
@@ -367,7 +369,7 @@ rec {
     };
   });
 
-  vim-startuptime = orig.vim-startuptime.overrideAttrs (old: {
+  vim-startuptime = prev.vimPlugins.vim-startuptime.overrideAttrs (old: {
     version = "2021-05-29";
     src = fetchFromGitHub {
       owner = "dstein64";
@@ -377,7 +379,7 @@ rec {
     };
   });
 
-  vim-surround = orig.vim-surround.overrideAttrs (old: {
+  vim-surround = prev.vimPlugins.vim-surround.overrideAttrs (old: {
     version = "2019-11-28";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -387,7 +389,7 @@ rec {
     };
   });
 
-  vim-tmux-navigator = orig.vim-tmux-navigator.overrideAttrs (old: {
+  vim-tmux-navigator = prev.vimPlugins.vim-tmux-navigator.overrideAttrs (old: {
     version = "2021-05-29";
     src = fetchFromGitHub {
       owner = "christoomey";
@@ -397,7 +399,7 @@ rec {
     };
   });
 
-  vim-toml = orig.vim-toml.overrideAttrs (old: {
+  vim-toml = prev.vimPlugins.vim-toml.overrideAttrs (old: {
     version = "2020-12-07";
     src = fetchFromGitHub {
       owner = "cespare";
@@ -407,7 +409,7 @@ rec {
     };
   });
 
-  vim-vinegar = orig.vim-vinegar.overrideAttrs (old: {
+  vim-vinegar = prev.vimPlugins.vim-vinegar.overrideAttrs (old: {
     version = "2021-03-15";
     src = fetchFromGitHub {
       owner = "tpope";
@@ -417,7 +419,7 @@ rec {
     };
   });
 
-  vim-vsnip = orig.vim-vsnip.overrideAttrs (old: {
+  vim-vsnip = prev.vimPlugins.vim-vsnip.overrideAttrs (old: {
     version = "2021-06-01";
     src = fetchFromGitHub {
       owner = "hrsh7th";
@@ -427,7 +429,7 @@ rec {
     };
   });
 
-  vim-which-key = orig.vim-which-key.overrideAttrs (old: {
+  vim-which-key = prev.vimPlugins.vim-which-key.overrideAttrs (old: {
     version = "2021-05-04";
     src = fetchFromGitHub {
       owner = "liuchengxu";
@@ -437,7 +439,7 @@ rec {
     };
   });
 
-  zig-vim = orig.zig-vim.overrideAttrs (old: {
+  zig-vim = prev.vimPlugins.zig-vim.overrideAttrs (old: {
     version = "2021-06-15";
     src = fetchFromGitHub {
       owner = "ziglang";
@@ -447,7 +449,7 @@ rec {
     };
   });
 
-  vim-go = orig.vim-go.overrideAttrs (old: {
+  vim-go = prev.vimPlugins.vim-go.overrideAttrs (old: {
     version = "2021-06-12";
     src = fetchFromGitHub {
       owner = "fatih";
@@ -457,7 +459,7 @@ rec {
     };
   });
 
-  galaxyline-nvim = orig.galaxyline-nvim.overrideAttrs (old: {
+  galaxyline-nvim = prev.vimPlugins.galaxyline-nvim.overrideAttrs (old: {
     version = "2021-04-25";
     src = fetchFromGitHub {
       owner = "glepnir";
@@ -466,10 +468,10 @@ rec {
       sha256 = "1390lqsqdcj1q89zn6y5qrm1id7p8fnpy07vlz6mm4cki47211mb";
     };
 
-    dependencies = (old.dependencies or [ ]) ++ [ nvim-web-devicons ];
+    dependencies = (old.dependencies or [ ]) ++ [ final.vimPlugins.nvim-web-devicons ];
   });
 
-  vim-pandoc-syntax = orig.vim-pandoc-syntax.overrideAttrs (old: {
+  vim-pandoc-syntax = prev.vimPlugins.vim-pandoc-syntax.overrideAttrs (old: {
     version = "2021-03-10";
     src = fetchFromGitHub {
       owner = "vim-pandoc";
@@ -479,7 +481,7 @@ rec {
     };
   });
 
-  vim-pandoc = orig.vim-pandoc.overrideAttrs (old: {
+  vim-pandoc = prev.vimPlugins.vim-pandoc.overrideAttrs (old: {
     version = "2021-06-09";
     src = fetchFromGitHub {
       owner = "vim-pandoc";
@@ -488,10 +490,10 @@ rec {
       sha256 = "017g2cq05pfxjmcdm42qz6pv2cf2v18lnnrfnizm1cd388r9byll";
     };
 
-    dependencies = (old.dependencies or [ ]) ++ [ vim-pandoc-syntax ];
+    dependencies = (old.dependencies or [ ]) ++ [ final.vimPlugins.vim-pandoc-syntax ];
   });
 
-  vim-markdown = orig.vim-markdown.overrideAttrs (old: {
+  vim-markdown = prev.vimPlugins.vim-markdown.overrideAttrs (old: {
     version = "2020-07-14";
     src = fetchFromGitHub {
       owner = "plasticboy";
@@ -500,10 +502,10 @@ rec {
       sha256 = "013vh2rnfifm5j56imar03rvchz68ll4lbgy9y8fbw7s9a0k6yaa";
     };
 
-    dependencies = (old.dependencies or [ ]) ++ [ tabular ];
+    dependencies = (old.dependencies or [ ]) ++ [ final.vimPlugins.tabular ];
   });
 
-  nvim-web-devicons = orig.nvim-web-devicons.overrideAttrs (old: {
+  nvim-web-devicons = prev.vimPlugins.nvim-web-devicons.overrideAttrs (old: {
     version = "2021-05-19";
     src = fetchFromGitHub {
       owner = "kyazdani42";
@@ -541,7 +543,7 @@ rec {
     };
 
     meta.homepage = "https://github.com/inkarkat/vim-SpellCheck/";
-    dependencies = [ vim-ingo-library ];
+    dependencies = [ final.vimPlugins.vim-ingo-library ];
   }
   );
 

@@ -1,8 +1,10 @@
-{ orig, fetchFromGitHub }:
+final: prev:
 
-rec {
+let fetchFromGitHub = prev.fetchFromGitHub; in
 
-  continuum = orig.continuum.overrideAttrs (oa: {
+{
+
+  continuum = prev.tmuxPlugins.continuum.overrideAttrs (oa: {
     version = "2021-06-08";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
@@ -12,7 +14,7 @@ rec {
     };
   });
 
-  copycat = orig.copycat.overrideAttrs (oa: {
+  copycat = prev.tmuxPlugins.copycat.overrideAttrs (oa: {
     version = "2020-07-24";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
@@ -22,7 +24,7 @@ rec {
     };
   });
 
-  dracula = orig.dracula.overrideAttrs (oa: {
+  dracula = prev.tmuxPlugins.dracula.overrideAttrs (oa: {
     version = "2021-04-03";
     src = fetchFromGitHub {
       owner = "dracula";
@@ -32,7 +34,7 @@ rec {
     };
   });
 
-  open = orig.open.overrideAttrs (oa: {
+  open = prev.tmuxPlugins.open.overrideAttrs (oa: {
     version = "2020-08-08";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
@@ -42,7 +44,7 @@ rec {
     };
   });
 
-  resurrect = orig.resurrect.overrideAttrs (oa: {
+  resurrect = prev.tmuxPlugins.resurrect.overrideAttrs (oa: {
     version = "2021-03-18";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
@@ -57,7 +59,7 @@ rec {
     ];
   });
 
-  sensible = orig.sensible.overrideAttrs (oa: {
+  sensible = prev.tmuxPlugins.sensible.overrideAttrs (oa: {
     version = "2021-05-20";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
@@ -67,7 +69,7 @@ rec {
     };
   });
 
-  sessionist = orig.sessionist.overrideAttrs (oa: {
+  sessionist = prev.tmuxPlugins.sessionist.overrideAttrs (oa: {
     pluginName = "sessionist";
     version = "2017-12-03";
     src = fetchFromGitHub {
@@ -78,7 +80,7 @@ rec {
     };
   });
 
-  tilish = orig.tilish.overrideAttrs (oa: {
+  tilish = prev.tmuxPlugins.tilish.overrideAttrs (oa: {
     pluginName = "tilish";
     version = "2020-08-12";
     src = fetchFromGitHub {
@@ -90,7 +92,7 @@ rec {
   });
 
 
-  vim-tmux-navigator = orig.vim-tmux-navigator.overrideAttrs (oa: {
+  vim-tmux-navigator = prev.tmuxPlugins.vim-tmux-navigator.overrideAttrs (oa: {
     version = "2021-05-29";
     src = fetchFromGitHub {
       owner = "christoomey";
@@ -100,7 +102,7 @@ rec {
     };
   });
 
-  yank = orig.yank.overrideAttrs (oa: {
+  yank = prev.tmuxPlugins.yank.overrideAttrs (oa: {
     version = "2020-10-02";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
@@ -110,7 +112,7 @@ rec {
     };
   });
 
-  tmux-fzf = orig.tmux-fzf.overrideAttrs (oa: {
+  tmux-fzf = prev.tmuxPlugins.tmux-fzf.overrideAttrs (oa: {
     version = "2021-05-29";
     src = fetchFromGitHub {
       owner = "sainnhe";

@@ -28,10 +28,10 @@ in
   afew = (import ./pkgs/afew) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
 
-  myTmuxPlugins = callPackage ./pkgs/tmux-plugins { orig = prev.tmuxPlugins; };
+  myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
 
-  myVimPlugins = prev.recurseIntoAttrs (callPackage ./pkgs/vim-plugins { orig = prev.vimPlugins; });
+  myVimPlugins = prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev);
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
 }

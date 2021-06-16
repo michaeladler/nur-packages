@@ -26,8 +26,6 @@ orig.overrideAttrs (old: {
   '';
 
   postInstall = ''
-    wrapProgram "$out/bin/st" --set LOCALE_ARCHIVE ${glibcLocales}/lib/locale/locale-archive
-
     install -dm 755 "$terminfo/share/terminfo/s/"
     tic -sx -o "$terminfo/share/terminfo" st.info
     mkdir -p $out/nix-support

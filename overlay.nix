@@ -25,6 +25,7 @@ in
   zzz = callPackage ./pkgs/zzz { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
+  goofys = callPackage ./pkgs/goofys { };
 
   afew = (import ./pkgs/afew) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;

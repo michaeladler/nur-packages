@@ -466,7 +466,7 @@ rec {
       sha256 = "1390lqsqdcj1q89zn6y5qrm1id7p8fnpy07vlz6mm4cki47211mb";
     };
 
-    dependencies = (if builtins.hasAttr "dependencies" old then old.dependencies else [ ]) ++ [ nvim-web-devicons ];
+    dependencies = (old.dependencies or [ ]) ++ [ nvim-web-devicons ];
   });
 
   vim-pandoc-syntax = orig.vim-pandoc-syntax.overrideAttrs (old: {
@@ -488,7 +488,7 @@ rec {
       sha256 = "017g2cq05pfxjmcdm42qz6pv2cf2v18lnnrfnizm1cd388r9byll";
     };
 
-    dependencies = (if builtins.hasAttr "dependencies" old then old.dependencies else [ ]) ++ [ vim-pandoc-syntax ];
+    dependencies = (old.dependencies or [ ]) ++ [ vim-pandoc-syntax ];
   });
 
   vim-markdown = orig.vim-markdown.overrideAttrs (old: {
@@ -500,7 +500,7 @@ rec {
       sha256 = "013vh2rnfifm5j56imar03rvchz68ll4lbgy9y8fbw7s9a0k6yaa";
     };
 
-    dependencies = (if builtins.hasAttr "dependencies" old then old.dependencies else [ ]) ++ [ tabular ];
+    dependencies = (old.dependencies or [ ]) ++ [ tabular ];
   });
 
   nvim-web-devicons = orig.nvim-web-devicons.overrideAttrs (old: {

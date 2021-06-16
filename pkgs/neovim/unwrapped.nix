@@ -23,7 +23,7 @@ orig.overrideAttrs (oa: {
 
   buildInputs = oa.buildInputs ++ [ tree-sitter ];
 
-  propagatedBuildInputs = (if builtins.hasAttr "propagatedBuildInputs" oa then oa.propagatedBuildInputs else []) ++ [ stdenv.cc.cc.lib ];
+  propagatedBuildInputs = (oa.propagatedBuildInputs or []) ++ [ stdenv.cc.cc.lib ];
 
   cmakeFlags = oa.cmakeFlags ++ [
     "-DUSE_BUNDLED=OFF"

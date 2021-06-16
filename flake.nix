@@ -64,7 +64,6 @@
         ###############################################################################
         zsh-autosuggestions = pkgs.zsh-autosuggestions;
         zsh-fast-syntax-highlighting = pkgs.zsh-fast-syntax-highlighting;
-        zsh-syntax-highlighting = pkgs.zsh-syntax-highlighting;
         zsh-pandoc-completion = pkgs.zsh-pandoc-completion;
         zsh-vi-mode = pkgs.zsh-vi-mode;
       };

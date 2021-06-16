@@ -11,7 +11,6 @@ in
 
   zsh-autosuggestions = callPackage ./pkgs/zsh-plugins/zsh-autosuggestions { orig = prev.zsh-autosuggestions; };
   zsh-fast-syntax-highlighting = callPackage ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting { orig = prev.zsh-fast-syntax-highlighting; };
-  zsh-syntax-highlighting = callPackage ./pkgs/zsh-plugins/zsh-syntax-highlighting { orig = prev.zsh-syntax-highlighting; };
   zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { };
   zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { };
 

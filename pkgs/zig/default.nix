@@ -4,8 +4,7 @@ let zig_versions = with builtins; fromJSON (readFile ./index.json); in
 
 prev.zig.overrideAttrs (old: {
 
-  pname = "zig";
-  version = zig_versions.version;
+  version = zig_versions.date;
 
   src = builtins.fetchurl {
     url = zig_versions.x86_64-linux.tarball;
@@ -15,11 +14,17 @@ prev.zig.overrideAttrs (old: {
   nativeBuildInputs = [ ];
   buildInputs = [ ];
 
-  installPhase = ''
-    mkdir -p "$out/bin"
-    mv * "$out/"
-    rm -f $out/LICENSE
-    ln -s "$out/zig" "$out/bin/zig"
-  '';
+  doCheck = false;
+
+  installPhase = let version = zig_versions.version; in
+    ''
+      mkdir -p "$out/bin"
+      mv * "$out/"
+      install -m0644 -D $out/LICENSE $out/share/${old.pname}/LICENSE
+      rm -f $out/LICENSE
+      ln -s "$out/zig" "$out/bin/zig"
+
+      echo ${version} >> $out/VERSION
+    '';
 
 })

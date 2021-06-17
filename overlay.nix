@@ -18,7 +18,6 @@ in
 
   dwm = (import ./pkgs/dwm) final prev;
   dwmblocks = (import ./pkgs/dwmblocks) final prev;
-  st = (import ./pkgs/st) final prev;
 
   luaprompt = callPackage ./pkgs/luaprompt { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };

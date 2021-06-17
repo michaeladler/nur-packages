@@ -81,6 +81,7 @@ neovim-unwrapped
 nix-direnv
 rnix-lsp
 vcalendar-filter
+xplugd
 zig
 zls
 zsh-autosuggestions

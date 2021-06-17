@@ -26,6 +26,7 @@ in
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   goofys = callPackage ./pkgs/goofys { };
   xplugd = callPackage ./pkgs/xplugd { };
+  sscep = callPackage ./pkgs/sscep { };
 
   afew = (import ./pkgs/afew) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;

@@ -80,7 +80,6 @@ myVimPlugins/zig-vim
 neovim-unwrapped
 nix-direnv
 rnix-lsp
-st
 vcalendar-filter
 zig
 zls

@@ -110,12 +110,12 @@ in
   });
 
   completion-nvim = prev.vimPlugins.completion-nvim.overrideAttrs (old: {
-    version = "2021-06-01";
+    version = "2021-06-16";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "completion-nvim";
-      rev = "c8db953a8e9f4bc8183e31831297cf84d6f521b8";
-      sha256 = "0p35msrh7g100ayl0g8285q43v20n6hlv1grdb0rmw8sil0j881a";
+      rev = "d62fff879b29fa1ce915887a75305af0fff57d32";
+      sha256 = "0hfsz06djyja8phj099fmbg2sa9jj89rqxvizwhwdxadshmr1f20";
     };
   });
 
@@ -130,12 +130,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-06-15";
+    version = "2021-06-16";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "ef1ea929affe8462f8efca80138e5bd38f28598e";
-      sha256 = "12chdk6j1aj23h86rbibc6h6h8vfgki162vrxka9i6kya2ajr987";
+      rev = "f81570d1288fd974098e0f311f728469ca919155";
+      sha256 = "162j51rw1gv0gwip4d82qvmgpk7ky22xhhb2sjqm43zhjv3hqy0g";
     };
   });
 

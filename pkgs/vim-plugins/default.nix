@@ -8,12 +8,12 @@ in
 {
 
   ale = prev.vimPlugins.ale.overrideAttrs (old: {
-    version = "2021-05-27";
+    version = "2021-06-19";
     src = fetchFromGitHub {
       owner = "dense-analysis";
       repo = "ale";
-      rev = "1b08791228f5aca4545a3fba6699b29a003028fe";
-      sha256 = "1fwj1a1xixirc8gq1imivb92mgzb4vn6gh6ayv1575255d4rbzc2";
+      rev = "397d56f40c9ae606edd70c498efef015753963c6";
+      sha256 = "0d88hiq99z5pg1djchzw0i7rp37hqpv6j7qs164qwz50vry1cwx7";
       fetchSubmodules = true;
     };
   });
@@ -90,12 +90,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-06-17";
+    version = "2021-06-19";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "d0934e7b335283879fd3e4ca68adaee6a92688b0";
-      sha256 = "08dqxlypi6f0dvm5r5zffd1j38cmdsf53s5zvvz41wkxj3hgpxhl";
+      rev = "f176c41f1e67bffe2dbd28f371fa55c172cf1c56";
+      sha256 = "1yys3m1wmpwr44zx2my975rg2bj2d7j4pzcvfkyccqi36z3g7d8m";
     };
   });
 
@@ -190,12 +190,12 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "2021-06-17";
+    version = "2021-06-19";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "baf7f0f3bf32a3c7c16fb7ff27d3c4cb54b8f59b";
-      sha256 = "16xbhb1x799cn8amjc71dwg3a37xypyyd4s630f2g6anas496zmx";
+      rev = "268002fdba2f8f5a4e86574e3b9924ad6d42da20";
+      sha256 = "07zskz9b5s4cainjqj431b2skzdrhnm8agydmjxmw13qjmwj0q7z";
     };
   });
 

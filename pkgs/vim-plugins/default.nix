@@ -130,12 +130,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-06-16";
+    version = "2021-06-20";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "f81570d1288fd974098e0f311f728469ca919155";
-      sha256 = "162j51rw1gv0gwip4d82qvmgpk7ky22xhhb2sjqm43zhjv3hqy0g";
+      rev = "48e47b4d26e45977d27c06dc1bc116416ca9276d";
+      sha256 = "1zf4sv91i3qkr9d8cbn9vzk2sc5bknjsjdhzvpf1zjr72bxx3q37";
     };
   });
 

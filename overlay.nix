@@ -37,4 +37,7 @@ in
   myVimPlugins = prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev);
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
+  # my packages
+  shell-snoop = callPackage ./pkgs/shell-snoop { };
+
 }

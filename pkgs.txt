@@ -80,6 +80,7 @@ myVimPlugins/zig-vim
 neovim-unwrapped
 nix-direnv
 rnix-lsp
+shell-snoop
 sscep
 vcalendar-filter
 xplugd

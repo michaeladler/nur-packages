@@ -8,12 +8,12 @@ in
 {
 
   ale = prev.vimPlugins.ale.overrideAttrs (old: {
-    version = "2021-06-19";
+    version = "2021-06-22";
     src = fetchFromGitHub {
       owner = "dense-analysis";
       repo = "ale";
-      rev = "397d56f40c9ae606edd70c498efef015753963c6";
-      sha256 = "0d88hiq99z5pg1djchzw0i7rp37hqpv6j7qs164qwz50vry1cwx7";
+      rev = "a4ba421803d030a8967ede111ce921d439aa5fbb";
+      sha256 = "1p047is3c6cw3qbhcnxznqcp7754c7xis1zwkc7sjs7xrc17rkmn";
       fetchSubmodules = true;
     };
   });
@@ -50,12 +50,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "2021-06-17";
+    version = "2021-06-22";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "1456c2434662f49e4527440e89f572bbddde95f0";
-      sha256 = "0pf90z0pan3dnga5j85dvgki1qi5b1f17d9jysn26nawmg9lax34";
+      rev = "bafd08a0993584a7f686498e1944a38087487c14";
+      sha256 = "1775nll0hjd5v057f365ckk54vxzzla24w8xr00dvswjg6w1jzb0";
     };
   });
 
@@ -150,12 +150,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-06-17";
+    version = "2021-06-23";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "d1f6a2a3d8372725e777e96740bfdf0cde7eb2c8";
-      sha256 = "13xqk8vy7v3ib36vdhg0ckzljg1g6rr5859xm4c06wrqxf4x2j2c";
+      rev = "55c5620aa318a11823b5dd3d3cd69265f3763339";
+      sha256 = "0r057zj21c8cpha7qvvcj2mjm4mynwrygwz0qjjzwbbs5jfrhdca";
     };
   });
 
@@ -440,12 +440,12 @@ in
   });
 
   zig-vim = prev.vimPlugins.zig-vim.overrideAttrs (old: {
-    version = "2021-06-15";
+    version = "2021-06-21";
     src = fetchFromGitHub {
       owner = "ziglang";
       repo = "zig.vim";
-      rev = "c339f13d9e840a9b4e392d104f9a0a2960f4a49a";
-      sha256 = "1w8127zhzz74gzclg5bv4kl11cwhi48wqqc1x176rsrlac7qfpp1";
+      rev = "41c26d6f1d32406b401342857d1e8ae3ec413884";
+      sha256 = "1mwm6i7krndx4r0n2prcc0b1187wglsfhbm9ibyy7hmi9l1cids6";
     };
   });
 

@@ -29,8 +29,8 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
     src = fetchFromGitHub {
       owner = "dracula";
       repo = "tmux";
-      rev = "e25e7a315787f310c2e95098cd8c735693998f89";
-      sha256 = "022l0i8hx06wl366iz1rv3vq4gkgb76m0v36xzdmr533p52wbhlz";
+      rev = "8748783b6062a1936aa618bae5ef4d5e7452640d";
+      sha256 = "0i68jhd2a50i0k167q4ba27r281nshyr9p4l8vxp4ky73w8p50v0";
     };
   });
 

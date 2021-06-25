@@ -24,6 +24,7 @@ myVimPlugins/completion-buffers
 myVimPlugins/completion-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts
+myVimPlugins/dracula-vim
 myVimPlugins/editorconfig-vim
 myVimPlugins/file-line
 myVimPlugins/friendly-snippets

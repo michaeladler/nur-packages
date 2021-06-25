@@ -30,6 +30,8 @@ myVimPlugins/friendly-snippets
 myVimPlugins/galaxyline-nvim
 myVimPlugins/gina-vim
 myVimPlugins/indent-guides-nvim
+myVimPlugins/lsp-status-nvim
+myVimPlugins/lspkind-nvim
 myVimPlugins/neoformat
 myVimPlugins/nvim-colorizer-lua
 myVimPlugins/nvim-compe

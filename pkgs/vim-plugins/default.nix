@@ -50,12 +50,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "2021-06-22";
+    version = "2021-06-24";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "bafd08a0993584a7f686498e1944a38087487c14";
-      sha256 = "1775nll0hjd5v057f365ckk54vxzzla24w8xr00dvswjg6w1jzb0";
+      rev = "2324961b5b00a53ca5a9a2a13053b5025e9cf063";
+      sha256 = "0bsw3a8r8gg1204al6b5lmbfdiyzjiyyj39h0fzgkd0rmn0i1ag5";
     };
   });
 
@@ -150,12 +150,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-06-23";
+    version = "2021-06-25";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "55c5620aa318a11823b5dd3d3cd69265f3763339";
-      sha256 = "0r057zj21c8cpha7qvvcj2mjm4mynwrygwz0qjjzwbbs5jfrhdca";
+      rev = "c699cc2e47fe302e9f414356cceb20a309be5bc6";
+      sha256 = "0w7wxq6j0kh8vparr98m07jnaid7ddmxpzfs6ahzk7vq20rqki9z";
     };
   });
 
@@ -440,12 +440,12 @@ in
   });
 
   zig-vim = prev.vimPlugins.zig-vim.overrideAttrs (old: {
-    version = "2021-06-21";
+    version = "2021-06-24";
     src = fetchFromGitHub {
       owner = "ziglang";
       repo = "zig.vim";
-      rev = "41c26d6f1d32406b401342857d1e8ae3ec413884";
-      sha256 = "1mwm6i7krndx4r0n2prcc0b1187wglsfhbm9ibyy7hmi9l1cids6";
+      rev = "fb534e7d12be7e529f79ad5ab99c08dc99f53294";
+      sha256 = "17dpkkgazrzym2yqhb6r07y3hxl3hq9yzwkrb1zii94ss4d8lhw9";
     };
   });
 

@@ -129,6 +129,26 @@ in
     };
   });
 
+  lspkind-nvim = prev.vimPlugins.lspkind-nvim.overrideAttrs (old: {
+    version = "2021-05-22";
+    src = fetchFromGitHub {
+      owner = "onsails";
+      repo = "lspkind-nvim";
+      rev = "3469f0c9a6767625d532a74a167f5d6ba2b8c5bf";
+      sha256 = "1ff1i6m9kk3n36n24c109g6yddcbbzm10iigvi0pv1z2fdpsrl07";
+    };
+  });
+
+  lsp-status-nvim = prev.vimPlugins.lsp-status-nvim.overrideAttrs (old: {
+    version = "2021-05-20";
+    src = fetchFromGitHub {
+      owner = "nvim-lua";
+      repo = "lsp-status.nvim";
+      rev = "54c395248539d65fddda46f7d92e3421856874c1";
+      sha256 = "1qfrfckdbqyav8l1g7lwpjrrwh559nm71ki74qd1xd18y1h63ny2";
+    };
+  });
+
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
     version = "2021-06-20";
     src = fetchFromGitHub {

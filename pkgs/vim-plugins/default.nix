@@ -28,6 +28,16 @@ in
     };
   });
 
+  dracula-vim = prev.vimPlugins.dracula-vim.overrideAttrs (old: {
+    version = "2021-06-04";
+    src = fetchFromGitHub {
+      owner = "dracula";
+      repo = "vim";
+      rev = "869f70a7603b77cdb2f63983dd286f3f61b7a966";
+      sha256 = "031c000nr2raw0v6bdnisczjz20y5iw0yapj8wih0nc703dirhih";
+    };
+  });
+
   editorconfig-vim = prev.vimPlugins.editorconfig-vim.overrideAttrs (old: {
     version = "2021-04-04";
     src = fetchFromGitHub {

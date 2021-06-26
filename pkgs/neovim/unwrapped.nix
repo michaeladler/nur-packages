@@ -3,13 +3,13 @@ final: prev:
 # based on https://github.com/neovim/neovim/blob/master/contrib/flake.nix, but improved
 # see also https://github.com/rvolosatovs/nixpkgs/tree/update/neovim
 prev.neovim-unwrapped.overrideAttrs (oa: {
-  version = "2021-06-24";
+  version = "2021-06-25";
 
   src = prev.fetchFromGitHub {
     owner = "neovim";
     repo = "neovim";
-    rev = "510ed996d2a92de527c70888208e3ad7ce157126";
-    sha256 = "0fwi51jy17svshd1vsxq5vz290rkq59fq1d71xqxzhvj2msp10l7";
+    rev = "c1120ad0e1adf8b34ee10b63b2134fcb0d580fce";
+    sha256 = "1kldr6ji4b1y8ck0jlmcmh7672ajacjzkzvraalp6jmsffq65hwz";
     fetchSubmodules = true;
   };
 

@@ -27,6 +27,7 @@ in
   goofys = callPackage ./pkgs/goofys { };
   xplugd = callPackage ./pkgs/xplugd { };
   sscep = callPackage ./pkgs/sscep { };
+  crx3 = callPackage ./pkgs/crx3 { };
 
   afew = (import ./pkgs/afew) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;

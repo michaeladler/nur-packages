@@ -1,5 +1,6 @@
 afew
 cpio
+crx3
 dwm
 dwmblocks
 fstabfmt

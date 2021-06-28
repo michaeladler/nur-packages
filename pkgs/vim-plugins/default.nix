@@ -60,12 +60,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "2021-06-25";
+    version = "2021-06-27";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "3dca3fc854b72a72233341f4ae51cebd7a864234";
-      sha256 = "1saasvazmxq5ll0fna0a8kx5q8lq9mg0ldkj1k4g13h9g34sdwgg";
+      rev = "3361919766dde206849b901163abd7cb820e59a7";
+      sha256 = "0q25v9qlyjv58wlq6yzjajmnzi3rw8yiz9amjia6h0bzhnfxwn3l";
     };
   });
 
@@ -260,12 +260,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-06-14";
+    version = "2021-06-27";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "6ac5ee0854fe02d651cadf2fc97a2463ff92f322";
-      sha256 = "1k2glya8cd000kzfvx5fif9fcqvcq1k2vrkwyzhfm4yngz7bxm1p";
+      rev = "e5bd4963da81b5d044749ee4507061801aeb0f78";
+      sha256 = "1dskr91qiark1z08yfjkbrnf1zvy2mci4avkdn574b7pz8v72lzb";
     };
   });
 
@@ -480,12 +480,12 @@ in
   });
 
   vim-go = prev.vimPlugins.vim-go.overrideAttrs (old: {
-    version = "2021-06-26";
+    version = "2021-06-27";
     src = fetchFromGitHub {
       owner = "fatih";
       repo = "vim-go";
-      rev = "e32b1a46ad5fc1fcb6765ef6150726c0af174c68";
-      sha256 = "04pbqwi4n0dyhhfwi3kp78dnyxdza2bg5pn7wbbkz7c6k3jhjysa";
+      rev = "d6a58a1ab6e01aed1b08c2c2a831c625748306bf";
+      sha256 = "0iv4q20g9hrlbva6vy7hf63cmn9y7k5dws3qikk2674992s5r4lf";
     };
   });
 

@@ -38,6 +38,8 @@ in
   myVimPlugins = prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev);
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
+  firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
+
   # my packages
   shell-snoop = callPackage ./pkgs/shell-snoop { };
 

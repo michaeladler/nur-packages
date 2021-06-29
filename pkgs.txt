@@ -3,6 +3,7 @@ cpio
 crx3
 dwm
 dwmblocks
+firefoxAddons/dracula-dark-colorscheme
 fstabfmt
 goofys
 luaprompt

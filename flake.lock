@@ -63,6 +63,21 @@
         "type": "indirect"
       }
     },
+    "nur": {
+      "locked": {
+        "lastModified": 1624955944,
+        "narHash": "sha256-SO42jje0Cos6n5E7ck2O0HDN0vofQa6PB51stoAtJ+c=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "bd24c411db2bd68b3b996483bb636a2d3140e401",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
     "rnix-lsp-src": {
       "inputs": {
         "naersk": "naersk",
@@ -89,6 +104,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
+        "nur": "nur",
         "rnix-lsp-src": "rnix-lsp-src"
       }
     },

@@ -42,7 +42,32 @@
 
         packages = flake-utils.lib.flattenTree {
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
-          inherit (pkgs) afew cpio luaprompt neovim-unwrapped nix-direnv vcalendar-filter zig zls zzz fstabfmt myTmuxPlugins myVimPlugins dwm dwmblocks zsh-autosuggestions zsh-fast-syntax-highlighting zsh-pandoc-completion zsh-vi-mode goofys xplugd sscep crx3 shell-snoop;
+          inherit (pkgs)
+            afew
+            cpio
+            crx3
+            dwm
+            dwmblocks
+            fstabfmt
+            goofys
+            luaprompt
+            msktutil
+            myTmuxPlugins
+            myVimPlugins
+            neovim-unwrapped
+            nix-direnv
+            shell-snoop
+            sscep
+            vcalendar-filter
+            xplugd
+            zig
+            zls
+            zsh-autosuggestions
+            zsh-fast-syntax-highlighting
+            zsh-pandoc-completion
+            zsh-vi-mode
+            zzz
+            ;
         };
 
         defaultPackage = pkgs.hello;

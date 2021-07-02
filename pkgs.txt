@@ -6,6 +6,7 @@ dwmblocks
 fstabfmt
 goofys
 luaprompt
+msktutil
 myTmuxPlugins/continuum
 myTmuxPlugins/copycat
 myTmuxPlugins/dracula

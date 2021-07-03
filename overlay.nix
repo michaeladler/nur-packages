@@ -26,8 +26,10 @@ in
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   goofys = callPackage ./pkgs/goofys { };
   xplugd = callPackage ./pkgs/xplugd { };
-  sscep = callPackage ./pkgs/sscep { };
   crx3 = callPackage ./pkgs/crx3 { };
+  btrfs-list = callPackage ./pkgs/btrfs-list { };
+
+  sscep = callPackage ./pkgs/sscep { };
   msktutil = callPackage ./pkgs/msktutil { };
 
   afew = (import ./pkgs/afew) final prev;

@@ -44,6 +44,7 @@
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
             afew
+            btrfs-list
             cpio
             crx3
             dwm

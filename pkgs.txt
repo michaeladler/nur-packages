@@ -1,4 +1,5 @@
 afew
+btrfs-du
 btrfs-list
 cpio
 crx3

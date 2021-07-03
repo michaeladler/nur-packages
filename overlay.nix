@@ -28,6 +28,7 @@ in
   xplugd = callPackage ./pkgs/xplugd { };
   crx3 = callPackage ./pkgs/crx3 { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
+  btrfs-du = callPackage ./pkgs/btrfs-du { };
 
   sscep = callPackage ./pkgs/sscep { };
   msktutil = callPackage ./pkgs/msktutil { };

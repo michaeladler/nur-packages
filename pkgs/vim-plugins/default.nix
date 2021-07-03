@@ -100,12 +100,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-07-01";
+    version = "2021-07-02";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "a46dfe7d7fc8f7af5bb84006db45ba11fb7b786c";
-      sha256 = "161zrqvw5kpcphn747cpa4388x4c2flps5qwxkl5yxkn320937im";
+      rev = "077329e6bd1704d1acdff087ef1a73df23e92789";
+      sha256 = "0spnybax3zqcac1by0785v5zh4gl07lpgq6ivnnx1wyhfky87jx3";
     };
   });
 
@@ -160,12 +160,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-06-30";
+    version = "2021-07-02";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "161ec66bda585fd7ba402cf7434bac87c927734f";
-      sha256 = "1d4qwxrkx9cbbrxddg2n9f7sszmp23jnx83g52yydsxhlxq8dj8l";
+      rev = "8435587084210c0779a27ca59d98ce4b9c6af0f6";
+      sha256 = "1xg56c5b3n0igc4m3wik4ly8xcv8v3rhqsbza2yvk5g26ix3y472";
     };
   });
 
@@ -184,8 +184,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "106eb8e5008691a1e1969c213c2d12a350416347";
-      sha256 = "0flkfa8xn5gpk9sipmmngqvif85s9xj0p15i6fn63ys95xqnf9jk";
+      rev = "4eb19c9e6da5c1628a5e2b4445595ecb39019efc";
+      sha256 = "15wvrcyfaxqvwwlba36qfq039cy6asqfg0aw8b9lzyagwyhr6ss7";
     };
   });
 
@@ -220,12 +220,12 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "2021-06-30";
+    version = "2021-07-02";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "18da6621459032aa5608b760622f0bc8fdc0535c";
-      sha256 = "1z1n3jpxmz3672f8bd6s898mlqjf17pv11qqy15l2npfd9crh5sv";
+      rev = "ca51b6842cd8021f58dc45c89b3e8d7994e0bf8f";
+      sha256 = "071gdhrrbrhdmagai3q8c4yzc9kn794aa7kkacnknkm5kzswb8hg";
     };
   });
 
@@ -260,12 +260,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-01";
+    version = "2021-07-02";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "5a53ec5c2fdab10ca8775d3979b1a85e63d57953";
-      sha256 = "1mr98irwsc5pmj63ssxd3cdwb3x31lalbkk1pyp79bswdfjmx0nl";
+      rev = "c5a6ed16e2022e2d19936e00a8a39a97cba39f11";
+      sha256 = "0fac4yy769d3hx5ql6xivahzm9llbqkywsdqbl7jdzgg2nix9a9m";
     };
   });
 

@@ -1,4 +1,5 @@
 afew
+btrfs-list
 cpio
 crx3
 dwm

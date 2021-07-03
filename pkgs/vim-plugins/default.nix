@@ -489,18 +489,6 @@ in
     };
   });
 
-  galaxyline-nvim = prev.vimPlugins.galaxyline-nvim.overrideAttrs (old: {
-    version = "2021-04-25";
-    src = fetchFromGitHub {
-      owner = "glepnir";
-      repo = "galaxyline.nvim";
-      rev = "d544cb9d0b56f6ef271db3b4c3cf19ef665940d5";
-      sha256 = "1390lqsqdcj1q89zn6y5qrm1id7p8fnpy07vlz6mm4cki47211mb";
-    };
-
-    dependencies = (old.dependencies or [ ]) ++ [ final.vimPlugins.nvim-web-devicons ];
-  });
-
   vim-pandoc-syntax = prev.vimPlugins.vim-pandoc-syntax.overrideAttrs (old: {
     version = "2021-03-10";
     src = fetchFromGitHub {
@@ -697,6 +685,21 @@ in
     };
 
     meta.homepage = "https://github.com/micarmst/vim-spellsync";
+  });
+
+  lualine-nvim = buildVimPluginFrom2Nix ({
+    pname = "lualine-nvim";
+    version = "2021-05-27";
+    src = fetchFromGitHub {
+      owner = "hoob3rt";
+      repo = "lualine.nvim";
+      rev = "9726824f1dcc8907632bc7c32f9882f26340f815";
+      sha256 = "0gmbv0pbswkxjd4qw7dq66gp3fj594di0pgkb47yh3b46id8vkyj";
+    };
+
+    dependencies = [ final.vimPlugins.nvim-web-devicons ];
+
+    meta.homepage = "https://github.com/hoob3rt/lualine.nvim";
   });
 
 }

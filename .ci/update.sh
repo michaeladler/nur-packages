@@ -31,7 +31,7 @@ find pkgs -name "*.nix" -not -path "pkgs/zig/*" -print0 | xargs -0 update-nix-fe
 
 git diff --exit-code || {
     nix --experimental-features "nix-command flakes" flake check
-    git commit -am 'choire: update packages'
+    git commit -am 'chore: update packages'
 }
 
 exit 0

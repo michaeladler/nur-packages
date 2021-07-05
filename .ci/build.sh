@@ -14,7 +14,7 @@ bash "$DIR/extract_pkg_names.sh" >pkgs.txt
 
 git diff --exit-code pkgs.txt || {
     git add pkgs.txt
-    git commit -m 'choire: update package list'
+    git commit -m 'chore: update package list'
 }
 
 sed -E -e 's/(.*)/.#\1/' <pkgs.txt |

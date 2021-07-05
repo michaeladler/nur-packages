@@ -84,7 +84,6 @@ myVimPlugins/vim-vinegar
 myVimPlugins/vim-vsnip
 myVimPlugins/vim-which-key
 myVimPlugins/zig-vim
-neovim-unwrapped
 nix-direnv
 rnix-lsp
 shell-snoop

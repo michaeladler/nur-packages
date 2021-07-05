@@ -56,7 +56,6 @@
             msktutil
             myTmuxPlugins
             myVimPlugins
-            neovim-unwrapped
             nix-direnv
             shell-snoop
             sscep

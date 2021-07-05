@@ -6,8 +6,6 @@ let
 in
 
 {
-  neovim-unwrapped = (import ./pkgs/neovim/unwrapped.nix) final prev;
-
   zsh-autosuggestions = (import ./pkgs/zsh-plugins/zsh-autosuggestions) final prev;
   zsh-fast-syntax-highlighting = (import ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting) final prev;
   zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { };

@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation {
   pname = "zsh-vi-mode";
-  version = "2021-07-03";
+  version = "2021-07-04";
 
   src = fetchFromGitHub {
     owner = "jeffreytse";
     repo = "zsh-vi-mode";
-    rev = "08fcc95d1cf67a559db466281f332640dc764b2c";
-    sha256 = "13pq79qhfcjbkjxrx5x3p23v00fn64pbb0gsyjn0r8i45vnpzgnj";
+    rev = "53be41902f6e264912cd5cf50b9f1c11d3ffa10f";
+    sha256 = "0spwxilzzckdaj8kywhpgw4rqfaa5dcc8mfbay3aynsy5r2x38fa";
   };
 
   installPhase = ''

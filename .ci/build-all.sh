@@ -1,11 +1,9 @@
 #!/usr/bin/env nix-shell
-#!nix-shell -p nixUnstable -p bash -i bash
+#!nix-shell -p nixUnstable -p git -p bash -i bash
 # shellcheck shell=bash
 set -eux -o pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 ROOT_DIR="${DIR}/.."
-
-source "$DIR/git.inc"
 
 cd "$ROOT_DIR"
 

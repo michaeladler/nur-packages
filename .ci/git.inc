@@ -1,4 +1,0 @@
-export GIT_AUTHOR_NAME="Github Actions"
-export GIT_AUTHOR_EMAIL="actions@github"
-export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
-export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL

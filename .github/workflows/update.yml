@@ -22,14 +22,15 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: update
-        run: ./.ci/update.sh
+        run: .ci/update.sh
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
 
       - name: build
-        run: ./.ci/build.sh
+        run: .ci/build.sh
 
       - name: push
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: git push "https://$GITHUB_TOKEN@github.com/michaeladler/nur-packages" HEAD:master
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'

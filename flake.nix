@@ -21,6 +21,7 @@
         pkgs = import nixpkgs {
           inherit system;
           overlays = [ self.overlay ];
+          config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {
           inherit system;
@@ -57,6 +58,7 @@
             myTmuxPlugins
             myVimPlugins
             nix-direnv
+            peda
             shell-snoop
             sscep
             vcalendar-filter

@@ -27,6 +27,7 @@ in
   crx3 = callPackage ./pkgs/crx3 { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
+  peda = callPackage ./pkgs/peda { };
 
   sscep = callPackage ./pkgs/sscep { };
   msktutil = callPackage ./pkgs/msktutil { };

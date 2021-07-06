@@ -85,6 +85,7 @@ myVimPlugins/vim-vsnip
 myVimPlugins/vim-which-key
 myVimPlugins/zig-vim
 nix-direnv
+peda
 rnix-lsp
 shell-snoop
 sscep

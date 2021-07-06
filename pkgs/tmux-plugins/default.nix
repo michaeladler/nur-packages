@@ -45,12 +45,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   resurrect = prev.tmuxPlugins.resurrect.overrideAttrs (oa: {
-    version = "2021-03-18";
+    version = "2021-07-05";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-resurrect";
-      rev = "abbc4fbfc4a51948478d6b05f0c0d554111663a8";
-      sha256 = "077xk332wd9awwhv32p5hnw7s70881aa4jcaf1nqms64z4gjdswh";
+      rev = "716b958145e2709e9fd3639ff24e1d1e4f26ff77";
+      sha256 = "01j7b6fdam006yr3a2zpnjk2gwzbzc9b3wdnva5p4w5bhz85w76y";
     };
 
     patches = [

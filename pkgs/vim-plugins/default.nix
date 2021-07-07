@@ -100,12 +100,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-07-05";
+    version = "2021-07-06";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "00ebf180d01f7f020c6c19bd8caed59f722ccc04";
-      sha256 = "1qasn6qx4qna0p364b2kbyrd3bdw7zkzys0d2x9rgc5pn7jx80f0";
+      rev = "964ba4adcb23c5d48312b5002818d1c22e914dc2";
+      sha256 = "1410afvggsd54931cdgbcp4v3dkh4xajxjbiynkvws1fyg0ypcjj";
     };
   });
 
@@ -160,12 +160,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-07-05";
+    version = "2021-07-06";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "4e8a6bb35f80e5e37c14b92b5db9abaf2dc6605f";
-      sha256 = "1zz0jf3cv7v1v3ixklld6ls4fcj05d8yy7ww20s85nqvalv5l66r";
+      rev = "e01b305a03f0b43899d31c5bdbfa2f972cf19bbf";
+      sha256 = "1s45z3pz50czyhffxcv67m7rc4jak4hvx69b9ilc37j6hb1l3l9a";
     };
   });
 
@@ -180,12 +180,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-07-06";
+    version = "2021-07-07";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "53d92f65bddf6623000b81ca5beae5ee3a6a736e";
-      sha256 = "18irdbpwqpp6xjmqk7bjlvd8k2mzyg77xgw5k4y2y5vcjg8jazfq";
+      rev = "c37e79803e21abfae960174a6c661da166c87e8b";
+      sha256 = "1dd4qmv6yrmx1b5qdz5yc5sipgag3qkgrkkw0y7wnvvw42vgz916";
     };
   });
 
@@ -400,12 +400,12 @@ in
   });
 
   vim-startuptime = prev.vimPlugins.vim-startuptime.overrideAttrs (old: {
-    version = "2021-07-04";
+    version = "2021-07-06";
     src = fetchFromGitHub {
       owner = "dstein64";
       repo = "vim-startuptime";
-      rev = "d4cc839f4a7c8fc0b7fbf8ec6a11ef1c1be846e1";
-      sha256 = "05yz4cpxx7n6ggkm8n9s0q387syllbn8s8vn4fwchnml4jdqigfq";
+      rev = "de17adceca7de20d5d59592708a6a7ab457bb16c";
+      sha256 = "1mavc92i2sq4v3lps82kcwg0f5sk386f4q7mhwbc9gbjya8b124j";
     };
   });
 
@@ -490,12 +490,12 @@ in
   });
 
   vim-pandoc-syntax = prev.vimPlugins.vim-pandoc-syntax.overrideAttrs (old: {
-    version = "2021-03-10";
+    version = "2021-07-06";
     src = fetchFromGitHub {
       owner = "vim-pandoc";
       repo = "vim-pandoc-syntax";
-      rev = "aba6b5596cf0e879a83a2aa5edc93e5e5753bea8";
-      sha256 = "0hgzmfcyl3qhdmyyxdaynlm7psk164v8xg5j1kvdaxxgj4lwbnig";
+      rev = "5056e635ecf406e65d7d28651bab55600dd18741";
+      sha256 = "0mzvknzk42x5h2p3l9gmmxhbardfkrirr8wzfx460cm5daps6j2q";
     };
   });
 

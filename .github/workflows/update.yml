@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  update-flakes:
+  update-all:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: update
-        run: .ci/update-flakes.sh
+        run: .ci/update-all.sh
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
           GIT_AUTHOR_NAME: "Github Actions"

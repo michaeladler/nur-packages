@@ -9,16 +9,15 @@ echo "experimental-features = nix-command flakes" >>~/.config/nix/nix.conf
 printf "access-tokens = github.com=%s" "$GITHUB_TOKEN" >>~/.config/nix/nix.conf
 chmod 600 ~/.config/nix/nix.conf
 
-git diff --exit-code >/dev/null
-
 ROOT_DIR=$(readlink -f "${DIR}/..")
 cd "$ROOT_DIR"
 
 # flakes
 nix --experimental-features "nix-command flakes" flake update
 
-# firefox addons
+# firefox and friends
 nix run '.#firefox-addons-generator' -- pkgs/firefox-addons/addons.json pkgs/firefox-addons/generated-addons.nix
+pkgs/firefox-bin/update.sh
 
 # everything else
 find pkgs -name "*.nix" -not -path "pkgs/zig/*" -print0 | xargs -0 update-nix-fetchgit

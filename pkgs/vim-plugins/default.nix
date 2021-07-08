@@ -104,8 +104,8 @@ in
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "83b33e70f4b210ebfae86a2ec2d054ca31f467dd";
-      sha256 = "0zgyvqsmc33k9m7ckgs0s8wi365w5xlywz5xh7idlvhzw4r29y5c";
+      rev = "d036e57e43996bc215757b28fa295992e08f706e";
+      sha256 = "061631kic9yklqwhffd83fdmh3v0x3pxg2qdxw9nhclalwndsivb";
     };
   });
 
@@ -260,12 +260,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-03";
+    version = "2021-07-08";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "38907ce7d74f26d123bfbb8ecf55bc9616b5ece5";
-      sha256 = "1dhjpcc6y6vxrlx9333hnjb6w20zmgs536s4kz6yzvn3w9mgk1kq";
+      rev = "d5a8e48aa632508f5d7d6d428244eaf150adad25";
+      sha256 = "1vdw8k08k54cxz9l16yhc7g9ins7hqjb2snvlrbnangl9b9d2kxg";
     };
   });
 

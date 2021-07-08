@@ -51,6 +51,7 @@
             crx3
             dwm
             dwmblocks
+            firefox-bin
             fstabfmt
             goofys
             luaprompt

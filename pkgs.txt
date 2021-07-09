@@ -26,11 +26,13 @@ myVimPlugins/FixCursorHold-nvim
 myVimPlugins/barbar-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts
+myVimPlugins/diffview-nvim
 myVimPlugins/friendly-snippets
 myVimPlugins/indent-guides-nvim
 myVimPlugins/lsp-status-nvim
 myVimPlugins/lspkind-nvim
 myVimPlugins/lualine-nvim
+myVimPlugins/neogit
 myVimPlugins/nvim-compe
 myVimPlugins/nvim-lightbulb
 myVimPlugins/nvim-lspconfig

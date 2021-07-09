@@ -49,6 +49,7 @@ myVimPlugins/vim-ingo-library
 myVimPlugins/vim-spellsync
 myVimPlugins/vim-vsnip
 nix-direnv
+oelint-adv
 peda
 rnix-lsp
 shell-snoop

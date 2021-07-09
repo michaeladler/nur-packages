@@ -157,6 +157,26 @@ in
     };
   });
 
+  neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
+    version = "2021-07-09";
+    src = fetchFromGitHub {
+      owner = "TimUntersberger";
+      repo = "neogit";
+      rev = "7a133c83b174bb40019f42ecc2a80c09bff53f33";
+      sha256 = "0y78h67m7jq65ngc8jd8qdlxsb4rhsxz21dxjyy5bx7ic73kqv1v";
+    };
+  });
+
+  diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {
+    version = "2021-07-04";
+    src = fetchFromGitHub {
+      owner = "sindrets";
+      repo = "diffview.nvim";
+      rev = "1936824f5986c986befad5995e7bf87ba124d109";
+      sha256 = "16h82yn7g9jq2chdb4wjjvz6akb0r06wjjvqpj9xkp82rx55m4ix";
+    };
+  });
+
   ###############################################################################
   # the following plugins are not (yet) available in nixpkgs:
   ###############################################################################

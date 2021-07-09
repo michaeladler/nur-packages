@@ -23,8 +23,7 @@ python3Packages.buildPythonPackage rec {
 
   meta = with lib; {
     homepage = "https://github.com/priv-kweihmann/oelint-adv";
-    description = metadata.description;
+    description = "Linter for bitbake-recipes";
     license = licenses.bsd2;
-    maintainers = "Michael Adler <therisen06@gmail.com";
   };
 }

@@ -59,6 +59,7 @@
             myTmuxPlugins
             myVimPlugins
             nix-direnv
+            oelint-adv
             peda
             shell-snoop
             sscep

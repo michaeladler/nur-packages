@@ -13,8 +13,7 @@ python3Packages.buildPythonPackage rec {
 
   meta = with lib; {
     homepage = "https://github.com/priv-kweihmann/oelint-parser";
-    description = metadata.description;
+    description = "alternative parser for bitbake recipes";
     license = licenses.bsd2;
-    maintainers = "Michael Adler <therisen06@gmail.com";
   };
 }

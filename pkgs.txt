@@ -48,6 +48,7 @@ myVimPlugins/vim-bitbake
 myVimPlugins/vim-boxdraw
 myVimPlugins/vim-enmasse
 myVimPlugins/vim-ingo-library
+myVimPlugins/vim-nightfly-guicolors
 myVimPlugins/vim-spellsync
 myVimPlugins/vim-vsnip
 nix-direnv

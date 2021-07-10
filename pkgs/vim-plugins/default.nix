@@ -346,4 +346,17 @@ in
     meta.homepage = "https://github.com/hoob3rt/lualine.nvim";
   });
 
+  vim-nightfly-guicolors = buildVimPluginFrom2Nix ({
+    pname = "vim-nightfly-guicolors";
+    version = "2021-06-09";
+    src = fetchFromGitHub {
+      owner = "bluz71";
+      repo = "vim-nightfly-guicolors";
+      rev = "828db323a0a804c3e5d401598bd69049ebe4b89c";
+      sha256 = "000q8x64y6khmzf48p158vgw18965qyjdxfb3ls4jv2bk7372m2p";
+    };
+
+    meta.homepage = "https://github.com/bluz71/vim-nightfly-guicolors";
+  });
+
 }

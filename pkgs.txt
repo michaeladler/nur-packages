@@ -47,6 +47,7 @@ myVimPlugins/telescope-nvim
 myVimPlugins/vim-SpellCheck
 myVimPlugins/vim-bitbake
 myVimPlugins/vim-boxdraw
+myVimPlugins/vim-buftabline
 myVimPlugins/vim-enmasse
 myVimPlugins/vim-ingo-library
 myVimPlugins/vim-nightfly-guicolors

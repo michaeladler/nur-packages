@@ -27,6 +27,7 @@ myVimPlugins/barbar-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts
 myVimPlugins/diffview-nvim
+myVimPlugins/doom-one-vim
 myVimPlugins/friendly-snippets
 myVimPlugins/indent-guides-nvim
 myVimPlugins/lsp-status-nvim

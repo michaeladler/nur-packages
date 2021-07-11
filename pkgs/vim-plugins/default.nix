@@ -359,4 +359,17 @@ in
     meta.homepage = "https://github.com/bluz71/vim-nightfly-guicolors";
   });
 
+  doom-one-vim = buildVimPluginFrom2Nix ({
+    pname = "doom-one-vim";
+    version = "2021-05-18";
+    src = fetchFromGitHub {
+      owner = "romgrk";
+      repo = "doom-one.vim";
+      rev = "80bba63483d33a0cfa270219e990e26919b3a87f";
+      sha256 = "16icxzm01lfilyr3h1dl1bv2rwsajp55ay018273inkbva5ycxza";
+    };
+
+    meta.homepage = "https://github.com/romgrk/doom-one.vim";
+  });
+
 }

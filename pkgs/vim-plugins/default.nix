@@ -28,12 +28,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-07-08";
+    version = "2021-07-10";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "d036e57e43996bc215757b28fa295992e08f706e";
-      sha256 = "061631kic9yklqwhffd83fdmh3v0x3pxg2qdxw9nhclalwndsivb";
+      rev = "8024ea3b44db0e90b1048dfbf14cfb97439dd9c0";
+      sha256 = "1fmnp1imyr1rkfzcyy0jk5lvap2yx011b5q9zr8jrjdk25n03n8x";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-07-08";
+    version = "2021-07-09";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "95d47960d99b1695e8084020cfd954d98b246a05";
-      sha256 = "1kkw81ajqqhng0mlwf2d59vl3cj56zhjxcg769zyq3gdcixckq4h";
+      rev = "e5e06b4254ccf720c981cbfc4c2733548b4d88c5";
+      sha256 = "1afmb701y4gmv447sfqsx74c8zn24d1rxb54svgw6iyk3iq0jjyl";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-07-08";
+    version = "2021-07-09";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "a2b9b9bd9d21d6309c33dc746d2b5671bb3b8aa7";
-      sha256 = "17fa69av9r6c52h44lpzhmbz681xnyivqgg9wf25dq46kdwvqrvq";
+      rev = "f6cd2d0b2fe43d4b9f805513e00d54e6f6693a92";
+      sha256 = "03yv556r6ck97j8ka6cqkivqd0xx9ski2r05r8a5cl0hmgzc17p8";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-08";
+    version = "2021-07-10";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "1dd6f8408b6e3334ddba695a7c4e0fd500f9bff6";
-      sha256 = "1jkfaln6m21a1vb44qf6aj1xzl3acfx6d22lzhxn2br2n5ljm5cg";
+      rev = "7cdaaaa39dde06b7372aa1b326c272ad11a95d4e";
+      sha256 = "1fr921za1lq635vpvq1xa5h90lp9wdd074mq8bm68y54lax7mi9r";
     };
   });
 

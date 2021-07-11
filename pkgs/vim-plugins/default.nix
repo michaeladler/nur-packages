@@ -372,4 +372,18 @@ in
     meta.homepage = "https://github.com/romgrk/doom-one.vim";
   });
 
+  vim-buftabline = buildVimPluginFrom2Nix ({
+    pname = "vim-buftabline";
+    version = "2020-12-13";
+    src = fetchFromGitHub {
+      owner = "ap";
+      repo = "vim-buftabline";
+      rev = "73b9ef5dcb6cdf6488bc88adb382f20bc3e3262a";
+      sha256 = "06xv5024lfnvjzxwggiaga01rxkm12rffps7fipqj3drgyd6mxsv";
+      fetchSubmodules = true;
+    };
+
+    meta.homepage = "https://github.com/ap/vim-buftabline";
+  });
+
 }

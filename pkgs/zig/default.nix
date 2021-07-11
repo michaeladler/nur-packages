@@ -6,7 +6,7 @@ prev.zig.overrideAttrs (old: {
 
   version = zig_versions.date;
 
-  src = builtins.fetchurl {
+  src = prev.fetchurl {
     url = zig_versions.x86_64-linux.tarball;
     sha256 = zig_versions.x86_64-linux.shasum;
   };

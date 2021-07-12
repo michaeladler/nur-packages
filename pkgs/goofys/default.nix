@@ -2,16 +2,16 @@
 
 buildGoModule rec {
   name = "goofys";
-  version = "2021-03-26";
+  version = "2021-07-11";
 
   src = fetchFromGitHub {
     owner = "kahing";
     repo = "goofys";
-    rev = "0c993271269b539196330a18716a33fbeeebd624";
-    sha256 = "18is5sv2a9wmsm0qpakly988z1qyl2b2hf2105lpxrgl659sf14p";
+    rev = "08534b28a2195d30bb3c45dce0b834f3696028b8";
+    sha256 = "0w8ca5ippka2g9g7mqhqqvzyki2jzslys8s3665msb2qs944p6ii";
   };
 
-  vendorSha256 = "sha256-0gWjlxfjUYa2/Yq0lNSFP7rYOc14zi9saZ3FBHUF2Jc=";
+  vendorSha256 = "sha256-GNzhRv0bk4iZ616YuZDCN8kXabFuDW/KT8ZWsDCBUco=";
 
   # tests require network
   doCheck = false;

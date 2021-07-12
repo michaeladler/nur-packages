@@ -28,12 +28,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-07-10";
+    version = "2021-07-12";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "8024ea3b44db0e90b1048dfbf14cfb97439dd9c0";
-      sha256 = "1fmnp1imyr1rkfzcyy0jk5lvap2yx011b5q9zr8jrjdk25n03n8x";
+      rev = "d35f5fcece6dc44d28646dbb9c6184eaeec82c8f";
+      sha256 = "07hdsnjj65zvn7al1wq1hncmvxzyvnxacp4v5g2frk24ill1bzy6";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-07-09";
+    version = "2021-07-11";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "e5e06b4254ccf720c981cbfc4c2733548b4d88c5";
-      sha256 = "1afmb701y4gmv447sfqsx74c8zn24d1rxb54svgw6iyk3iq0jjyl";
+      rev = "cfab466847e0874f03cf5b1bfbd89286827c537c";
+      sha256 = "176blqdih86xa8sw65klfs63pqqbyl9mkckcwqgcfy6gfy3y671f";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-07-09";
+    version = "2021-07-11";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "f6cd2d0b2fe43d4b9f805513e00d54e6f6693a92";
-      sha256 = "03yv556r6ck97j8ka6cqkivqd0xx9ski2r05r8a5cl0hmgzc17p8";
+      rev = "647268183f8eb164bf8c94ec1c87634f51f5c34a";
+      sha256 = "1xf4px6vsxm623dvj7jgd0i73k1a9k5rq7jjz7azd0mv54dm5hbj";
     };
   });
 
@@ -118,12 +118,12 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "2021-07-02";
+    version = "2021-07-12";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "ca51b6842cd8021f58dc45c89b3e8d7994e0bf8f";
-      sha256 = "071gdhrrbrhdmagai3q8c4yzc9kn794aa7kkacnknkm5kzswb8hg";
+      rev = "8bae2c1fadc9ed5bfcfb5ecbd0c0c4d7d40cb974";
+      sha256 = "1axvjv6n77afkjqk914dpc020kxd7mig6m5sr916k1n1q35jc4ny";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-10";
+    version = "2021-07-12";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "7cdaaaa39dde06b7372aa1b326c272ad11a95d4e";
-      sha256 = "1fr921za1lq635vpvq1xa5h90lp9wdd074mq8bm68y54lax7mi9r";
+      rev = "5692edd004fed1dbd55c90775c34a051298724e7";
+      sha256 = "0mzgbnm9ic173spnm9w9da7yl79fqg6p7s1sv0w3d3m7qqvz0bpz";
     };
   });
 
@@ -158,12 +158,12 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "2021-07-09";
+    version = "2021-07-12";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "7a133c83b174bb40019f42ecc2a80c09bff53f33";
-      sha256 = "0y78h67m7jq65ngc8jd8qdlxsb4rhsxz21dxjyy5bx7ic73kqv1v";
+      rev = "90b1901774c11b86f3d36f7d17803125bfbe82b8";
+      sha256 = "1fi4dajrhrsfj64bxz9vpd2ipsjnsx51sqc34qg0iw47qraw8yij";
     };
   });
 
@@ -225,12 +225,12 @@ in
 
   FTerm-nvim = buildVimPluginFrom2Nix ({
     pname = "FTerm-nvim";
-    version = "2021-07-05";
+    version = "2021-07-12";
     src = fetchFromGitHub {
       owner = "numtostr";
       repo = "FTerm.nvim";
-      rev = "241b52922a10d70692bd35b32ab6f6963e54d93a";
-      sha256 = "1ss1rgaf4xxv9j9fsnmhs8r0jzrasjibnnkj4asap8kfxr9x8l3s";
+      rev = "024c76c577718028c4dd5a670552117eef73e69a";
+      sha256 = "1vf5wa9jgc5kbxwpx34zld92wm6vz0rj84kc2shnxnpwdk9sg1is";
     };
 
     meta.homepage = "https://github.com/numtostr/FTerm.nvim/";
@@ -348,12 +348,12 @@ in
 
   vim-nightfly-guicolors = buildVimPluginFrom2Nix ({
     pname = "vim-nightfly-guicolors";
-    version = "2021-06-09";
+    version = "2021-07-11";
     src = fetchFromGitHub {
       owner = "bluz71";
       repo = "vim-nightfly-guicolors";
-      rev = "828db323a0a804c3e5d401598bd69049ebe4b89c";
-      sha256 = "000q8x64y6khmzf48p158vgw18965qyjdxfb3ls4jv2bk7372m2p";
+      rev = "1c238496f7cf8d2546c53d81a5a94f7ff9bc3027";
+      sha256 = "1kkh1gggxhl2vs9cy4ldffv4wnw98qg0xh8pzcibk89ykag8nxby";
     };
 
     meta.homepage = "https://github.com/bluz71/vim-nightfly-guicolors";

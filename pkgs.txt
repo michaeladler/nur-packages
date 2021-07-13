@@ -10,6 +10,7 @@ firefox-bin
 fstabfmt
 goofys
 luaprompt
+minigbm
 msktutil
 myTmuxPlugins/continuum
 myTmuxPlugins/copycat
@@ -62,6 +63,7 @@ qmarkdown
 rnix-lsp
 shell-snoop
 sscep
+ungoogled-chromium-bin
 vcalendar-filter
 xplugd
 zig

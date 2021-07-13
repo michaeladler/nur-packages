@@ -17,6 +17,8 @@ in
   dwm = (import ./pkgs/dwm) final prev;
   dwmblocks = (import ./pkgs/dwmblocks) final prev;
 
+  brave = (import ./pkgs/brave) final prev;
+
   luaprompt = callPackage ./pkgs/luaprompt { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   zzz = callPackage ./pkgs/zzz { };

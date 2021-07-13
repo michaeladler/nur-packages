@@ -45,6 +45,7 @@
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
             afew
+            brave
             btrfs-du
             btrfs-list
             cpio

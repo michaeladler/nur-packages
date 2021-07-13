@@ -45,6 +45,10 @@ jobs:
           git push origin HEAD:master
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
+          GIT_AUTHOR_NAME: "Github Actions"
+          GIT_AUTHOR_EMAIL: "actions@github"
+          GIT_COMMITTER_NAME: "Github Actions"
+          GIT_COMMITTER_EMAIL: "actions@github"
 
   update-zig:
     runs-on: ubuntu-latest
@@ -79,3 +83,8 @@ jobs:
           git push origin HEAD:master
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
+          GIT_AUTHOR_NAME: "Github Actions"
+          GIT_AUTHOR_EMAIL: "actions@github"
+          GIT_COMMITTER_NAME: "Github Actions"
+          GIT_COMMITTER_EMAIL: "actions@github"
+

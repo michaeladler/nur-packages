@@ -23,7 +23,10 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: update
-        run: .ci/update-all.sh
+        run: |
+          mkdir -p ~/.config/nix
+          printf "access-tokens = github.com=%s" "$GITHUB_TOKEN" >>~/.config/nix/nix.conf
+          .ci/update-all.sh
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
           GIT_AUTHOR_NAME: "Github Actions"

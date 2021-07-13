@@ -3,9 +3,10 @@
 # shellcheck shell=bash
 set -eux -o pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
-ROOT_DIR="${DIR}/.."
 
-cd "$ROOT_DIR"
+cd "${DIR}/.."
+
+NIX=(nix "--experimental-features" "nix-command flakes")
 
 echo "Generating package list"
 bash "$DIR/extract_pkg_names.sh" >pkgs.txt
@@ -16,4 +17,4 @@ git diff --exit-code pkgs.txt || {
 }
 
 sed -E -e 's/(.*)/.#\1/' <pkgs.txt |
-    xargs --delimiter='\n' nix --experimental-features "nix-command flakes" build --no-link
+    xargs --delimiter='\n' "${NIX[@]}" build --no-link

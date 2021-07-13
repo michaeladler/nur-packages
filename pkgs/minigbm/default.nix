@@ -2,12 +2,12 @@
 
 clangStdenv.mkDerivation rec {
   pname = "minigbm";
-  version = "2021-07-08";
+  version = "2021-07-13";
 
   src = fetchgit {
     url = "https://chromium.googlesource.com/chromiumos/platform/minigbm";
     rev = "2e63aaf616cdda26019d265989bd0d96ee11aab9";
-    sha256 = "sha256-ty4Gygv4/hEcVVdIJ0DuDUX3GVI2flX5Kl1q8GKO1UQ=";
+    sha256 = "0i6mirig0sjx5bwmazina8czfi8dxr02fj2palf13zpq1g50cbmp";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,13 @@ clangStdenv.mkDerivation rec {
 
   buildInputs = [ mesa ];
 
-  makeFlags = [ "DESTDIR=$(out)" "LIBDIR=lib" ];
+  # see https://afrantzis.com/posts/running-chromium-with-ozone-gbm-on-a-gnu-linux-desktop-system/
+  makeFlags = [
+    "CPPFLAGS=-DDRV_I915"
+    "DRV_I915=1"
+    "DESTDIR=$(out)"
+    "LIBDIR=lib"
+  ];
 
   postInstall = ''
     cd $out/lib

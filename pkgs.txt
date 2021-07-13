@@ -44,6 +44,7 @@ myVimPlugins/nvim-treesitter-textobjects
 myVimPlugins/plenary-nvim
 myVimPlugins/popup-nvim
 myVimPlugins/telescope-nvim
+myVimPlugins/tokyonight-nvim
 myVimPlugins/vim-SpellCheck
 myVimPlugins/vim-bitbake
 myVimPlugins/vim-boxdraw

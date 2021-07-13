@@ -28,6 +28,7 @@ in
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   peda = callPackage ./pkgs/peda { };
+  qmarkdown = callPackage ./pkgs/qmarkdown { };
 
   sscep = callPackage ./pkgs/sscep { };
   msktutil = callPackage ./pkgs/msktutil { };

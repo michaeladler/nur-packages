@@ -61,6 +61,7 @@
             nix-direnv
             oelint-adv
             peda
+            qmarkdown
             shell-snoop
             sscep
             vcalendar-filter

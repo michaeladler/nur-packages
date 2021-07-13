@@ -32,6 +32,9 @@ in
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
 
+  ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
+  minigbm = callPackage ./pkgs/minigbm { };
+
   sscep = callPackage ./pkgs/sscep { };
   msktutil = callPackage ./pkgs/msktutil { };
 

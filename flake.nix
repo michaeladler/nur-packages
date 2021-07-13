@@ -56,6 +56,7 @@
             fstabfmt
             goofys
             luaprompt
+            minigbm
             msktutil
             myTmuxPlugins
             myVimPlugins
@@ -65,6 +66,7 @@
             qmarkdown
             shell-snoop
             sscep
+            ungoogled-chromium-bin
             vcalendar-filter
             xplugd
             zig

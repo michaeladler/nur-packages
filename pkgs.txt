@@ -57,6 +57,7 @@ myVimPlugins/vim-vsnip
 nix-direnv
 oelint-adv
 peda
+qmarkdown
 rnix-lsp
 shell-snoop
 sscep

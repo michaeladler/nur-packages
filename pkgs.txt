@@ -1,4 +1,5 @@
 afew
+brave
 btrfs-du
 btrfs-list
 cpio

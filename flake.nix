@@ -44,7 +44,6 @@
         packages = flake-utils.lib.flattenTree {
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
-            afew
             brave
             btrfs-du
             btrfs-list
@@ -75,7 +74,6 @@
             zsh-fast-syntax-highlighting
             zsh-pandoc-completion
             zsh-vi-mode
-            zzz
             ;
         };
 

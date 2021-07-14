@@ -1,4 +1,3 @@
-afew
 brave
 btrfs-du
 btrfs-list
@@ -72,4 +71,3 @@ zsh-autosuggestions
 zsh-fast-syntax-highlighting
 zsh-pandoc-completion
 zsh-vi-mode
-zzz

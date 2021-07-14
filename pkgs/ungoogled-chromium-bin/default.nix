@@ -1,4 +1,6 @@
-{ stdenv, lib, fetchurl
+{ stdenv
+, lib
+, fetchurl
 , dpkg
 , alsa-lib
 , at-spi2-atk
@@ -46,58 +48,59 @@
 
 let
 
-rpath = lib.makeLibraryPath [
-  alsa-lib
-  at-spi2-atk
-  at-spi2-core
-  atk
-  cairo
-  cups
-  dbus
-  expat
-  fontconfig
-  freetype
-  gdk-pixbuf
-  glib
-  gnome2.GConf
-  gtk3
-  libdrm
-  libpulseaudio
-  libX11
-  libxkbcommon
-  libXScrnSaver
-  libXcomposite
-  libXcursor
-  libXdamage
-  libXext
-  libXfixes
-  libXi
-  libXrandr
-  libXrender
-  libxshmfence
-  libXtst
-  libuuid
-  mesa
-  nspr
-  nss
-  pango
-  udev
-  xdg-utils
-  xorg.libxcb
-  zlib
-  minigbm
-];
+  rpath = lib.makeLibraryPath [
+    alsa-lib
+    at-spi2-atk
+    at-spi2-core
+    atk
+    cairo
+    cups
+    dbus
+    expat
+    fontconfig
+    freetype
+    gdk-pixbuf
+    glib
+    gnome2.GConf
+    gtk3
+    libdrm
+    libpulseaudio
+    libX11
+    libxkbcommon
+    libXScrnSaver
+    libXcomposite
+    libXcursor
+    libXdamage
+    libXext
+    libXfixes
+    libXi
+    libXrandr
+    libXrender
+    libxshmfence
+    libXtst
+    libuuid
+    mesa
+    nspr
+    nss
+    pango
+    udev
+    xdg-utils
+    xorg.libxcb
+    zlib
+    minigbm
+  ];
+
+  metadata = with builtins; fromJSON (readFile ./metadata.json);
 
 in
 
 # taken from nixpkgs brave
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "ungoogled-chromium-bin";
-  version = "91.0.4472.114-1.1";
+  inherit (metadata) version;
 
   src = fetchurl {
-    url = "https://github.com/mdedonno1337/ungoogled-chromium-binaries/releases/download/${version}/ungoogled-chromium_${version}_linux.tar.xz";
-    sha256 = "8e63c835d1bcb472b8b19f3ffb40f590d9266884c85739c0b5a23af3dca5ac7f";
+    inherit (metadata) url sha256;
   };
 
   dontConfigure = true;
@@ -110,40 +113,40 @@ stdenv.mkDerivation rec {
   buildInputs = [ glib gsettings-desktop-schemas gnome.adwaita-icon-theme ];
 
   installPhase = ''
-      runHook preInstall
+    runHook preInstall
 
-      mkdir -p $out/bin $out/opt/ungoogled-chromium
+    mkdir -p $out/bin $out/opt/ungoogled-chromium
 
-      cp -R * $out/opt/ungoogled-chromium/
+    cp -R * $out/opt/ungoogled-chromium/
 
-      export BINARYWRAPPER=$out/opt/ungoogled-chromium/chrome-wrapper
+    export BINARYWRAPPER=$out/opt/ungoogled-chromium/chrome-wrapper
 
-      # Fix path to bash in $BINARYWRAPPER
-      substituteInPlace $BINARYWRAPPER \
-          --replace /bin/bash ${stdenv.shell}
+    # Fix path to bash in $BINARYWRAPPER
+    substituteInPlace $BINARYWRAPPER \
+        --replace /bin/bash ${stdenv.shell}
 
-      ln -sf $BINARYWRAPPER $out/bin/chromium
+    ln -sf $BINARYWRAPPER $out/bin/chromium
 
-      patchelf \
-          --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
-          --set-rpath "${rpath}" $out/opt/ungoogled-chromium/chrome
+    patchelf \
+        --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
+        --set-rpath "${rpath}" $out/opt/ungoogled-chromium/chrome
 
-      # TODO: create $out/share/applications/chromium.desktop
+    # TODO: create $out/share/applications/chromium.desktop
 
-      # Correct icons location
-      icon_sizes=("48")
+    # Correct icons location
+    icon_sizes=("48")
 
-      for icon in ''${icon_sizes[*]}
-      do
-          mkdir -p $out/share/icons/hicolor/$icon\x$icon/apps
-          ln -s $out/opt/ungoogled-chromium/product_logo_$icon.png $out/share/icons/hicolor/$icon\x$icon/apps/chromium.png
-      done
+    for icon in ''${icon_sizes[*]}
+    do
+        mkdir -p $out/share/icons/hicolor/$icon\x$icon/apps
+        ln -s $out/opt/ungoogled-chromium/product_logo_$icon.png $out/share/icons/hicolor/$icon\x$icon/apps/chromium.png
+    done
 
-      # Replace xdg-settings and xdg-mime
-      ln -sf ${xdg-utils}/bin/xdg-settings $out/opt/ungoogled-chromium/xdg-settings
-      ln -sf ${xdg-utils}/bin/xdg-mime $out/opt/ungoogled-chromium/xdg-mime
+    # Replace xdg-settings and xdg-mime
+    ln -sf ${xdg-utils}/bin/xdg-settings $out/opt/ungoogled-chromium/xdg-settings
+    ln -sf ${xdg-utils}/bin/xdg-mime $out/opt/ungoogled-chromium/xdg-mime
 
-      runHook postInstall
+    runHook postInstall
   '';
 
   installCheckPhase = ''

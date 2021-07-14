@@ -28,12 +28,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-07-13";
+    version = "2021-07-14";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "a3e530ea915634afb43b21e621d45515f7bdff77";
-      sha256 = "1dx95vnwz65d07irb3c6dy7nkalmfla501dwcyhyk3zygws50zaw";
+      rev = "9687868acc76f7ac1344ad646300e0987ea17af3";
+      sha256 = "1qbcll1z4prcmam2zpnn0vhlrrbl50827b0r80qp5z4vcyf5ywam";
     };
   });
 

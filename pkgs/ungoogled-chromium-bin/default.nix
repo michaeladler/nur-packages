@@ -96,7 +96,7 @@ in
 
 # taken from nixpkgs brave
 stdenv.mkDerivation {
-  pname = "ungoogled-chromium-bin";
+  pname = "ungoogled-chromium";
   inherit (metadata) version;
 
   src = fetchurl {

@@ -92,8 +92,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "b2008fcda16522841aedd8985af06d4d62d97617";
-      sha256 = "0bkwyfnvx0cl2p0czc27z1vzh1dvc0f7n213w706x9i99g04ay7l";
+      rev = "29113e6892a46d4afff41417c0be7122a3b97ae6";
+      sha256 = "1fzflm7kmpf90jmylkdiv3m6w25yvs420xy206kb0hangxnpa6dw";
     };
   });
 
@@ -162,8 +162,8 @@ in
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "8e36fcc04f9707c7c322e23d163cf72ad8ef7185";
-      sha256 = "09dnglg62p2z34qsqdh9hcfvz79a4crclcqlifdvs6qd0is9i4wh";
+      rev = "8db09458f69b03dd50c8c7c85bf660467221b078";
+      sha256 = "0mh1a8f11np2bcydkkysap75qbl1c1rinjpx5lagpyl39ggzzm94";
     };
   });
 

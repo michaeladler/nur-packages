@@ -10,12 +10,13 @@ NIX=(nix "--experimental-features" "nix-command flakes")
 # flakes
 ("${NIX[@]}" flake update) &
 
-# firefox and friends
+# firefox and addons
 ("${NIX[@]}" run '.#firefox-addons-generator' -- pkgs/firefox-addons/addons.json pkgs/firefox-addons/generated-addons.nix) &
 (pkgs/firefox-bin/update.sh) &
 
-# ungoogled-chromium
+# chromium, brave
 (cd pkgs/ungoogled-chromium-bin && ./update.py) &
+(pkgs/brave/update.sh) &
 
 # everything else
 (find pkgs -name "*.nix" -not -path "pkgs/zig/*" -not -path "pkgs/ungoogled-chromium-bin/*" -print0 | xargs -0 update-nix-fetchgit) &

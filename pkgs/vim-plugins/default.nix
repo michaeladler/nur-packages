@@ -32,8 +32,8 @@ in
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "9687868acc76f7ac1344ad646300e0987ea17af3";
-      sha256 = "1qbcll1z4prcmam2zpnn0vhlrrbl50827b0r80qp5z4vcyf5ywam";
+      rev = "29879b29b63fcd315e247a110a505e6a337b584a";
+      sha256 = "18ybvc2l07l91gkl3w63l58pm9q7bx2p0fmkyxpqb48cii98n4yj";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-07-13";
+    version = "2021-07-14";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "59bc16aa2c9cfc6f8c2a67ae01635eeea1d43943";
-      sha256 = "1hdwc0jbirwa36w97qj7fpdjr6zvyvzi2j5bky0kbqf79z0kq2wz";
+      rev = "a7b5ffd7bdbf299fb296777311ec2b4c5e52450a";
+      sha256 = "18yjh7w4jy3mx8vagqz8ygly07jib5yzymzdp6pjqgr72iwrc7f6";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-07-13";
+    version = "2021-07-14";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "29113e6892a46d4afff41417c0be7122a3b97ae6";
-      sha256 = "1fzflm7kmpf90jmylkdiv3m6w25yvs420xy206kb0hangxnpa6dw";
+      rev = "d779ee79f0426711f84b770bf6ff4afda4f41c1e";
+      sha256 = "0svnb4fsqsjhlqcikq0kgrwyrqfqplgvx93mhw1qhpmwfbgqn6vi";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-13";
+    version = "2021-07-14";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "999fad2ce514d869b736aa5d948d355fad89be8d";
-      sha256 = "0l7yphcryx04dzinmn1yywb31gbh0m7x15kvlzlivq9zfniz0h74";
+      rev = "37a3a68a78e15900254ae5d9d4f9f0b5100a1735";
+      sha256 = "1a5hsjsz62nb5hlrd0k8wbcnyxa3574jgipphs9s2llf6qfwkfh1";
     };
   });
 
@@ -158,12 +158,12 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "2021-07-13";
+    version = "2021-07-14";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "8db09458f69b03dd50c8c7c85bf660467221b078";
-      sha256 = "0mh1a8f11np2bcydkkysap75qbl1c1rinjpx5lagpyl39ggzzm94";
+      rev = "bf148e2534097988e61ed334edaf31b67134369b";
+      sha256 = "157k4gbs0r92zwm41hh40gqxc9774g05ngan936ivnnfg5j9igsg";
     };
   });
 

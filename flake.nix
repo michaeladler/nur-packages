@@ -47,7 +47,6 @@
             brave
             btrfs-du
             btrfs-list
-            cpio
             dwm
             dwmblocks
             firefox-bin

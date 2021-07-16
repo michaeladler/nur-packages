@@ -346,32 +346,6 @@ in
     meta.homepage = "https://github.com/hoob3rt/lualine.nvim";
   });
 
-  vim-nightfly-guicolors = buildVimPluginFrom2Nix ({
-    pname = "vim-nightfly-guicolors";
-    version = "2021-07-11";
-    src = fetchFromGitHub {
-      owner = "bluz71";
-      repo = "vim-nightfly-guicolors";
-      rev = "1c238496f7cf8d2546c53d81a5a94f7ff9bc3027";
-      sha256 = "1kkh1gggxhl2vs9cy4ldffv4wnw98qg0xh8pzcibk89ykag8nxby";
-    };
-
-    meta.homepage = "https://github.com/bluz71/vim-nightfly-guicolors";
-  });
-
-  doom-one-vim = buildVimPluginFrom2Nix ({
-    pname = "doom-one-vim";
-    version = "2021-05-18";
-    src = fetchFromGitHub {
-      owner = "romgrk";
-      repo = "doom-one.vim";
-      rev = "80bba63483d33a0cfa270219e990e26919b3a87f";
-      sha256 = "16icxzm01lfilyr3h1dl1bv2rwsajp55ay018273inkbva5ycxza";
-    };
-
-    meta.homepage = "https://github.com/romgrk/doom-one.vim";
-  });
-
   vim-buftabline = buildVimPluginFrom2Nix ({
     pname = "vim-buftabline";
     version = "2020-12-13";
@@ -384,20 +358,6 @@ in
     };
 
     meta.homepage = "https://github.com/ap/vim-buftabline";
-  });
-
-  tokyonight-nvim = buildVimPluginFrom2Nix ({
-    pname = "tokyonight-nvim";
-    version = "2021-07-09";
-    src = fetchFromGitHub {
-      owner = "folke";
-      repo = "tokyonight.nvim";
-      rev = "e3ad6032a7e2c54dd7500335b43c7d353a19ede9";
-      sha256 = "1slb67kirb0jfgjsw09dhimmxagsk2aii6w461y1w8nj3fkl6p28";
-    };
-
-    meta.homepage = "https://github.com/folke/tokyonight.nvim";
-    meta.license = prev.lib.licenses.mit;
   });
 
 }

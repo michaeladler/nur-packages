@@ -25,7 +25,7 @@ in
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   goofys = callPackage ./pkgs/goofys { };
   xplugd = callPackage ./pkgs/xplugd { };
-  crx3 = callPackage ./pkgs/crx3 { };
+  go-crx3 = callPackage ./pkgs/go-crx3 { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   peda = callPackage ./pkgs/peda { };

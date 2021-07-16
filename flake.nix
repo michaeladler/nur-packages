@@ -48,11 +48,11 @@
             btrfs-du
             btrfs-list
             cpio
-            crx3
             dwm
             dwmblocks
             firefox-bin
             fstabfmt
+            go-crx3
             goofys
             luaprompt
             minigbm

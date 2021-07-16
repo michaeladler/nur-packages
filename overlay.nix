@@ -38,6 +38,7 @@ in
   msktutil = callPackage ./pkgs/msktutil { };
 
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
+  handlr = (import ./pkgs/handlr) final prev;
 
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;

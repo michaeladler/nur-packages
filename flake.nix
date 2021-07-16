@@ -53,6 +53,7 @@
             fstabfmt
             go-crx3
             goofys
+            handlr
             luaprompt
             minigbm
             msktutil

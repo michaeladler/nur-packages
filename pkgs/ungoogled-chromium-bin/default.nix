@@ -102,6 +102,10 @@ stdenv.mkDerivation {
   src = fetchurl {
     inherit (metadata) url sha256;
   };
+  desktop_template_src = fetchurl {
+    url = "https://raw.githubusercontent.com/chromium/chromium/ec932ff42c9bfc77a48c32c7a36920f816927624/chrome/installer/linux/common/desktop.template";
+    sha256 = "19289a9684ec9b5f0fd8d0730c8249eb88c15f7909f178482b38feed37f4a69e";
+  };
 
   dontConfigure = true;
   dontBuild = true;
@@ -131,11 +135,27 @@ stdenv.mkDerivation {
         --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" \
         --set-rpath "${rpath}" $out/opt/ungoogled-chromium/chrome
 
-    # TODO: create $out/share/applications/chromium.desktop
+    # Install Desktop Entry, stolen from pkgs/applications/networking/browsers/chromium/browser.nix
+    mkdir -p $out/share/applications/
+    cp $desktop_template_src $out/share/applications/chromium-browser.desktop
+
+    substituteInPlace $out/share/applications/chromium-browser.desktop \
+      --replace "@@MENUNAME@@" "Chromium" \
+      --replace "@@PACKAGE@@" "chromium" \
+      --replace "Exec=/usr/bin/@@USR_BIN_SYMLINK_NAME@@" "Exec=chromium"
+
+    # Append more mime types to the end
+    sed -i '/^MimeType=/ s,$,x-scheme-handler/webcal;x-scheme-handler/mailto;x-scheme-handler/about;x-scheme-handler/unknown,' \
+      $out/share/applications/chromium-browser.desktop
+
+    # See https://github.com/NixOS/nixpkgs/issues/12433
+    sed -i \
+      -e '/\[Desktop Entry\]/a\' \
+      -e 'StartupWMClass=chromium-browser' \
+      $out/share/applications/chromium-browser.desktop
 
     # Correct icons location
     icon_sizes=("48")
-
     for icon in ''${icon_sizes[*]}
     do
         mkdir -p $out/share/icons/hicolor/$icon\x$icon/apps

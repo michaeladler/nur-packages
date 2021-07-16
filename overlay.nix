@@ -46,7 +46,7 @@ in
   myVimPlugins = prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev);
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
-  firefox-bin = (import ./pkgs/firefox-bin) final prev;
+  firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
 
   # my packages

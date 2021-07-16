@@ -27,7 +27,6 @@ myVimPlugins/barbar-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts
 myVimPlugins/diffview-nvim
-myVimPlugins/doom-one-vim
 myVimPlugins/friendly-snippets
 myVimPlugins/indent-guides-nvim
 myVimPlugins/lsp-status-nvim
@@ -44,14 +43,12 @@ myVimPlugins/nvim-treesitter-textobjects
 myVimPlugins/plenary-nvim
 myVimPlugins/popup-nvim
 myVimPlugins/telescope-nvim
-myVimPlugins/tokyonight-nvim
 myVimPlugins/vim-SpellCheck
 myVimPlugins/vim-bitbake
 myVimPlugins/vim-boxdraw
 myVimPlugins/vim-buftabline
 myVimPlugins/vim-enmasse
 myVimPlugins/vim-ingo-library
-myVimPlugins/vim-nightfly-guicolors
 myVimPlugins/vim-spellsync
 myVimPlugins/vim-vsnip
 nix-direnv

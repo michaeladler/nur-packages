@@ -54,7 +54,6 @@
             go-crx3
             goofys
             handlr
-            i3status
             luaprompt
             minigbm
             msktutil

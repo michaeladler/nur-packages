@@ -1,13 +1,13 @@
 final: prev:
 
 prev.dwmblocks.overrideAttrs (old: {
-  version = "2021-05-23";
+  version = "2021-07-16";
 
   src = prev.fetchFromGitHub {
     owner = "lukesmithxyz";
     repo = "dwmblocks";
-    rev = "ea5afdccbd23d61e70f3ef62aabd9b6726b2c20f";
-    sha256 = "1f3d933zxh3xca971xhzbkflnkimgvdjfl8pvmv0kjxn9sgq567g";
+    rev = "66f31c307adbdcc2505239260ecda24a49eea7af";
+    sha256 = "0s379dpn0wppfqwaawg18mn7gzl1b5788sn7bpv41yvm553h4z4g";
   };
 
 })

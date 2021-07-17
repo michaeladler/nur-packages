@@ -1,0 +1,25 @@
+From d167100d98e3dc20c27e05779b11451a7425c8e6 Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Sat, 17 Jul 2021 20:52:47 +0200
+Subject: [PATCH] Enable click events
+
+---
+ i3status.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/i3status.c b/i3status.c
+index bf2f1cd..89e9921 100644
+--- a/i3status.c
++++ b/i3status.c
+@@ -603,7 +603,7 @@ int main(int argc, char *argv[]) {
+     if (output_format == O_I3BAR) {
+         /* Initialize the i3bar protocol. See i3/docs/i3bar-protocol
+          * for details. */
+-        printf("{\"version\":1}\n[\n");
++        printf("{\"version\":1,\"click_events\":true}\n[\n");
+         fflush(stdout);
+         yajl_gen_array_open(json_gen);
+         yajl_gen_clear(json_gen);
+-- 
+2.32.0
+

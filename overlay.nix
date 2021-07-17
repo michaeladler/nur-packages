@@ -39,6 +39,7 @@ in
 
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   handlr = (import ./pkgs/handlr) final prev;
+  i3status = (import ./pkgs/i3status) final prev;
 
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;

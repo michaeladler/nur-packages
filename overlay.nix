@@ -6,39 +6,35 @@ let
 in
 
 {
-  zsh-autosuggestions = (import ./pkgs/zsh-plugins/zsh-autosuggestions) final prev;
-  zsh-fast-syntax-highlighting = (import ./pkgs/zsh-plugins/zsh-fast-syntax-highlighting) final prev;
-  zsh-pandoc-completion = callPackage ./pkgs/zsh-plugins/zsh-pandoc-completion { };
-  zsh-vi-mode = callPackage ./pkgs/zsh-plugins/zsh-vi-mode { };
-
+  # overlayed
+  brave = (import ./pkgs/brave) final prev;
+  dwm = (import ./pkgs/dwm) final prev;
+  dwmblocks = (import ./pkgs/dwmblocks) final prev;
+  firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
+  handlr = (import ./pkgs/handlr) final prev;
+  nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
 
-  dwm = (import ./pkgs/dwm) final prev;
-  dwmblocks = (import ./pkgs/dwmblocks) final prev;
-
-  brave = (import ./pkgs/brave) final prev;
-
-  luaprompt = callPackage ./pkgs/luaprompt { };
-  vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
-  oelint-adv = callPackage ./pkgs/oelint-adv { };
-  fstabfmt = callPackage ./pkgs/fstabfmt { };
-  goofys = callPackage ./pkgs/goofys { };
-  xplugd = callPackage ./pkgs/xplugd { };
-  go-crx3 = callPackage ./pkgs/go-crx3 { };
-  btrfs-list = callPackage ./pkgs/btrfs-list { };
+  # missing upstream
   btrfs-du = callPackage ./pkgs/btrfs-du { };
+  btrfs-list = callPackage ./pkgs/btrfs-list { };
+  fstabfmt = callPackage ./pkgs/fstabfmt { };
+  go-crx3 = callPackage ./pkgs/go-crx3 { };
+  goofys = callPackage ./pkgs/goofys { };
+  luaprompt = callPackage ./pkgs/luaprompt { };
+  minigbm = callPackage ./pkgs/minigbm { };
+  msktutil = callPackage ./pkgs/msktutil { };
+  oelint-adv = callPackage ./pkgs/oelint-adv { };
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
-
-  ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
-  minigbm = callPackage ./pkgs/minigbm { };
-
+  shell-snoop = callPackage ./pkgs/shell-snoop { };
   sscep = callPackage ./pkgs/sscep { };
-  msktutil = callPackage ./pkgs/msktutil { };
+  ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
+  vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
+  xplugd = callPackage ./pkgs/xplugd { };
 
-  nix-direnv = (import ./pkgs/nix-direnv) final prev;
-  handlr = (import ./pkgs/handlr) final prev;
+  # bundles
 
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
@@ -46,10 +42,8 @@ in
   myVimPlugins = prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev);
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
-  firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
+  myZshPlugins = prev.recurseIntoAttrs ((import ./pkgs/zsh-plugins/overlay.nix) final prev);
+  zshPlugins = (prev.zshPlugins  or { }) // final.myZshPlugins;
+
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
-
-  # my packages
-  shell-snoop = callPackage ./pkgs/shell-snoop { };
-
 }

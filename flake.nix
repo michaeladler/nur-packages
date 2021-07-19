@@ -39,6 +39,7 @@
           vimPlugins = pkgs.vimPlugins;
           tmuxPlugins = pkgs.tmuxPlugins;
           firefoxAddons = pkgs.firefoxAddons;
+          zshPlugins = pkgs.zshPlugins;
         };
 
         packages = flake-utils.lib.flattenTree {
@@ -59,6 +60,7 @@
             msktutil
             myTmuxPlugins
             myVimPlugins
+            myZshPlugins
             nix-direnv
             oelint-adv
             peda
@@ -70,10 +72,6 @@
             xplugd
             zig
             zls
-            zsh-autosuggestions
-            zsh-fast-syntax-highlighting
-            zsh-pandoc-completion
-            zsh-vi-mode
             ;
         };
 

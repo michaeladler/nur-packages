@@ -55,6 +55,7 @@ myVimPlugins/vim-vsnip
 myZshPlugins/zsh-autosuggestions
 myZshPlugins/zsh-fast-syntax-highlighting
 myZshPlugins/zsh-fzf-tab
+myZshPlugins/zsh-history-substring-search
 myZshPlugins/zsh-pandoc-completion
 myZshPlugins/zsh-vi-mode
 nix-direnv

@@ -65,7 +65,6 @@
             oelint-adv
             peda
             qmarkdown
-            shell-snoop
             sscep
             ungoogled-chromium-bin
             vcalendar-filter

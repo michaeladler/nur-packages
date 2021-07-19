@@ -28,7 +28,6 @@ in
   oelint-adv = callPackage ./pkgs/oelint-adv { };
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
-  shell-snoop = callPackage ./pkgs/shell-snoop { };
   sscep = callPackage ./pkgs/sscep { };
   ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };

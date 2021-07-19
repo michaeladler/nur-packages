@@ -52,6 +52,7 @@
             dwmblocks
             firefox-bin
             fstabfmt
+            git-hours
             go-crx3
             goofys
             handlr

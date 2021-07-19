@@ -20,6 +20,7 @@ in
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
+  git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   goofys = callPackage ./pkgs/goofys { };
   luaprompt = callPackage ./pkgs/luaprompt { };

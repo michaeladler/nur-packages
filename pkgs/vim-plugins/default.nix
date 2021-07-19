@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-07-17";
+    version = "2021-07-18";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "1729b502fa00df2fdcbfa118b404b8b8a8a2d6a3";
-      sha256 = "1r4ajaxvf9kpfq42b81c08ixfqakiq8fibn89qar7sd4a7634dsg";
+      rev = "38e0003d0c40d506e9e46ff55978b78220a76b71";
+      sha256 = "0r3zicx8gkj5jd0kxs1i5inxpi9jmg3nwb0km4xcj55fb3x2vbky";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-07-14";
+    version = "2021-07-18";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "d779ee79f0426711f84b770bf6ff4afda4f41c1e";
-      sha256 = "0svnb4fsqsjhlqcikq0kgrwyrqfqplgvx93mhw1qhpmwfbgqn6vi";
+      rev = "9144ea1107ed5aaf250bffafc1f0f32fb97cce47";
+      sha256 = "05apxyy0xg6llskigirglb4a73ay8cdaw2rckl2g3d6j8ry9dkc4";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-17";
+    version = "2021-07-18";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "5b597e7709eec08331ce71b45193117f6fb5626b";
-      sha256 = "1lwr3gayqj6h0ha749p5dfgihjlqydgaidcnblcvvj8vi10ick35";
+      rev = "8c3f2b630be0241fe10709e61ee9dab473518f32";
+      sha256 = "1yd1kkdp8baxrhkfsg0j0dpkprxvwi0r4xljjcdln7rpr2r0lm82";
     };
   });
 
@@ -158,12 +158,12 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "2021-07-14";
+    version = "2021-07-18";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "bf148e2534097988e61ed334edaf31b67134369b";
-      sha256 = "157k4gbs0r92zwm41hh40gqxc9774g05ngan936ivnnfg5j9igsg";
+      rev = "ee83d4fa8ac946e5e0064e65a5276e1ea030ae28";
+      sha256 = "0mrydz0xl2yqgsp1nsz4p55mjhx7x7z7pahcq3y5mzzla687dnqg";
     };
   });
 

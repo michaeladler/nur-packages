@@ -1,7 +1,7 @@
-From 79d9254474ff9fdfad58cb37e4c0aa6a231ee55d Mon Sep 17 00:00:00 2001
+From 6e1067e679c789ab96dc4b03251475cedb1ab7d7 Mon Sep 17 00:00:00 2001
 From: Michael Adler <therisen06@gmail.com>
 Date: Tue, 2 Feb 2021 23:39:53 +0100
-Subject: [PATCH 2/2] Support for binary strategy files
+Subject: [PATCH] Support for binary strategy files
 
 Signed-off-by: Michael Adler <therisen06@gmail.com>
 ---
@@ -31,5 +31,5 @@ index 08647a7..9a1f9b9 100755
  }
  
 -- 
-2.31.1
+2.32.0
 

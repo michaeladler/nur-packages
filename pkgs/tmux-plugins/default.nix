@@ -53,10 +53,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
       sha256 = "01j7b6fdam006yr3a2zpnjk2gwzbzc9b3wdnva5p4w5bhz85w76y";
     };
 
-    patches = [
-      ./patches/tmux-resurrect/0001-linux_procfs-Improve-COMMAND_PID-detection.patch
-      ./patches/tmux-resurrect/0002-Support-for-binary-strategy-files.patch
-    ];
+    patches = [ ./patches/tmux-resurrect/0001-Support-for-binary-strategy-files.patch ];
   });
 
   sensible = prev.tmuxPlugins.sensible.overrideAttrs (oa: {

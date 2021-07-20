@@ -12,7 +12,7 @@ NIX=(nix "--experimental-features" "nix-command flakes")
 
 # firefox and addons
 ("${NIX[@]}" run '.#firefox-addons-generator' -- pkgs/firefox-addons/addons.json pkgs/firefox-addons/generated-addons.nix) &
-(pkgs/firefox-bin/update.sh) &
+(pkgs/firefox-bin-unwrapped/update.sh) &
 
 # chromium, brave
 (cd pkgs/ungoogled-chromium-bin && ./update.py) &

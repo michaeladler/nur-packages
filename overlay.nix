@@ -22,6 +22,7 @@ in
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
+  go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
   goofys = callPackage ./pkgs/goofys { };
   luaprompt = callPackage ./pkgs/luaprompt { };
   minigbm = callPackage ./pkgs/minigbm { };

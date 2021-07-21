@@ -54,6 +54,7 @@
             fstabfmt
             git-hours
             go-crx3
+            go-mod-outdated
             goofys
             handlr
             luaprompt

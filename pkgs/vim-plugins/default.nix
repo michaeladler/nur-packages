@@ -360,4 +360,17 @@ in
     meta.homepage = "https://github.com/ap/vim-buftabline";
   });
 
+  vim-just = buildVimPluginFrom2Nix ({
+    pname = "vim-just";
+    version = "2021-05-26";
+    src = fetchFromGitHub {
+      owner = "NoahTheDuke";
+      repo = "vim-just";
+      rev = "a2bd76d9a588c557003e9bb87aae93f13c8703e9";
+      sha256 = "1kgwccfqdxrkhxdhx4yd9hcvdlhfkdn455l5716qy12212a432ri";
+    };
+
+    meta.homepage = "https://github.com/NoahTheDuke/vim-just";
+  });
+
 }

@@ -51,6 +51,7 @@ myVimPlugins/vim-boxdraw
 myVimPlugins/vim-buftabline
 myVimPlugins/vim-enmasse
 myVimPlugins/vim-ingo-library
+myVimPlugins/vim-just
 myVimPlugins/vim-spellsync
 myVimPlugins/vim-vsnip
 myZshPlugins/zsh-autosuggestions

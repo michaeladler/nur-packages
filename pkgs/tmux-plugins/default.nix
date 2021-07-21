@@ -79,12 +79,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 
   tilish = prev.tmuxPlugins.tilish.overrideAttrs (oa: {
     pluginName = "tilish";
-    version = "2021-06-18";
+    version = "2021-07-20";
     src = fetchFromGitHub {
       owner = "jabirali";
       repo = "tmux-tilish";
-      rev = "1c6c7eb4934f6066252abff5f96b283d13b302fb";
-      sha256 = "0i0yzl07jr1j5k257vclbn6kabdyl141z9xvx1qyz3pmzpz0dmji";
+      rev = "732c7ef189d62e3e92b6d737e305f1ad084ae165";
+      sha256 = "1qdfr66891wfdvqx580hnp3gc21xv90wi9p6jx2qr1xf9q8xzjyi";
     };
   });
 

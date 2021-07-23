@@ -24,8 +24,10 @@ jobs:
 
       - name: update
         run: |
-          mkdir -p ~/.config/nix
+          mkdir -p ~/.config/nix ~/.config/nixpkgs/overlays
           printf "access-tokens = github.com=%s" "$GITHUB_TOKEN" >>~/.config/nix/nix.conf
+          echo 'final: prev: { update-nix-fetchgit = prev.update-nix-fetchgit.overrideAttrs (old: { doCheck = false; }); }' > ~/.config/nixpkgs/overlays/fixes.nix
+          cat ~/.config/nixpkgs/overlays/fixes.nix
           .ci/update-all.sh
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'

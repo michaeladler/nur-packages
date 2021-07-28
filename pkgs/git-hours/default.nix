@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "git-hours";
-  version = "2021-04-20";
+  version = "unstable-2021-04-20";
   src = fetchFromGitHub {
     owner = "ceigh";
     repo = "git-hours";

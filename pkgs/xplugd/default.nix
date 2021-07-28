@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation {
   name = "xplugd";
-  version = "2020-07-08";
+  version = "unstable-2020-07-08";
 
   src = fetchFromGitHub {
     owner = "troglobit";

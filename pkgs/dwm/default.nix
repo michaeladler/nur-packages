@@ -1,7 +1,7 @@
 final: prev:
 
 prev.dwm.overrideAttrs (old: {
-  version = "2021-07-04";
+  version = "unstable-2021-07-04";
 
   src = prev.fetchFromGitHub {
     owner = "LukeSmithxyz";

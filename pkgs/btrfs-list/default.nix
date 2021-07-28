@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "btrfs-list";
-  version = "2020-02-19";
+  version = "unstable-2020-02-19";
 
   src = fetchFromGitHub {
     owner = "speed47";

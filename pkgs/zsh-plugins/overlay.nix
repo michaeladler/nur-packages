@@ -3,7 +3,7 @@ final: prev:
 {
 
   zsh-autosuggestions = prev.zsh-autosuggestions.overrideAttrs (old: {
-    version = "2021-06-04";
+    version = "unstable-2021-06-04";
     src = prev.fetchFromGitHub {
       owner = "zsh-users";
       repo = "zsh-autosuggestions";
@@ -14,7 +14,7 @@ final: prev:
   });
 
   zsh-fast-syntax-highlighting = prev.zsh-fast-syntax-highlighting.overrideAttrs (old: {
-    version = "2021-05-14";
+    version = "unstable-2021-05-14";
     src = prev.fetchFromGitHub {
       owner = "zdharma";
       repo = "fast-syntax-highlighting";
@@ -24,7 +24,7 @@ final: prev:
   });
 
   zsh-fzf-tab = prev.zsh-fzf-tab.overrideAttrs (old: {
-    version = "2021-06-11";
+    version = "unstable-2021-06-11";
     src = prev.fetchFromGitHub {
       owner = "Aloxaf";
       repo = "fzf-tab";
@@ -34,7 +34,7 @@ final: prev:
   });
 
   zsh-history-substring-search = prev.zsh-history-substring-search.overrideAttrs (old: {
-    version = "2019-05-12";
+    version = "unstable-2019-05-12";
     src = prev.fetchFromGitHub {
       owner = "zsh-users";
       repo = "zsh-history-substring-search";

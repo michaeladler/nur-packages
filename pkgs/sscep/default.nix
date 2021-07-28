@@ -4,7 +4,7 @@ with stdenv.lib;
 
 stdenv.mkDerivation rec {
   name = "sscep";
-  version = "2021-07-11";
+  version = "unstable-2021-07-11";
 
   src = fetchFromGitHub {
     owner = "certnanny";

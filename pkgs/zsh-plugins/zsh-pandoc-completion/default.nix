@@ -2,7 +2,7 @@
 
 stdenvNoCC.mkDerivation {
   pname = "zsh-pandoc-completion";
-  version = "2019-07-06";
+  version = "unstable-2019-07-06";
 
   src = fetchFromGitHub {
     owner = "srijanshetty";

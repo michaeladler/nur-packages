@@ -2,7 +2,7 @@
 
 python3Packages.buildPythonPackage rec {
   pname = "oelint_parser";
-  version = "2021-06-05";
+  version = "unstable-2021-06-05";
 
   src = fetchFromGitHub {
     owner = "priv-kweihmann";

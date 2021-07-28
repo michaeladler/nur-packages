@@ -8,7 +8,7 @@ in
 {
 
   barbar-nvim = prev.vimPlugins.barbar-nvim.overrideAttrs (old: {
-    version = "2021-06-12";
+    version = "unstable-2021-06-12";
     src = fetchFromGitHub {
       owner = "romgrk";
       repo = "barbar.nvim";
@@ -18,7 +18,7 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "2021-07-24";
+    version = "unstable-2021-07-24";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
@@ -28,7 +28,7 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "2021-07-23";
+    version = "unstable-2021-07-23";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
@@ -38,7 +38,7 @@ in
   });
 
   nvim-lightbulb = prev.vimPlugins.nvim-lightbulb.overrideAttrs (old: {
-    version = "2021-06-05";
+    version = "unstable-2021-06-05";
     src = fetchFromGitHub {
       owner = "kosayoda";
       repo = "nvim-lightbulb";
@@ -48,7 +48,7 @@ in
   });
 
   lspkind-nvim = prev.vimPlugins.lspkind-nvim.overrideAttrs (old: {
-    version = "2021-05-22";
+    version = "unstable-2021-05-22";
     src = fetchFromGitHub {
       owner = "onsails";
       repo = "lspkind-nvim";
@@ -58,7 +58,7 @@ in
   });
 
   lsp-status-nvim = prev.vimPlugins.lsp-status-nvim.overrideAttrs (old: {
-    version = "2021-05-20";
+    version = "unstable-2021-05-20";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "lsp-status.nvim";
@@ -68,17 +68,17 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "2021-07-26";
+    version = "unstable-2021-07-27";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "316a9e824bb0bdc8252a77ba4d4bcbf70861517f";
-      sha256 = "16m74vfs7di0cqxg5f91d1l7bl0s8pi82nipqv6q0dkdad9a89w7";
+      rev = "da176608296c7d29d6d8976d5c1ba852cccec43d";
+      sha256 = "14kckqxqy9paa6q0xx62rnafv0h2b3iqiq6fsrbnh58mjqy7if3n";
     };
   });
 
   nvim-peekup = prev.vimPlugins.nvim-peekup.overrideAttrs (old: {
-    version = "2021-07-05";
+    version = "unstable-2021-07-05";
     src = fetchFromGitHub {
       owner = "gennaro-tedesco";
       repo = "nvim-peekup";
@@ -88,7 +88,7 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "2021-07-25";
+    version = "unstable-2021-07-25";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
@@ -98,7 +98,7 @@ in
   });
 
   nvim-treesitter-refactor = prev.vimPlugins.nvim-treesitter-refactor.overrideAttrs (old: {
-    version = "2021-07-05";
+    version = "unstable-2021-07-05";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-refactor";
@@ -108,7 +108,7 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "2021-07-25";
+    version = "unstable-2021-07-25";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
@@ -118,7 +118,7 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "2021-07-12";
+    version = "unstable-2021-07-12";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
@@ -128,7 +128,7 @@ in
   });
 
   popup-nvim = prev.vimPlugins.popup-nvim.overrideAttrs (old: {
-    version = "2021-05-08";
+    version = "unstable-2021-05-08";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "popup.nvim";
@@ -138,7 +138,7 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "2021-07-25";
+    version = "unstable-2021-07-25";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
@@ -148,7 +148,7 @@ in
   });
 
   vim-vsnip = prev.vimPlugins.vim-vsnip.overrideAttrs (old: {
-    version = "2021-07-05";
+    version = "unstable-2021-07-05";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "vim-vsnip";
@@ -158,7 +158,7 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "2021-07-18";
+    version = "unstable-2021-07-18";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
@@ -168,7 +168,7 @@ in
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {
-    version = "2021-07-25";
+    version = "unstable-2021-07-25";
     src = fetchFromGitHub {
       owner = "sindrets";
       repo = "diffview.nvim";
@@ -183,7 +183,7 @@ in
   vim-ingo-library = buildVimPluginFrom2Nix ({
     pname = "vim-ingo-library";
 
-    version = "2021-07-13";
+    version = "unstable-2021-07-13";
     src = fetchFromGitHub {
       owner = "inkarkat";
       repo = "vim-ingo-library";
@@ -196,7 +196,7 @@ in
 
   vim-SpellCheck = buildVimPluginFrom2Nix ({
     pname = "vim-SpellCheck";
-    version = "2020-08-18";
+    version = "unstable-2020-08-18";
     src = fetchFromGitHub {
       owner = "inkarkat";
       repo = "vim-SpellCheck";
@@ -212,7 +212,7 @@ in
   FixCursorHold-nvim = buildVimPluginFrom2Nix ({
     pname = "FixCursorHold-nvim";
 
-    version = "2021-04-16";
+    version = "unstable-2021-04-16";
     src = fetchFromGitHub {
       owner = "antoinemadec";
       repo = "FixCursorHold.nvim";
@@ -225,7 +225,7 @@ in
 
   FTerm-nvim = buildVimPluginFrom2Nix ({
     pname = "FTerm-nvim";
-    version = "2021-07-12";
+    version = "unstable-2021-07-12";
     src = fetchFromGitHub {
       owner = "numtostr";
       repo = "FTerm.nvim";
@@ -238,7 +238,7 @@ in
 
   indent-guides-nvim = buildVimPluginFrom2Nix ({
     pname = "indent-guides-nvim";
-    version = "2021-03-26";
+    version = "unstable-2021-03-26";
     src = fetchFromGitHub {
       owner = "glepnir";
       repo = "indent-guides.nvim";
@@ -251,7 +251,7 @@ in
 
   detectindent = buildVimPluginFrom2Nix ({
     pname = "detectindent";
-    version = "2015-03-09";
+    version = "unstable-2015-03-09";
     src = fetchFromGitHub {
       owner = "ciaranm";
       repo = "detectindent";
@@ -264,7 +264,7 @@ in
 
   diffconflicts = buildVimPluginFrom2Nix ({
     pname = "diffconflicts";
-    version = "2020-12-08";
+    version = "unstable-2020-12-08";
     src = fetchFromGitHub {
       owner = "whiteinge";
       repo = "diffconflicts";
@@ -278,7 +278,7 @@ in
   vim-bitbake = buildVimPluginFrom2Nix ({
     pname = "vim-bitbake";
 
-    version = "2020-09-14";
+    version = "unstable-2020-09-14";
     src = fetchFromGitHub {
       owner = "kergoth";
       repo = "vim-bitbake";
@@ -291,7 +291,7 @@ in
 
   vim-boxdraw = buildVimPluginFrom2Nix ({
     pname = "vim-boxdraw";
-    version = "2021-03-25";
+    version = "unstable-2021-03-25";
 
     # TODO: use upstream and use patches
     src = fetchFromGitHub {
@@ -305,7 +305,7 @@ in
 
   vim-enmasse = buildVimPluginFrom2Nix ({
     pname = "vim-enmasse";
-    version = "2018-04-03";
+    version = "unstable-2018-04-03";
 
     src = fetchFromGitHub {
       owner = "Olical";
@@ -319,7 +319,7 @@ in
 
   vim-spellsync = buildVimPluginFrom2Nix ({
     pname = "vim-spellsync";
-    version = "2018-09-18";
+    version = "unstable-2018-09-18";
 
     src = fetchFromGitHub {
       owner = "micarmst";
@@ -333,7 +333,7 @@ in
 
   lualine-nvim = buildVimPluginFrom2Nix ({
     pname = "lualine-nvim";
-    version = "2021-05-27";
+    version = "unstable-2021-05-27";
     src = fetchFromGitHub {
       owner = "hoob3rt";
       repo = "lualine.nvim";
@@ -348,7 +348,7 @@ in
 
   vim-buftabline = buildVimPluginFrom2Nix ({
     pname = "vim-buftabline";
-    version = "2020-12-13";
+    version = "unstable-2020-12-13";
     src = fetchFromGitHub {
       owner = "ap";
       repo = "vim-buftabline";
@@ -362,7 +362,7 @@ in
 
   vim-just = buildVimPluginFrom2Nix ({
     pname = "vim-just";
-    version = "2021-05-26";
+    version = "unstable-2021-05-26";
     src = fetchFromGitHub {
       owner = "NoahTheDuke";
       repo = "vim-just";

@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "peda";
-  version = "2021-01-03";
+  version = "unstable-2021-01-03";
 
   src = fetchFromGitHub {
     owner = "longld";

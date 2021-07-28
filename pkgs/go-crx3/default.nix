@@ -2,7 +2,7 @@
 
 buildGoModule {
   name = "go-crx3";
-  version = "2020-08-27";
+  version = "unstable-2020-08-27";
 
   src = fetchFromGitHub {
     owner = "mmadfox/";

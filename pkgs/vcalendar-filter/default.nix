@@ -7,7 +7,7 @@ let metadata = sources.mutt-filters;
 in
 buildPerlPackage rec {
   pname = "vcalendar-filter";
-  version = "2016-06-07";
+  version = "unstable-2016-06-07";
 
   src = fetchFromGitHub {
     owner = "terabyte";

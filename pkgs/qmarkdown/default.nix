@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "qmarkdown";
-  version = "2021-07-14";
+  version = "unstable-2021-07-14";
 
   src = fetchFromGitHub {
     owner = "Peterkmoss";

@@ -1,7 +1,7 @@
 { stdenv, lib, fetchFromGitHub, pkgconfig, autoreconfHook, kerberos, cyrus_sasl, openldap }:
 
 stdenv.mkDerivation rec {
-  version = "2021-03-07";
+  version = "unstable-2021-03-07";
   name = "msktutil";
 
   src = fetchFromGitHub {

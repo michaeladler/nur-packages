@@ -2,7 +2,7 @@
 
 buildGoModule {
   name = "fstabfmt";
-  version = "2021-06-02";
+  version = "unstable-2021-06-02";
 
   src = fetchFromGitHub {
     owner = "xyproto";

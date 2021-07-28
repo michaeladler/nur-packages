@@ -2,7 +2,7 @@
 
 clangStdenv.mkDerivation rec {
   pname = "minigbm";
-  version = "2021-07-13";
+  version = "unstable-2021-07-13";
 
   src = fetchgit {
     url = "https://chromium.googlesource.com/chromiumos/platform/minigbm";

@@ -5,7 +5,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 {
 
   continuum = prev.tmuxPlugins.continuum.overrideAttrs (oa: {
-    version = "2021-06-08";
+    version = "unstable-2021-06-08";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-continuum";
@@ -15,7 +15,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   copycat = prev.tmuxPlugins.copycat.overrideAttrs (oa: {
-    version = "2020-07-24";
+    version = "unstable-2020-07-24";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-copycat";
@@ -25,7 +25,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   dracula = prev.tmuxPlugins.dracula.overrideAttrs (oa: {
-    version = "2021-07-22";
+    version = "unstable-2021-07-22";
     src = fetchFromGitHub {
       owner = "dracula";
       repo = "tmux";
@@ -35,7 +35,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   open = prev.tmuxPlugins.open.overrideAttrs (oa: {
-    version = "2020-08-08";
+    version = "unstable-2020-08-08";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-open";
@@ -45,7 +45,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   resurrect = prev.tmuxPlugins.resurrect.overrideAttrs (oa: {
-    version = "2021-07-05";
+    version = "unstable-2021-07-05";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-resurrect";
@@ -57,7 +57,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   sensible = prev.tmuxPlugins.sensible.overrideAttrs (oa: {
-    version = "2021-05-20";
+    version = "unstable-2021-05-20";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-sensible";
@@ -68,7 +68,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 
   sessionist = prev.tmuxPlugins.sessionist.overrideAttrs (oa: {
     pluginName = "sessionist";
-    version = "2017-12-03";
+    version = "unstable-2017-12-03";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-sessionist";
@@ -79,7 +79,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 
   tilish = prev.tmuxPlugins.tilish.overrideAttrs (oa: {
     pluginName = "tilish";
-    version = "2021-07-21";
+    version = "unstable-2021-07-21";
     src = fetchFromGitHub {
       owner = "jabirali";
       repo = "tmux-tilish";
@@ -90,7 +90,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 
 
   vim-tmux-navigator = prev.tmuxPlugins.vim-tmux-navigator.overrideAttrs (oa: {
-    version = "2021-05-29";
+    version = "unstable-2021-05-29";
     src = fetchFromGitHub {
       owner = "christoomey";
       repo = "vim-tmux-navigator";
@@ -100,7 +100,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   yank = prev.tmuxPlugins.yank.overrideAttrs (oa: {
-    version = "2020-10-02";
+    version = "unstable-2020-10-02";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-yank";
@@ -110,7 +110,7 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   tmux-fzf = prev.tmuxPlugins.tmux-fzf.overrideAttrs (oa: {
-    version = "2021-05-29";
+    version = "unstable-2021-05-29";
     src = fetchFromGitHub {
       owner = "sainnhe";
       repo = "tmux-fzf";

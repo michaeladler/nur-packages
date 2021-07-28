@@ -2,7 +2,7 @@
 
 stdenvNoCC.mkDerivation {
   pname = "zsh-vi-mode";
-  version = "2021-07-09";
+  version = "unstable-2021-07-09";
 
   src = fetchFromGitHub {
     owner = "jeffreytse";

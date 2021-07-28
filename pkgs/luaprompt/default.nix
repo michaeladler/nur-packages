@@ -11,7 +11,7 @@
 stdenv.mkDerivation rec {
 
   pname = "luaprompt";
-  version = "2015-11-19";
+  version = "unstable-2015-11-19";
 
   src = fetchFromGitHub {
     owner = "dpapavas";

@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-07-30";
+    version = "unstable-2021-07-31";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "950932f0c217979a31dc4b0dd00174453427600e";
-      sha256 = "0yy9g58hl1n6cp6dkxxshw07cs852giys5cf9bwn4p8if8iadqwz";
+      rev = "59887fbf3335316e5d0458ff03493a998fabf1ee";
+      sha256 = "1hzyi29wsv69rjhvw2dah1j6a7rz2bgyd70kz5h3qjrgg6w7jbk7";
     };
   });
 

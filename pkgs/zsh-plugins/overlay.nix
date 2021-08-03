@@ -34,12 +34,12 @@ final: prev:
   });
 
   zsh-history-substring-search = prev.zsh-history-substring-search.overrideAttrs (old: {
-    version = "unstable-2019-05-12";
+    version = "unstable-2021-08-02";
     src = prev.fetchFromGitHub {
       owner = "zsh-users";
       repo = "zsh-history-substring-search";
-      rev = "0f80b8eb3368b46e5e573c1d91ae69eb095db3fb";
-      sha256 = "0y8va5kc2ram38hbk2cibkk64ffrabfv1sh4xm7pjspsba9n5p1y";
+      rev = "4f2f17cc46f21924cad9f3ca5019d7909c94d066";
+      sha256 = "1d9zafdk4c4gk5hvnb4s39yj11hjrpy0hpxw1kmrriwkm98mv62f";
     };
 
   });

@@ -8,22 +8,22 @@ in
 {
 
   barbar-nvim = prev.vimPlugins.barbar-nvim.overrideAttrs (old: {
-    version = "unstable-2021-07-31";
+    version = "unstable-2021-08-02";
     src = fetchFromGitHub {
       owner = "romgrk";
       repo = "barbar.nvim";
-      rev = "9a8a0cdec7a93176a1207c6705011cd0759820e0";
-      sha256 = "04dvcsgqhwqaamb5dx2mkrj9ndgjgyv659bgpbknznqfpw4ha0k2";
+      rev = "28319dd1756f46f0f48c33e50fcf7b9125aeea4b";
+      sha256 = "1sf44ab7acs348vcr6nbkzk8hp45sy0bjbkp7425871nfd5f9389";
     };
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-08-01";
+    version = "unstable-2021-08-02";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "2e1330555c8caa2e2284406f0653354feee28cda";
-      sha256 = "1dg8k9gh2cwdwhi7j03920405rj42sp23w15rsdck9y4kf99hqbn";
+      rev = "459179fd7711fcec5c4926903e0785a8f464b21d";
+      sha256 = "1fvx3513pbsasar4bh06jaxaj8vaq1y65id2pppkgxp7jsknrf4i";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-08-01";
+    version = "unstable-2021-08-02";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "6944173e8778795863eda56a3bd2f98efdd82c10";
-      sha256 = "0rvrwccm2s2vpmshzdn0dfsvzbq5fz47cc6jab5vjgd15dimkbsh";
+      rev = "50a77bbc22055fc5665d5de3c7a135f5990e9132";
+      sha256 = "0smh32fvq7swnrv15aw05df3j0hh3xqcc65p3kbx8782d7bcm3lv";
     };
   });
 
@@ -118,12 +118,12 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "unstable-2021-07-30";
+    version = "unstable-2021-08-02";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "6a51028a103518826423b0c408077ea7e258f1ee";
-      sha256 = "1sc7b308scipb2a4d6frq9bij9y44nkkw3l103m85f8k39s93q10";
+      rev = "4a30ce31e3132bc268dee6879b20cad28c0fe8fa";
+      sha256 = "0iwrw88vjsnkij1mdm1d7pg1wwksssd6jpngps2qb5cddh43d2c0";
     };
   });
 
@@ -158,12 +158,12 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "unstable-2021-07-18";
+    version = "unstable-2021-08-02";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "ee83d4fa8ac946e5e0064e65a5276e1ea030ae28";
-      sha256 = "0mrydz0xl2yqgsp1nsz4p55mjhx7x7z7pahcq3y5mzzla687dnqg";
+      rev = "75717d467376fe81fe1acb56a4754c9088068235";
+      sha256 = "1nmd95z6b95id54lgmaphwsh4j19n86hr12dbzc6v3m46xnyciai";
     };
   });
 

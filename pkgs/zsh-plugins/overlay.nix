@@ -38,8 +38,8 @@ final: prev:
     src = prev.fetchFromGitHub {
       owner = "zsh-users";
       repo = "zsh-history-substring-search";
-      rev = "4f2f17cc46f21924cad9f3ca5019d7909c94d066";
-      sha256 = "1d9zafdk4c4gk5hvnb4s39yj11hjrpy0hpxw1kmrriwkm98mv62f";
+      rev = "4abed97b6e67eb5590b39bcd59080aa23192f25d";
+      sha256 = "0s8xdddb6zppc5lj28w44nl4n45wg9ic8x3b5pm1139cv038yj7j";
     };
 
   });

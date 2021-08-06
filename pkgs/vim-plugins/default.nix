@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-08-04";
+    version = "unstable-2021-08-05";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "97942a726bf7e4851d8d1812e910e8f9d489f909";
-      sha256 = "1mqgy6jps6g69x1jj3x60hcr3szpfnwvvyjyafqbd3wpc313pnwq";
+      rev = "bf2ebdfba23a10a7b9dea62b23dfaa7a1bc0852d";
+      sha256 = "100iif4is145fgr3hzqk4k9d3jhdl3lh6nbl4n7xrahkh9fxw6s8";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-08-01";
+    version = "unstable-2021-08-05";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "4bcc485e2e6ccb4ed7bdd9f1e12c9c4ad6fe1f0e";
-      sha256 = "18csqavwmdz7yn6j1wp9ypmpdkw6147xvn4gmd50wkphfh74bc67";
+      rev = "662159eeb112c076d90b2c3fe799f16a8165e4a6";
+      sha256 = "0jazw69444zcvvzj7j8k2zjqwyymgcsvz42pxq10ll58apmjrzri";
     };
   });
 
@@ -362,12 +362,12 @@ in
 
   vim-just = buildVimPluginFrom2Nix ({
     pname = "vim-just";
-    version = "unstable-2021-05-26";
+    version = "unstable-2021-08-04";
     src = fetchFromGitHub {
       owner = "NoahTheDuke";
       repo = "vim-just";
-      rev = "a2bd76d9a588c557003e9bb87aae93f13c8703e9";
-      sha256 = "1kgwccfqdxrkhxdhx4yd9hcvdlhfkdn455l5716qy12212a432ri";
+      rev = "3d41a4c6f0f241549e33ba0b7eaf907060855910";
+      sha256 = "18i9prhh9k47m1xxw2w3z83lf60qx6hwl0krnwz8c9vfc01xj5rw";
     };
 
     meta.homepage = "https://github.com/NoahTheDuke/vim-just";

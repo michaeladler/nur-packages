@@ -8,12 +8,12 @@ in
 {
 
   barbar-nvim = prev.vimPlugins.barbar-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-06";
+    version = "unstable-2021-08-07";
     src = fetchFromGitHub {
       owner = "romgrk";
       repo = "barbar.nvim";
-      rev = "7dcd28363b18a81d6c27852ba0a9e5b50e9fb803";
-      sha256 = "00g1c4gr8fmx9bmfn28njz9hkgwmzalgk2yrrxa0sx95g44n94kq";
+      rev = "877ef78049d44eee8ebf4d0e6ec541ca23e4ab49";
+      sha256 = "0m4yn8kkljn6m45ha7279wv7p9ppjyqrrpagmq92yrqnbfi87qa1";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-08-06";
+    version = "unstable-2021-08-07";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "81305705e1d46647529fe0a35cb760357c7bd59f";
-      sha256 = "19plic42w69cvx78g8xsa2rzxrp5a5hx78b3q5ls57f5razpbjgf";
+      rev = "6ed86a85164e53c8c2a5a99761768fc48cebaf14";
+      sha256 = "1z7hwxd20fxdm4qlkxikprrv3vb0cjnvxpqwhj3ldvqv76wd0x99";
     };
   });
 
@@ -183,12 +183,12 @@ in
   vim-ingo-library = buildVimPluginFrom2Nix ({
     pname = "vim-ingo-library";
 
-    version = "unstable-2021-07-28";
+    version = "unstable-2021-08-07";
     src = fetchFromGitHub {
       owner = "inkarkat";
       repo = "vim-ingo-library";
-      rev = "6cc9443f5f71885f9514c5a0e81c18c6b2a45cc7";
-      sha256 = "01yjr0wm7k3zpbi6raa7qfss192zkak4939hlpijdmyi48qbfpay";
+      rev = "51703e0f5fc73836b8e5be222f6eebde1891a664";
+      sha256 = "0yk8dhjpxywh4vrxwvg3vjxdabl4i3qbd1qgk9bmb111bn7lwjnh";
     };
 
     meta.homepage = "https://github.com/inkarkat/vim-ingo-library/";

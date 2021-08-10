@@ -110,12 +110,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   tmux-fzf = prev.tmuxPlugins.tmux-fzf.overrideAttrs (oa: {
-    version = "unstable-2021-05-29";
+    version = "unstable-2021-08-09";
     src = fetchFromGitHub {
       owner = "sainnhe";
       repo = "tmux-fzf";
-      rev = "6e70fc5a75c1315cc8f33a6ca44c0f557f1d2de2";
-      sha256 = "1w0469qp5akfvmdy72k1hwdsjzsd7pj4dvbjgq5h22bkj60d4r8x";
+      rev = "8bba6a429d3ec808031f972384f0bd28b0ce38c1";
+      sha256 = "19l7k2i7gldnk1hm86lgzqq7k5q63rxcjnmryy8y2jh5ayznmc21";
     };
   });
 

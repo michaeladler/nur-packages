@@ -31,9 +31,10 @@ in
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
-  ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
-  xplugd = callPackage ./pkgs/xplugd { };
+
+  # sometimes more up2date
+  ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
 
   # bundles
 

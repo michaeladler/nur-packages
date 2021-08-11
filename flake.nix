@@ -70,7 +70,6 @@
             sscep
             ungoogled-chromium-bin
             vcalendar-filter
-            xplugd
             zig
             zls
             ;

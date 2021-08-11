@@ -1,0 +1,91 @@
+From 3f51e6a0801536fa6579b0bbca89b34af0c7cdbd Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Thu, 25 Mar 2021 13:53:10 +0100
+Subject: [PATCH] UTF-8 style
+
+---
+ plugin/boxdraw.vim |  2 +-
+ python/boxdraw.py  | 37 +++++++++++++++++++------------------
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+
+diff --git a/plugin/boxdraw.vim b/plugin/boxdraw.vim
+index 5cc6320..bc61696 100644
+--- a/plugin/boxdraw.vim
++++ b/plugin/boxdraw.vim
+@@ -30,7 +30,7 @@ function! boxdraw#Draw(cmd, args)
+ 	let x1 = p1[2] + p1[3] - 1
+ 	let x2 = p2[2] + p2[3] - 1
+ 	let c = ['python3', s:drawscript, shellescape(a:cmd), y1, x1, y2, x2] + a:args
+-	execute "%!" . join(c, " ")
++	execute "%!PYTHONIOENCODING=UTF-8 " . join(c, " ")
+ 	call setpos(".", p2)
+ endfunction
+ 
+diff --git a/python/boxdraw.py b/python/boxdraw.py
+index ffc6b10..0c6add6 100755
+--- a/python/boxdraw.py
++++ b/python/boxdraw.py
+@@ -112,7 +112,7 @@ def char_at(lines, y, x, default=' '):
+ def draw_box(lines, y1, x1, y2, x2):
+     "Draws a box and clears its contents with spaces."
+     y, x, h, w = block_pos(y1, x1, y2, x2)
+-    box = line([[line('+-+',w)], [line('| |',w)], [line('+-+',w)]], h)
++    box = line([[line('┌─┐',w)], [line('│ │',w)], [line('└─┘',w)]], h)
+     return replace_block(lines, y, x, box)
+ 
+ def fill_box(lines, y1, x1, y2, x2, yalign, xalign, text):
+@@ -140,11 +140,12 @@ def draw_box_with_label(lines, y1, x1, y2, x2, yalign, xalign, text):
+ 
+ def arrow_reverse(arrow):
+     "Returns the reverse of an arrow: +-> becomes <-+"
+-    return arrow[2].replace('>','<').replace('^','v') + arrow[1] + arrow[0].replace('<','>').replace('v','^')
++    return arrow[2].replace('▶','◀').replace('▲','▼') + arrow[1] + arrow[0].replace('◀','▶').replace('▼', '▲')
++
+ 
+ def arrow_h2v(arrow):
+     "Converts an arrow to vertical. Returns a block that can be merged into lines."
+-    arrow = arrow.replace('-', '|').replace('<','^').replace('>','v')
++    arrow = arrow.replace('─', '│').replace('◀','▲').replace('▶','▼')
+     return [[a] for a in arrow]
+ 
+ def arrow_start(lines, y1, x1, arrow):
+@@ -244,21 +245,21 @@ CMDS = {
+     '+}]c': [fill_box, 'bottom', 'right'],
+ 
+     # Line drawing
+-    '+>': [draw_line_vh, '-->'],
+-    '+<': [draw_line_vh, '-->'],
+-    '+V': [draw_line_hv, '-->'],
+-    '+v': [draw_line_hv, '-->'],
+-    '+^': [draw_line_hv, '-->'],
+-
+-    '++>': [draw_line_vh, '<->'],
+-    '++<': [draw_line_vh, '<->'],
+-    '++V': [draw_line_hv, '<->'],
+-    '++v': [draw_line_hv, '<->'],
+-    '++^': [draw_line_hv, '<->'],
+-
+-    '+-': [draw_line_vh, '---'],
+-    '+_': [draw_line_vh, '---'],
+-    '+|': [draw_line_hv, '---'],
++    '+>': [draw_line_vh, '──▶'],
++    '+<': [draw_line_vh, '──▶'],
++    '+V': [draw_line_hv, '──▶'],
++    '+v': [draw_line_hv, '──▶'],
++    '+^': [draw_line_hv, '──▶'],
++
++    '++>': [draw_line_vh, '◀─▶'],
++    '++<': [draw_line_vh, '◀─▶'],
++    '++V': [draw_line_hv, '◀─▶'],
++    '++v': [draw_line_hv, '◀─▶'],
++    '++^': [draw_line_hv, '◀─▶'],
++
++    '+-': [draw_line_vh, '───'],
++    '+_': [draw_line_vh, '───'],
++    '+|': [draw_line_hv, '───'],
+ 
+     # Selection
+     'ao': [select_outer_box],
+-- 
+2.32.0
+

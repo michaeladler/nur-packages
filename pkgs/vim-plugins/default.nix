@@ -291,15 +291,19 @@ in
 
   vim-boxdraw = buildVimPluginFrom2Nix ({
     pname = "vim-boxdraw";
-    version = "unstable-2021-03-25";
+    version = "unstable-2021-01-28";
 
-    # TODO: use upstream and use patches
     src = fetchFromGitHub {
-      owner = "michaeladler";
+      owner = "gyim";
       repo = "vim-boxdraw";
-      rev = "3f51e6a0801536fa6579b0bbca89b34af0c7cdbd";
-      sha256 = "1l5wznmm1kjcm2fkx009hgwbsfx3xv8cy1jwws7jfp1r9gr7jnfv";
+      rev = "b7f789f305b1c5b0b4623585e0f10adb417f2966";
+      sha256 = "0zr3r4dgpdadaz3g9hzn7vyv0rids0k1wdywk9yywfp6q9m0ygj8";
     };
+
+    patches = [
+      ./patches/vim-boxdraw/0001-UTF-8-style.patch
+    ];
+
     meta.homepage = "https://github.com/gyim/vim-boxdraw";
   });
 

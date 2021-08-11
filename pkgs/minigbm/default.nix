@@ -2,12 +2,12 @@
 
 clangStdenv.mkDerivation rec {
   pname = "minigbm";
-  version = "unstable-2021-08-03";
+  version = "unstable-2021-08-10";
 
   src = fetchgit {
     url = "https://chromium.googlesource.com/chromiumos/platform/minigbm";
-    rev = "d9381b66288d8886d5d99bff7927748a1352c85a";
-    sha256 = "1nis6487advbp9sml8wv59gjz3d04g0gaa6l7yxdjba10i6n55ny";
+    rev = "1b252e2ee2316d4087e616b21c9ed75cc77f89b9";
+    sha256 = "1qn6pcanynrnq7zbw1y7vh0vrm8pbzl1pwm2l6afx5j4z3g3jwld";
   };
 
   nativeBuildInputs = [ pkg-config ];

@@ -1,6 +1,4 @@
-{ stdenv, fetchFromGitHub, autoreconfHook, pkg-config, openssl }:
-
-with stdenv.lib;
+{ stdenv, lib, fetchFromGitHub, autoreconfHook, pkg-config, openssl }:
 
 stdenv.mkDerivation rec {
   name = "sscep";
@@ -16,9 +14,9 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ pkg-config autoreconfHook ];
   buildInputs = [ openssl ];
 
-  meta = {
+  meta = with lib; {
     description = "Simple SCEP client for Unix";
     homepage = "https://github.com/certnanny/sscep";
-    license = "OpenSSL";
+    license = licenses.openssl;
   };
 }

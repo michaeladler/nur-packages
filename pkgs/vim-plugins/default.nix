@@ -28,12 +28,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "unstable-2021-08-09";
+    version = "unstable-2021-08-12";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "8ed6999e005015251b6b05cb5c0bfe857785b1d4";
-      sha256 = "0921vgji6n5hcb3z2cppz2gfbkww71yn7wqvh3wvgrw041ird3af";
+      rev = "9012b8f51ffc97604b3ff99a5d5b67c79aac9417";
+      sha256 = "1k2hbr9j565ayc9nyq64qqdqbp1bqj0a5ykh33ypblwdvl3lhisi";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-08-10";
+    version = "unstable-2021-08-11";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "7d6e2211571029ace6ddeefed7df18e4dc51274f";
-      sha256 = "14351dhxn0l8sdqyghfqxfqsg76gw2ascy65v4m5f48in0sp450v";
+      rev = "d2d6e6251172a78436b7d2730a638e572f04b6ce";
+      sha256 = "0b146fvcsg5i5x8bqmk9n1gfv9h158b6vss69pp47nr7jf7xfrfd";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-08-09";
+    version = "unstable-2021-08-12";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "2b51d9b766c34128db22484c343709e19f5301b5";
-      sha256 = "0vc7ichk49nmhqmvkcm8jbfs92z3bb1pvxkr6chc8dk03ppnqwh9";
+      rev = "03943f9a7cdb82ee5fe4cbbdf6bf16d55d4b9807";
+      sha256 = "0hzdc31zjp75mp43b1r2p0nf70ba4c2kiccp77mzki964j2dk5y4";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-09";
+    version = "unstable-2021-08-11";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "2c573b9d12f421cec74a215f79b25591fe083352";
-      sha256 = "064lw82hfrx68djn8w2kkw3sz18hl96j0nd3g4c50dv9wr6440zb";
+      rev = "d4a52ded6767ccda6c29e47332247003ac4c2007";
+      sha256 = "15d996l9zbd300nrb946nfkw1b39v9qmzm1w2i8p4k11rclm77si";
     };
   });
 

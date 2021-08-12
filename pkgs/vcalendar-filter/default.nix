@@ -34,7 +34,6 @@ buildPerlPackage rec {
     license = licenses.gpl3Plus;
     homepage = "https://github.com/terabyte/mutt-filters";
     platforms = platforms.all;
-    maintainers = "Michael Adler";
   };
 
 }

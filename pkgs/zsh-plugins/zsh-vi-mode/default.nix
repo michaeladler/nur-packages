@@ -20,7 +20,6 @@ stdenvNoCC.mkDerivation {
     description = "A better and friendly vi(vim) mode plugin for ZSH.";
     homepage = "https://github.com/jeffreytse/zsh-vi-mode";
     license = licenses.mit;
-    maintainers = "Michael Adler";
     platforms = platforms.unix;
   };
 }

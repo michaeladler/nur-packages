@@ -21,7 +21,6 @@ stdenvNoCC.mkDerivation {
     description = "Simple completion function to complete pandoc in zsh";
     homepage = "https://github.com/srijanshetty/zsh-pandoc-completion";
     license = licenses.mit;
-    maintainers = "Michael Adler";
     platforms = platforms.unix;
   };
 }

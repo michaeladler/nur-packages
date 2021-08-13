@@ -92,8 +92,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "2ac7858bd458fc447ace58f3d86b46ad73f9f281";
-      sha256 = "0127qd60m26273i0bgv8k25y65glrppv4jn7an3z0vnmm3vcs8sp";
+      rev = "d06ab287662eef5945daca71ed77942a095fa5a1";
+      sha256 = "0mlk9y4a822wds1ndnax81fnxx1z0980c8jm7lylrgjbcs4a5q7v";
     };
   });
 
@@ -128,7 +128,7 @@ in
 
     knownRockspec = (prev.fetchurl {
       url = "https://github.com/nvim-lua/plenary.nvim/raw/0b78fe699b9049b8f46942664027b32102979832/plenary.nvim-scm-1.rockspec";
-      sha256 = "sha256-ffQ1SP56dB1K/v8FOkVKL5KCAgijv+R/VYnCb4wOeyI=";
+      sha256 = "08kv1s66zhl9amzy9gx3101854ig992kl1gzzr51sx3szr43bx3x";
     }).outPath;
   });
 
@@ -147,8 +147,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "2a86f47df649af3336ae10af73f0dbd574ca8cb1";
-      sha256 = "03hmf4dyy2nh6n603xkw4vcaz37ay17fqd3vqcs4l51vcd6g3hag";
+      rev = "f1a27baf279976845eb43c65e99a71d7f0f92d02";
+      sha256 = "069r1pkg82zj7fm55gk21va2f2x2jmrknfwld5bp0py344gh65n1";
     };
   });
 

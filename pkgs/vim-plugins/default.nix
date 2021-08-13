@@ -382,4 +382,17 @@ in
     meta.homepage = "https://github.com/NoahTheDuke/vim-just";
   });
 
+  close-buffers-nvim = buildVimPluginFrom2Nix ({
+    pname = "close-buffers-nvim";
+    version = "unstable-2021-08-10";
+    src = fetchFromGitHub {
+      owner = "kazhala";
+      repo = "close-buffers.nvim";
+      rev = "da77e7efd1491a2985e2db3b0927c9b5a6b16031";
+      sha256 = "09azw4s37a6bpdi9rvvw8frjn3r8225a3jyrjsvhzfbflgpg3lb1";
+    };
+
+    meta.homepage = "https://github.com/kazhala/close-buffers.nvim";
+  });
+
 }

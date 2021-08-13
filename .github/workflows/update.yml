@@ -25,10 +25,16 @@ jobs:
       - name: update
         run: |
           mkdir -p ~/.config/nix ~/.config/nixpkgs/overlays
-          printf "access-tokens = github.com=%s" "$GITHUB_TOKEN" >>~/.config/nix/nix.conf
+          echo "access-tokens = github.com=$GITHUB_TOKEN" >>~/.config/nix/nix.conf
           echo 'final: prev: { update-nix-fetchgit = prev.update-nix-fetchgit.overrideAttrs (old: { doCheck = false; }); }' > ~/.config/nixpkgs/overlays/fixes.nix
-          cat ~/.config/nixpkgs/overlays/fixes.nix
-          .ci/update-all.sh
+
+          nix-shell \
+            --command "make -j8 update-flakes update-firefox-addons update-firefox update-chromium update-brave update-other" \
+            -p nixUnstable update-nix-fetchgit
+          nix-shell \
+            --command "nix --experimental-features 'nix-command flakes' flake check" \
+            -p nixUnstable
+          git diff --exit-code || git commit -am 'chore: update packages'
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
           GIT_AUTHOR_NAME: "Github Actions"
@@ -37,7 +43,10 @@ jobs:
           GIT_COMMITTER_EMAIL: "actions@github"
 
       - name: build
-        run: .ci/build-all.sh
+        run: |
+          nix-shell \
+            --command "make build-all" \
+            -p nixUnstable
 
       - name: push
         if: ${{ github.ref == 'refs/heads/master' }}
@@ -66,7 +75,10 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: update
-        run: .ci/update-zig.sh
+        run: |
+          nix-shell \
+            --command "make -j2 update-zig update-zls" \
+            -p nixUnstable update-nix-fetchgit
         env:
           GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
           GIT_AUTHOR_NAME: "Github Actions"
@@ -75,7 +87,11 @@ jobs:
           GIT_COMMITTER_EMAIL: "actions@github"
 
       - name: build
-        run: .ci/build-zig.sh
+        run: |
+          nix-shell \
+            --command "nix --experimental-features 'nix-command flakes' build --no-link '.#zig' '.#zls'" \
+            -p nixUnstable
+          git diff --exit-code || git commit -am 'chore: update zig and zls'
 
       - name: push
         if: ${{ github.ref == 'refs/heads/master' }}

@@ -171,6 +171,10 @@ rec {
       rev = "3226b98318518bef47f55218041adfdf99c36e9a";
       sha256 = "09r6k5afd940cf44gdb62ffnh0ns32qr20vxxqgsw3rdi5558wfc";
     };
+
+    # this is necessary otherwise telescope-nvim depends on the old versions
+    # weird overlay magic...
+    dependencies = with final; [ plenary-nvim popup-nvim ];
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {

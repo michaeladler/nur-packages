@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-12";
+    version = "unstable-2021-08-09";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "f039f60a99a264b1ca3a0ee98a59db1477150f00";
-      sha256 = "0q0yy0w6q0bx567dl91cs96zrijn2cmdypfnfxzkx8jfq7nkwmpx";
+      rev = "2c573b9d12f421cec74a215f79b25591fe083352"; # pin
+      sha256 = "064lw82hfrx68djn8w2kkw3sz18hl96j0nd3g4c50dv9wr6440zb";
     };
   });
 

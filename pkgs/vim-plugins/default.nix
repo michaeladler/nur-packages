@@ -117,18 +117,6 @@ rec {
     };
   });
 
-  plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: rec {
-    version = "unstable-2021-08-13";
-    src = fetchFromGitHub {
-      owner = "nvim-lua";
-      repo = "plenary.nvim";
-      rev = "0b78fe699b9049b8f46942664027b32102979832";
-      sha256 = "16ghyvnsqdrfkjb7hawcvwrx56v6llnq4zziw4z1811j4n1v6ypa";
-    };
-
-    knownRockspec = "${src.outPath}/plenary.nvim-scm-1.rockspec";
-  });
-
   popup-nvim = prev.vimPlugins.popup-nvim.overrideAttrs (old: {
     version = "unstable-2021-08-09";
     src = fetchFromGitHub {
@@ -147,10 +135,6 @@ rec {
       rev = "f1a27baf279976845eb43c65e99a71d7f0f92d02";
       sha256 = "069r1pkg82zj7fm55gk21va2f2x2jmrknfwld5bp0py344gh65n1";
     };
-
-    # this is necessary otherwise telescope-nvim depends on the old versions
-    # weird overlay magic...
-    dependencies = with final; [ plenary-nvim popup-nvim ];
   });
 
   vim-vsnip = prev.vimPlugins.vim-vsnip.overrideAttrs (old: {
@@ -171,10 +155,6 @@ rec {
       rev = "3226b98318518bef47f55218041adfdf99c36e9a";
       sha256 = "09r6k5afd940cf44gdb62ffnh0ns32qr20vxxqgsw3rdi5558wfc";
     };
-
-    # this is necessary otherwise telescope-nvim depends on the old versions
-    # weird overlay magic...
-    dependencies = with final; [ plenary-nvim popup-nvim ];
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {

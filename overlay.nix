@@ -48,4 +48,8 @@ in
   zshPlugins = (prev.zshPlugins  or { }) // final.myZshPlugins;
 
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
+
+  myLua51Packages = prev.recurseIntoAttrs ((import ./pkgs/lua-modules) final prev);
+  lua51Packages = prev.lua51Packages // final.myLua51Packages;
+
 }

@@ -13,6 +13,7 @@ handlr
 luaprompt
 minigbm
 msktutil
+myLua51Packages/plenary-nvim
 myTmuxPlugins/continuum
 myTmuxPlugins/copycat
 myTmuxPlugins/dracula
@@ -44,7 +45,6 @@ myVimPlugins/nvim-peekup
 myVimPlugins/nvim-treesitter
 myVimPlugins/nvim-treesitter-refactor
 myVimPlugins/nvim-treesitter-textobjects
-myVimPlugins/plenary-nvim
 myVimPlugins/popup-nvim
 myVimPlugins/telescope-nvim
 myVimPlugins/vim-SpellCheck

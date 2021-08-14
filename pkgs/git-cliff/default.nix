@@ -1,9 +1,11 @@
-{ lib
+{ stdenv
+, lib
 , naersk-lib
 , fetchFromGitHub
+, installShellFiles
 }:
 
-naersk-lib.buildPackage {
+let gitCliff = naersk-lib.buildPackage {
   pname = "git-cliff";
   version = "unstable-2021-08-14";
 
@@ -20,4 +22,29 @@ naersk-lib.buildPackage {
     license = licenses.gpl3;
     platforms = platforms.all;
   };
+};
+in
+
+stdenv.mkDerivation {
+  inherit (gitCliff) pname version src meta;
+
+  phases = [ "buildPhase" "installPhase" ];
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  buildPhase = ''
+    mkdir -p completions
+    env OUT_DIR=./completions ${gitCliff}/bin/git-cliff-completions
+  '';
+
+  installPhase = ''
+    mkdir -p $out/bin
+    cp -a ${gitCliff}/bin/git-cliff $out/bin/
+
+    cd completions
+    installShellCompletion --zsh --name _git-cliff _git-cliff
+    installShellCompletion git-cliff.bash
+    installShellCompletion git-cliff.fish
+  '';
+
 }

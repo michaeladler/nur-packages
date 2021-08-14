@@ -8,12 +8,12 @@ in
 rec {
 
   barbar-nvim = prev.vimPlugins.barbar-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-10";
+    version = "unstable-2021-08-14";
     src = fetchFromGitHub {
       owner = "romgrk";
       repo = "barbar.nvim";
-      rev = "f4163e2ca987f25c3d1fb5cf3d9329d8ab343f35";
-      sha256 = "1wlxfkpa42rvw853x8nalxy3zxaaji0d365jbp3pcvhsy0li33dc";
+      rev = "0c4c37eb3188230b11493adac68aac491c5e6a07";
+      sha256 = "0pc5rrzhcrp7p5wwid4ggdakp5y05ki0hkm04bflq0y4ib4haa4c";
     };
   });
 
@@ -28,12 +28,12 @@ rec {
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "unstable-2021-08-12";
+    version = "unstable-2021-08-14";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "9012b8f51ffc97604b3ff99a5d5b67c79aac9417";
-      sha256 = "1k2hbr9j565ayc9nyq64qqdqbp1bqj0a5ykh33ypblwdvl3lhisi";
+      rev = "cfbcd727d97958943c0d94e8a8126abe27294ad3";
+      sha256 = "0znfd451bshqczalw5w4gy2k7fp8630p7vkmfpp1n4gw7z3vchqg";
     };
   });
 
@@ -92,8 +92,8 @@ rec {
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "ef85abba7f1e69b8bcfcca260f4818e1077894c4";
-      sha256 = "0w50yzxv888zzk8anbaf67942y19nfn24g9951dx892h9sjy1i0p";
+      rev = "efdd6fccb25e400fea68d53a8c4c39af7b66d974";
+      sha256 = "15ylxq9s9w2hirp8m5ziqhcsc559py6vivns5h9czbkh89i2x9bg";
     };
   });
 

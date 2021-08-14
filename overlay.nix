@@ -33,6 +33,7 @@ in
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
 
+
   # sometimes more up2date
   ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
 

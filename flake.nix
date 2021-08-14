@@ -8,10 +8,13 @@
     url = "github:nix-community/rnix-lsp";
     inputs.nixpkgs.follows = "nixpkgs";
   };
-
+  inputs.naersk = {
+    url = "github:nmattia/naersk";
+    # inputs.nixpkgs.follows = "nixpkgs";
+  };
   inputs.nur.url = github:nix-community/NUR;
 
-  outputs = { self, nixpkgs, flake-utils, rnix-lsp-src, nur }:
+  outputs = { self, nixpkgs, flake-utils, rnix-lsp-src, nur, naersk }:
 
     {
       overlay = import ./overlay.nix;
@@ -27,6 +30,7 @@
           inherit system;
           overlays = [ nur.overlay ];
         };
+        naersk-lib = naersk.lib."${system}";
 
       in
       {
@@ -75,6 +79,8 @@
             zig
             zls
             ;
+
+          git-cliff = pkgs.callPackage ./pkgs/git-cliff { inherit naersk-lib; };
         };
 
         defaultPackage = pkgs.hello;

@@ -17,7 +17,25 @@
     },
     "naersk": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1623927034,
+        "narHash": "sha256-sGxlmfp5eXL5sAMNqHSb04Zq6gPl+JeltIZ226OYN0w=",
+        "owner": "nmattia",
+        "repo": "naersk",
+        "rev": "e09c320446c5c2516d430803f7b19f5833781337",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nmattia",
+        "repo": "naersk",
+        "type": "github"
+      }
+    },
+    "naersk_2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1605267184,
@@ -35,6 +53,19 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1628779307,
+        "narHash": "sha256-ErivbgE5SGvNdFpq+Q50lw1JGGmvxBR/d71aW41S+1A=",
+        "path": "/nix/store/9h6hsbq8qc7h51wnk88j39kyh3zihqz5-source",
+        "rev": "4138cbd913fad85073e59007710e3f083d0eb7c6",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1628934079,
         "narHash": "sha256-CEYsKXNYprs/TvmB7ppkYMALXnfhEw6lg5VaEXgpoec=",
         "owner": "nixos",
@@ -49,7 +80,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1605988311,
         "narHash": "sha256-PA+kgq46NApOAJlmBNJHs5DwsIrY+jodM0e4g7VtXyY=",
@@ -65,11 +96,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1628947296,
-        "narHash": "sha256-7nAgpYMCc5QSM3wLZvKk/uAau3v2uDw1Mj2ANkhMCQ4=",
+        "lastModified": 1628952930,
+        "narHash": "sha256-oErE1yYJ0Wvo7xE549q8KpCe8gdtttqoq5WxSKnKJ0I=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "d82fb5daa20ee635db065680221ba6e2b22c8be8",
+        "rev": "b4851bec5d5e2764a2e595c429f2f0dfa5a7a624",
         "type": "github"
       },
       "original": {
@@ -80,7 +111,7 @@
     },
     "rnix-lsp-src": {
       "inputs": {
-        "naersk": "naersk",
+        "naersk": "naersk_2",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -103,7 +134,8 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
+        "naersk": "naersk",
+        "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "rnix-lsp-src": "rnix-lsp-src"
       }

@@ -5,7 +5,7 @@ let
   fetchFromGitHub = prev.fetchFromGitHub;
 in
 
-rec {
+{
 
   barbar-nvim = prev.vimPlugins.barbar-nvim.overrideAttrs (old: {
     version = "unstable-2021-08-14";

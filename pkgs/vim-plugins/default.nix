@@ -380,4 +380,17 @@ in
     meta.homepage = "https://github.com/kazhala/close-buffers.nvim";
   });
 
+  papercolor-theme-slim = buildVimPluginFrom2Nix ({
+    pname = "papercolor-theme-slim";
+    version = "unstable-2021-03-17";
+    src = fetchFromGitHub {
+      owner = "pappasam";
+      repo = "papercolor-theme-slim";
+      rev = "642a52947c6233129e56ac1f2c9e551f4b81acc1";
+      sha256 = "1334fvcr0daqqwsr758slhh10cbxvpx3n9p42n25nbham7biqzhg";
+    };
+
+    meta.homepage = "https://github.com/pappasam/papercolor-theme-slim";
+  });
+
 }

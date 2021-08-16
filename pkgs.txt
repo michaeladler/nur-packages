@@ -46,6 +46,7 @@ myVimPlugins/nvim-peekup
 myVimPlugins/nvim-treesitter
 myVimPlugins/nvim-treesitter-refactor
 myVimPlugins/nvim-treesitter-textobjects
+myVimPlugins/papercolor-theme-slim
 myVimPlugins/popup-nvim
 myVimPlugins/telescope-nvim
 myVimPlugins/vim-SpellCheck

@@ -69,6 +69,7 @@ oelint-adv
 peda
 qmarkdown
 rnix-lsp
+sad
 sscep
 ungoogled-chromium-bin
 vcalendar-filter

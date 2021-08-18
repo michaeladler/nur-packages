@@ -73,6 +73,7 @@
             oelint-adv
             peda
             qmarkdown
+            sad
             sscep
             ungoogled-chromium-bin
             vcalendar-filter

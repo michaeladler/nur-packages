@@ -127,6 +127,16 @@ in
     };
   });
 
+  plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
+    version = "unstable-2021-08-13";
+    src = fetchFromGitHub {
+      owner = "nvim-lua";
+      repo = "plenary.nvim";
+      rev = "0b78fe699b9049b8f46942664027b32102979832";
+      sha256 = "16ghyvnsqdrfkjb7hawcvwrx56v6llnq4zziw4z1811j4n1v6ypa";
+    };
+  });
+
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
     version = "unstable-2021-08-18";
     src = fetchFromGitHub {

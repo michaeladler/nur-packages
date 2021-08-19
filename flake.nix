@@ -44,7 +44,6 @@
           tmuxPlugins = pkgs.tmuxPlugins;
           firefoxAddons = pkgs.firefoxAddons;
           zshPlugins = pkgs.zshPlugins;
-          lua51Packages = pkgs.lua51Packages;
         };
 
         packages = flake-utils.lib.flattenTree {
@@ -65,7 +64,6 @@
             luaprompt
             minigbm
             msktutil
-            myLua51Packages
             myTmuxPlugins
             myVimPlugins
             myZshPlugins

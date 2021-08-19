@@ -7,13 +7,13 @@
 
 let gitCliff = naersk-lib.buildPackage {
   pname = "git-cliff";
-  version = "unstable-2021-08-14";
+  version = "unstable-2021-08-19";
 
   src = fetchFromGitHub {
     owner = "orhun";
     repo = "git-cliff";
-    rev = "c5f58213b42fdfd6ec987563c3cdc9f3d152dc06";
-    sha256 = "0z5wyajqq3lb3cyf7ksz80lcsbqjn07jhh3qa24wm0sf9yksbihg";
+    rev = "e6fe05b2da8b65122a5f9b021e7e3aaa4b5e5956";
+    sha256 = "10y15cpmrpw478bh7lkgyf3gi4qs7chmf37dx7h857z5dxgip0pc";
   };
 
   meta = with lib; {

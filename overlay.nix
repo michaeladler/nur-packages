@@ -32,7 +32,6 @@ in
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
-  sad = callPackage ./pkgs/sad { };
 
   # sometimes more up2date
   ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };

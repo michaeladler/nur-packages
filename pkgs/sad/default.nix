@@ -1,9 +1,9 @@
 { lib
 , fetchFromGitHub
-, rustPlatform
+, naersk-lib
 }:
 
-rustPlatform.buildRustPackage rec {
+naersk-lib.buildPackage rec {
   pname = "sad";
   version = "unstable-2021-08-18";
 
@@ -13,8 +13,6 @@ rustPlatform.buildRustPackage rec {
     rev = "16d77240939d8957d6f22a79ab4670a49d992d28";
     sha256 = "0g856qvx9drbgdkvmx6clrxmbssb5djny7xycp0vg0v1cvvpdg2h";
   };
-
-  cargoSha256 = "sha256-sNhh2B2mdHIYrcAH/vlWEwgLM2lpXu3Wrl5Li28dgnw=";
 
   meta = with lib; {
     description = "CLI search and replace";

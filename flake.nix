@@ -73,7 +73,6 @@
             oelint-adv
             peda
             qmarkdown
-            sad
             sscep
             ungoogled-chromium-bin
             vcalendar-filter
@@ -82,6 +81,7 @@
             ;
 
           git-cliff = pkgs.callPackage ./pkgs/git-cliff { inherit naersk-lib; };
+          sad = pkgs.callPackage ./pkgs/sad { inherit naersk-lib; };
         };
 
         defaultPackage = pkgs.hello;

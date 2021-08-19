@@ -39,16 +39,10 @@ update-zls:
 .PHONY: update-other
 update-other:
 	find pkgs -name "*.nix" \
-		-not -path "pkgs/zig/*" \
 		-not -path "pkgs/ungoogled-chromium-bin/*" \
-		-not -path "pkgs/sad/*" \
-		-not -path "pkgs/zls/*" -print0 \
-		| xargs -0 update-nix-fetchgit
-
-.PHONY: update-rust-pkgs
-update-rust-pkgs:
-	update-nix-fetchgit ./pkgs/sad/default.nix
-	git diff --exit-code ./pkgs/sad/default.nix || ./scripts/fix-rust-pkg.sh sad
+		-not -path "pkgs/zig/*" \
+		-not -path "pkgs/zls/*" \
+		-print0 | xargs -0 update-nix-fetchgit
 
 .PHONY: pkgs.txt
 pkgs.txt:

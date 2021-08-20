@@ -57,12 +57,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   sensible = prev.tmuxPlugins.sensible.overrideAttrs (oa: {
-    version = "unstable-2021-05-20";
+    version = "unstable-2021-08-19";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-sensible";
-      rev = "989d09249e9389604a68d281c999978f6231431b";
-      sha256 = "0l1gl1wsd69l5z8zf6mp23x170iyzk5y00pxp3x7f73z7796i9ak";
+      rev = "5d089e418efb1a00f47654014ed085deb3d0c878";
+      sha256 = "1n0q18adqzsjwg6147inhj14lzqqxkb0ycl68pn064hy7ic6rv5f";
     };
   });
 

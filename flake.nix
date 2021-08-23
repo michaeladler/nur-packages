@@ -50,6 +50,7 @@
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
             brave
+            bsp-layout
             btrfs-du
             btrfs-list
             dwm

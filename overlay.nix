@@ -8,6 +8,7 @@ in
 {
   # overlayed
   brave = (import ./pkgs/brave) final prev;
+  bsp-layout = (import ./pkgs/bsp-layout) final prev;
   dwm = (import ./pkgs/dwm) final prev;
   dwmblocks = (import ./pkgs/dwmblocks) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;

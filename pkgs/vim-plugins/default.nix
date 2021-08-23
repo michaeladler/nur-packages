@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-08-19";
+    version = "unstable-2021-08-22";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "2d7bcab215c8b7a8f889b371c4060dda2a6c6541";
-      sha256 = "0kxm6nl167b51gjwli64d9qp5s1cdy9za0zfq9hy8phivjk2pmyl";
+      rev = "15182dc21cd6a3901becba75129ea889d7bc26dd";
+      sha256 = "0bjh8xnnq094fwwbn1fa4mpqk9xcxgq8878dg3jdvh5sxikpxck2";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-08-20";
+    version = "unstable-2021-08-22";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "9adbacf29835bf521a99a8d3f0b6f2157b1b9166";
-      sha256 = "0k4b6qsrvlgxr600x9wgkfdraqczx49zqyqfz88xf6pjbx0zyach";
+      rev = "5b0fa84ee35006e06142f98b8a5b28d79cfa5000";
+      sha256 = "0in0r3irawmgxp1prwryw3dpxj7gd6pviv14w8a7hnw1sd2g84l8";
     };
   });
 
@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-08-21";
+    version = "unstable-2021-08-22";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "383715a322713a268a2a066d560c46a402af7116";
-      sha256 = "08mkgbfhy56alacmk586cl50xwk9ff80b763s06ra8bm5aw01nw8";
+      rev = "531b5d4b808960fbcd5419a52c15f7753d074e2e";
+      sha256 = "1fqnal3bggxadbx3zz9rj4m7q2md82ca5qljfcakg6b1syj6gvnx";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-21";
+    version = "unstable-2021-08-23";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "8381a215e091dc9e1f6ad9ceaeadf35ef3cfed8f";
-      sha256 = "0cn1ynvva8nzjyrp285ficfa74wky0gikii2hysdi0g4ndnh6ypa";
+      rev = "d8eeb0e4acb81ed52bbabc43010f2450c0a7972c";
+      sha256 = "1pvy9s8i2xgdsrmzflny4zn7z7j8mb9f8jima5myng4n18rvp6ak";
     };
   });
 

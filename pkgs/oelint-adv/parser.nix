@@ -2,13 +2,13 @@
 
 python3Packages.buildPythonPackage rec {
   pname = "oelint_parser";
-  version = "unstable-2021-08-22";
+  version = "unstable-2021-08-24";
 
   src = fetchFromGitHub {
     owner = "priv-kweihmann";
     repo = "oelint-parser";
-    rev = "a5bbe794569255eece43e46da8e3262688d18284";
-    sha256 = "1bk87rqh8sf3ysifmi9y255d1dkli7jz2s6xy355i9a2yl74xf69";
+    rev = "6a70945ed9acbfc4a5a28ea95b8ac0a92fa42abd";
+    sha256 = "1hy08zrs0jn7b2ypn0bikr0h75i3zzxlr6lwza7pb9bf3zsvbvap";
   };
 
   meta = with lib; {

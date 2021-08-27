@@ -25,12 +25,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   dracula = prev.tmuxPlugins.dracula.overrideAttrs (oa: {
-    version = "unstable-2021-08-24";
+    version = "unstable-2021-08-26";
     src = fetchFromGitHub {
       owner = "dracula";
       repo = "tmux";
-      rev = "ee73724f02b4b12b222fc9ca1792e63fa344feae";
-      sha256 = "1idd28ibh0an2wg3z6pb2wsbbnzfvmszhfm3q1fwfmhdnhcrpl76";
+      rev = "afd4d17996fcc9a74c399449cfd6f434def1a2f7";
+      sha256 = "02lnva2jc5qg3l7z7mjsv2hb25sjv6xajd8kphjhxd8haaaib09g";
     };
   });
 

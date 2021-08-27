@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-08-25";
+    version = "unstable-2021-08-26";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "faf936cb5cc850dfe8108b1c3b34cd49a449f054";
-      sha256 = "00ckyfkks142qybsf3p9nqygy92xf6j1pi5xva2wq07yvgz3sgwa";
+      rev = "45ace6d27ffdb81ef423d6c0e1643d547b0e7cbe";
+      sha256 = "1xbi0zrqrnv5vf927cx3fi2bfrf9v58nqc9460i9xmw0a3d7prkg";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-08-25";
+    version = "unstable-2021-08-26";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "45b6b1925664566b9d7e1f674dfaff7314f43fe5";
-      sha256 = "1z4d5any4q0mk6dqrhlr4yb8n5dkd4ml9jmlx4xbly84vzl8a62a";
+      rev = "7c5ce01c20adb707ca9f13f3a60d1d3915905bc3";
+      sha256 = "1w2pa6svbwxrp3f5k7z748ha9wnb8m59zdbqi5si4333pxz6cm12";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-08-25";
+    version = "unstable-2021-08-26";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "4f2265632becabcd2c5b1791fa31ef278f1e496c";
-      sha256 = "1cvnw9ing6ccbf6smwx5i34z4572lv09f6ik7965zmar6jn0wdlv";
+      rev = "1e4c846d01561821a737d08a6a5e2ac16d19c332";
+      sha256 = "0cl2h599i4xmvgm4k8cliiz43qz6xnirh1zb8sfibdnw0fbqfpa5";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-25";
+    version = "unstable-2021-08-26";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "e6838a6289dc8507810363a6472e33e8eb0dc5ab";
-      sha256 = "1fc35s92c2wwhw86gk0rrgs66495vaiidimhfkdvz9y09wadgizg";
+      rev = "dcee6c81f4cd5f9bc4a4cea782135a0669aa74bd";
+      sha256 = "0d5hs640mcvsca97p8sxj35hr7vfjq842lra0ymnhl6smk1vknbx";
     };
   });
 

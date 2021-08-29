@@ -2,12 +2,12 @@ final: prev:
 
 prev.handlr.overrideAttrs (old: {
 
-  version = "unstable-2021-07-30";
+  version = "unstable-2021-08-28";
   src = prev.fetchFromGitHub {
     owner = "chmln";
     repo = "handlr";
-    rev = "b9b71369f855eb48f4ecca051515feb05d68f87d";
-    sha256 = "0kkgjzxrny7vhv7xhglr4m2k69yq2salvjfiqxgqkjiczbrsr95l";
+    rev = "90e78ba92d0355cb523abf268858f3123fd81238";
+    sha256 = "0av3fvfkn7f15cq8raiybin5z3a0bjnjk35wmwzxhz3h82an2hy0";
   };
 
 })

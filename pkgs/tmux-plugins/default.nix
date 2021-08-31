@@ -45,12 +45,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   resurrect = prev.tmuxPlugins.resurrect.overrideAttrs (oa: {
-    version = "unstable-2021-07-05";
+    version = "unstable-2021-08-30";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-resurrect";
-      rev = "716b958145e2709e9fd3639ff24e1d1e4f26ff77";
-      sha256 = "01j7b6fdam006yr3a2zpnjk2gwzbzc9b3wdnva5p4w5bhz85w76y";
+      rev = "6be2f34b5f06c8a6a23dc3dc835e69c132d58a18";
+      sha256 = "0pwkcsnw9kspapmp4npg2b9y60vshnva92j2mg214vlrjzpy9mfl";
     };
 
     patches = [ ./patches/tmux-resurrect/0001-Support-for-binary-strategy-files.patch ];

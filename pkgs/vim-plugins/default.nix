@@ -28,12 +28,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "unstable-2021-08-25";
+    version = "unstable-2021-08-31";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "dc39f945e54b4547c998dc9e686df419d1077b60";
-      sha256 = "0dc6nkx5648z96hgycins4gpagl4j4400vpgsqrlhk70d09q8w06";
+      rev = "efd9f425383ec57756a74c60a6e85d190b110ed7";
+      sha256 = "0vqmpgrvgn0923dadf9y1clxpaxf56brscsx31l96v2qghwac7m8";
     };
   });
 
@@ -92,8 +92,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "cd4c0a7526561ff94b80bde0a058c1661b62da76";
-      sha256 = "1gx9lyvbz23sy6l5kdpd7xam55n6fh82c199spclbhmfjci4nzjn";
+      rev = "e46b2545b054df0e20aabec3f7bdc2b73f3cfa62";
+      sha256 = "0fwkni32pk5a36dcldlzi77qya05pr6fn7zpgilgv3x7maf95c6k";
     };
   });
 
@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-08-28";
+    version = "unstable-2021-08-30";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "e6699089f0e58e210628d14469474824c372d1c9";
-      sha256 = "02g1n4qaija1qdls0pays90yv1880cg4j5lcdnicyz9rsc1212yl";
+      rev = "85b42b42358e17e8d668f67b878e62898e43fed8";
+      sha256 = "0hvvfsz6bnlbaxfvpyyvv6byi7m2f820lvxilazp715mbcvdskbg";
     };
   });
 
@@ -128,12 +128,12 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-19";
+    version = "unstable-2021-08-31";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "15c3cb9e6311dc1a875eacb9fc8df69ca48d7402";
-      sha256 = "0gdysws82vdcyfsfpkpg9wqw223vg6hh74pf821wxh8p6qg3r26m";
+      rev = "e4e631f1056ef1dc4ce0f8ea944e2be42758a286";
+      sha256 = "15i8cm2c4zl8ipabqdvrfay1hns1nfqr0qi9fnb1yyx3808aq03a";
     };
   });
 
@@ -158,22 +158,22 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "unstable-2021-08-30";
+    version = "unstable-2021-08-31";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "133e50cc0d4255078585044d87e26c627e100df7";
-      sha256 = "06902q54nciwly8l9vlyx1m7xfwhhdv4s1zbd7za362nbgqi7vbp";
+      rev = "38d06dda07fb50d098677fd2785127447c2e9993";
+      sha256 = "0f3vavly0f8dg54gw8jnxjjbv2kxqcn9w21hvyayh9zp5jjpqa46";
     };
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {
-    version = "unstable-2021-08-20";
+    version = "unstable-2021-08-31";
     src = fetchFromGitHub {
       owner = "sindrets";
       repo = "diffview.nvim";
-      rev = "e0ffb1cb7c5ea9e693e5ee5ee3ce1e5f78916ed6";
-      sha256 = "1s3j2hdswrvw0vj6qycxyh71zg24b38anxr59ragq0hjm05zddb1";
+      rev = "5fc90e2352ab9d9598e4c9d53a27b79c84aa573c";
+      sha256 = "1bhkzdarld9faczqij2wnky6bjrrsz4z3h18hjcfn4h581jwvik1";
     };
   });
 

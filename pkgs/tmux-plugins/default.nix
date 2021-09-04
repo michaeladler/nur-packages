@@ -35,12 +35,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   open = prev.tmuxPlugins.open.overrideAttrs (oa: {
-    version = "unstable-2020-08-08";
+    version = "unstable-2021-09-03";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-open";
-      rev = "5b09bd955292ae33ef6d3519df09b5bc1b0ff49e";
-      sha256 = "1xqkb85yvq7kasgkwjd9ilz5rky8v6dhc33q7k5rqarh7sn5nxxj";
+      rev = "ab428e710af2c9eb05e794fa01bec9cd4a5f923e";
+      sha256 = "0sib9s09cjac2vxhrh33zqfmprfiq30sc7pq31qva3lwp74lmbl8";
     };
   });
 

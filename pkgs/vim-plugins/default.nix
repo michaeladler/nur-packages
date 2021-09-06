@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-09-04";
+    version = "unstable-2021-09-05";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "a33d4eb3e1fa1eeaa96a5d8648dbd851ff50e0b3";
-      sha256 = "04a4bbibqybsrsrj0p9jld3z8wbbggbc6r16aw0kc0iayiiq8wic";
+      rev = "64f3e094c32fbc2443bd4688f467d91707f99698";
+      sha256 = "0p64rk95bqmzhqb14ym8qcj08q5n57czdyjnl7l4r0p7zzajsl1p";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-09-04";
+    version = "unstable-2021-09-05";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "2f026f2177bff7c9599d8dc561a4bdb30626ad9c";
-      sha256 = "04zcq34x8wmcffa425sbq2rbl39a2i6cw2ikh24ncvyz87iigdhp";
+      rev = "cbd7c91530d62a72bf4a5a5a1aac384883077d81";
+      sha256 = "0v10ai0061x4wb67igzrbvs7x2w7mky3vj3cxpvyymz2bw8isp26";
     };
   });
 
@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-09-04";
+    version = "unstable-2021-09-05";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "4cf4feaa893fc1e379d49942bc3d94034f5c9f61";
-      sha256 = "1lp2nxscqvl4ay3pz3yj76wak2arnvrr098ml06ah261rd7548ai";
+      rev = "832ae18c60243b2494998ff8bd978212092ef642";
+      sha256 = "02f4g9xmi8x2gbyxnspvdyakirbzjkfrkmm1ysla2jpq2fv2ni5g";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-09-02";
+    version = "unstable-2021-09-05";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "ac42f0c26cb417b76046a394c1b3163d346e9107";
-      sha256 = "1qzc04xlrkssgvrmciddbykcczklqzhh8fnkr0pf6xrll0vvm1fv";
+      rev = "5fc94cdd784ee1e4d79c850102b1035b58b5e435";
+      sha256 = "1i8p3l4srmx8clyxmslim32gs0nwwfk298w574scy41w06y90jr2";
     };
   });
 
@@ -225,12 +225,12 @@ in
 
   FTerm-nvim = buildVimPluginFrom2Nix ({
     pname = "FTerm-nvim";
-    version = "unstable-2021-09-04";
+    version = "unstable-2021-09-05";
     src = fetchFromGitHub {
       owner = "numtostr";
       repo = "FTerm.nvim";
-      rev = "0ec019c6631b7588103ea5f82f64c1a8364d64f6";
-      sha256 = "00ms0i8gahnppn8wdnc4hpxk5ywnvk1wa4rc25py0avm82w9d0zm";
+      rev = "0cbab707a84679003341051dc4ca0db671ab917d";
+      sha256 = "1k41ipgy4ijq704sfjnnvkmq0bksrzi93p7h77rcclyn7lqwbkf2";
     };
 
     meta.homepage = "https://github.com/numtostr/FTerm.nvim/";

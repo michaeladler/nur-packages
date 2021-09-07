@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-09-05";
+    version = "unstable-2021-09-06";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "64f3e094c32fbc2443bd4688f467d91707f99698";
-      sha256 = "0p64rk95bqmzhqb14ym8qcj08q5n57czdyjnl7l4r0p7zzajsl1p";
+      rev = "737876790020dcab6598b1fe740f5980b1e8a4cf";
+      sha256 = "0yfy228nj5gafa5jarg67msaqqrdn94cmc4jgzihc3l4s8p96z2v";
     };
   });
 
@@ -58,22 +58,22 @@ in
   });
 
   lsp-status-nvim = prev.vimPlugins.lsp-status-nvim.overrideAttrs (old: {
-    version = "unstable-2021-09-01";
+    version = "unstable-2021-09-05";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "lsp-status.nvim";
-      rev = "745ba61c353b47c365d4dbfdd3d3334a3177f8cd";
-      sha256 = "06cgvrl6l1wj6aj0ndbxi14zfqdfhgdzd7h72dxi1bkx8hrf54i0";
+      rev = "a5990bfde2fb67c55575ece39b1c863d107acb60";
+      sha256 = "10swm4zwdkgvn8pdqif1ai8kqshzm6bzw9k9jykpb8dxy2anj27y";
     };
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-09-05";
+    version = "unstable-2021-09-06";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "cbd7c91530d62a72bf4a5a5a1aac384883077d81";
-      sha256 = "0v10ai0061x4wb67igzrbvs7x2w7mky3vj3cxpvyymz2bw8isp26";
+      rev = "ea72eaae8809c0e475a8248aa665034d7d4520db";
+      sha256 = "01mzyf0d5q0wmr9md6dj3yxlxqc3s80mz43ig3lkz7cgywjzn3qz";
     };
   });
 
@@ -142,8 +142,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "5fc94cdd784ee1e4d79c850102b1035b58b5e435";
-      sha256 = "1i8p3l4srmx8clyxmslim32gs0nwwfk298w574scy41w06y90jr2";
+      rev = "162cf7b5343eaf97c32c97af6a37452f9a3a9ca1";
+      sha256 = "0lq26j3jhn4a8dzgry329hqxxx50qmczl6pq0zw9lvrzhjgc3zpj";
     };
   });
 
@@ -168,12 +168,12 @@ in
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {
-    version = "unstable-2021-09-04";
+    version = "unstable-2021-09-06";
     src = fetchFromGitHub {
       owner = "sindrets";
       repo = "diffview.nvim";
-      rev = "e0f212f71987f9696a3ced0fc7cd53d155003ae6";
-      sha256 = "0ccb94lwfacg9fymyjv6gmxkc09x2b72xx1hqp7sa4xnyg9bk4cx";
+      rev = "5965e8303be4bc50d26733a02e5c11100f98986c";
+      sha256 = "12pxdha0zk8lwvgvqp02fwkvh5yvpzxf75865h5rxz69v1dqgspf";
     };
   });
 

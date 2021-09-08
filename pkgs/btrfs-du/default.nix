@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "btrfs-du";
-  version = "unstable-2020-06-16";
+  version = "unstable-2021-09-07";
 
   src = fetchFromGitHub {
     owner = "nachoparker";
     repo = "btrfs-du";
-    rev = "239fbb80daeffcd695c0493f04968a5690fb4f80";
-    sha256 = "1g295sqplfacjjjz9vw7318wiwqlc633xi9mbdbc7g8x7nzyjjkx";
+    rev = "dc0194d9f31a88a0ca823d734d672a4a53d24029";
+    sha256 = "0lsv2afgbfv787ab7y66bf1nxl8b0d3bm988q7k5gcqnk46xc3z4";
   };
 
   nativeBuildInputs = [ makeWrapper ];

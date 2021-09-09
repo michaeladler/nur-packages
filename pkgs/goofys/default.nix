@@ -16,8 +16,11 @@ buildGoModule rec {
   # tests require network
   doCheck = false;
 
-  buildFlagsArray = [
-    "-ldflags=-s -w -X main.Version=${src.rev}"
+  ldflags = [
+    "-s"
+    "-w"
+    "-X"
+    "main.Version=${src.rev}"
   ];
 
   postInstall = ''

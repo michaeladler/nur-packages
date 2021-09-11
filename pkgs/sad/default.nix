@@ -10,8 +10,8 @@ naersk-lib.buildPackage rec {
   src = fetchFromGitHub {
     owner = "ms-jpq";
     repo = "sad";
-    rev = "58f653846ecd02c506a6e5a8e6b4b44034d15ce3";
-    sha256 = "12h32haf7361snsbs92cbii53j76fdl9bq2gafqjqfx9h54khd6g";
+    rev = "2c943d8ea3a87e52bced1349ec1b4a7217f264da";
+    sha256 = "0gwaijv3nlzi87p01q3r5j5mavv3imyzyh7z6vliqfy18zyy6p6j";
   };
 
   meta = with lib; {

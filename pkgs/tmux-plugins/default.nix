@@ -5,12 +5,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 {
 
   continuum = prev.tmuxPlugins.continuum.overrideAttrs (oa: {
-    version = "unstable-2021-06-08";
+    version = "unstable-2021-09-11";
     src = fetchFromGitHub {
       owner = "tmux-plugins";
       repo = "tmux-continuum";
-      rev = "6e58336c288958a3b1ff7773fb945770126db16e";
-      sha256 = "10zvhxrinmp673dnjs5264xrgvgdcjhqkhjvmf1dky4qnhlrjx7h";
+      rev = "44e6be6222a062809d0377e2b05dded900dc260f";
+      sha256 = "18arw6f96i7rd1cl0706hqx2yffqsvi24s299ibmsz4y43fzjqfv";
     };
   });
 

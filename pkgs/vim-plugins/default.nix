@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-09-05";
+    version = "unstable-2021-09-11";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "832ae18c60243b2494998ff8bd978212092ef642";
-      sha256 = "02f4g9xmi8x2gbyxnspvdyakirbzjkfrkmm1ysla2jpq2fv2ni5g";
+      rev = "ed9ca86a54b772dcb2c0c28527141838ae602e72";
+      sha256 = "1sic6l54gdqhs0ffh2mh0wxdir4xy27abphisidzv3kj59yy4m5j";
     };
   });
 

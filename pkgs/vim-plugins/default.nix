@@ -177,6 +177,16 @@ in
     };
   });
 
+  null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
+    version = "unstable-2021-09-11";
+    src = fetchFromGitHub {
+      owner = "jose-elias-alvarez";
+      repo = "null-ls.nvim";
+      rev = "da8bb757c630b96fd26030df56fd3a070fbf16a1";
+      sha256 = "1n6gqikw4fsypchvb5hna1l7b54638qrhny0w84xamadmv4nj4kr";
+    };
+  });
+
   ###############################################################################
   # the following plugins are not (yet) available in nixpkgs:
   ###############################################################################

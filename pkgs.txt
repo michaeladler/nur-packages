@@ -39,6 +39,7 @@ myVimPlugins/lsp-status-nvim
 myVimPlugins/lspkind-nvim
 myVimPlugins/lualine-nvim
 myVimPlugins/neogit
+myVimPlugins/null-ls-nvim
 myVimPlugins/nvim-compe
 myVimPlugins/nvim-lightbulb
 myVimPlugins/nvim-lspconfig

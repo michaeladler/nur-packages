@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-09-11";
+    version = "unstable-2021-09-13";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "9b1804bf6b6db18b1e056a92e0e03ddecff8e721";
-      sha256 = "08gvxbq8i6hw4s2h6d68bdb27gm97sxj00zcamhpj6gi2h4wbzwl";
+      rev = "f93adbf3e0ce1bd9e90a995d6f37a15c7fc8b543";
+      sha256 = "0qpsj2273xlgmjg2hciy3rc6w2z4ypzib72lk54ki38axbjbjzc7";
     };
   });
 
@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-09-12";
+    version = "unstable-2021-09-14";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "bab6486efa5a8ed35cb3d785dfac4630579e5a18";
-      sha256 = "074fgzc38y7wchf6f7llhi6ppxf2ck4i711h6x5p84kjr9bigrcr";
+      rev = "6d0e0ec9af67085042b637cd204115feeda109c6";
+      sha256 = "0sic3w2im41wy7b487m6867mxa6yfnxqj7ccl3b6a1f25irag5g1";
     };
   });
 
@@ -128,22 +128,22 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "unstable-2021-09-12";
+    version = "unstable-2021-09-13";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "6c80b83cd57ff3b029fae37b6145bcaeb4f69ee3";
-      sha256 = "1jzyxnjs2zg02ib7h2vshhiq873n04bsg4g829v7d46bsw1337kw";
+      rev = "f96a39b1242c6e632d64ba3db4b36b35973ebcf1";
+      sha256 = "1l5aycz0g5n4vkdibfs5cyz9gigqf03cax52bvzf1p1isk9wnzp5";
     };
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-09-12";
+    version = "unstable-2021-09-13";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "1d17cc4abc493d20b4aba36569e8805c2382ea7b";
-      sha256 = "1ycq09ip2dhlzf2bmjayb3zj9zhl1scznls2krzvmzfq46g93ira";
+      rev = "e7aa63db8fea4983658d03b5000d59f75259638b";
+      sha256 = "1kn2wr3xypymjb6h2mnlz7w13fjkad68azc06i7i60qjmghy6dij";
     };
   });
 
@@ -392,12 +392,12 @@ in
 
   papercolor-theme-slim = buildVimPluginFrom2Nix ({
     pname = "papercolor-theme-slim";
-    version = "unstable-2021-09-07";
+    version = "unstable-2021-09-13";
     src = fetchFromGitHub {
       owner = "pappasam";
       repo = "papercolor-theme-slim";
-      rev = "dc09a335820c3b4fa687b9823a418c60ce1d5a6e";
-      sha256 = "194ja72qd5gchaln1hjywp64zmgnffal5kq56j3f0lfx6zbgd6k7";
+      rev = "cf535dd08c06e698d0aa063ad56e50e5bf65d84c";
+      sha256 = "0s8jnig2dsggirp7hv2iiyb7b5j3rs02fqk6l3armyr6hrmajsxf";
     };
 
     meta.homepage = "https://github.com/pappasam/papercolor-theme-slim";

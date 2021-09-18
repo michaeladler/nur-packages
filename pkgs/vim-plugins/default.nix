@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-09-16";
+    version = "unstable-2021-09-18";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "4b3d58d39c37f0e1fdc70c50af9f88a89a1a7b2d";
-      sha256 = "16dpkxpr3w23p7il7q8500m9m3nq9f2l640cqks2dhjvi6ivlim1";
+      rev = "2dfe72f32a22df04758709645f043e06cd6c037c";
+      sha256 = "07rjnrgfj5w0d76r9zy9jphqpvzg38aagqm5xy24sbd9dy9y0z6r";
     };
   });
 
@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-09-15";
+    version = "unstable-2021-09-17";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "75d91569820593c6208454f18582e6b1800c5019";
-      sha256 = "09cr40cmm711am2yg3ilz6dh11h8vxqmlssn5jcjzyppa5shk0rr";
+      rev = "825a0185f8af72203d9980b08bdf8ffc92d097e3";
+      sha256 = "1qa60ivl6a6l03n9j0x2kdzclwhwg2lidbrlfi88w24g4q9364v7";
     };
   });
 
@@ -142,8 +142,8 @@ in
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "5a020a8859657ba909950239c723e08dda6967b9";
-      sha256 = "1i565dp8q41i9sshp5y6b17r5risjr5hrcrvqqbs8ngf5ai4rpw8";
+      rev = "2e7584f1cfdffb32bf26039a050cd2cf74ede4cd";
+      sha256 = "16gdsx9yv5kwg8girmf51l6wb4v2kzg5snc1d2lhilizhs35qzmw";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-09-11";
+    version = "unstable-2021-09-17";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "da8bb757c630b96fd26030df56fd3a070fbf16a1";
-      sha256 = "1n6gqikw4fsypchvb5hna1l7b54638qrhny0w84xamadmv4nj4kr";
+      rev = "2c6a20434de6b1d09f76c20eea34e37e7432e06c";
+      sha256 = "1z58wqvw8xslz9yzbrnmsjn0mdn9kpvrrv7hmydfc2a8vir55mlk";
     };
   });
 

@@ -6,8 +6,8 @@ clangStdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://chromium.googlesource.com/chromiumos/platform/minigbm";
-    rev = "53749c99a71fd4c841b726fcdbe12118a7b40d31";
-    sha256 = "1kyjb75cixykrfld0ac49x1x8i7s8d25yabxnmawy8pah7any6w0";
+    rev = "6aad13595253a67fa07d824ebcb52cc62c039b7f";
+    sha256 = "14sz00kccmscwspgazqgd48p5cpas5zrzm4d8nq0zycy5hz8jrfd";
   };
 
   nativeBuildInputs = [ pkg-config ];

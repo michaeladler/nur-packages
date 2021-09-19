@@ -38,12 +38,12 @@ in
   });
 
   nvim-lightbulb = prev.vimPlugins.nvim-lightbulb.overrideAttrs (old: {
-    version = "unstable-2021-09-09";
+    version = "unstable-2021-09-17";
     src = fetchFromGitHub {
       owner = "kosayoda";
       repo = "nvim-lightbulb";
-      rev = "7411586f6b431a9c49a50fa962b6d6eae25aeb20";
-      sha256 = "0maba6mzkpvnjdz8x0lifdqlbw55bd58ggavbhyxd8279887bph6";
+      rev = "7180e64d7f8dcde0fd162d6ca55b73e2d9d9621b";
+      sha256 = "1sv3xgjgbm3d9v1mwln9zfwllxjn37virzb9fmr6m1axc2vn5lj4";
     };
   });
 

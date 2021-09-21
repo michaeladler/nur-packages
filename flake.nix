@@ -73,6 +73,7 @@
             peda
             qmarkdown
             sscep
+            sysz
             ungoogled-chromium-bin
             vcalendar-filter
             zig

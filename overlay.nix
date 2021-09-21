@@ -33,6 +33,7 @@ in
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
+  sysz = callPackage ./pkgs/sysz { };
 
   # sometimes more up2date
   ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };

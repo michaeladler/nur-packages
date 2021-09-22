@@ -42,7 +42,7 @@ update-other:
 		-not -path "pkgs/ungoogled-chromium-bin/*" \
 		-not -path "pkgs/zig/*" \
 		-not -path "pkgs/zls/*" \
-		-print0 | xargs -0 update-nix-fetchgit
+		| while read fname; do echo "updating $$fname"; update-nix-fetchgit "$$fname"; done
 
 .PHONY: pkgs.txt
 pkgs.txt:

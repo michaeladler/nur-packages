@@ -17,6 +17,11 @@ in
   zig = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
 
+  # more up-to-date
+  dhall = callPackage ./pkgs/dhall { };
+  dhall-json = callPackage ./pkgs/dhall-json { };
+  dhall-lsp-server = callPackage ./pkgs/dhall-lsp-server { };
+
   # missing upstream
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };

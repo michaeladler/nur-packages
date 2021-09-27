@@ -53,6 +53,9 @@
             bsp-layout
             btrfs-du
             btrfs-list
+            dhall
+            dhall-json
+            dhall-lsp-server
             dwm
             dwmblocks
             firefox-bin

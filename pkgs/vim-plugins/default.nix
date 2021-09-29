@@ -187,6 +187,17 @@ in
     };
   });
 
+ wilder-nvim = prev.vimPlugins.wilder-nvim.overrideAttrs (old: {
+    version = "unstable-2021-09-14";
+    src = fetchFromGitHub {
+      owner = "gelguy";
+      repo = "wilder.nvim";
+      rev = "15ff3a0e6fa1882fb4a2391d880c6465652718f5";
+      sha256 = "15rb1g0hyp942s9hgpfzf27yz7w5aaym2phrvr51aybnjz6lm9ff";
+    };
+
+  });
+
   ###############################################################################
   # the following plugins are not (yet) available in nixpkgs:
   ###############################################################################

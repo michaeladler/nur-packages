@@ -63,6 +63,7 @@ myVimPlugins/vim-ingo-library
 myVimPlugins/vim-just
 myVimPlugins/vim-spellsync
 myVimPlugins/vim-vsnip
+myVimPlugins/wilder-nvim
 myZshPlugins/zsh-autosuggestions
 myZshPlugins/zsh-fast-syntax-highlighting
 myZshPlugins/zsh-fzf-tab

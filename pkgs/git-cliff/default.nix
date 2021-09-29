@@ -12,8 +12,8 @@ let gitCliff = naersk-lib.buildPackage {
   src = fetchFromGitHub {
     owner = "orhun";
     repo = "git-cliff";
-    rev = "b193f42e258e8fdee8b1b645d5a614d606f7e079";
-    sha256 = "1dh6f0x9lzv1jif1zyyw94yjh9l8zd0306c2q88g8cvqcxj2f2b3";
+    rev = "2950a412c2aaa0d96609753129047cef39fd3e1c";
+    sha256 = "1yh6apbxpjkj3ppgrgs3rczr7fp2qib3fg2v95vmgdmmzwp8fllp";
   };
 
   meta = with lib; {

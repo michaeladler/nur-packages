@@ -7,7 +7,6 @@ in
 
 {
   # overlayed
-  brave = (import ./pkgs/brave) final prev;
   bsp-layout = (import ./pkgs/bsp-layout) final prev;
   dwm = (import ./pkgs/dwm) final prev;
   dwmblocks = (import ./pkgs/dwmblocks) final prev;
@@ -18,6 +17,7 @@ in
   zls = (import ./pkgs/zls) final prev;
 
   # more up-to-date
+  brave = callPackage ./pkgs/brave { };
   dhall = callPackage ./pkgs/dhall { };
   dhall-json = callPackage ./pkgs/dhall-json { };
   dhall-lsp-server = callPackage ./pkgs/dhall-lsp-server { };

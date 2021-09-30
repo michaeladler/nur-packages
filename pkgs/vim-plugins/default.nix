@@ -187,7 +187,7 @@ in
     };
   });
 
- wilder-nvim = prev.vimPlugins.wilder-nvim.overrideAttrs (old: {
+  wilder-nvim = prev.vimPlugins.wilder-nvim.overrideAttrs (old: {
     version = "unstable-2021-09-14";
     src = fetchFromGitHub {
       owner = "gelguy";
@@ -422,6 +422,25 @@ in
     };
 
     meta.homepage = "https://github.com/pappasam/papercolor-theme-slim";
+  });
+
+  coq-nvim = buildVimPluginFrom2Nix ({
+    pname = "coq-nvim";
+    version = "unstable-2021-09-30";
+    src = fetchFromGitHub {
+      owner = "ms-jpq";
+      repo = "coq_nvim";
+      rev = "180ef29da2b4e864619beb42e3ac937073834e95"; # coq
+      sha256 = "0q5xw2yjndfrlvfh69kb5pxb2ab3fra4rsksjpvsl489z1lignb9";
+    };
+
+    patches = [
+      ./patches/coq-nvim/0001-Do-not-use-venv.patch
+    ];
+
+    passthru.python3Dependencies = ps: with ps; [ std2 pynvim-pp pyyaml ];
+
+    meta.homepage = "https://github.com/ms-jpq/coq_nvim";
   });
 
 }

@@ -44,6 +44,7 @@
           tmuxPlugins = pkgs.tmuxPlugins;
           firefoxAddons = pkgs.firefoxAddons;
           zshPlugins = pkgs.zshPlugins;
+          python3Packages = pkgs.python3Packages;
         };
 
         packages = flake-utils.lib.flattenTree {

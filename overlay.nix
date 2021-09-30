@@ -56,4 +56,9 @@ in
 
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
 
+  python3Packages = prev.python3Packages // {
+    std2 = callPackage ./pkgs/python-modules/std2 { };
+    pynvim_pp = callPackage ./pkgs/python-modules/pynvim-pp { };
+  };
+
 }

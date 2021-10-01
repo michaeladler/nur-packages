@@ -55,6 +55,7 @@ myVimPlugins/papercolor-theme-slim
 myVimPlugins/plenary-nvim
 myVimPlugins/popup-nvim
 myVimPlugins/telescope-nvim
+myVimPlugins/venn-nvim
 myVimPlugins/vim-SpellCheck
 myVimPlugins/vim-bitbake
 myVimPlugins/vim-buftabline

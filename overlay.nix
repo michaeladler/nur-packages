@@ -50,6 +50,7 @@ in
 
   myVimPlugins = (prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev)) //
     {
+      coq-artifacts = callPackage ./pkgs/vim-plugins/coq-artifacts { };
       coq-nvim = callPackage ./pkgs/vim-plugins/coq-nvim { };
     };
   vimPlugins = prev.vimPlugins // final.myVimPlugins;

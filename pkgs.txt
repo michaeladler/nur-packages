@@ -33,6 +33,7 @@ myVimPlugins/FTerm-nvim
 myVimPlugins/FixCursorHold-nvim
 myVimPlugins/barbar-nvim
 myVimPlugins/close-buffers-nvim
+myVimPlugins/coq-artifacts
 myVimPlugins/coq-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts

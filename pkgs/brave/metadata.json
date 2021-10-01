@@ -1,1 +1,5 @@
-{"version": "1.30.87", "url": "https://github.com/brave/brave-browser/releases/download/v1.30.87/brave-browser_1.30.87_amd64.deb", "sha256": "0mx1vnrip1y87g6zj9sdcf5siihwn0b6v1q106d9kz89znpzd64s"}
+{
+  "version": "1.30.87",
+  "url": "https://github.com/brave/brave-browser/releases/download/v1.30.87/brave-browser_1.30.87_amd64.deb",
+  "sha256": "0mx1vnrip1y87g6zj9sdcf5siihwn0b6v1q106d9kz89znpzd64s"
+}

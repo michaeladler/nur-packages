@@ -310,24 +310,6 @@ in
     meta.homepage = "https://github.com/kergoth/vim-bitbake";
   });
 
-  vim-boxdraw = buildVimPluginFrom2Nix ({
-    pname = "vim-boxdraw";
-    version = "unstable-2021-01-28";
-
-    src = fetchFromGitHub {
-      owner = "gyim";
-      repo = "vim-boxdraw";
-      rev = "b7f789f305b1c5b0b4623585e0f10adb417f2966";
-      sha256 = "0zr3r4dgpdadaz3g9hzn7vyv0rids0k1wdywk9yywfp6q9m0ygj8";
-    };
-
-    patches = [
-      ./patches/vim-boxdraw/0001-UTF-8-style.patch
-    ];
-
-    meta.homepage = "https://github.com/gyim/vim-boxdraw";
-  });
-
   vim-enmasse = buildVimPluginFrom2Nix ({
     pname = "vim-enmasse";
     version = "unstable-2018-04-03";
@@ -422,6 +404,19 @@ in
     };
 
     meta.homepage = "https://github.com/pappasam/papercolor-theme-slim";
+  });
+
+  venn-nvim = buildVimPluginFrom2Nix ({
+    pname = "venn-nvim";
+    version = "unstable-2021-08-28";
+    src = fetchFromGitHub {
+      owner = "jbyuki";
+      repo = "venn.nvim";
+      rev = "3092446ad7f7076a6345327f4507ee877535d515";
+      sha256 = "1hr8mnc2212hbmhz6mmag4na8nmd99mr4bcy09cyyrndwmwr9gnf";
+    };
+
+    meta.homepage = "https://github.com/jbyuki/venn.nvim";
   });
 
 }

@@ -48,17 +48,14 @@ in
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
 
-  myVimPlugins = prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev);
+  myVimPlugins = (prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev)) //
+    {
+      coq-nvim = callPackage ./pkgs/vim-plugins/coq-nvim { };
+    };
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
   myZshPlugins = prev.recurseIntoAttrs ((import ./pkgs/zsh-plugins/overlay.nix) final prev);
   zshPlugins = (prev.zshPlugins  or { }) // final.myZshPlugins;
 
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
-
-  python3Packages = prev.python3Packages // {
-    std2 = callPackage ./pkgs/python-modules/std2 { };
-    pynvim_pp = callPackage ./pkgs/python-modules/pynvim-pp { };
-  };
-
 }

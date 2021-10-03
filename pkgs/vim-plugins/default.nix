@@ -28,12 +28,12 @@ in
   });
 
   nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "unstable-2021-09-08";
+    version = "unstable-2021-10-03";
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-compe";
-      rev = "980357a9eeabe84f29c96d38421c9bff321a2bc8";
-      sha256 = "1qh8axjfwc2dwdfvc9izfmzwy382vzg9jcnfzs8fkl7lqb87i3a0";
+      rev = "d186d739c54823e0b010feb205c6f97792322c08";
+      sha256 = "1cl3c4cazzpjj2wmsi42czrklzngzm82bbb9ivmcsa40rfz2lsk3";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-10-01";
+    version = "unstable-2021-10-02";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "8cf90f81a4386e4e53657b3665ac71423b9232ad";
-      sha256 = "1sgnys46gqp46pr1m8s8zwqgw2f5nb7j16gs56nd5dcjzhqzwr8w";
+      rev = "e0e6d1b263c2cc678ebf616e04495195ea45d5e2";
+      sha256 = "04mdg9wp81s4g9ppvvxxx0zxha1di5167yrbllx11qssfv78q5ww";
     };
   });
 
@@ -108,12 +108,12 @@ in
   });
 
   nvim-treesitter-textobjects = prev.vimPlugins.nvim-treesitter-textobjects.overrideAttrs (old: {
-    version = "unstable-2021-09-27";
+    version = "unstable-2021-10-02";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter-textobjects";
-      rev = "47cdd6befd74cad188ed331fce8a951d98f9c4e3";
-      sha256 = "16866qndqvslgyin60wnjrihrba6sqlf0p4vwlwg8vqdl2v4q8jk";
+      rev = "d0429d7c2e19019a7fd8961e328e574de4280bfb";
+      sha256 = "145y6r302lz5fqwjrj606qdj15qqalncj13ys410pawg8ccnydwq";
     };
   });
 
@@ -246,12 +246,12 @@ in
 
   FTerm-nvim = buildVimPluginFrom2Nix ({
     pname = "FTerm-nvim";
-    version = "unstable-2021-09-20";
+    version = "unstable-2021-10-02";
     src = fetchFromGitHub {
       owner = "numtostr";
       repo = "FTerm.nvim";
-      rev = "55e091d0d1240e221f3a690d52ae1d695539d899";
-      sha256 = "0bm8dmx71z5j013hb5nyngdhgax5wlikmnz94kkmqp7nkm3053l0";
+      rev = "0d8daf58b102e12fcb2d8b4a0186b65a88ea5d20";
+      sha256 = "1bnl8hwbgwynqfq14ypcqgw8vqml4wa9756qvf752idng1wxiqa6";
     };
 
     meta.homepage = "https://github.com/numtostr/FTerm.nvim/";

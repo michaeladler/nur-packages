@@ -36,12 +36,17 @@ update-zig:
 update-zls:
 	update-nix-fetchgit ./pkgs/zls/default.nix
 
+.PHONY: update-coq
+update-coq:
+	pkgs/vim-plugins/coq-nvim/update.sh
+
 .PHONY: update-other
 update-other:
 	find pkgs -name "*.nix" \
 		-not -path "pkgs/ungoogled-chromium-bin/*" \
 		-not -path "pkgs/zig/*" \
 		-not -path "pkgs/zls/*" \
+		-not -path "**/coq-nvim/*" \
 		| while read fname; do echo "updating $$fname"; update-nix-fetchgit "$$fname"; done
 
 .PHONY: pkgs.txt

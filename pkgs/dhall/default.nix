@@ -6,7 +6,7 @@ stdenv.mkDerivation {
 
   src = fetchurl {
     url = "https://github.com/dhall-lang/dhall-haskell/releases/download/1.40.1/dhall-1.40.1-x86_64-linux.tar.bz2";
-    sha256 = "213ee6eb2792bf5bacf89b4f1fde6449310476ce4ab37d769d6037179f5adb6e";
+    sha256 = "0vnvbagifdv0kmv7vcsarrv08ca9ckg1ykwvz2n5pgwj4zmycgi1";
   };
 
   nativeBuildInputs = [ installShellFiles ];

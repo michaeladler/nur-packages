@@ -1,11 +1,11 @@
 { stdenv, lib, fetchurl, installShellFiles }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "dhall";
   version = "1.40.1";
 
   src = fetchurl {
-    url = "https://github.com/dhall-lang/dhall-haskell/releases/download/${version}/dhall-${version}-x86_64-linux.tar.bz2";
+    url = "https://github.com/dhall-lang/dhall-haskell/releases/download/1.40.1/dhall-1.40.1-x86_64-linux.tar.bz2";
     sha256 = "213ee6eb2792bf5bacf89b4f1fde6449310476ce4ab37d769d6037179f5adb6e";
   };
 

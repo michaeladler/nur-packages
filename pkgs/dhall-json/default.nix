@@ -5,8 +5,8 @@ stdenv.mkDerivation rec {
   version = "1.7.8";
 
   src = fetchurl {
-    url = "https://github.com/dhall-lang/dhall-haskell/releases/download/1.40.1/dhall-json-${version}-x86_64-linux.tar.bz2";
-    sha256 = "sha256-mDK5ZnzgQwl0+57GBP3B4k5HjCJXgesG+jIylRjIz0s=";
+    url = "https://github.com/dhall-lang/dhall-haskell/releases/download/1.40.1/dhall-json-1.7.8-x86_64-linux.tar.bz2";
+    sha256 = "0jygr0c9acijz83fp0ap4a64fkp2q7yh9ilyzds0jhz0gikbjclq";
   };
 
   sourceRoot = ".";

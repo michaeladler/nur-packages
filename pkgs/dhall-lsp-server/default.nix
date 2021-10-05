@@ -1,11 +1,11 @@
 { stdenv, lib, fetchurl }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "dhall-lsp-server";
   version = "1.0.16";
 
   src = fetchurl {
-    url = "https://github.com/dhall-lang/dhall-haskell/releases/download/1.40.1/dhall-lsp-server-${version}-x86_64-linux.tar.bz2";
+    url = "https://github.com/dhall-lang/dhall-haskell/releases/download/1.40.1/dhall-lsp-server-1.0.16-x86_64-linux.tar.bz2";
     sha256 = "sha256-iLF+Jcuow3Zfg4jIgPKF0nCI/6SDL5beuZoswf9rz5w=";
   };
 

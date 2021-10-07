@@ -76,6 +76,7 @@
             peda
             qmarkdown
             sscep
+            sumneko-lua-language-server
             sysz
             ungoogled-chromium-bin
             vcalendar-filter

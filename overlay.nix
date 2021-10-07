@@ -15,6 +15,7 @@ in
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
+  sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };

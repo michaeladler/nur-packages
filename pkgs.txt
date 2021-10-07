@@ -79,6 +79,7 @@ qmarkdown
 rnix-lsp
 sad
 sscep
+sumneko-lua-language-server
 sysz
 ungoogled-chromium-bin
 vcalendar-filter

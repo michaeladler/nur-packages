@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-07";
+    version = "unstable-2021-10-08";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "ec6c13fc092fe8447df77e35013df907a6f3761e";
-      sha256 = "0p95c4rhhf2bxb7djz5bjw9a1yg5lgakzmwc5v977nshhp9kp0wr";
+      rev = "dea927d0eb22255632dd82d2efff1a68d621c871";
+      sha256 = "0f9zr0230avjay53fcbw54scw8hg0sqx1293jsay02iypbzx72ms";
     };
   });
 
@@ -158,32 +158,32 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "unstable-2021-10-07";
+    version = "unstable-2021-10-08";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "2e02df46e9cb0b80c1947149c773da50d4b53e01";
-      sha256 = "17mpk5jm8z9czbl26cji7rc3xrgzvv40akn4qxqbigqnkyn0pfgb";
+      rev = "ab2840c8c1a8df92cd37a086948d0528ffdede32";
+      sha256 = "0iz85svvq0h38nbkih0spgnlh0gnnhk2y3rs7igc5gjka7k7mc89";
     };
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-02";
+    version = "unstable-2021-10-08";
     src = fetchFromGitHub {
       owner = "sindrets";
       repo = "diffview.nvim";
-      rev = "b0a86fef8e7f4f85cc37915fcd439e99f648f14c";
-      sha256 = "1b24baqcsw3yals07vd6dksghggymlp7xvag53iy5v08f11i9bbc";
+      rev = "2a838d444ef38e07170b161ed12ce241a8d8c54f";
+      sha256 = "1d23mxvc4ldlsv5a6zy0glxfnfmx08fvp1zyxds1v369pn6x61pi";
     };
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-07";
+    version = "unstable-2021-10-08";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "f2c198c1eb331f5ce34c760fc0edb6d0d64f3692";
-      sha256 = "176y4bc6ql7sn0i323ab88vak5v7agg5n8pkavfd6nb9db6di2kp";
+      rev = "b3b58e2c8aeeee42c119b61b3ce8db9995b669f3";
+      sha256 = "00gzy3d9sjrd9h69ns36faqis91987ss7ggz7ych3rvs01i7g34z";
     };
   });
 

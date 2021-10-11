@@ -1,7 +1,7 @@
 NIX := nix --experimental-features "nix-command flakes"
 
 .PHONY: update-all
-update-all: update-flakes update-firefox-addons update-firefox update-chromium update-brave update-zig update-zls update-other
+update-all: update-flakes update-firefox-addons update-firefox update-brave update-zig update-zls update-other
 
 .PHONY: build-all
 build-all:
@@ -19,10 +19,6 @@ update-firefox-addons:
 .PHONY: update-firefox
 update-firefox:
 	pkgs/firefox-bin-unwrapped/update.sh
-
-.PHONY: update-chromium
-update-chromium:
-	cd pkgs/ungoogled-chromium-bin && ./update.py
 
 .PHONY: update-brave
 update-brave:
@@ -43,7 +39,6 @@ update-coq:
 .PHONY: update-other
 update-other:
 	find pkgs -name "*.nix" \
-		-not -path "pkgs/ungoogled-chromium-bin/*" \
 		-not -path "pkgs/zig/*" \
 		-not -path "pkgs/zls/*" \
 		-not -path "**/coq-nvim/*" \

@@ -66,7 +66,6 @@
             goofys
             handlr
             luaprompt
-            minigbm
             msktutil
             myTmuxPlugins
             myVimPlugins
@@ -79,7 +78,6 @@
             sumneko-lua-language-server
             sysz
             tabbed-flexipatch
-            ungoogled-chromium-bin
             vcalendar-filter
             zig
             zls

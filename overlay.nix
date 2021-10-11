@@ -32,7 +32,6 @@ in
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
   goofys = callPackage ./pkgs/goofys { };
   luaprompt = callPackage ./pkgs/luaprompt { };
-  minigbm = callPackage ./pkgs/minigbm { };
   msktutil = callPackage ./pkgs/msktutil { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };
   peda = callPackage ./pkgs/peda { };
@@ -42,11 +41,7 @@ in
   sysz = callPackage ./pkgs/sysz { };
   tabbed-flexipatch = callPackage ./pkgs/tabbed-flexipatch { };
 
-  # sometimes more up2date
-  ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };
-
   # bundles
-
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
 

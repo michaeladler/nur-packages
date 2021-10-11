@@ -80,6 +80,7 @@ sad
 sscep
 sumneko-lua-language-server
 sysz
+tabbed-flexipatch
 vcalendar-filter
 zig
 zls

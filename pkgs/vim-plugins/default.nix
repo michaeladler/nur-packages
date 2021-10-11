@@ -178,22 +178,22 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-08";
+    version = "unstable-2021-10-09";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "b3b58e2c8aeeee42c119b61b3ce8db9995b669f3";
-      sha256 = "00gzy3d9sjrd9h69ns36faqis91987ss7ggz7ych3rvs01i7g34z";
+      rev = "01bb7be2a576003b4f7d23aa3561c5cc65c6b47b";
+      sha256 = "1ygr5641jzlr0b835aicfd5f5lq8fvh7iby74v2wf9684zn75sv0";
     };
   });
 
   wilder-nvim = prev.vimPlugins.wilder-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-06";
+    version = "unstable-2021-10-10";
     src = fetchFromGitHub {
       owner = "gelguy";
       repo = "wilder.nvim";
-      rev = "666b1778031c288615715ebd837acb1f946d83a7";
-      sha256 = "1sx4rczbvg78gyyap56wa48i2lvy8x6briyp8jv500sh7x89q4zm";
+      rev = "615df90caac067673c34f0fb8b399b164ef6449a";
+      sha256 = "0y787bm302wrpk187gcr49qw5x28gjzxajjl2dh16acvf5hdzj3w";
     };
 
   });

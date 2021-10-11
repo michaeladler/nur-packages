@@ -25,12 +25,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
   });
 
   dracula = prev.tmuxPlugins.dracula.overrideAttrs (oa: {
-    version = "unstable-2021-10-09";
+    version = "unstable-2021-10-10";
     src = fetchFromGitHub {
       owner = "dracula";
       repo = "tmux";
-      rev = "874374444ce57e85caa60eb9bd5df6658fd7cfb4";
-      sha256 = "1shhyhklghb6ab81xlf627kday2nwkhxvsyq22wf4b242igwisq3";
+      rev = "a92fc1913b20cc2777a44ced00639397ff3c3dd7";
+      sha256 = "0lv55da580jrvzcsqm06d1bn3flld98xjpw6gz6ba52859ayck0c";
     };
   });
 
@@ -90,12 +90,12 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
 
 
   vim-tmux-navigator = prev.tmuxPlugins.vim-tmux-navigator.overrideAttrs (oa: {
-    version = "unstable-2021-05-29";
+    version = "unstable-2021-10-10";
     src = fetchFromGitHub {
       owner = "christoomey";
       repo = "vim-tmux-navigator";
-      rev = "0cabb1ef01af0986b7bf6fb7acf631debdbbb470";
-      sha256 = "0xxc5wpyfqv7f7sfy6xncy7ipj0cvshw28s12ld3jfgyimjllr62";
+      rev = "9ca5bfe5bd274051b5dd796cc150348afc993b80";
+      sha256 = "11qv4bqwwf7wh3l729c9za6kzpyry91q3cks2z51znppkyd20gb7";
     };
   });
 

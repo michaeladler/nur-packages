@@ -40,6 +40,7 @@ in
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   sysz = callPackage ./pkgs/sysz { };
+  tabbed-flexipatch = callPackage ./pkgs/tabbed-flexipatch { };
 
   # sometimes more up2date
   ungoogled-chromium-bin = callPackage ./pkgs/ungoogled-chromium-bin { };

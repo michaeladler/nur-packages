@@ -51,6 +51,7 @@
           inherit (pkgs)
             brave
             bsp-layout
+            bsptab
             btrfs-du
             btrfs-list
             dhall

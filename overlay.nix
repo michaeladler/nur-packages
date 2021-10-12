@@ -24,6 +24,7 @@ in
   dhall-lsp-server = callPackage ./pkgs/dhall-lsp-server { };
 
   # missing upstream
+  bsptab = callPackage ./pkgs/bsptab { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
@@ -37,9 +38,9 @@ in
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
-  vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   sysz = callPackage ./pkgs/sysz { };
   tabbed-flexipatch = callPackage ./pkgs/tabbed-flexipatch { };
+  vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
 
   # bundles
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);

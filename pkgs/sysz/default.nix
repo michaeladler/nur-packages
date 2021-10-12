@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "sysz";
-  version = "unstable-2021-10-08";
+  version = "unstable-2021-10-11";
 
   src = fetchFromGitHub {
     owner = "joehillen";
     repo = "sysz";
-    rev = "d5f6c27aac02bbb8bd96238c3515585264240d0e";
-    sha256 = "166gfvvizlr4wp7k04n11yq7xsy3n4bjwb7nnhci7wmvp3dc3bg0";
+    rev = "e65c00c9a7a633bf6e5aceb22314a0cfcfa71e03";
+    sha256 = "1fx714rxmcavgqmv0wvslsj0wqwy6lsijyydn9bdmbh5gglsqrpb";
   };
 
   nativeBuildInputs = [ makeWrapper ];

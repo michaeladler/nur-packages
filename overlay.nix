@@ -28,6 +28,7 @@ in
   bsptab = callPackage ./pkgs/bsptab { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
+  efibootguard = callPackage ./pkgs/efibootguard { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };

@@ -59,6 +59,7 @@
             dhall-lsp-server
             dwm
             dwmblocks
+            efibootguard
             firefox-bin
             fstabfmt
             git-hours

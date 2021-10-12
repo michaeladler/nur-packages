@@ -66,6 +66,7 @@
             go-mod-outdated
             goofys
             handlr
+            i3-gaps
             luaprompt
             msktutil
             myTmuxPlugins

@@ -6,8 +6,8 @@ vimUtils.buildVimPluginFrom2Nix ({
   src = fetchFromGitHub {
     owner = "ms-jpq";
     repo = "coq.artifacts";
-    rev = "3021913f70bad499cf912fd4b257a7355ff1dccf"; # artifacts
-    sha256 = "1201kf1r59q6hksy2pc4ynyywlsl0ynd7sy0xf4s3nh3199aw4in";
+    rev = "5721aa8fc61b7c326f37a8a762ed79fafbee9a81"; # artifacts
+    sha256 = "056xw8v6q6r09kgcj3sal7g6kdyh9rkpnqdqlavvwvy436kc4frd";
   };
 
   meta.homepage = "https://github.com/ms-jpq/coq.artifacts";

@@ -78,7 +78,6 @@
             peda
             qmarkdown
             sscep
-            sumneko-lua-language-server
             sysz
             tabbed-flexipatch
             vcalendar-filter

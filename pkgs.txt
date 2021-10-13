@@ -81,7 +81,6 @@ qmarkdown
 rnix-lsp
 sad
 sscep
-sumneko-lua-language-server
 sysz
 tabbed-flexipatch
 vcalendar-filter

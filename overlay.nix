@@ -14,7 +14,6 @@ in
   handlr = (import ./pkgs/handlr) final prev;
   i3-gaps = (import ./pkgs/i3-gaps) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
-  sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
   zig = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
 

@@ -72,8 +72,8 @@ in
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "dd8c77a689b9e69bb08693d6d387cbb93669a791";
-      sha256 = "1xgzw4iqxzfk92bii4i546xl767gx9kw2jncfbymrr1mdwkx87by";
+      rev = "cfeb6a336eeafd8f7f7729c1ce13ca3c6f4d32be";
+      sha256 = "1sci1qkqfljvbkxq9qxc14w622sv3nwb0c5wk3xxjljcw0g2pmln";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-10-13";
+    version = "unstable-2021-10-15";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "638891d401bb0269af404cce2f8367ac13053006";
-      sha256 = "13rw8nk4jj5c7ga79jays61iph8zizvgpfd225j9nizxjr3fcsk1";
+      rev = "58dd95f4a4db38a011c8f28564786c9d98b010c8";
+      sha256 = "1q6j5gpciz5ylpmj3wg289hr9wpfdcpfkcfihrwjcd6wys4pp947";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-14";
+    version = "unstable-2021-10-15";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "8bb7cc511b0405f3ae3bb806fac4488da5a33692";
-      sha256 = "1pahn0paqq7pd52zbqywjkc6y7pn38b2sdxk9spczknmj1kq006s";
+      rev = "f9d3acd1a4e3b7e6d84951754fbdaadb196ae0fd";
+      sha256 = "15jk540qb2zwpq3vh31skdl1gn9v6y28vqv9jrw78fjmhrs99lld";
     };
   });
 
@@ -233,12 +233,12 @@ in
   FixCursorHold-nvim = buildVimPluginFrom2Nix ({
     pname = "FixCursorHold-nvim";
 
-    version = "unstable-2021-04-16";
+    version = "unstable-2021-10-15";
     src = fetchFromGitHub {
       owner = "antoinemadec";
       repo = "FixCursorHold.nvim";
-      rev = "b5158c93563ee6192ce8d903bfef839393bfeccd";
-      sha256 = "1y6hv7vl268zbf3bzd72l43jjgi0cq364p15z8ia9jlph1syk9zz";
+      rev = "f2572b0163d7b19b4e8a7c76a3eb084921d736de";
+      sha256 = "06agspmka503yn75873kk0g5v2m91df1zblsh96gkc4h6wm52liv";
     };
 
     meta.homepage = "https://github.com/antoinemadec/FixCursorHold.nvim/";

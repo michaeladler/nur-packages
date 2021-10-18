@@ -68,6 +68,7 @@
             goofys
             handlr
             i3-gaps
+            leakdice
             luaprompt
             msktutil
             myTmuxPlugins

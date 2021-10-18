@@ -18,6 +18,7 @@ go-mod-outdated
 goofys
 handlr
 i3-gaps
+leakdice
 luaprompt
 msktutil
 myTmuxPlugins/continuum

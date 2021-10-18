@@ -42,8 +42,8 @@ in
     src = fetchFromGitHub {
       owner = "kosayoda";
       repo = "nvim-lightbulb";
-      rev = "9838d3a0f9268d89c9f238c67928d3b6a0ceaaf5";
-      sha256 = "157x2i6paqz626bvbjly5k1yg2939v6j8riicrw8gxbb3s5z5fh5";
+      rev = "66223954d7bd7d4358c36d157c25503168d04319";
+      sha256 = "0jghq2fkvibilb1zglkckhpmq6dgi1q87fcwpvcv9slk1qlgw19d";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-10-16";
+    version = "unstable-2021-10-17";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "28a8e5258cb8140cc50a030b9b3c15e39376028a";
-      sha256 = "02n5kacdb6my8mn0iayr5l1rm6nx4pqc6fx6a7l5minww9vh8na2";
+      rev = "7f902f952944aa708c78138f6536c0dc55aec3a2";
+      sha256 = "1n8srlrfliak2587r30la87x3jgl9iq1x8jdxlhrx7i874ha3ykp";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-15";
+    version = "unstable-2021-10-17";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "f9d3acd1a4e3b7e6d84951754fbdaadb196ae0fd";
-      sha256 = "15jk540qb2zwpq3vh31skdl1gn9v6y28vqv9jrw78fjmhrs99lld";
+      rev = "9534bda66ec8e919bace771bec74678b50b87a88";
+      sha256 = "0n61rf8qg8kqxa9hmf7jvnrj36xqi5ml9h3kfwszzbjmq89533kw";
     };
   });
 

@@ -198,6 +198,16 @@ in
 
   });
 
+  lightspeed-nvim = prev.vimPlugins.lightspeed-nvim.overrideAttrs (old: {
+    version = "2021-10-09";
+    src = fetchFromGitHub {
+      owner = "ggandor";
+      repo = "lightspeed.nvim";
+      rev = "0836af9ad0c4bb913c8e00595bb25620c894fb97";
+      sha256 = "0vj84656vifg5c47m2pj7sfp9gz5ikpq9n0p57047d8r1arw50xg";
+    };
+  });
+
   ###############################################################################
   # the following plugins are not (yet) available in nixpkgs:
   ###############################################################################

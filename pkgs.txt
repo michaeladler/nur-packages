@@ -42,6 +42,7 @@ myVimPlugins/diffconflicts
 myVimPlugins/diffview-nvim
 myVimPlugins/friendly-snippets
 myVimPlugins/indent-guides-nvim
+myVimPlugins/lightspeed-nvim
 myVimPlugins/lsp-status-nvim
 myVimPlugins/lspkind-nvim
 myVimPlugins/lualine-nvim

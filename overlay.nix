@@ -6,10 +6,6 @@ let
 in
 
 {
-  # overlayed
-  bsp-layout = (import ./pkgs/bsp-layout) final prev;
-  dwm = (import ./pkgs/dwm) final prev;
-  dwmblocks = (import ./pkgs/dwmblocks) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   handlr = (import ./pkgs/handlr) final prev;
   i3-gaps = (import ./pkgs/i3-gaps) final prev;
@@ -24,7 +20,6 @@ in
   dhall-lsp-server = callPackage ./pkgs/dhall-lsp-server { };
 
   # missing upstream
-  bsptab = callPackage ./pkgs/bsptab { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   efibootguard = callPackage ./pkgs/efibootguard { };
@@ -41,7 +36,6 @@ in
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
   sysz = callPackage ./pkgs/sysz { };
-  tabbed-flexipatch = callPackage ./pkgs/tabbed-flexipatch { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
 
   # bundles

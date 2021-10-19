@@ -50,15 +50,11 @@
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
             brave
-            bsp-layout
-            bsptab
             btrfs-du
             btrfs-list
             dhall
             dhall-json
             dhall-lsp-server
-            dwm
-            dwmblocks
             efibootguard
             firefox-bin
             fstabfmt
@@ -80,7 +76,6 @@
             qmarkdown
             sscep
             sysz
-            tabbed-flexipatch
             vcalendar-filter
             zig
             zls

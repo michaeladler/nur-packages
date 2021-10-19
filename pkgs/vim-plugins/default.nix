@@ -429,4 +429,16 @@ in
     meta.homepage = "https://github.com/jbyuki/venn.nvim";
   });
 
+  comment-nvim = buildVimPluginFrom2Nix ({
+    pname = "comment-nvim";
+    version = "unstable-2021-10-19";
+    src = fetchFromGitHub {
+      owner = "numToStr";
+      repo = "Comment.nvim";
+      rev = "f90fd4b5b47e35c9cd911126fc5b88585919e7cc";
+      sha256 = "0pii6fd6m2yzf3fxixmip471nqrb4dvsxygn71wiy7ldc8f6lw7n";
+    };
+
+    meta.homepage = "https://github.com/numToStr/Comment.nvim";
+  });
 }

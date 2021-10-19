@@ -128,12 +128,12 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-06";
+    version = "unstable-2021-10-18";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "80bb2b9bb74bdca38a46480b6f2e15af990406e4";
-      sha256 = "11akcpxcp4m997a2y76ajknnmsifac2hj4nq9i4a8b1j08bxinim";
+      rev = "901b96d37a30be0504c97cc2c05d3a99b4cca842";
+      sha256 = "14nkpj4x9213waqsy93sdgnll42s4dxxpq5kv6g8w015drjrbwhv";
     };
   });
 
@@ -168,22 +168,22 @@ in
   });
 
   diffview-nvim = prev.vimPlugins.diffview-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-08";
+    version = "unstable-2021-10-18";
     src = fetchFromGitHub {
       owner = "sindrets";
       repo = "diffview.nvim";
-      rev = "2a838d444ef38e07170b161ed12ce241a8d8c54f";
-      sha256 = "1d23mxvc4ldlsv5a6zy0glxfnfmx08fvp1zyxds1v369pn6x61pi";
+      rev = "8bc4e6e2bd08afc19f74968372b5e2423a299d2f";
+      sha256 = "0amwnh9pnq0zyqja3bh52qpsyavbzw1537awlwn29p10mmfv9p8f";
     };
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-17";
+    version = "unstable-2021-10-18";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "9534bda66ec8e919bace771bec74678b50b87a88";
-      sha256 = "0n61rf8qg8kqxa9hmf7jvnrj36xqi5ml9h3kfwszzbjmq89533kw";
+      rev = "c73a31c04d531764073d3ccfa3adcd6b0412e031";
+      sha256 = "074bkhzafa0gzdkwkcig3swh5fn7z29d437pbpkgy8mb80f9c5vd";
     };
   });
 
@@ -199,12 +199,12 @@ in
   });
 
   lightspeed-nvim = prev.vimPlugins.lightspeed-nvim.overrideAttrs (old: {
-    version = "2021-10-09";
+    version = "unstable-2021-10-18";
     src = fetchFromGitHub {
       owner = "ggandor";
       repo = "lightspeed.nvim";
-      rev = "0836af9ad0c4bb913c8e00595bb25620c894fb97";
-      sha256 = "0vj84656vifg5c47m2pj7sfp9gz5ikpq9n0p57047d8r1arw50xg";
+      rev = "176ab1e0e5e9a044a36b38d2dc5db357c2add9b2";
+      sha256 = "0bywrylff2igkk4r7vp67j5h58ixvpssbzxjgm59362khf2d78r8";
     };
   });
 

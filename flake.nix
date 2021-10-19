@@ -52,6 +52,7 @@
             brave
             btrfs-du
             btrfs-list
+            clang-format-diff
             dhall
             dhall-json
             dhall-lsp-server

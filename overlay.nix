@@ -22,6 +22,7 @@ in
   # missing upstream
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
+  clang-format-diff = callPackage ./pkgs/clang-format-diff { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   git-hours = callPackage ./pkgs/git-hours { };

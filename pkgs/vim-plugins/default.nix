@@ -441,4 +441,31 @@ in
 
     meta.homepage = "https://github.com/numToStr/Comment.nvim";
   });
+
+  stabilize-nvim = buildVimPluginFrom2Nix ({
+    pname = "stabilize-nvim";
+    version = "unstable-2021-10-20";
+    src = fetchFromGitHub {
+      owner = "luukvbaal";
+      repo = "stabilize.nvim";
+      rev = "4e367db3f38d09e097973362e7497a1a671e2f8e";
+      sha256 = "0rds612np4rn32v8gavhvbn1ni8mvnccbm9g4w3vy9r49iwg2xdi";
+    };
+
+    meta.homepage = "https://github.com/luukvbaal/stabilize.nvim";
+  });
+
+  replacer-nvim = buildVimPluginFrom2Nix ({
+    pname = "replacer-nvim";
+    version = "unstable-2021-09-03";
+    src = fetchFromGitHub {
+      owner = "gabrielpoca";
+      repo = "replacer.nvim";
+      rev = "2dd6fc14c2f9bbc1edc24958609f7f3405a0df41";
+      sha256 = "0j51shpdrsfjifk5k28myffik03vbz7ils1gcn70jgi3lby8vv4w";
+    };
+
+    meta.homepage = "https://github.com/gabrielpoca/replacer.nvim";
+  });
+
 }

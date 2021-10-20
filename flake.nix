@@ -71,6 +71,7 @@
             myTmuxPlugins
             myVimPlugins
             myZshPlugins
+            neomutt
             nix-direnv
             oelint-adv
             peda

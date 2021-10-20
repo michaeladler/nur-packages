@@ -2,12 +2,12 @@
 
 vimUtils.buildVimPluginFrom2Nix ({
   pname = "coq-artifacts";
-  version = "unstable-2021-10-18";
+  version = "unstable-2021-10-19";
   src = fetchFromGitHub {
     owner = "ms-jpq";
     repo = "coq.artifacts";
-    rev = "899a7e316e7ccedd2c6e7a8962264c7d935a39d8"; # artifacts
-    sha256 = "090vli09r55wm517iiwlaz0vxdw4yqzfw1qvlym2d5b3wlb0wfyc";
+    rev = "8ae3960b29235d0c8528bf6722947053edbd3604"; # artifacts
+    sha256 = "0bk32gm7pzswmqfga1y39gvsk5rdcnm04rcyj9i5fjw842j4bif2";
   };
 
   meta.homepage = "https://github.com/ms-jpq/coq.artifacts";

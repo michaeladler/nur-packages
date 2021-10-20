@@ -2,12 +2,12 @@
 
 vimUtils.buildVimPluginFrom2Nix ({
   pname = "coq-nvim";
-  version = "unstable-2021-10-18";
+  version = "unstable-2021-10-19";
   src = fetchFromGitHub {
     owner = "ms-jpq";
     repo = "coq_nvim";
-    rev = "9718da5b621a15709dca342d311a1ee8553f7955"; # coq
-    sha256 = "10pixhq5j1761q4wbfh1fhr769llcsrzfiil6cxjxmidrzl426ah";
+    rev = "4fe40c9284df38d64c3d98d51757a6d023f4c3bc"; # coq
+    sha256 = "0sjamky7bvd6q0lq68i8k42w2n0yfv31lrl297rp3r5sw1i9r28q";
   };
 
   patches = [

@@ -1,27 +1,28 @@
-From 8b8b04d66ac812c75dd719d9d5049ceb04ee33fa Mon Sep 17 00:00:00 2001
+From affcacb30eb25adc50066e784a85a028b86758b7 Mon Sep 17 00:00:00 2001
 From: Michael Adler <therisen06@gmail.com>
 Date: Fri, 1 Oct 2021 08:44:05 +0200
 Subject: [PATCH] Do not use venv
 
 ---
- coq/__main__.py | 82 ++++++-------------------------------------------
- 1 file changed, 9 insertions(+), 73 deletions(-)
+ coq/__main__.py | 74 +++----------------------------------------------
+ 1 file changed, 4 insertions(+), 70 deletions(-)
 
 diff --git a/coq/__main__.py b/coq/__main__.py
-index d6c3fdc1..bccf0c75 100644
+index 07ce63ed..9720e089 100644
 --- a/coq/__main__.py
 +++ b/coq/__main__.py
-@@ -57,82 +57,18 @@ _IN_VENV = _RT_PY == _EXEC_PATH
+@@ -66,63 +66,6 @@ _IN_VENV = _RT_PY == _EXEC_PATH
  
  
  if command == "deps":
 -    assert not _IN_VENV
 -
+-    io_out = StringIO()
 -    try:
 -        from venv import EnvBuilder
 -
 -        print("...", flush=True)
--        with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+-        with redirect_stdout(io_out), redirect_stderr(io_out):
 -            EnvBuilder(
 -                system_site_packages=False,
 -                with_pip=True,
@@ -31,7 +32,8 @@ index d6c3fdc1..bccf0c75 100644
 -            ).create(_RT_DIR)
 -    except (ImportError, CalledProcessError):
 -        msg = "Please install python3-venv separately. (apt, yum, apk, etc)"
--        print(msg, file=stderr)
+-        io_out.seek(0)
+-        print(msg, io_out.read(), file=stderr)
 -        exit(1)
 -    else:
 -        proc = run(
@@ -70,16 +72,10 @@ index d6c3fdc1..bccf0c75 100644
 -            exit(proc.returncode)
 -        else:
 -            _LOCK_FILE.write_text(_REQ)
--            msg = """
--            ---
--            You can now use :COQnow
--            """
--            print(dedent(msg), file=stderr)
-+    msg = """
-+    ---
-+    You can now use :COQnow
-+    """
-+    print(dedent(msg), file=stderr)
+             msg = """
+             ---
+             You can now use :COQnow
+@@ -131,19 +74,10 @@ if command == "deps":
  
  elif command == "run":
      try:

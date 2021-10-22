@@ -7,12 +7,12 @@ in
 {
 
   plenary-nvim = prev.lua51Packages.plenary-nvim.overrideAttrs (old: rec {
-    version = "unstable-2021-10-18";
+    version = "unstable-2021-10-21";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "901b96d37a30be0504c97cc2c05d3a99b4cca842";
-      sha256 = "14nkpj4x9213waqsy93sdgnll42s4dxxpq5kv6g8w015drjrbwhv";
+      rev = "de5acdcb595f0a97bec874693008c94f94b57060";
+      sha256 = "1g0j2nnmnfkmbirpqg751pl1qxrbx6fx39r9ak0f7sl9rm8322s7";
     };
 
     knownRockspec = "${src.outPath}/plenary.nvim-scm-1.rockspec";

@@ -31,6 +31,7 @@ in
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
   goofys = callPackage ./pkgs/goofys { };
   leakdice = callPackage ./pkgs/leakdice { };
+  libubootenv = callPackage ./pkgs/libubootenv { };
   luaprompt = callPackage ./pkgs/luaprompt { };
   msktutil = callPackage ./pkgs/msktutil { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };

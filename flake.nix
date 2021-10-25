@@ -66,6 +66,7 @@
             handlr
             i3-gaps
             leakdice
+            libubootenv
             luaprompt
             msktutil
             myTmuxPlugins

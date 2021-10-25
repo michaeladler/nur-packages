@@ -37,7 +37,6 @@ in
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
-  sysz = callPackage ./pkgs/sysz { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
 
   # bundles

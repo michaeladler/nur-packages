@@ -76,7 +76,6 @@
             peda
             qmarkdown
             sscep
-            sysz
             vcalendar-filter
             zig
             zls

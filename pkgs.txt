@@ -8,7 +8,6 @@ dhall-lsp-server
 efibootguard
 firefox-bin
 fstabfmt
-git-cliff
 git-hours
 go-crx3
 go-mod-outdated

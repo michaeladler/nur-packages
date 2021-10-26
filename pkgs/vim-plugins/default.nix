@@ -48,12 +48,12 @@ in
   });
 
   lspkind-nvim = prev.vimPlugins.lspkind-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-11";
+    version = "unstable-2021-10-25";
     src = fetchFromGitHub {
       owner = "onsails";
       repo = "lspkind-nvim";
-      rev = "0f7851772ebdd5cb67a04b3d3cda5281a1eb83c1";
-      sha256 = "0jk1xlp8x6vw40dl96zvmdxv0p8100rzx7za58xpahz10232lckx";
+      rev = "1557ce5b3b8e497c1cb1d0b9d967a873136b0c23";
+      sha256 = "0qrfrwd7mz311hjmpkjfjg1d2dkar675vflizpj0p09b5dp8zkbv";
     };
   });
 
@@ -158,12 +158,12 @@ in
   });
 
   neogit = prev.vimPlugins.neogit.overrideAttrs (old: {
-    version = "unstable-2021-10-21";
+    version = "unstable-2021-10-25";
     src = fetchFromGitHub {
       owner = "TimUntersberger";
       repo = "neogit";
-      rev = "495ae477caa40b467e8b01aa83b5d240fabf13fa";
-      sha256 = "16kbzqgk3pbwkyyrzg461c7vw9rj7sa8hczv74ai4393cgcil38m";
+      rev = "86f4a4daa278a00a311765eac17fb45e1e5688ae";
+      sha256 = "16xax1gyni7qrrscq2lqsgsd271sb6y667rg395wwqhrgq98zd6j";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-21";
+    version = "unstable-2021-10-25";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "4a7ac163de30d04ab697eeea86b7ea773100b8e4";
-      sha256 = "0chgqap87v2ar7jj1n0g6haqiprz5lhkny9jy4imi5qgf7hb5f6i";
+      rev = "c6ec1d0730eba85bb784a2b563c3508aaaf0c4eb";
+      sha256 = "1z0lzxr6f9wri086n8414740j2wbhvqsq10chji66v7rc7kfzac7";
     };
   });
 

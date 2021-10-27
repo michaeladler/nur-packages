@@ -6,8 +6,8 @@ vimUtils.buildVimPluginFrom2Nix ({
   src = fetchFromGitHub {
     owner = "ms-jpq";
     repo = "coq_nvim";
-    rev = "4af0a56d1112f38c011b836847b16fb3ca1c028b"; # coq
-    sha256 = "14lr71yj45xx9ljaz6glpcyg3b5gb795mypyv7kz0zygjdqnjjsi";
+    rev = "9485834416436a417ad325c116d239f11f58cd57"; # coq
+    sha256 = "00qhfhsdac30qf11ww2dxhrm8i22gayydmlw3kcfiy0dlxwwdp9f";
   };
 
   patches = [

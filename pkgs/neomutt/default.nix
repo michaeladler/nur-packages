@@ -1,13 +1,13 @@
 final: prev:
 
 prev.neomutt.overrideAttrs (old: {
-  version = "unstable-2021-10-25";
+  version = "unstable-2021-10-26";
 
   src = prev.fetchFromGitHub {
     owner = "neomutt";
     repo = "neomutt";
-    rev = "fa8a4a270e2d836bad3d114814faa1c56e68dc41";
-    sha256 = "19csx58yfb8y0wbjajwhb6v4yyn2napp4jqndxrq01msg4xcnr1i";
+    rev = "2c6998b91640bb75c4b527d58b4bd00e42eeaf15";
+    sha256 = "02z9gj802h5ga168lzj5lb78w9jq15qwiji15g5s8b75xp76d52m";
   };
 
 })

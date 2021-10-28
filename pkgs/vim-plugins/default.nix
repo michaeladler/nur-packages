@@ -18,12 +18,12 @@ in
   });
 
   friendly-snippets = prev.vimPlugins.friendly-snippets.overrideAttrs (old: {
-    version = "unstable-2021-10-12";
+    version = "unstable-2021-10-27";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "59507a9773ea1a24072342da357da0708b303ef9";
-      sha256 = "1d5ragvg9jxs3axln3cqj7i37c0vxdyfwl4ll06yslghb77krf6w";
+      rev = "fcd2ab16e3217dc58c5950b02f57cb43b9ae086e";
+      sha256 = "1zs61lrgrns4711iyvjl2px0491bnnsrphd5v76m3k6439iys974";
     };
   });
 
@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-10-24";
+    version = "unstable-2021-10-27";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "7dc04ca9ae28bded22f4c78cb29dce09b6643f38";
-      sha256 = "0bs66idzq4f0infbazr1w1pl9h2chm13lds06znxvfgi30ispd32";
+      rev = "9314d0a8da0f5ccd700d8a1fa699949a95971420";
+      sha256 = "0bm9318wbm7gkqzx0zwv64nlpzdv8gyi2z574mcz7hrdqn5wp3ar";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-10-23";
+    version = "unstable-2021-10-26";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "0bbc6e3d164ab771c78c0f8905166d43939c7c12";
-      sha256 = "0a1cvjyk4s1rx20x2qa3xd0x67h0f4vw6i56g1rmpcl3m171k1x5";
+      rev = "fe4e4aa286ba14e949948ef6e826d69c63048cdb";
+      sha256 = "0h210kid8z3l2b8s3f5ifjb4j7bzjjl0bjvjn5nj09x1mzrid3bh";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-26";
+    version = "unstable-2021-10-27";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "05c9a78996e5a5ad9ad9b7952247a20faf62c65c";
-      sha256 = "0qcg08rmw24q82gs9gz4yy4myrfwnj8srmsppagnq3d6jdj963k3";
+      rev = "bd0940c2eb8f77872a411bccd5d498539bb7552d";
+      sha256 = "1hp063c7q9chbswlvj3ravq14a28sdql7dv20c939ix4svz3bd0h";
     };
   });
 
@@ -199,12 +199,12 @@ in
   });
 
   lightspeed-nvim = prev.vimPlugins.lightspeed-nvim.overrideAttrs (old: {
-    version = "unstable-2021-10-24";
+    version = "unstable-2021-10-27";
     src = fetchFromGitHub {
       owner = "ggandor";
       repo = "lightspeed.nvim";
-      rev = "0a40c82fea060709b95b926cd0fe1bf1229e2900";
-      sha256 = "1wvcd4nix9variddhfpn9mak5m2rskhc4vgfwy4pi3hrrwixjlyh";
+      rev = "e0df8d58352835ef2fa5a03e09186ffd58344d32";
+      sha256 = "1y5h4mk6k1zqbw9j0yr89j5bk1vn1g42njcfgi11lmc5xm9d8hjx";
     };
   });
 
@@ -444,12 +444,12 @@ in
 
   stabilize-nvim = buildVimPluginFrom2Nix ({
     pname = "stabilize-nvim";
-    version = "unstable-2021-10-21";
+    version = "unstable-2021-10-28";
     src = fetchFromGitHub {
       owner = "luukvbaal";
       repo = "stabilize.nvim";
-      rev = "c38a133122d267181889c27967a3ab76b50930e5";
-      sha256 = "1wighg1wf388kw9c8g7ykv0nmssqw7x3jalb7qvmsw05fppd4aal";
+      rev = "367b1989150aca438bbbc787c47a2d840ac579d4";
+      sha256 = "1s6b4r46gcgx0qy1vvzg93y9kqxlfilijh0q0fzmg5zidma0m2ic";
     };
 
     meta.homepage = "https://github.com/luukvbaal/stabilize.nvim";

@@ -27,13 +27,13 @@ in
     };
   });
 
-  nvim-compe = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
-    version = "unstable-2021-10-03";
+  nvim-cmp = prev.vimPlugins.nvim-compe.overrideAttrs (old: {
+    version = "unstable-2021-11-01";
     src = fetchFromGitHub {
       owner = "hrsh7th";
-      repo = "nvim-compe";
-      rev = "d186d739c54823e0b010feb205c6f97792322c08";
-      sha256 = "1cl3c4cazzpjj2wmsi42czrklzngzm82bbb9ivmcsa40rfz2lsk3";
+      repo = "nvim-cmp";
+      rev = "e8cb695b0bcf53ea51837421d24ff01cadb4f4e5";
+      sha256 = "16vcpisi9ksw8chk2mfsqwxlxcch7g7y7s9jk9cyb7bhx6q4lvvw";
     };
   });
 

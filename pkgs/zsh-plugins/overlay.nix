@@ -24,12 +24,12 @@ final: prev:
   });
 
   zsh-fzf-tab = prev.zsh-fzf-tab.overrideAttrs (old: {
-    version = "unstable-2021-09-05";
+    version = "unstable-2021-10-30";
     src = prev.fetchFromGitHub {
       owner = "Aloxaf";
       repo = "fzf-tab";
-      rev = "220bee396dd3c2024baa54015a928d5915e4f48f";
-      sha256 = "0vh0r4k3xw6mwpy7f6crgsrfrds8fjijvpppfa9wicarnnqwwz4n";
+      rev = "e3fae7478fc365a04a06b9972b04766ffed78c1c";
+      sha256 = "152vhm7i84ab7xp8bkvxr5axfy6lljiqc0k9vggxpc149knkyh9n";
     };
   });
 

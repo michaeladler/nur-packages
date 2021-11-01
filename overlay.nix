@@ -45,11 +45,7 @@ in
   myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
   tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
 
-  myVimPlugins = (prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev)) //
-    {
-      coq-artifacts = callPackage ./pkgs/vim-plugins/coq-artifacts { };
-      coq-nvim = callPackage ./pkgs/vim-plugins/coq-nvim { };
-    };
+  myVimPlugins = (prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev));
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 
   myZshPlugins = prev.recurseIntoAttrs ((import ./pkgs/zsh-plugins/overlay.nix) final prev);

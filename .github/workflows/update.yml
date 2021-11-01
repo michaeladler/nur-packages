@@ -28,7 +28,7 @@ jobs:
           echo "access-tokens = github.com=$GITHUB_TOKEN" >>~/.config/nix/nix.conf
 
           nix-shell \
-            --command "make -j8 update-flakes update-firefox-addons update-firefox update-brave update-coq update-other" \
+            --command "make -j8 update-flakes update-firefox-addons update-firefox update-brave update-other" \
             -p nixUnstable update-nix-fetchgit
           nix-shell \
             --command "nix --experimental-features 'nix-command flakes' flake check" \

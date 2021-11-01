@@ -34,8 +34,6 @@ myVimPlugins/FixCursorHold-nvim
 myVimPlugins/barbar-nvim
 myVimPlugins/close-buffers-nvim
 myVimPlugins/comment-nvim
-myVimPlugins/coq-artifacts
-myVimPlugins/coq-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts
 myVimPlugins/diffview-nvim

@@ -37,6 +37,7 @@ myVimPlugins/comment-nvim
 myVimPlugins/detectindent
 myVimPlugins/diffconflicts
 myVimPlugins/diffview-nvim
+myVimPlugins/dracula-nvim
 myVimPlugins/friendly-snippets
 myVimPlugins/indent-guides-nvim
 myVimPlugins/lightspeed-nvim

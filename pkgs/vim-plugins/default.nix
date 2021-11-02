@@ -468,4 +468,17 @@ in
     meta.homepage = "https://github.com/gabrielpoca/replacer.nvim";
   });
 
+  dracula-nvim = buildVimPluginFrom2Nix ({
+    pname = "dracula.nvim";
+    version = "unstable-2021-10-11";
+    src = fetchFromGitHub {
+      owner = "Mofiqul";
+      repo = "dracula.nvim";
+      rev = "328e6993bea9e117551a7338e06d71fe4a1bc533";
+      sha256 = "1wa63v7arrsqx703cbjn4bxbi0f2vwyz7baqskk3m8sbn304pfzv";
+    };
+
+    meta.homepage = "https://github.com/Mofiqul/dracula.nvim";
+  });
+
 }

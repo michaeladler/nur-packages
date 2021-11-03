@@ -3,6 +3,8 @@ final: prev:
 prev.neomutt.overrideAttrs (old: {
   version = "unstable-2021-10-31";
 
+  patches = [ ];
+
   src = prev.fetchFromGitHub {
     owner = "neomutt";
     repo = "neomutt";

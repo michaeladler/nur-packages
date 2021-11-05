@@ -32,8 +32,8 @@ in
     src = fetchFromGitHub {
       owner = "hrsh7th";
       repo = "nvim-cmp";
-      rev = "68a37a669b9e1738f13ec8849d136f32be9b32d9";
-      sha256 = "15c72ija92h09rvi636aa8j5mfi4mxx4mhx9x9y7n56ypv1na88a";
+      rev = "01fcf869bba850b38e6a45feb389d055e49934b5";
+      sha256 = "1p7fkz8anr2mrbalvfflmjqannk9kmyq8c8r3x0c7nfvw5rjikvf";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-11-03";
+    version = "unstable-2021-11-04";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "7ada23db8b5a615808b3691952f2519dbee04704";
-      sha256 = "0jr1gs3q1d92d328a6bmrjb9chrhqc9zybi4djn8w8xdvkiz9g72";
+      rev = "d8ed0eff3ed9bc1d88745e75a51311747a9bd49d";
+      sha256 = "012vbhn0szl87wcvabai94l34q11cjsxchd392qfdr4zpc76h6a6";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-01";
+    version = "unstable-2021-11-04";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "587a10d1494d8ffa1229246228f0655db2f0a48a";
-      sha256 = "063pfry56v606fni7zkly9mmmxbvcf3ssw4a8lgkspjy7fn7hqrk";
+      rev = "97842abb038798ee51dd1f6bceb2f928f04a4c31";
+      sha256 = "0ns55ah5ls5sbhaglql6a57swk8ckfqnannd4rgs8iaqg5xj4wd9";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-03";
+    version = "unstable-2021-11-04";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "b6142f782f3e72dcb408965492d1d90c9c10c190";
-      sha256 = "1jlgzxkdx273zknmy8m4mvjvi6cf0w4ay3a790x6bdf8y4wrfdcm";
+      rev = "64b269b51c7490660dcb2008f59ae260f2cdbbe4";
+      sha256 = "1vp5y8cd3ljhshg2hrisbgxxb1zz5xqqxldngv3ll98pd98f9yjy";
     };
   });
 
@@ -431,12 +431,12 @@ in
 
   comment-nvim = buildVimPluginFrom2Nix ({
     pname = "comment-nvim";
-    version = "unstable-2021-11-03";
+    version = "unstable-2021-11-04";
     src = fetchFromGitHub {
       owner = "numToStr";
       repo = "Comment.nvim";
-      rev = "5e6e376b6c3f538301b205a9d706b7ee4b5f637e";
-      sha256 = "1c3saj991197c3hq9gbv590gv94l45wz30x9bxvygk48l08dm4lr";
+      rev = "57421d33f8e601647426ebc1363560b292962d79";
+      sha256 = "1dxzgy3kiv91j2pk5pic98kf053ihjp7zpiqk5h9qc2cyy6ac25p";
     };
 
     meta.homepage = "https://github.com/numToStr/Comment.nvim";
@@ -470,12 +470,12 @@ in
 
   dracula-nvim = buildVimPluginFrom2Nix ({
     pname = "dracula.nvim";
-    version = "unstable-2021-11-03";
+    version = "unstable-2021-11-04";
     src = fetchFromGitHub {
       owner = "Mofiqul";
       repo = "dracula.nvim";
-      rev = "b388757bbc63e7a407925a1593384378199d05bc";
-      sha256 = "1a99yhakavc9ls9dk1qkjkk0rfabfs1kab6rdc4jw2448ag0x96v";
+      rev = "d49df92821b4797f0625e9e393b84e20e85462d0";
+      sha256 = "1pi1wjqphmmjjyw21yc66xdw2z53ksggdapfb03f0z0n4ccrxg8c";
     };
 
     meta.homepage = "https://github.com/Mofiqul/dracula.nvim";

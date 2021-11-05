@@ -49,6 +49,7 @@
         packages = flake-utils.lib.flattenTree {
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
+            aoc-cli
             brave
             btrfs-du
             btrfs-list

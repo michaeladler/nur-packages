@@ -22,6 +22,7 @@ in
   dhall-lsp-server = callPackage ./pkgs/dhall-lsp-server { };
 
   # missing upstream
+  aoc-cli = callPackage ./pkgs/aoc-cli { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   clang-format-diff = callPackage ./pkgs/clang-format-diff { };

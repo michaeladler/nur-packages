@@ -1,3 +1,4 @@
+aoc-cli
 brave
 btrfs-du
 btrfs-list

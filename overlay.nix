@@ -54,4 +54,5 @@ in
   zshPlugins = (prev.zshPlugins  or { }) // final.myZshPlugins;
 
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
+
 }

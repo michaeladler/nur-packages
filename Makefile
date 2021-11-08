@@ -8,6 +8,10 @@ build-all:
 	sed -E -e 's/(.*)/.#\1/' <pkgs.txt \
 		| xargs --delimiter='\n' $(NIX) build --no-link
 
+.PHONY: build-kernel
+build-kernel:
+	$(NIX) build '.#linuxPackages_zen.kernel'
+
 .PHONY: update-flakes
 update-flakes:
 	$(NIX) flake update

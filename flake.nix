@@ -1,7 +1,8 @@
 {
   description = "My NUR";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  #inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   inputs.rnix-lsp-src = {
@@ -40,10 +41,13 @@
         # so they are re-exported here
         # https://github.com/numtide/flake-utils/pull/29#issuecomment-817652939
         legacyPackages = {
-          vimPlugins = pkgs.vimPlugins;
-          tmuxPlugins = pkgs.tmuxPlugins;
-          firefoxAddons = pkgs.firefoxAddons;
-          zshPlugins = pkgs.zshPlugins;
+          inherit (pkgs)
+            firefoxAddons
+            tmuxPlugins
+            vimPlugins
+            zshPlugins
+            linuxPackages_zen
+            ;
         };
 
         packages = flake-utils.lib.flattenTree {

@@ -25,6 +25,7 @@ in
   aoc-cli = callPackage ./pkgs/aoc-cli { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
+  cinclude2dot = callPackage ./pkgs/cinclude2dot { };
   clang-format-diff = callPackage ./pkgs/clang-format-diff { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };

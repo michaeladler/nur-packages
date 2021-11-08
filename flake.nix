@@ -53,6 +53,7 @@
             brave
             btrfs-du
             btrfs-list
+            cinclude2dot
             clang-format-diff
             dhall
             dhall-json

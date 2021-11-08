@@ -1,0 +1,97 @@
+From 7fc5194156b8d8cdefc3154e628c5937f908b048 Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Mon, 18 Oct 2021 08:13:52 +0200
+Subject: [PATCH] Update polybar when mailbox is saved
+
+---
+ mx.c | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 56 insertions(+)
+
+diff --git a/mx.c b/mx.c
+index c21826780..c81d6bafa 100644
+--- a/mx.c
++++ b/mx.c
+@@ -23,6 +23,14 @@
+  * this program.  If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#include <dirent.h>
++#include <sys/stat.h>
++#include <fcntl.h>
++
++static int polybar_msg(const char *payload, size_t payload_len);
++static const char *polybar_payload = "hook:module/mail1";
++static const size_t polybar_payload_len = 17;
++
+ /**
+  * @page neo_mx Mailbox multiplexor
+  *
+@@ -413,6 +421,8 @@ bool mx_mbox_open(struct Mailbox *m, OpenMailboxFlags flags)
+     m->has_new = false;
+   OptForceRefresh = false;
+ 
++  (void)polybar_msg(polybar_payload, polybar_payload_len);
++
+   return true;
+ 
+ error:
+@@ -1018,6 +1028,7 @@ enum MxStatus mx_mbox_sync(struct Mailbox *m)
+     }
+ 
+     mutt_sleep(0);
++    (void)polybar_msg(polybar_payload, polybar_payload_len);
+ 
+     const bool c_save_empty = cs_subset_bool(NeoMutt->sub, "save_empty");
+     if ((m->msg_count == m->msg_deleted) &&
+@@ -1867,3 +1878,48 @@ int mx_toggle_write(struct Mailbox *m)
+   notify_send(m->notify, NT_MAILBOX, NT_MAILBOX_CHANGE, &ev_m);
+   return 0;
+ }
++
++static int polybar_msg(const char *payload, size_t payload_len) {
++  int errcount = 0;
++
++  DIR *dir;
++  const char *tmp;
++  { // initialize dir
++    tmp = getenv("TMP");
++    if (tmp == NULL) {
++      tmp = "/tmp";
++    }
++  }
++  dir = opendir(tmp);
++  if (dir == NULL) {
++    errcount += 1;
++    return errcount;
++  }
++
++  struct dirent *ent;
++  while ((ent = readdir(dir)) != NULL) {
++    if (strncmp(ent->d_name, "polybar_mqueue.", 15) == 0) {
++
++      char buf[1024];
++      snprintf(buf, sizeof(buf) - 1, "%s/%s", tmp, ent->d_name);
++      buf[sizeof(buf) - 1] = '\0';
++
++      int fd = open(buf, O_NONBLOCK | O_WRONLY);
++      if (fd == -1) {
++        perror("Unable to open polybar socket");
++        errcount += 1;
++      }
++      ssize_t count = write(fd, payload, payload_len);
++      if (count == payload_len) {
++        errcount = 0;
++      } else {
++        printf("ERROR: Unable to send payload");
++        errcount += 1;
++      }
++      close(fd);
++    }
++  }
++  closedir(dir);
++
++  return errcount;
++}
+-- 
+2.33.0
+

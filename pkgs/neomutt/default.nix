@@ -3,7 +3,7 @@ final: prev:
 prev.neomutt.overrideAttrs (old: {
   version = "unstable-2021-11-03";
 
-  patches = [ ];
+  patches = [ ./patches/0001-Update-polybar-when-mailbox-is-saved.patch ];
 
   src = prev.fetchFromGitHub {
     owner = "neomutt";

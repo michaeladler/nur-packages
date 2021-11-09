@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   name = "sscep";
-  version = "unstable-2021-09-29";
+  version = "unstable-2021-11-08";
 
   src = fetchFromGitHub {
     owner = "certnanny";
     repo = "sscep";
-    rev = "b3f9798d56d0f6474b491204ff426d80fd4010a7";
-    sha256 = "0q25z4s5sq97yrpv54wsrxr3vz9cd31ci04ffj6znb42scw50p62";
+    rev = "354acb8d66292286ca3fb75b93a240e9357b8718";
+    sha256 = "1fc3szv2rbgcbac8zzql90v8rqwqlxnmhrnx1skazy8xaahqm91r";
   };
 
   nativeBuildInputs = [ pkg-config autoreconfHook ];

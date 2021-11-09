@@ -46,7 +46,6 @@
             tmuxPlugins
             vimPlugins
             zshPlugins
-            linuxPackages_zen
             ;
         };
 
@@ -88,6 +87,8 @@
             zig
             zls
             ;
+
+            zen_kernel = pkgs.linuxPackages_zen.kernel;
 
           sad = pkgs.callPackage ./pkgs/sad { inherit naersk-lib; };
         };

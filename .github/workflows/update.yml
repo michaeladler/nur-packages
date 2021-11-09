@@ -25,6 +25,10 @@ jobs:
       - name: update
         run: |
           mkdir -p ~/.config/nix ~/.config/nixpkgs/overlays
+          [ -n "${GITHUB_TOKEN:-}" ] || {
+            echo "GITHUB_TOKEN not set"
+            exit 1
+          }
           echo "access-tokens = github.com=$GITHUB_TOKEN" >>~/.config/nix/nix.conf
 
           nix-shell \
@@ -33,13 +37,8 @@ jobs:
           nix-shell \
             --command "nix --experimental-features 'nix-command flakes' flake check" \
             -p nixUnstable
-          git diff --exit-code || git commit -am 'chore: update packages'
         env:
-          GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build
         run: |
@@ -47,18 +46,11 @@ jobs:
             --command "make build-all" \
             -p nixUnstable
 
-      - name: push
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: |
-          git remote set-url origin "https://$GITHUB_TOKEN@github.com/michaeladler/nur-packages"
-          git fetch origin master && git rebase origin/master
-          git push origin HEAD:master
-        env:
-          GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
+      - name: Commit & Push changes
+        uses: benkaiser/rebase-commit-push@v1.1
+        with:
+          message: 'chore: update packages'
+          rebase: true
 
   update-zig:
     runs-on: ubuntu-latest
@@ -78,36 +70,16 @@ jobs:
           nix-shell \
             --command "make -j2 update-zig update-zls" \
             -p nixUnstable update-nix-fetchgit
-        env:
-          GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
 
       - name: build
         run: |
           nix-shell \
             --command "nix --experimental-features 'nix-command flakes' build --no-link '.#zig' '.#zls'" \
             -p nixUnstable
-          git diff --exit-code || git commit -am 'chore: update zig and zls'
-        env:
-          GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
 
-      - name: push
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: |
-          git remote set-url origin "https://$GITHUB_TOKEN@github.com/michaeladler/nur-packages"
-          git fetch origin master && git rebase origin/master
-          git push origin HEAD:master
-        env:
-          GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
+      - name: Commit & Push changes
+        uses: benkaiser/rebase-commit-push@v1.1
+        with:
+          message: 'chore: update zig and zls'
+          rebase: true
 

@@ -21,25 +21,9 @@ jobs:
           nix-shell \
             --command "make -j2 pkgs.txt build-all" \
             -p nixUnstable
-          git diff --exit-code pkgs.txt || {
-              git add pkgs.txt
-              git commit -m 'chore: update package list'
-          }
-        env:
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
 
-      - name: push
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: |
-          git remote set-url origin "https://$GITHUB_TOKEN@github.com/michaeladler/nur-packages"
-          git fetch origin master && git rebase origin/master
-          git push origin HEAD:master
-        env:
-          GITHUB_TOKEN: '${{ secrets.API_TOKEN_GITHUB }}'
-          GIT_AUTHOR_NAME: "Github Actions"
-          GIT_AUTHOR_EMAIL: "actions@github"
-          GIT_COMMITTER_NAME: "Github Actions"
-          GIT_COMMITTER_EMAIL: "actions@github"
+      - name: Commit & Push changes
+        uses: benkaiser/rebase-commit-push@v1.1
+        with:
+          message: 'chore: update package list'
+          rebase: true

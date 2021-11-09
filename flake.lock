@@ -17,7 +17,9 @@
     },
     "naersk": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1636103400,
@@ -56,20 +58,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1636416043,
-        "narHash": "sha256-Esz9X97OeAsNoJUVuqlCu2LDWcyLE24huUonhOY3JGw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "db6044d5debaff0749420c3553d1b89fc6c5c5f8",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1636381033,
         "narHash": "sha256-NW+4xvyEFZteG8oFra//yFi61Lw9SwOxOrgo4A7dynU=",
         "owner": "michaeladler",
@@ -86,11 +74,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1636415603,
-        "narHash": "sha256-0JoCdHZP8WHy2P4Sqj3NP9IzrstWxQ/6U1SzsFZHnWw=",
+        "lastModified": 1636440294,
+        "narHash": "sha256-9HRp7fF5Pfu2tPHTZ58+IJPuSbYf6j4xtZyLQBflpC4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "87f6119fcd68f836a5ed68d9187b6f46114a6615",
+        "rev": "d45a2fb134d3ebce6894e720b4e6738ba460cffa",
         "type": "github"
       },
       "original": {
@@ -125,7 +113,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "naersk": "naersk",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nur": "nur",
         "rnix-lsp-src": "rnix-lsp-src"
       }

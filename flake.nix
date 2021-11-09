@@ -11,7 +11,7 @@
   };
   inputs.naersk = {
     url = "github:nmattia/naersk";
-    # inputs.nixpkgs.follows = "nixpkgs";
+    inputs.nixpkgs.follows = "nixpkgs";
   };
   inputs.nur.url = github:nix-community/NUR;
 

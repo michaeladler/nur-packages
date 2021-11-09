@@ -481,4 +481,17 @@ in
     meta.homepage = "https://github.com/Mofiqul/dracula.nvim";
   });
 
+  solarized-nvim = buildVimPluginFrom2Nix ({
+    pname = "solarized.nvim";
+    version = "unstable-2021-06-05";
+    src = fetchFromGitHub {
+      owner = "shaunsingh";
+      repo = "solarized.nvim";
+      rev = "2c791ae9a94b7674c7ccd67638e50b492fd83c13";
+      sha256 = "0sav1mfakr0hw14hpn4abj7j8kkcz1y83gaibm724gzxcy2l5139";
+    };
+
+    meta.homepage = "https://github.com/shaunsingh/solarized.nvim";
+  });
+
 }

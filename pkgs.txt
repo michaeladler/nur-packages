@@ -59,6 +59,7 @@ myVimPlugins/papercolor-theme-slim
 myVimPlugins/plenary-nvim
 myVimPlugins/popup-nvim
 myVimPlugins/replacer-nvim
+myVimPlugins/solarized-nvim
 myVimPlugins/stabilize-nvim
 myVimPlugins/telescope-nvim
 myVimPlugins/venn-nvim

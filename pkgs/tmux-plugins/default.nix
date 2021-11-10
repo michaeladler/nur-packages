@@ -117,6 +117,8 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
       rev = "1801dd525b39154745ea668fb6916035023949e3";
       sha256 = "03wa436hgbwhfgqjjmyqhjwljyjk9xdlg03mlwdnmdjym4kbvpbv";
     };
+    postInstall = "true";
+
   });
 
 }

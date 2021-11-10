@@ -14,6 +14,7 @@ in
   zig = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
   neomutt = (import ./pkgs/neomutt) final prev;
+  fzf = (import ./pkgs/fzf) final prev;
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };

@@ -64,6 +64,7 @@
             efibootguard
             firefox-bin
             fstabfmt
+            fzf
             git-hours
             go-crx3
             go-mod-outdated

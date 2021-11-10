@@ -1,0 +1,25 @@
+From f5e16eb40c1e3182030bcbaaf64984869e405ef5 Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Wed, 10 Nov 2021 11:12:06 +0100
+Subject: [PATCH] PMenu: do not use black background
+
+---
+ lua/solarized/theme.lua | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lua/solarized/theme.lua b/lua/solarized/theme.lua
+index cbbef67..4c49744 100644
+--- a/lua/solarized/theme.lua
++++ b/lua/solarized/theme.lua
+@@ -113,7 +113,7 @@ theme.loadEditor = function ()
+ 		ModeMsg =				{ fg = solarized.accent },
+ 		MoreMsg =				{ fg = solarized.accent },
+ 		NonText =				{ fg = solarized.disabled },
+-		Pmenu =					{ fg = solarized.bg, bg = solarized.contrast },
++		Pmenu =					{ fg = solarized.fg, bg = solarized.none },
+ 		PmenuSel =				{ fg = solarized.accent, bg = solarized.active },
+ 		PmenuSbar =				{ fg = solarized.text, bg = solarized.contrast },
+ 		PmenuThumb =			{ fg = solarized.fg, bg = solarized.accent },
+-- 
+2.33.1
+

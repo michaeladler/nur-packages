@@ -491,6 +491,10 @@ in
       sha256 = "0sav1mfakr0hw14hpn4abj7j8kkcz1y83gaibm724gzxcy2l5139";
     };
 
+    patches = [
+      ./patches/solarized-nvim/0001-PMenu-do-not-use-black-background.patch
+    ];
+
     meta.homepage = "https://github.com/shaunsingh/solarized.nvim";
   });
 

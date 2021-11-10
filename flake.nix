@@ -87,6 +87,7 @@
             vcalendar-filter
             zig
             zls
+            zoxide
             ;
 
             zen_kernel = pkgs.linuxPackages_zen.kernel;

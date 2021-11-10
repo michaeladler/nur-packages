@@ -483,17 +483,13 @@ in
 
   solarized-nvim = buildVimPluginFrom2Nix ({
     pname = "solarized.nvim";
-    version = "unstable-2021-06-05";
+    version = "unstable-2021-11-10";
     src = fetchFromGitHub {
       owner = "shaunsingh";
       repo = "solarized.nvim";
-      rev = "2c791ae9a94b7674c7ccd67638e50b492fd83c13";
-      sha256 = "0sav1mfakr0hw14hpn4abj7j8kkcz1y83gaibm724gzxcy2l5139";
+      rev = "f3578ab3fa7bb40678dff60560faefb50a345f01";
+      sha256 = "0dfz2cmscwvcasr8w04gk10wcg1rf79kk8wq5qlnp84vid15mnnl";
     };
-
-    patches = [
-      ./patches/solarized-nvim/0001-PMenu-do-not-use-black-background.patch
-    ];
 
     meta.homepage = "https://github.com/shaunsingh/solarized.nvim";
   });

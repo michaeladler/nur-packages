@@ -86,6 +86,8 @@ let fetchFromGitHub = prev.fetchFromGitHub; in
       rev = "fef77c8c499f268311eeab149f1018bfc948543d";
       sha256 = "17znyy1sl13cscjbq75ryji2gvdhahmvxwfh31gpjgrpksfr1zll";
     };
+
+    patches = [ ./patches/tmux-tilish/0001-unbind-alt-enter.patch ];
   });
 
 

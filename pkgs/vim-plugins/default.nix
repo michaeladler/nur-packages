@@ -494,4 +494,17 @@ in
     meta.homepage = "https://github.com/shaunsingh/solarized.nvim";
   });
 
+  material-nvim = buildVimPluginFrom2Nix ({
+    pname = "material.nvim";
+    version = "unstable-2021-10-29";
+    src = fetchFromGitHub {
+      owner = "marko-cerovac";
+      repo = "material.nvim";
+      rev = "f62b22127c74db1de30b186c96d7dfc3ec35aed0";
+      sha256 = "0agm2iw67b8dsnmhm1bx0q5a5x5c7bn0r76yyadm3qr5gv61a66x";
+    };
+
+    meta.homepage = "https://github.com/marko-cerovac/material.nvim";
+  });
+
 }

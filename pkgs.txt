@@ -47,6 +47,7 @@ myVimPlugins/lightspeed-nvim
 myVimPlugins/lsp-status-nvim
 myVimPlugins/lspkind-nvim
 myVimPlugins/lualine-nvim
+myVimPlugins/material-nvim
 myVimPlugins/neogit
 myVimPlugins/null-ls-nvim
 myVimPlugins/nvim-cmp

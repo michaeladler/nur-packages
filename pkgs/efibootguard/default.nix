@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "efibootguard";
-    rev = "e499d403d6049119a4e75c6145678ce9d3e82b64"; # next
+    rev = "e499d403d6049119a4e75c6145678ce9d3e82b64"; # master
     sha256 = "13y3c8b8jsff80k9cdwx23i1gv3b5nmvbm9w86qnf343pnr6ddp5";
   };
 

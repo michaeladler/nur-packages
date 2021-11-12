@@ -8,6 +8,7 @@
 , zlib
 , glibc
 , pciutils
+, python3
 }:
 
 stdenv.mkDerivation rec {
@@ -22,7 +23,7 @@ stdenv.mkDerivation rec {
     sha256 = "13y3c8b8jsff80k9cdwx23i1gv3b5nmvbm9w86qnf343pnr6ddp5";
   };
 
-  nativeBuildInputs = [ autoreconfHook pkgconfig check ];
+  nativeBuildInputs = [ autoreconfHook pkgconfig check python3 ];
 
   buildInputs = [ gnu-efi zlib glibc pciutils ];
 

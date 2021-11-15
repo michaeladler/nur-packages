@@ -9,13 +9,13 @@ let
 in
 python3Packages.buildPythonPackage rec {
   pname = "oelint-adv";
-  version = "unstable-2021-11-12";
+  version = "unstable-2021-11-14";
 
   src = fetchFromGitHub {
     owner = "priv-kweihmann";
     repo = "oelint-adv";
-    rev = "9ff76e8dc8e99809e5fc4c29681dd2afe24feb75";
-    sha256 = "0smx2haa68kwqd8fqk0q5ni7cc67yr8ackldd1v68m6970d4mvgn";
+    rev = "a2dbed2a3b0ef4b18eb488418c79868e26b35dbe";
+    sha256 = "1r09nggpvkxjjyh7imd4b9w6xvbv01b3gfghwgsix6l4ynsvlqlv";
   };
 
   propagatedBuildInputs = [ oelint-parser ]

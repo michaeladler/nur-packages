@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-11-13";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "4191b1fca3bafe759ae5606d19e0f0e54e9fc83b";
-      sha256 = "0fd7a9b0930kwd4c6hzfbqz6zq95skf06gc3nvb8g5my82xh5i2s";
+      rev = "100b61b679cf809cbe07ed1644d5ec6b78913558";
+      sha256 = "06dppzbngjx7pgc0gnzgfxp7grsr2v1w7hs8np3yv78b54b7fc4l";
     };
   });
 
@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-11-12";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "724f8c7e790619d29ebee079267c642b68d72bc0";
-      sha256 = "08r6cgnvdvwa2kny51iknvqy9i6wshfyqirn12jlyf18r347jjb2";
+      rev = "a47df48e7d4232fd771f2537a4fb43f582c026c9";
+      sha256 = "0w3v6416b8a7y20awjdkh9ag3xrnqyg2va25nvv9d8n4zw2aqp02";
     };
   });
 
@@ -128,22 +128,22 @@ in
   });
 
   plenary-nvim = prev.vimPlugins.plenary-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-08";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "nvim-lua";
       repo = "plenary.nvim";
-      rev = "b42e0cfe22ad3a0cac35cf14315e9dc22cea2ec9";
-      sha256 = "09is80vcmnp0w42nahsqwliiyiyv64s9x459rl2dk4mnr7hgi7fm";
+      rev = "1c31adb35fcebe921f65e5c6ff6d5481fa5fa5ac";
+      sha256 = "075b6ak0hl3wqhsy1qmi91s30lh6p6vpbvqllzvyhlz3pxabh314";
     };
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-13";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "b2f16c788ec0f1c72a500c67f5ad93d08a646b30";
-      sha256 = "0wj4x9pbnra6r59gis19v43n8zpvqini3fvypfdnmcn7rx2hii93";
+      rev = "729492406ec3b545c4ecf2beadf7bd30c81e70e4";
+      sha256 = "0vh0r1149xqniggjdr6b92rniwcq5879y01glnsz8rzf6n236zwc";
     };
   });
 
@@ -178,12 +178,12 @@ in
   });
 
   null-ls-nvim = prev.vimPlugins.null-ls-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-12";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "jose-elias-alvarez";
       repo = "null-ls.nvim";
-      rev = "a3ded9b1525b06136e58a95f4d9ed2f090c0f908";
-      sha256 = "0xc909lw73fbmmfvzvqwkba2akyv0c2msdfk94gcvxlm3dk910ng";
+      rev = "8ad1e6becb80dd705b00f4ab9e42fcbf9671d0bc";
+      sha256 = "1c9y7367q4na8d29mk553aisrcwpqawq0f51w0ns2xwj4kjgzi2n";
     };
   });
 
@@ -199,12 +199,12 @@ in
   });
 
   lightspeed-nvim = prev.vimPlugins.lightspeed-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-13";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "ggandor";
       repo = "lightspeed.nvim";
-      rev = "d7d1890fa527fba5db3c3b8aa97b5c3731bdefee";
-      sha256 = "1bq33br726mmlpgbdakm9bmxa426c46ldg66bp65bv3vx794crxk";
+      rev = "117c0e8800eee90d3bdc91a486f3a6c3d645eafe";
+      sha256 = "044gfckriybq6k18wls2innrygcfczim0k1gzhx29r3p3l2352xw";
     };
   });
 
@@ -392,12 +392,12 @@ in
 
   close-buffers-nvim = buildVimPluginFrom2Nix ({
     pname = "close-buffers-nvim";
-    version = "unstable-2021-08-10";
+    version = "unstable-2021-11-15";
     src = fetchFromGitHub {
       owner = "kazhala";
       repo = "close-buffers.nvim";
-      rev = "da77e7efd1491a2985e2db3b0927c9b5a6b16031";
-      sha256 = "09azw4s37a6bpdi9rvvw8frjn3r8225a3jyrjsvhzfbflgpg3lb1";
+      rev = "3acbcad1211572342632a6c0151f839e7dead27f";
+      sha256 = "0gncvn531grcgdmxismfp49dqprj2qjasb3h3xr3jagiwvqkffgy";
     };
 
     meta.homepage = "https://github.com/kazhala/close-buffers.nvim";
@@ -470,12 +470,12 @@ in
 
   dracula-nvim = buildVimPluginFrom2Nix ({
     pname = "dracula.nvim";
-    version = "unstable-2021-11-04";
+    version = "unstable-2021-11-14";
     src = fetchFromGitHub {
       owner = "Mofiqul";
       repo = "dracula.nvim";
-      rev = "d49df92821b4797f0625e9e393b84e20e85462d0";
-      sha256 = "1pi1wjqphmmjjyw21yc66xdw2z53ksggdapfb03f0z0n4ccrxg8c";
+      rev = "b740001bcfe9754be7f72f4bfb2b3173098d05d3";
+      sha256 = "07a381sj9phc7aj70crif2pq77cixiv59m7gyna9ad6fab0lnfl1";
     };
 
     meta.homepage = "https://github.com/Mofiqul/dracula.nvim";

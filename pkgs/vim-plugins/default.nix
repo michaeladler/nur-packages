@@ -208,6 +208,16 @@ in
     };
   });
 
+  orgmode-nvim = prev.vimPlugins.orgmode-nvim.overrideAttrs (old: {
+    version = "unstable-2021-11-14";
+    src = fetchFromGitHub {
+      owner = "kristijanhusak";
+      repo = "orgmode.nvim";
+      rev = "25e1fec55362124a8300108c88bd7127e09dad03";
+      sha256 = "0yhdyiwbwwg7m57983pnlawjgzm40dg77jy8dk4gb2183ldk8srs";
+    };
+  });
+
   ###############################################################################
   # the following plugins are not (yet) available in nixpkgs:
   ###############################################################################

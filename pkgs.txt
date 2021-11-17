@@ -58,6 +58,7 @@ myVimPlugins/nvim-peekup
 myVimPlugins/nvim-treesitter
 myVimPlugins/nvim-treesitter-refactor
 myVimPlugins/nvim-treesitter-textobjects
+myVimPlugins/orgmode-nvim
 myVimPlugins/papercolor-theme-slim
 myVimPlugins/plenary-nvim
 myVimPlugins/popup-nvim

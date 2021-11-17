@@ -8,6 +8,7 @@ dhall
 dhall-json
 dhall-lsp-server
 efibootguard
+emacsGcc
 firefox-bin
 fstabfmt
 fzf

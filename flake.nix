@@ -5,6 +5,8 @@
   inputs.nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
+  inputs.nur.url = github:nix-community/NUR;
+
   inputs.rnix-lsp-src = {
     url = "github:nix-community/rnix-lsp";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -13,9 +15,9 @@
     url = "github:nmattia/naersk";
     inputs.nixpkgs.follows = "nixpkgs";
   };
-  inputs.nur.url = github:nix-community/NUR;
+  inputs.emacs-overlay.url = "github:nix-community/emacs-overlay";
 
-  outputs = { self, nixpkgs, flake-utils, rnix-lsp-src, nur, naersk }:
+  outputs = { self, nixpkgs, flake-utils, nur, naersk, rnix-lsp-src, emacs-overlay }:
 
     {
       overlay = import ./overlay.nix;
@@ -24,7 +26,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlay ];
+          overlays = [ self.overlay emacs-overlay.overlay ];
           config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {
@@ -62,6 +64,7 @@
             dhall-json
             dhall-lsp-server
             efibootguard
+            emacsGcc # from emacs-overlay
             firefox-bin
             fstabfmt
             fzf
@@ -90,7 +93,7 @@
             zoxide
             ;
 
-            zen_kernel = pkgs.linuxPackages_zen.kernel;
+          zen_kernel = pkgs.linuxPackages_zen.kernel;
 
           sad = pkgs.callPackage ./pkgs/sad { inherit naersk-lib; };
         };

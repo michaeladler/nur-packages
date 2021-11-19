@@ -1,15 +1,15 @@
 final: prev:
 
 prev.neomutt.overrideAttrs (old: {
-  version = "unstable-2021-11-17";
+  version = "unstable-2021-11-18";
 
   patches = [ ./patches/0001-Update-polybar-when-mailbox-is-saved.patch ];
 
   src = prev.fetchFromGitHub {
     owner = "neomutt";
     repo = "neomutt";
-    rev = "54c93c9f9abcfccad8cc50f33625ec7783344fdd";
-    sha256 = "0q17skywgyc3j4wxn8c8l6sf6cz1dxr1528fwrh8gwp8nhhxzf0w";
+    rev = "dd996bc2c80755fd2d991b9058a789687fa12e2f";
+    sha256 = "0j7jy18da4g1g4ff1g5pp19ls5bk3qc1v90pg5axs0jdvbsxdjr7";
   };
 
 })

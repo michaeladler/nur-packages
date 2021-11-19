@@ -28,6 +28,7 @@ in
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   cinclude2dot = callPackage ./pkgs/cinclude2dot { };
   clang-format-diff = callPackage ./pkgs/clang-format-diff { };
+  dotdrop = callPackage ./pkgs/dotdrop { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
   git-hours = callPackage ./pkgs/git-hours { };

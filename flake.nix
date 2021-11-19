@@ -63,6 +63,7 @@
             dhall
             dhall-json
             dhall-lsp-server
+            dotdrop
             efibootguard
             emacsGcc # from emacs-overlay
             firefox-bin

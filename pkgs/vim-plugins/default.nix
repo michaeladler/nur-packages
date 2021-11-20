@@ -68,12 +68,12 @@ in
   });
 
   nvim-lspconfig = prev.vimPlugins.nvim-lspconfig.overrideAttrs (old: {
-    version = "unstable-2021-11-19";
+    version = "unstable-2021-11-20";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "414af1b02aad0bc106967f75ed8defb1e29cb538";
-      sha256 = "15fh4f63cmr3f8cv09x1dqmz4y0vjrdk0jyldbmyrwjkdnlnr9sv";
+      rev = "2e6c94069e92cb4a43416b3ac0267e941b3fd47e";
+      sha256 = "1nq5n2zfkf0llmsk982570wzlpr3lydk5fkdfkww2wrjz84cfmb4";
     };
   });
 
@@ -138,12 +138,12 @@ in
   });
 
   telescope-nvim = prev.vimPlugins.telescope-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-18";
+    version = "unstable-2021-11-20";
     src = fetchFromGitHub {
       owner = "nvim-telescope";
       repo = "telescope.nvim";
-      rev = "d686fb27998fc130f7b851fb6c540f3f1fe806e8";
-      sha256 = "1c78qgsy5v6ih7lvlbfn1mnilm1bcgznf6lmhg3zxwdpwng3997x";
+      rev = "6f82c6630cea83b591beeebdc760705cafa3e426";
+      sha256 = "0cdvw3724gmgd5mzshbvzs43286syv905amras8vm3w8z3nzhpap";
     };
   });
 
@@ -360,12 +360,12 @@ in
 
   lualine-nvim = buildVimPluginFrom2Nix ({
     pname = "lualine-nvim";
-    version = "unstable-2021-11-18";
+    version = "unstable-2021-11-20";
     src = fetchFromGitHub {
       owner = "hoob3rt";
       repo = "lualine.nvim";
-      rev = "44e09a0a9925472f92b297634ac43b9d085c7d19";
-      sha256 = "1jzz18kwh2p380bmpqcpfp4w7dzghig498z5lnfj900x0n175hw9";
+      rev = "98b9c05b0630cf8cb52cfd546126e8f0ae34d347";
+      sha256 = "111q8c2vxig1jhkmg3m8avqxap1aamzzk7z9y1dn91nc06q76x1r";
     };
 
     dependencies = [ final.vimPlugins.nvim-web-devicons ];
@@ -441,12 +441,12 @@ in
 
   comment-nvim = buildVimPluginFrom2Nix ({
     pname = "comment-nvim";
-    version = "unstable-2021-11-05";
+    version = "unstable-2021-11-20";
     src = fetchFromGitHub {
       owner = "numToStr";
       repo = "Comment.nvim";
-      rev = "620445b87a0d1640fac6991f9c3338af8dec1884";
-      sha256 = "1mw6862njjfpl3h4kaq9vkl1gddi4bdah2kzrijgq0gykiqkjpks";
+      rev = "fac23e75c4063f9f1428a3672401863ea11274a7";
+      sha256 = "0a8riqb5ydwnbkdxxcnmn86xby3rxims2770dmv5ma19s7v89ff7";
     };
 
     meta.homepage = "https://github.com/numToStr/Comment.nvim";

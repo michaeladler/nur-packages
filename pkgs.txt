@@ -23,17 +23,6 @@ leakdice
 libubootenv
 luaprompt
 msktutil
-myTmuxPlugins/continuum
-myTmuxPlugins/copycat
-myTmuxPlugins/dracula
-myTmuxPlugins/open
-myTmuxPlugins/resurrect
-myTmuxPlugins/sensible
-myTmuxPlugins/sessionist
-myTmuxPlugins/tilish
-myTmuxPlugins/tmux-fzf
-myTmuxPlugins/vim-tmux-navigator
-myTmuxPlugins/yank
 myVimPlugins/FTerm-nvim
 myVimPlugins/FixCursorHold-nvim
 myVimPlugins/barbar-nvim

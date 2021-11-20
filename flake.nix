@@ -45,7 +45,6 @@
         legacyPackages = {
           inherit (pkgs)
             firefoxAddons
-            tmuxPlugins
             vimPlugins
             zshPlugins
             ;
@@ -79,7 +78,6 @@
             libubootenv
             luaprompt
             msktutil
-            myTmuxPlugins
             myVimPlugins
             myZshPlugins
             neomutt

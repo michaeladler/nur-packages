@@ -49,10 +49,6 @@ in
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
 
-  # bundles
-  myTmuxPlugins = prev.recurseIntoAttrs ((import ./pkgs/tmux-plugins) final prev);
-  tmuxPlugins = prev.tmuxPlugins // final.myTmuxPlugins;
-
   myVimPlugins = (prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev));
   vimPlugins = prev.vimPlugins // final.myVimPlugins;
 

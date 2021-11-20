@@ -86,6 +86,7 @@
             nix-direnv
             oelint-adv
             peda
+            polybar
             qmarkdown
             sscep
             vcalendar-filter

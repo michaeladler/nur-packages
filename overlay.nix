@@ -15,6 +15,10 @@ in
   zls = (import ./pkgs/zls) final prev;
   neomutt = (import ./pkgs/neomutt) final prev;
   fzf = (import ./pkgs/fzf) final prev;
+  polybar = prev.polybar.override {
+    pulseSupport = true;
+    i3GapsSupport = true;
+  };
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };

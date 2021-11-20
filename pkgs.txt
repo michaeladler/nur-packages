@@ -87,6 +87,7 @@ neomutt
 nix-direnv
 oelint-adv
 peda
+polybar
 qmarkdown
 rnix-lsp
 sad

@@ -88,12 +88,12 @@ in
   });
 
   nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-    version = "unstable-2021-11-18";
+    version = "unstable-2021-11-20";
     src = fetchFromGitHub {
       owner = "nvim-treesitter";
       repo = "nvim-treesitter";
-      rev = "190bcc8d56c0b4c5047492d17b1615c6e89139af";
-      sha256 = "0zsasax6kzd92fl3dfwjr3myaay1q9mwh1qyipdm5q70w9wjq2ww";
+      rev = "89fbb9b39e9ff4049c797397721d44facbd246df";
+      sha256 = "0y2rvjrc0arghnyx1b4avakaxpmlc2df6sh4pzpwadl3xxryfyzn";
     };
   });
 
@@ -209,12 +209,12 @@ in
   });
 
   orgmode-nvim = prev.vimPlugins.orgmode-nvim.overrideAttrs (old: {
-    version = "unstable-2021-11-19";
+    version = "unstable-2021-11-20";
     src = fetchFromGitHub {
       owner = "kristijanhusak";
       repo = "orgmode.nvim";
-      rev = "ca2223b79b4325990911793d67a2fa1c71048684";
-      sha256 = "0a38vxmx6wj7yzswlld98f0idww078zkvmx4bzq8i5rf3qqfclfz";
+      rev = "01ad1caf4e359a1cf331942fc70c2cfce5bac1c5";
+      sha256 = "0aw7jr22k1pnwlzp147hk8a1dl5ysw2d9vrzsprq24yjml3cj0p6";
     };
   });
 

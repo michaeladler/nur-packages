@@ -360,12 +360,12 @@ in
 
   lualine-nvim = buildVimPluginFrom2Nix ({
     pname = "lualine-nvim";
-    version = "unstable-2021-11-20";
+    version = "unstable-2021-11-22";
     src = fetchFromGitHub {
       owner = "hoob3rt";
       repo = "lualine.nvim";
-      rev = "98b9c05b0630cf8cb52cfd546126e8f0ae34d347";
-      sha256 = "111q8c2vxig1jhkmg3m8avqxap1aamzzk7z9y1dn91nc06q76x1r";
+      rev = "3ad39d4d761ab3dddd54ae84b463a7a3e44d349c";
+      sha256 = "0bqlzng5whcik9aga4imqh18arbvbzwm7c8ir77cz2k7pxg3588k";
     };
 
     dependencies = [ final.vimPlugins.nvim-web-devicons ];

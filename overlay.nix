@@ -49,12 +49,5 @@ in
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
 
-  myVimPlugins = (prev.recurseIntoAttrs ((import ./pkgs/vim-plugins) final prev));
-  vimPlugins = prev.vimPlugins // final.myVimPlugins;
-
-  myZshPlugins = prev.recurseIntoAttrs ((import ./pkgs/zsh-plugins/overlay.nix) final prev);
-  zshPlugins = (prev.zshPlugins  or { }) // final.myZshPlugins;
-
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
-
 }

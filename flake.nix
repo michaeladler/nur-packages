@@ -45,8 +45,6 @@
         legacyPackages = {
           inherit (pkgs)
             firefoxAddons
-            vimPlugins
-            zshPlugins
             ;
         };
 
@@ -78,8 +76,6 @@
             libubootenv
             luaprompt
             msktutil
-            myVimPlugins
-            myZshPlugins
             neomutt
             nix-direnv
             oelint-adv

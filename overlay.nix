@@ -35,6 +35,7 @@ in
   dotdrop = callPackage ./pkgs/dotdrop { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };
+  fzy-lua-native = callPackage ./pkgs/fzy-lua-native { };
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };

@@ -87,6 +87,7 @@
             zig
             zls
             zoxide
+  fzy-lua-native
             ;
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;

@@ -12,7 +12,6 @@ efibootguard
 emacsGcc
 firefox-bin
 fstabfmt
-fzf
 fzy-lua-native
 git-hours
 go-crx3

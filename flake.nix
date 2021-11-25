@@ -15,9 +15,8 @@
     url = "github:nmattia/naersk";
     inputs.nixpkgs.follows = "nixpkgs";
   };
-  inputs.emacs-overlay.url = "github:nix-community/emacs-overlay";
 
-  outputs = { self, nixpkgs, flake-utils, nur, naersk, rnix-lsp-src, emacs-overlay }:
+  outputs = { self, nixpkgs, flake-utils, nur, naersk, rnix-lsp-src }:
 
     {
       overlay = import ./overlay.nix;
@@ -26,7 +25,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlay emacs-overlay.overlay ];
+          overlays = [ self.overlay ];
           config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {
@@ -62,7 +61,6 @@
             dhall-lsp-server
             dotdrop
             efibootguard
-            emacsGcc # from emacs-overlay
             firefox-bin
             fstabfmt
             git-hours

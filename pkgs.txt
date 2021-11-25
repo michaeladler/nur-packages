@@ -9,7 +9,6 @@ dhall-json
 dhall-lsp-server
 dotdrop
 efibootguard
-emacsGcc
 firefox-bin
 fstabfmt
 fzy-lua-native

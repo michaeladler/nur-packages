@@ -2,13 +2,13 @@ final: prev:
 
 # https://github.com/zigtools/zls/blob/master/default.nix
 prev.zls.overrideAttrs (oa: {
-  version = "unstable-2021-11-04";
+  version = "unstable-2021-11-24";
 
   src = prev.fetchFromGitHub {
     owner = "zigtools";
     repo = "zls";
-    rev = "12cda9b0310605d170b932ebb6005e44e41f4ee1";
-    sha256 = "156s1fv9lr1q8m75bjgqfpirahhfkib32sizrma3as0hqh7k8wzw";
+    rev = "7793b7250c699ea3a8aee6a66e5878ec7418149b";
+    sha256 = "19m6m17ylqm8cxdmilpkalxxcwjflvsvhsfa03zmzmca2lh37cfr";
     fetchSubmodules = true;
   };
 

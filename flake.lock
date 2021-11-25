@@ -1,20 +1,5 @@
 {
   "nodes": {
-    "emacs-overlay": {
-      "locked": {
-        "lastModified": 1637771311,
-        "narHash": "sha256-94BT3fWPYh+nr77oFfiz3/BJey9BkYgH21BwmXK2V6c=",
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "rev": "11059911b8f96237b365f9b49d9d031963475a19",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "type": "github"
-      }
-    },
     "flake-utils": {
       "locked": {
         "lastModified": 1637014545,
@@ -126,7 +111,6 @@
     },
     "root": {
       "inputs": {
-        "emacs-overlay": "emacs-overlay",
         "flake-utils": "flake-utils",
         "naersk": "naersk",
         "nixpkgs": "nixpkgs",

@@ -1,13 +1,13 @@
 final: prev:
 
 prev.i3-gaps.overrideAttrs (old: {
-  version = "unstable-2021-11-18";
+  version = "unstable-2021-11-27";
 
   src = prev.fetchFromGitHub {
     owner = "Airblader";
     repo = "i3";
-    rev = "1f6bf271ddc8ba8aed8c225350e965fda75dcf5f"; # gaps-next
-    sha256 = "1zlcs0qnkd6l0z3r90pd7yxbdwnq7yc626ndiz1aky5r6qvqn4rc";
+    rev = "6aaae79c8665f6dba8ff8b4c6263140d1a618fc7"; # gaps-next
+    sha256 = "08nw3dn46dir1czwd6hw6slrz4lh9gvbv9ynaqa2vkfs742jbrgx";
   };
 
 })

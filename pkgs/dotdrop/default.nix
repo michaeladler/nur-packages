@@ -6,13 +6,13 @@ let
 in
 python3Packages.buildPythonPackage rec {
   pname = "dotdrop";
-  version = "unstable-2021-11-21";
+  version = "unstable-2021-11-27";
 
   src = fetchFromGitHub {
     owner = "deadc0de6";
     repo = "dotdrop";
-    rev = "6722dcb7185c5d11366baf9ec84a558a8ec6b25d";
-    sha256 = "00bsqmgzmhwbfb79dzvmw29f986h07pkwcvr4csjlnp3zdx5fw19";
+    rev = "56911eb6fd028bc3a9f86b670825e035c5c92200";
+    sha256 = "1k1yrypn6yqd6nl0dvcxqmzjwakdfyzd6iz79arz6z7zxligb3lh";
   };
 
   nativeBuildInputs = [ installShellFiles ];

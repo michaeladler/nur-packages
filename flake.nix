@@ -63,6 +63,7 @@
             efibootguard
             firefox-bin
             fstabfmt
+            fzy-lua-native
             git-hours
             go-crx3
             go-mod-outdated
@@ -80,11 +81,11 @@
             polybar
             qmarkdown
             sscep
+            sumneko-lua-language-server
             vcalendar-filter
             zig
             zls
             zoxide
-  fzy-lua-native
             ;
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;

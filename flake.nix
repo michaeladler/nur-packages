@@ -56,9 +56,6 @@
             btrfs-list
             cinclude2dot
             clang-format-diff
-            dhall
-            dhall-json
-            dhall-lsp-server
             dotdrop
             efibootguard
             firefox-bin

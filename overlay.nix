@@ -22,9 +22,6 @@ in
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };
-  dhall = callPackage ./pkgs/dhall { };
-  dhall-json = callPackage ./pkgs/dhall-json { };
-  dhall-lsp-server = callPackage ./pkgs/dhall-lsp-server { };
 
   # missing upstream
   aoc-cli = callPackage ./pkgs/aoc-cli { };

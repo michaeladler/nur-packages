@@ -19,6 +19,7 @@ in
     i3GapsSupport = true;
   };
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
+  ccls = (import ./pkgs/ccls) final prev;
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };

@@ -54,6 +54,7 @@
             brave
             btrfs-du
             btrfs-list
+            ccls
             cinclude2dot
             clang-format-diff
             dotdrop

@@ -6,7 +6,7 @@ let
 in
 python3Packages.buildPythonPackage rec {
   pname = "dotdrop";
-  version = "unstable-2021-11-27";
+  version = "unstable-2021-11-27"; # tags/v*
 
   src = fetchFromGitHub {
     owner = "deadc0de6";

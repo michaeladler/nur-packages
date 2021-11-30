@@ -47,6 +47,7 @@ in
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
+  kas-container = callPackage ./pkgs/kas-container { };
 
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
 }

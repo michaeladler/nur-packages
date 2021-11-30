@@ -68,6 +68,7 @@
             goofys
             handlr
             i3-gaps
+            kas-container
             leakdice
             libubootenv
             luaprompt

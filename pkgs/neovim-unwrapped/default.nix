@@ -7,7 +7,8 @@ prev.neovim-unwrapped.overrideAttrs (old: {
     owner = "neovim";
     repo = "neovim";
     rev = "e65b724451ba5f65dfcaf8f8c16afdd508db7359"; # tags/*
-    sha256 = "sha256-mVVZiDjAsAs4PgC8lHf0Ro1uKJ4OKonoPtF59eUd888=";
+    sha256 = "1iyyj07gz6997h7ndzqgnf0hjid23d48i11a83f8ynms5jh9jymi";
+    fetchSubmodules = true;
   };
 
 })

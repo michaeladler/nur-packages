@@ -74,6 +74,7 @@
             luaprompt
             msktutil
             neomutt
+            neovim-unwrapped
             nix-direnv
             oelint-adv
             peda

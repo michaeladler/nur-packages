@@ -1,4 +1,4 @@
-{ stdenv, lib, callPackage, fetchFromGitHub, python3Packages, installShellFiles }:
+{ stdenv, lib, callPackage, fetchFromGitHub, python3Packages, installShellFiles, file }:
 
 let
   buildPythonPackage = python3Packages;
@@ -27,7 +27,13 @@ python3Packages.buildPythonPackage rec {
       requests
     ];
 
-  doCheck = false;
+  checkInputs = [ file python3Packages.pytestCheckHook ];
+
+  doCheck = false; # does not work yet
+
+  preCheck = ''
+    export HOME=$(mktemp -d)
+  '';
 
   postInstall = ''
     installShellCompletion --zsh --name _dotdrop $src/completion/_dotdrop-completion.zsh
@@ -37,7 +43,7 @@ python3Packages.buildPythonPackage rec {
 
   meta = with lib; {
     homepage = "https://github.com/deadc0de6/dotdrop";
-    description = "";
+    description = "Save your dotfiles once, deploy them everywhere";
     license = licenses.gpl3Plus;
   };
 }

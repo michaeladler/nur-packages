@@ -2,20 +2,20 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "aoc-cli";
-  version = "unstable-2021-11-30";
+  version = "unstable-2021-12-01";
 
   src = fetchFromGitHub {
     owner = "scarvalhojr";
     repo = "aoc-cli";
-    rev = "c468277d54c7fe0d79da25a9266d8c27fd7d959f";
-    sha256 = "1kyapf0dshkl4prl15xw0v6lkpk6kxwpqpwlqbv1xm93k1zwk7xm";
+    rev = "9022d5dd0765587672dce80b49c37da42af51c6a";
+    sha256 = "10qb4mvkdmp1npsj7lykz0dhbqdy6577aj3x1nrbzf2l9if2a0ch";
   };
 
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ openssl ];
 
-  cargoSha256 = "sha256-axx89KPr3SJPx0ZIQu8aNsNha97pPkfhd4g40p3cOZE=";
+  cargoSha256 = "sha256-L0BScNqN8NcShF7u4DssSfUDxwVHbpHEAfZqmbS/bsM=";
 
   meta = with lib; {
     description = "Advent of Code command-line helper tool";

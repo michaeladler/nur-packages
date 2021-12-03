@@ -39,6 +39,10 @@ update-other:
 		-not -path "pkgs/zls/*" \
 		| while read fname; do echo "updating $$fname"; update-nix-fetchgit "$$fname"; done
 
+.PHONY: trigger-ci
+trigger-ci:
+	gh workflow run "Update World"
+
 .PHONY: pkgs.txt
 pkgs.txt:
 	@echo "Generating package list"

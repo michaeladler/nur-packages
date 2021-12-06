@@ -1,6 +1,11 @@
-{ lib, rustPlatform, fetchFromGitHub, pkg-config, openssl }:
+{ lib
+, fetchFromGitHub
+, naersk-lib
+, pkg-config
+, openssl
+}:
 
-rustPlatform.buildRustPackage rec {
+naersk-lib.buildPackage rec {
   pname = "aoc-cli";
   version = "unstable-2021-12-01";
 
@@ -14,8 +19,6 @@ rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ openssl ];
-
-  cargoSha256 = "sha256-L0BScNqN8NcShF7u4DssSfUDxwVHbpHEAfZqmbS/bsM=";
 
   meta = with lib; {
     description = "Advent of Code command-line helper tool";

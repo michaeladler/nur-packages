@@ -50,7 +50,6 @@
         packages = flake-utils.lib.flattenTree {
           inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
-            aoc-cli
             brave
             btrfs-du
             btrfs-list
@@ -91,6 +90,7 @@
           zen_kernel = pkgs.linuxPackages_zen.kernel;
 
           sad = pkgs.callPackage ./pkgs/sad { inherit naersk-lib; };
+          aoc-cli = pkgs.callPackage ./pkgs/aoc-cli { inherit naersk-lib; };
         };
 
         defaultPackage = pkgs.hello;

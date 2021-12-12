@@ -8,8 +8,8 @@ prev.neomutt.overrideAttrs (old: {
   src = prev.fetchFromGitHub {
     owner = "neomutt";
     repo = "neomutt";
-    rev = "e875321497565f0b5b212c07377ce8bbbaf64944";
-    sha256 = "1apmd8vn4pbs0qs4lc1m86z99qzyd6ix6xkvvga4i7wnw40hrlf3";
+    rev = "337f967950d2ba3db1c050ba1aa7506c29886590";
+    sha256 = "185rn9r1h9p8n7ff6wfx9y9dyqf94rz7gp2wji7iknzjdr303nwd";
   };
 
 })

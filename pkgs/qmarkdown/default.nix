@@ -2,13 +2,14 @@
 
 stdenv.mkDerivation rec {
   pname = "qmarkdown";
-  version = "unstable-2021-09-08";
+  version = "unstable-2021-12-14";
 
   src = fetchFromGitHub {
-    owner = "Peterkmoss";
+    #owner = "Peterkmoss";
+    owner = "michaeladler";
     repo = "qmarkdown";
-    rev = "ce08edc5863bdc1d8979d79ad98a626546457fdb";
-    sha256 = "1s9sm8c6jdxx2xq514r5ixrl1373xm89g99jg72fjdizijfy51c5";
+    rev = "d03f3dfffa2a779695c9f3f05515296cdc8225d8";
+    sha256 = "0jv9nn35393cx42j2s8ci7jjry6bxgr8f6qm0lrmax547indf53a";
   };
 
   buildInputs = with qt5; [ qtbase qtwebengine qtwebchannel ];

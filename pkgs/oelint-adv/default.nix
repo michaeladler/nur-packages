@@ -14,8 +14,8 @@ python3Packages.buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "priv-kweihmann";
     repo = "oelint-adv";
-    rev = "5e4d1bc0ff5bd3b7f899cbf86988fff3599ab9a8";
-    sha256 = "1r4kjnymjxrakrvkx2xm46ddrp5ccplcsqkpmpmcqspfma6pmva3";
+    rev = "a6fd69e78af0551eb9152bc47cf395d34a220c3b";
+    sha256 = "0g1aazrylbk630k2hl4iry2q2bcmx9safalnzwjbgcdi0aclwkb7";
   };
 
   propagatedBuildInputs = [ oelint-parser ]

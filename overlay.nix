@@ -21,6 +21,7 @@ in
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
   ccls = (import ./pkgs/ccls) final prev;
   neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
+  fmt_8 = (import ./pkgs/fmt/fmt_8.nix) final prev;
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };

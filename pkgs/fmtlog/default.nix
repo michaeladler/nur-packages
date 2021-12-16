@@ -28,8 +28,11 @@ stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out/lib $dev/include/fmtlog
-    cp libfmtlog-${if enableShared then "shared.so" else "static.a"} "$out/lib"
+    cp libfmtlog-${if enableShared then "shared.so" else "static.a"} "$out/lib/"
     cp "$src/fmtlog.h" "$dev/include/fmtlog"
+
+    cd $out/lib
+    ln -s libfmtlog-${if enableShared then "shared.so" else "static.a"} libfmtlog.${if enableShared then "so" else "a"}
   '';
 
   meta = with lib; {

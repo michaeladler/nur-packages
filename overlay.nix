@@ -49,6 +49,7 @@ in
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   kas-container = callPackage ./pkgs/kas-container { };
+  fmtlog = callPackage ./pkgs/fmtlog { };
 
   firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
 }

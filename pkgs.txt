@@ -33,7 +33,6 @@ qmarkdown
 rnix-lsp
 sad
 sscep
-sumneko-lua-language-server
 vcalendar-filter
 zen_kernel
 zig

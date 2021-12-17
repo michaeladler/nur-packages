@@ -82,7 +82,6 @@
             polybar
             qmarkdown
             sscep
-            sumneko-lua-language-server
             vcalendar-filter
             zig
             zls

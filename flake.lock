@@ -40,15 +40,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1629707199,
-        "narHash": "sha256-sGxlmfp5eXL5sAMNqHSb04Zq6gPl+JeltIZ226OYN0w=",
-        "owner": "nmattia",
+        "lastModified": 1639947939,
+        "narHash": "sha256-pGsM8haJadVP80GFq4xhnSpNitYNQpaXk4cnA796Cso=",
+        "owner": "nix-community",
         "repo": "naersk",
-        "rev": "df71f5e4babda41cd919a8684b72218e2e809fa9",
+        "rev": "2fc8ce9d3c025d59fee349c1f80be9785049d653",
         "type": "github"
       },
       "original": {
-        "owner": "nmattia",
+        "owner": "nix-community",
         "repo": "naersk",
         "type": "github"
       }
@@ -71,11 +71,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1640269308,
-        "narHash": "sha256-vBVwv3+kPrxbNyfo48cB5cc5/4tq5zlJGas/qw8XNBE=",
+        "lastModified": 1640328990,
+        "narHash": "sha256-KQbvJx4qO9bo04tfTZuISyY4vRC5k3ZB3lyLS21XWIw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0c408a087b4751c887e463e3848512c12017be25",
+        "rev": "ab93217a2b74a1c36bc892c14f44ee5959c33f12",
         "type": "github"
       },
       "original": {
@@ -85,11 +85,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1640297366,
-        "narHash": "sha256-eARITkFYtE5mg7Tx1RxM7aHOFLSRau1e8gM4fXx9eTw=",
+        "lastModified": 1640392160,
+        "narHash": "sha256-zkKnjLBD8upEmBz3Rg7nZkDMzuVa6hrZ4yqGv+xjIy4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "e181a90b28b66342924ccdca1c797ac29876124b",
+        "rev": "6ca2107ae7a10f65159a42fd8a437df6836de164",
         "type": "github"
       },
       "original": {
@@ -107,11 +107,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1639933352,
-        "narHash": "sha256-RNPx4Y7p/Q+aXJD9OD4yI6ErIvZ3ouQVe3/WBX+aQvY=",
+        "lastModified": 1640347520,
+        "narHash": "sha256-UkieGBW9ap0pQbumYoG60Ed+BpzMRGuLQ6Zb41u7Fkk=",
         "owner": "nix-community",
         "repo": "rnix-lsp",
-        "rev": "7cee663a5cbe6c15b9138947b6d4465ec08e8d86",
+        "rev": "d7cc2887ac9e65dd01715aac472edbf46b93ed31",
         "type": "github"
       },
       "original": {

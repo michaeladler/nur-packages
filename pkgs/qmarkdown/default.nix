@@ -2,13 +2,12 @@
 
 stdenv.mkDerivation rec {
   pname = "qmarkdown";
-  version = "unstable-2021-12-14";
+  version = "unstable-2021-12-20";
 
   src = fetchFromGitHub {
-    #owner = "Peterkmoss";
-    owner = "michaeladler";
+    owner = "Peterkmoss";
     repo = "qmarkdown";
-    rev = "d03f3dfffa2a779695c9f3f05515296cdc8225d8";
+    rev = "979da49d1ddab29a7c5feb9ea61d42fcc9d5c085"; # pin
     sha256 = "0jv9nn35393cx42j2s8ci7jjry6bxgr8f6qm0lrmax547indf53a";
   };
 

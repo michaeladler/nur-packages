@@ -5,13 +5,13 @@
 
 naersk-lib.buildPackage rec {
   pname = "sad";
-  version = "unstable-2022-01-03";
+  version = "unstable-2022-01-05";
 
   src = fetchFromGitHub {
     owner = "ms-jpq";
     repo = "sad";
-    rev = "a65b04ba8d5356676586adf10c363fc3de2fcc46";
-    sha256 = "0vr7vznam6wm3s0n19la90lygf3nf4dwmv08dadcxs9ij3ksdg46";
+    rev = "afe90bbbaf8c2491082046115d41cc533bb12c42";
+    sha256 = "15xnc308ka053y4lpwx3l87mynfxgdrqgx01zax5myzp5bvlldp1";
   };
 
   meta = with lib; {

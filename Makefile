@@ -1,7 +1,7 @@
 NIX := nix --experimental-features "nix-command flakes"
 
 .PHONY: update-all
-update-all: update-flakes update-firefox-addons update-firefox update-brave update-zig update-zls update-other
+update-all: update-flakes update-firefox-addons update-firefox update-brave update-zig
 
 .PHONY: build-all
 build-all:
@@ -27,17 +27,6 @@ update-brave:
 .PHONY: update-zig
 update-zig:
 	pkgs/zig/update.sh
-
-.PHONY: update-zls
-update-zls:
-	update-nix-fetchgit ./pkgs/zls/default.nix
-
-.PHONY: update-other
-update-other:
-	find pkgs -name "*.nix" \
-		-not -path "pkgs/zig/*" \
-		-not -path "pkgs/zls/*" \
-		| while read fname; do echo "updating $$fname"; update-nix-fetchgit "$$fname"; done
 
 .PHONY: trigger-ci
 trigger-ci:

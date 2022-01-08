@@ -84,7 +84,6 @@
             sscep
             vcalendar-filter
             zig
-            zls
             zoxide
             ;
 

@@ -36,5 +36,4 @@ sscep
 vcalendar-filter
 zen_kernel
 zig
-zls
 zoxide

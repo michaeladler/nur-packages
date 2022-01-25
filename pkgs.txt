@@ -32,6 +32,7 @@ polybar
 qmarkdown
 rnix-lsp
 sad
+sbkeys
 sscep
 vcalendar-filter
 zen_kernel

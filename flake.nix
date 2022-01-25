@@ -81,6 +81,7 @@
             peda
             polybar
             qmarkdown
+            sbkeys
             sscep
             vcalendar-filter
             zig

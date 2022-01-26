@@ -97,7 +97,5 @@
 
         defaultPackage = pkgs.hello;
 
-        apps.firefox-addons-generator = flake-utils.lib.mkApp { drv = nurPkgs.nur.repos.rycee.firefox-addons-generator; };
-
       }));
 }

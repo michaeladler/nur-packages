@@ -1,7 +1,7 @@
 NIX := nix --experimental-features "nix-command flakes"
 
 .PHONY: update-all
-update-all: update-flakes update-firefox-addons update-firefox update-brave update-zig update-other
+update-all: update-flakes update-firefox update-brave update-zig update-other
 
 .PHONY: build-all
 build-all:
@@ -11,10 +11,6 @@ build-all:
 .PHONY: update-flakes
 update-flakes:
 	$(NIX) flake update
-
-.PHONY: update-firefox-addons
-update-firefox-addons:
-	$(NIX) run '.#firefox-addons-generator' -- pkgs/firefox-addons/addons.json pkgs/firefox-addons/generated-addons.nix
 
 .PHONY: update-firefox
 update-firefox:

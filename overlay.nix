@@ -51,6 +51,4 @@ in
   kas-container = callPackage ./pkgs/kas-container { };
   fmtlog = callPackage ./pkgs/fmtlog { };
   sbkeys = callPackage ./pkgs/sbkeys { };
-
-  firefoxAddons = prev.recurseIntoAttrs ((import ./pkgs/firefox-addons) final prev);
 }

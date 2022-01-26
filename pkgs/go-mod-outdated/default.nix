@@ -2,13 +2,13 @@
 
 buildGoModule {
   pname = "go-mod-outdated";
-  version = "unstable-2021-10-11";
+  version = "unstable-2022-01-14";
 
   src = fetchFromGitHub {
     owner = "psampaz";
     repo = "go-mod-outdated";
-    rev = "0db5223616ecf1828b7aeaf8da331a27539bfbbd";
-    sha256 = "0vskpsi6rkf8iiypryi9acmprrh9bfll9dhf54gw9b0n851ahzlr";
+    rev = "0e5b58226df95a670bb0b404eb675916c1d7b846";
+    sha256 = "1zg5m6s1da2g7skb48yalih275vq6szmq1lb4p0wkgf1i96ajgqg";
   };
 
   vendorSha256 = "sha256-Ue0jCGOG2Fmaz2F9+xl3oYAZCyHFBuEleqjmk6dDjoM=";

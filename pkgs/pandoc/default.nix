@@ -1,12 +1,13 @@
 { stdenv, lib, fetchurl, installShellFiles }:
 
+let metadata = with builtins; fromJSON (readFile ./metadata.json); in
+
 stdenv.mkDerivation rec {
   name = "pandoc";
-  version = "2.17.0.1";
+  version = metadata.version;
 
   src = fetchurl {
-    url = "https://github.com/jgm/pandoc/releases/download/${version}/pandoc-${version}-linux-amd64.tar.gz";
-    sha256 = "sha256-EIz0QKkRHeJyEuG2+EWaIRxBTjFz3fwHtlcDyzmmbwk=";
+    inherit (metadata) url sha256;
   };
 
   nativeBuildInputs = [ installShellFiles ];

@@ -37,7 +37,10 @@
     },
     "naersk_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": [
+          "rnix-lsp-src",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1639947939,
@@ -69,26 +72,13 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1643179508,
-        "narHash": "sha256-kGerkeFfrRyFL37UOtdUH1G/Y+1gBjNXxQeCeKu3zKw=",
-        "path": "/nix/store/kj6ksbxg0sb3lydb26gqvqrfnhgp7yyh-source",
-        "rev": "1e4b76796e98780c406ea5cc2116096015ac39fc",
-        "type": "path"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
     "nur": {
       "locked": {
-        "lastModified": 1643170106,
-        "narHash": "sha256-lQD+nhPIFnHxyI7+2SYYIBLoT3TKqyL9lbxrsdmO8us=",
+        "lastModified": 1643258705,
+        "narHash": "sha256-49aEybwMTiNQogev06TKUGA+TxJ8upw2ssS3vmXoVFM=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "66dc05260812ad40f6baf049cf0e486a67042d99",
+        "rev": "0f85d3be27dddbb895726bf31606fc7940305618",
         "type": "github"
       },
       "original": {

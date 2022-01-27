@@ -73,7 +73,6 @@
             leakdice
             libubootenv
             luaprompt
-            msktutil
             neomutt
             neovim-unwrapped
             nix-direnv

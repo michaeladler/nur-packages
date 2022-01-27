@@ -42,7 +42,6 @@ in
   leakdice = callPackage ./pkgs/leakdice { };
   libubootenv = callPackage ./pkgs/libubootenv { };
   luaprompt = callPackage ./pkgs/luaprompt { };
-  msktutil = callPackage ./pkgs/msktutil { };
   oelint-adv = callPackage ./pkgs/oelint-adv { };
   peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };

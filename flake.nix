@@ -13,7 +13,6 @@
   };
   inputs.naersk = {
     url = "github:nmattia/naersk";
-    inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, flake-utils, nur, naersk, rnix-lsp-src }:

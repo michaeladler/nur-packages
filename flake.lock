@@ -17,9 +17,7 @@
     },
     "naersk": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1639947939,
@@ -57,6 +55,19 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1643352902,
+        "narHash": "sha256-iVDVnujsxfDQNkOXh5b/GrqbWpC2OZjGFCmofG1pKAw=",
+        "path": "/nix/store/2zk4hazfh6lqdb2nj7vz8m8hagnv2s36-source",
+        "rev": "b798b2fb8a162d79a7046dcfd93ab4c07e42cfd9",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1643612621,
         "narHash": "sha256-OtfSkFukS8etqmqnJOKjcD5vOvzmTplxOplzCU3ihtk=",
@@ -113,7 +124,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "naersk": "naersk",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "rnix-lsp-src": "rnix-lsp-src"
       }

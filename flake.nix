@@ -7,15 +7,11 @@
 
   inputs.nur.url = github:nix-community/NUR;
 
-  inputs.rnix-lsp-src = {
-    url = "github:nix-community/rnix-lsp";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
   inputs.naersk = {
     url = "github:nmattia/naersk";
   };
 
-  outputs = { self, nixpkgs, flake-utils, nur, naersk, rnix-lsp-src }:
+  outputs = { self, nixpkgs, flake-utils, nur, naersk }:
 
     {
       overlay = import ./overlay.nix;
@@ -47,7 +43,6 @@
         };
 
         packages = flake-utils.lib.flattenTree {
-          inherit (rnix-lsp-src.packages.x86_64-linux) rnix-lsp;
           inherit (pkgs)
             brave
             btrfs-du

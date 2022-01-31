@@ -30,7 +30,6 @@ pandoc
 peda
 polybar
 qmarkdown
-rnix-lsp
 sad
 sbkeys
 sscep

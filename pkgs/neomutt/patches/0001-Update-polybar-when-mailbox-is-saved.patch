@@ -1,4 +1,4 @@
-From 7fc5194156b8d8cdefc3154e628c5937f908b048 Mon Sep 17 00:00:00 2001
+From b196943a7a7f0f7a6d3bf3f080478e3c4b35a93a Mon Sep 17 00:00:00 2001
 From: Michael Adler <therisen06@gmail.com>
 Date: Mon, 18 Oct 2021 08:13:52 +0200
 Subject: [PATCH] Update polybar when mailbox is saved
@@ -8,7 +8,7 @@ Subject: [PATCH] Update polybar when mailbox is saved
  1 file changed, 56 insertions(+)
 
 diff --git a/mx.c b/mx.c
-index c21826780..c81d6bafa 100644
+index 8fe1e0056..3118ec421 100644
 --- a/mx.c
 +++ b/mx.c
 @@ -23,6 +23,14 @@
@@ -35,7 +35,7 @@ index c21826780..c81d6bafa 100644
    return true;
  
  error:
-@@ -1018,6 +1028,7 @@ enum MxStatus mx_mbox_sync(struct Mailbox *m)
+@@ -1019,6 +1029,7 @@ enum MxStatus mx_mbox_sync(struct Mailbox *m)
      }
  
      mutt_sleep(0);
@@ -43,7 +43,7 @@ index c21826780..c81d6bafa 100644
  
      const bool c_save_empty = cs_subset_bool(NeoMutt->sub, "save_empty");
      if ((m->msg_count == m->msg_deleted) &&
-@@ -1867,3 +1878,48 @@ int mx_toggle_write(struct Mailbox *m)
+@@ -1872,3 +1883,48 @@ int mx_toggle_write(struct Mailbox *m)
    notify_send(m->notify, NT_MAILBOX, NT_MAILBOX_CHANGE, &ev_m);
    return 0;
  }
@@ -93,5 +93,5 @@ index c21826780..c81d6bafa 100644
 +  return errcount;
 +}
 -- 
-2.33.0
+2.34.1
 

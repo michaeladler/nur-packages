@@ -13,14 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 10000
-          swap-size-mb: 1024
-          remove-dotnet: 'true'
-
       - uses: actions/checkout@v2
       - uses: cachix/install-nix-action@v13
         with:
@@ -32,6 +24,11 @@ jobs:
 
       - name: update
         run: |
+          df -h
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          df -h
+
           mkdir -p ~/.config/nix ~/.config/nixpkgs/overlays
           [ -n "${GITHUB_TOKEN:-}" ] || {
             echo "GITHUB_TOKEN not set"

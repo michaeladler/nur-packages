@@ -11,6 +11,7 @@ firefox-bin
 fmt_8
 fmtlog
 fstabfmt
+fwupd
 fzy-lua-native
 git-hours
 go-crx3

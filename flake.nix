@@ -80,6 +80,8 @@
             vcalendar-filter
             zig
             zoxide
+
+            fwupd
             ;
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;

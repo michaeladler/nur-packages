@@ -38,7 +38,6 @@ in
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
-  goofys = callPackage ./pkgs/goofys { };
   leakdice = callPackage ./pkgs/leakdice { };
   libubootenv = callPackage ./pkgs/libubootenv { };
   luaprompt = callPackage ./pkgs/luaprompt { };

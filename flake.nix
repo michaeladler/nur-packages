@@ -60,7 +60,6 @@
             git-hours
             go-crx3
             go-mod-outdated
-            goofys
             handlr
             i3-gaps
             kas-container

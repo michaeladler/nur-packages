@@ -86,7 +86,6 @@
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;
 
-          sad = pkgs.callPackage ./pkgs/sad { inherit naersk-lib; };
           aoc-cli = pkgs.callPackage ./pkgs/aoc-cli { inherit naersk-lib; };
         };
 

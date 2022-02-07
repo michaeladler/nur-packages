@@ -31,7 +31,6 @@ pandoc
 peda
 polybar
 qmarkdown
-sad
 sbkeys
 sscep
 vcalendar-filter

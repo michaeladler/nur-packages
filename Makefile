@@ -6,7 +6,7 @@ update-all: update-flakes update-firefox update-brave update-zig update-other up
 .PHONY: build-all
 build-all:
 	sed -E -e 's/(.*)/.#\1/' <pkgs.txt \
-		| xargs --delimiter='\n' $(NIX) build --no-link
+		| xargs --delimiter='\n' $(NIX) build --show-trace -L -v --no-link
 
 .PHONY: update-flakes
 update-flakes:

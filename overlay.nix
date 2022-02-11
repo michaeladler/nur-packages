@@ -49,4 +49,6 @@ in
   kas-container = callPackage ./pkgs/kas-container { };
   fmtlog = callPackage ./pkgs/fmtlog { };
   sbkeys = callPackage ./pkgs/sbkeys { };
+
+  imhex = callPackage ./pkgs/imhex { };
 }

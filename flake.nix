@@ -79,6 +79,7 @@
             vcalendar-filter
             zig
             zoxide
+            imhex
 
             fwupd
             ;

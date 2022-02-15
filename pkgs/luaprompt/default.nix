@@ -42,8 +42,8 @@ stdenv.mkDerivation rec {
   postFixup = ''
     LUA_CPATH=$out/lib/lua/5.1/?.so;$LUA_CPATH
     wrapProgram $out/bin/luap \
-      --prefix LUA_PATH ";" "$LUA_PATH" \
-      --prefix LUA_CPATH ";" "$LUA_CPATH"
+      --set LUA_PATH "$LUA_PATH" \
+      --set LUA_CPATH "$LUA_CPATH"
   '';
 
   meta = with lib; {

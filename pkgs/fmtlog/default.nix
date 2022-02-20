@@ -8,15 +8,15 @@
 
 stdenv.mkDerivation {
   pname = "fmtlog";
-  version = "unstable-2022-02-08";
+  version = "unstable-2022-02-19";
 
   outputs = [ "out" "dev" ];
 
   src = fetchFromGitHub {
     owner = "MengRao";
     repo = "fmtlog";
-    rev = "8760d2a5f40b3e904340689ff9d5c699af3955b6";
-    sha256 = "07cspz9wpl59zis4i0d7h441smr24gf1invxdvs216mrqx2y0q4k";
+    rev = "cb5dcde887332419f24271a428d2abc51eb82e27";
+    sha256 = "071lzbfz21j2kfkr7n7zld1liiccnm3d40f1psx3c56nx5dqzxn1";
     fetchSubmodules = true;
   };
 

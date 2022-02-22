@@ -76,6 +76,7 @@
             qmarkdown
             sbkeys
             sscep
+            sumneko-lua-language-server
             vcalendar-filter
             zig
             zoxide

@@ -80,6 +80,7 @@
             vcalendar-filter
             zig
             zoxide
+            rematrix
 
             fwupd
             ;

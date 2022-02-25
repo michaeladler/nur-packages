@@ -50,4 +50,5 @@ in
   kas-container = callPackage ./pkgs/kas-container { };
   fmtlog = callPackage ./pkgs/fmtlog { };
   sbkeys = callPackage ./pkgs/sbkeys { };
+  rematrix = callPackage ./pkgs/rematrix { };
 }

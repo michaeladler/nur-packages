@@ -18,5 +18,11 @@ fi
 
 echo "brave: $old_version -> $version"
 url=$(printf "https://github.com/brave/brave-browser/releases/download/v%s/brave-browser_%s_amd64.deb" "$version" "$version")
+
+curl --fail --head "$url" || {
+    echo "FATAL: Unable to access $url"
+    exit 0
+}
+
 sha256=$(nix-prefetch-url "$url")
 printf '{"version": "%s", "url": "%s", "sha256": "%s"}\n' "$version" "$url" "$sha256" | jq >"$SCRIPT_DIR/metadata.json"

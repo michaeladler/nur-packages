@@ -1,6 +1,6 @@
-{ lib, buildPerlPackage, fetchFromGitHub, installShellFiles }:
+{ lib, perlPackages, fetchFromGitHub, installShellFiles }:
 
-buildPerlPackage {
+perlPackages.buildPerlPackage {
   pname = "cinclude2dot";
   version = "unstable-2018-08-29";
 

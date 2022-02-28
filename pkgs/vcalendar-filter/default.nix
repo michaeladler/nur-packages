@@ -1,11 +1,11 @@
-{ lib, stdenv, fetchFromGitHub, perl, buildPerlPackage, perlPackages }:
+{ lib, stdenv, fetchFromGitHub, perl, perlPackages }:
 
 with lib;
 
 let metadata = sources.mutt-filters;
 
 in
-buildPerlPackage rec {
+perlPackages.buildPerlPackage rec {
   pname = "vcalendar-filter";
   version = "unstable-2016-06-07";
 

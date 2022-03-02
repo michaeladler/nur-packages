@@ -1,41 +1,41 @@
 {
-  "version": "0.10.0-dev.1076+f6aaab940",
+  "version": "0.10.0-dev.1079+ed2364a14",
   "date": "2022-03-02",
   "docs": "https://ziglang.org/documentation/master/",
   "stdDocs": "https://ziglang.org/documentation/master/std/",
   "src": {
-    "tarball": "https://ziglang.org/builds/zig-0.10.0-dev.1076+f6aaab940.tar.xz",
-    "shasum": "53595ce90e40fbac2cdcb110912c21e9a8cb15a2db6d0d017c60eb141a7a2a11",
-    "size": "14608676"
+    "tarball": "https://ziglang.org/builds/zig-0.10.0-dev.1079+ed2364a14.tar.xz",
+    "shasum": "ce56eaabc27d2c4ad0a5bf0fdd9e9d15ec02a4bdf560afe705604f52c1b4b083",
+    "size": "14608760"
   },
   "x86_64-freebsd": {
-    "tarball": "https://ziglang.org/builds/zig-freebsd-x86_64-0.10.0-dev.1076+f6aaab940.tar.xz",
-    "shasum": "ec705572022b13e323874f22906e50939a2ed35ad26fb45773eb811c3f4c5d85",
-    "size": "44245856"
+    "tarball": "https://ziglang.org/builds/zig-freebsd-x86_64-0.10.0-dev.1079+ed2364a14.tar.xz",
+    "shasum": "6bd36ba837a61a4b9b20c78fa33af340df242cee0e809e9a085bd97c3f4a2a60",
+    "size": "44243236"
   },
   "x86_64-macos": {
-    "tarball": "https://ziglang.org/builds/zig-macos-x86_64-0.10.0-dev.1076+f6aaab940.tar.xz",
-    "shasum": "c3edbd9d68a6846816997f1b7c5fec863bc46fc81a8916186a0397226d8f08da",
-    "size": "43140512"
+    "tarball": "https://ziglang.org/builds/zig-macos-x86_64-0.10.0-dev.1079+ed2364a14.tar.xz",
+    "shasum": "0a0cce70f822a9fd8c513e8dfaf7cca161665b2aafc4129226dd3b3edcd88051",
+    "size": "43192176"
   },
   "aarch64-macos": {
-    "tarball": "https://ziglang.org/builds/zig-macos-aarch64-0.10.0-dev.1076+f6aaab940.tar.xz",
-    "shasum": "6538d1550bc9846f86cce55ed91daa52e2aa85ce89cf1b7698c378711355c48a",
-    "size": "39936344"
+    "tarball": "https://ziglang.org/builds/zig-macos-aarch64-0.10.0-dev.1079+ed2364a14.tar.xz",
+    "shasum": "9cda2a65bd5bc2707c9ee36751d6b71759b08dc0b613292022514b5ad3f43046",
+    "size": "39954952"
   },
   "x86_64-windows": {
-    "tarball": "https://ziglang.org/builds/zig-windows-x86_64-0.10.0-dev.1076+f6aaab940.zip",
-    "shasum": "198832724cbb7d992340e6482c874f5df01f20f73a8e5c9e7093f213d3120e6f",
-    "size": "64251020"
+    "tarball": "https://ziglang.org/builds/zig-windows-x86_64-0.10.0-dev.1079+ed2364a14.zip",
+    "shasum": "04a6472b8a0770a7162b9262c1ebca18d6c23c796362d88c698898d6f2d77e76",
+    "size": "64252373"
   },
   "x86_64-linux": {
-    "tarball": "https://ziglang.org/builds/zig-linux-x86_64-0.10.0-dev.1076+f6aaab940.tar.xz",
-    "shasum": "26bf6749ddee459452e7b8c7f1c236ee3f056a60aaae9da8c01380bdd9bda24d",
-    "size": "40058448"
+    "tarball": "https://ziglang.org/builds/zig-linux-x86_64-0.10.0-dev.1079+ed2364a14.tar.xz",
+    "shasum": "f10e914c98938e3f48dc40b101e1d646bcf8833b0f25cecad522ef1b4f24ecfa",
+    "size": "40057168"
   },
   "aarch64-linux": {
-    "tarball": "https://ziglang.org/builds/zig-linux-aarch64-0.10.0-dev.1076+f6aaab940.tar.xz",
-    "shasum": "1817a9fb6fc8ed9c0a5eaa4c6114791a05ed3495ffd29dc2f29da23e1a374db1",
-    "size": "40126356"
+    "tarball": "https://ziglang.org/builds/zig-linux-aarch64-0.10.0-dev.1079+ed2364a14.tar.xz",
+    "shasum": "279de901e67fb10082b8d6448791a1ee079cfcbcc7bd41b616bdfa54f983bcf8",
+    "size": "40571980"
   }
 }

@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation {
   pname = "kas-container";
-  version = "unstable-2022-02-22";
+  version = "unstable-2022-03-03";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "kas";
-    rev = "3d35fe2f6035781034cb28d7719b772a1b25a8f8";
-    sha256 = "1as3zhgl5f1l7h42vw205d9jjbsqdzkbyjmc3mx6bl18a9d6hxmx";
+    rev = "41b52b126314836b3d3497032dfe0cb3781e7fb5";
+    sha256 = "00hxxxl1rfxndkksymn9w4wvwg042962g2dipzryysmzc34fk09h";
   };
 
   installPhase = ''

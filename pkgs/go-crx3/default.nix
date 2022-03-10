@@ -5,7 +5,7 @@ buildGoModule {
   version = "unstable-2020-08-27";
 
   src = fetchFromGitHub {
-    owner = "mmadfox/";
+    owner = "mmadfox";
     repo = "go-crx3";
     rev = "48e0282c5c42660fe762f75d0a8010105c93b889"; # pin
     sha256 = "178y5f1kaczys9nyk9n6vn1mym9lvd5m49asvyina6r3dabznliz";

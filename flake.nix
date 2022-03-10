@@ -48,6 +48,7 @@
             btrfs-du
             btrfs-list
             ccls
+            chyle
             cinclude2dot
             clang-format-diff
             dotdrop

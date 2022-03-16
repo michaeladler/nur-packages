@@ -11,7 +11,11 @@
     url = "github:nmattia/naersk";
   };
 
-  outputs = { self, nixpkgs, flake-utils, nur, naersk }:
+  inputs.shrinkwrap_src = {
+    url = "github:fzakaria/shrinkwrap";
+  };
+
+  outputs = { self, nixpkgs, flake-utils, nur, naersk, shrinkwrap_src }:
 
     {
       overlay = import ./overlay.nix;
@@ -82,8 +86,12 @@
             zig
             zoxide
 
+            # re-exported to benefit from caching
             fwupd
             ;
+
+
+          shrinkwrap = shrinkwrap_src.packages.${system}.shrinkwrap;
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;
 

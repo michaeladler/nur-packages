@@ -12,11 +12,14 @@ else
 fi
 
 if [ "$old_version" = "$version" ]; then
-    echo "brave: no update available"
+    echo "$(date -Iseconds) brave: no update available"
     exit 0
 fi
 
 echo "brave: $old_version -> $version"
+if command -v notify-send; then
+    notify-send -u critical -t -1 "brave" "brave: $old_version -> $version"
+fi
 url=$(printf "https://github.com/brave/brave-browser/releases/download/v%s/brave-browser_%s_amd64.deb" "$version" "$version")
 
 curl --fail --head "$url" || {

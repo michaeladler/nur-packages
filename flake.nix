@@ -8,11 +8,7 @@
 
   inputs.nur.url = github:nix-community/NUR;
 
-  inputs.naersk = {
-    url = "github:nmattia/naersk";
-  };
-
-  outputs = { self, nixpkgs, flake-utils, nur, naersk, emacs-overlay }:
+  outputs = { self, nixpkgs, flake-utils, nur, emacs-overlay }:
 
     {
       overlay = import ./overlay.nix;
@@ -28,7 +24,6 @@
           inherit system;
           overlays = [ nur.overlay ];
         };
-        naersk-lib = naersk.lib."${system}";
 
       in
       {
@@ -45,6 +40,7 @@
 
         packages = flake-utils.lib.flattenTree {
           inherit (pkgs)
+            aoc-cli
             brave
             btrfs-du
             btrfs-list
@@ -91,7 +87,6 @@
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;
 
-          aoc-cli = pkgs.callPackage ./pkgs/aoc-cli { inherit naersk-lib; };
         };
 
         defaultPackage = pkgs.hello;

@@ -1,11 +1,11 @@
 { lib
+, rustPlatform
 , fetchFromGitHub
-, naersk-lib
 , pkg-config
 , openssl
 }:
 
-naersk-lib.buildPackage rec {
+rustPlatform.buildRustPackage {
   pname = "aoc-cli";
   version = "unstable-2021-12-01";
 
@@ -16,6 +16,8 @@ naersk-lib.buildPackage rec {
     sha256 = "10qb4mvkdmp1npsj7lykz0dhbqdy6577aj3x1nrbzf2l9if2a0ch";
   };
 
+  cargoSha256 = "sha256-L0BScNqN8NcShF7u4DssSfUDxwVHbpHEAfZqmbS/bsM=";
+
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ openssl ];
@@ -25,4 +27,5 @@ naersk-lib.buildPackage rec {
     homepage = "https://github.com/scarvalhojr/aoc-cli";
     license = licenses.mit;
   };
+
 }

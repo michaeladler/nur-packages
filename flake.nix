@@ -74,7 +74,6 @@
             neomutt
             neovim-unwrapped
             nix-direnv
-            oelint-adv
             pandoc
             peda
             polybar

@@ -8,6 +8,7 @@ cinclude2dot
 clang-format-diff
 dotdrop
 efibootguard
+emacsUnstable
 firefox-bin
 fmt_8
 fmtlog
@@ -31,7 +32,6 @@ peda
 polybar
 qmarkdown
 sbkeys
-shrinkwrap
 sscep
 sumneko-lua-language-server
 vcalendar-filter

@@ -4,6 +4,7 @@
   #inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs.emacs-overlay.url = "github:nix-community/emacs-overlay";
 
   inputs.nur.url = github:nix-community/NUR;
 
@@ -11,11 +12,7 @@
     url = "github:nmattia/naersk";
   };
 
-  inputs.shrinkwrap_src = {
-    url = "github:fzakaria/shrinkwrap";
-  };
-
-  outputs = { self, nixpkgs, flake-utils, nur, naersk, shrinkwrap_src }:
+  outputs = { self, nixpkgs, flake-utils, nur, naersk, emacs-overlay }:
 
     {
       overlay = import ./overlay.nix;
@@ -24,7 +21,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlay ];
+          overlays = [ self.overlay emacs-overlay.overlay ];
           config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {
@@ -87,10 +84,10 @@
 
             # re-exported to benefit from caching
             fwupd
+
+            # from emacs-overlay
+            emacsUnstable
             ;
-
-
-          shrinkwrap = shrinkwrap_src.packages.${system}.shrinkwrap;
 
           zen_kernel = pkgs.linuxPackages_zen.kernel;
 

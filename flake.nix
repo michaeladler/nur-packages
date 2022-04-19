@@ -80,6 +80,7 @@
 
             # re-exported to benefit from caching
             fwupd
+            bear
 
             # from emacs-overlay
             emacsUnstable

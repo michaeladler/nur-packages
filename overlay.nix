@@ -50,4 +50,8 @@ in
   fmtlog = callPackage ./pkgs/fmtlog { };
   sbkeys = callPackage ./pkgs/sbkeys { };
   chyle = callPackage ./pkgs/chyle { };
+
+  luajitPackages = prev.luajitPackages // {
+    lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { };
+  };
 }

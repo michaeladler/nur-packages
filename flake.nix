@@ -35,6 +35,7 @@
         legacyPackages = {
           inherit (pkgs)
             firefoxAddons
+            luajitPackages
             ;
         };
 

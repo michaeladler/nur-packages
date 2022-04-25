@@ -1,13 +1,13 @@
 final: prev:
 
 prev.sumneko-lua-language-server.overrideAttrs (old: {
-  version = "unstable-2022-04-17";
+  version = "unstable-2022-04-25";
 
   src = prev.fetchFromGitHub {
     owner = "sumneko";
     repo = "lua-language-server";
-    rev = "076dd3e5c4e03f9cef0c5757dfa09a010c0ec6bf"; # tags/*
-    sha256 = "13m6d4cx8bmdagz1sfi9nsjsrfrmalyqvpg2lshliiphwpp1lj1z";
+    rev = "14bf8a0d00cd6e485eff604c67dc21e29b80eef1"; # tags/*
+    sha256 = "0x1la1005q3da4gzf5iywb69xc4r85w89v10pqjnfnjkbjnxw5xg";
     fetchSubmodules = true;
   };
 

@@ -42,6 +42,7 @@
         packages = flake-utils.lib.flattenTree {
           inherit (pkgs)
             aoc-cli
+            awesome-git
             brave
             btrfs-du
             btrfs-list

@@ -25,6 +25,11 @@ in
   # more up-to-date
   brave = callPackage ./pkgs/brave { };
   pandoc = callPackage ./pkgs/pandoc { };
+  awesome-git = callPackage ./pkgs/awesome (with final; {
+    lua = luajit;
+    cairo = cairo.override { xcbSupport = true; };
+    inherit (texFunctions) fontsConf;
+  });
 
   # missing upstream
   aoc-cli = callPackage ./pkgs/aoc-cli { };

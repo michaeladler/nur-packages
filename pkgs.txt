@@ -38,6 +38,6 @@ sscep
 sumneko-lua-language-server
 vcalendar-filter
 zen_kernel
-zig
+zig-master
 zls
 zoxide

@@ -1,4 +1,5 @@
 aoc-cli
+awesome-git
 bear
 brave
 btrfs-du

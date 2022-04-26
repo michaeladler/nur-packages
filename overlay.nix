@@ -11,7 +11,8 @@ in
   handlr = (import ./pkgs/handlr) final prev;
   i3-gaps = (import ./pkgs/i3-gaps) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
-  zig = (import ./pkgs/zig) final prev;
+  zig-master = (import ./pkgs/zig) final prev;
+  zls = (import ./pkgs/zls) final prev;
   neomutt = (import ./pkgs/neomutt) final prev;
   polybar = prev.polybar.override {
     pulseSupport = true;

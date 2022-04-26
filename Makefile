@@ -23,11 +23,13 @@ update-brave:
 .PHONY: update-zig
 update-zig:
 	pkgs/zig/update.sh
+	update-nix-fetchgit ./pkgs/zls/default.nix
 
 .PHONY: update-other
 update-other:
 	find pkgs -name "*.nix" \
 		-not -path "pkgs/zig/*" \
+		-not -path "pkgs/zls/*" \
 		-not -path "pkgs/pandoc/*" \
 		| while read fname; do echo "updating $$fname"; update-nix-fetchgit "$$fname"; done
 

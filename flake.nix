@@ -77,7 +77,8 @@
             sscep
             sumneko-lua-language-server
             vcalendar-filter
-            zig
+            zig-master
+            zls
             zoxide
 
             # re-exported to benefit from caching

@@ -39,4 +39,5 @@ sumneko-lua-language-server
 vcalendar-filter
 zen_kernel
 zig
+zls
 zoxide

@@ -1,6 +1,6 @@
-{ lib, luajitPackages, fetchFromGitHub, pkg-config }:
+{ lib, lua, fetchFromGitHub, pkg-config }:
 
-luajitPackages.buildLuaPackage {
+lua.pkgs.buildLuaPackage {
   pname = "lua-getch";
   version = "unstable-2021-01-06";
 

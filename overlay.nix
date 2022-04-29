@@ -5,7 +5,7 @@ let
   callPackage = final.callPackage;
 in
 
-{
+rec {
   # overlays
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   handlr = (import ./pkgs/handlr) final prev;
@@ -57,7 +57,11 @@ in
   sbkeys = callPackage ./pkgs/sbkeys { };
   chyle = callPackage ./pkgs/chyle { };
 
-  luajitPackages = prev.luajitPackages // {
-    lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { };
+  myluapackages = lua: rec {
+    lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { inherit lua; };
+    dbus_proxy = callPackage ./pkgs/lua-packages/dbus_proxy.nix { inherit lua; };
+    pulseaudio_dbus = callPackage ./pkgs/lua-packages/pulseaudio_dbus.nix { inherit lua dbus_proxy; };
   };
+
+  luajitPackages = prev.luajitPackages // (myluapackages prev.luajit);
 }

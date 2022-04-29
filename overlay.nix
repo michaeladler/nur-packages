@@ -58,8 +58,6 @@ in
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {
       lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { inherit lua; };
-      dbus_proxy = callPackage ./pkgs/lua-packages/dbus_proxy.nix { inherit lua; };
-      pulseaudio_dbus = callPackage ./pkgs/lua-packages/pulseaudio_dbus.nix { inherit lua dbus_proxy; };
     };
 
 }

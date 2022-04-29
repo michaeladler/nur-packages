@@ -7,14 +7,11 @@
 , asciidoctor
 , fontsConf
 , gtk3Support ? false, gtk3 ? null
+, luaEnv ? lua.withPackages(ps: [ ps.lgi ps.ldoc ])
 }:
 
 # needed for beautiful.gtk to work
 assert gtk3Support -> gtk3 != null;
-
-let
-  luaEnv = lua.withPackages(ps: [ ps.lgi ps.ldoc ps.compat53 ]);
-in
 
 stdenv.mkDerivation rec {
   pname = "awesome";

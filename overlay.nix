@@ -5,8 +5,11 @@ let
   callPackage = final.callPackage;
 in
 
-rec {
+# do not make this 'rec'
+{
+
   # overlays
+  awesome-git = (import ./pkgs/awesome) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   handlr = (import ./pkgs/handlr) final prev;
   i3-gaps = (import ./pkgs/i3-gaps) final prev;
@@ -26,11 +29,6 @@ rec {
   # more up-to-date
   brave = callPackage ./pkgs/brave { };
   pandoc = callPackage ./pkgs/pandoc { };
-  awesome-git = callPackage ./pkgs/awesome (with final; {
-    lua = luajit;
-    cairo = cairo.override { xcbSupport = true; };
-    inherit (texFunctions) fontsConf;
-  });
 
   # missing upstream
   aoc-cli = callPackage ./pkgs/aoc-cli { };
@@ -57,11 +55,11 @@ rec {
   sbkeys = callPackage ./pkgs/sbkeys { };
   chyle = callPackage ./pkgs/chyle { };
 
-  myluapackages = lua: rec {
-    lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { inherit lua; };
-    dbus_proxy = callPackage ./pkgs/lua-packages/dbus_proxy.nix { inherit lua; };
-    pulseaudio_dbus = callPackage ./pkgs/lua-packages/pulseaudio_dbus.nix { inherit lua dbus_proxy; };
-  };
+  extraLuaJITPackages = let lua = prev.luajit; in
+    rec {
+      lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { inherit lua; };
+      dbus_proxy = callPackage ./pkgs/lua-packages/dbus_proxy.nix { inherit lua; };
+      pulseaudio_dbus = callPackage ./pkgs/lua-packages/pulseaudio_dbus.nix { inherit lua dbus_proxy; };
+    };
 
-  luajitPackages = prev.luajitPackages // (myluapackages prev.luajit);
 }

@@ -58,6 +58,7 @@ in
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {
       lua-getch = callPackage ./pkgs/lua-packages/lua-getch.nix { inherit lua; };
+      pulseaudio = callPackage ./pkgs/lua-packages/pulseaudio.nix { inherit lua; };
     };
 
 }

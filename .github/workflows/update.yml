@@ -56,3 +56,34 @@ jobs:
         with:
           message: 'chore: update packages'
           rebase: true
+
+  update-zig:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cachix/install-nix-action@v13
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+      - uses: cachix/cachix-action@v10
+        with:
+          name: nur-packages
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+
+      - name: update
+        run: |
+          nix-shell \
+            --command "make update-zig" \
+            -p nixUnstable update-nix-fetchgit
+
+      - name: build
+        run: |
+          nix-shell \
+            --command "nix --experimental-features 'nix-command flakes' build --no-link '.#zig' '.#zls'" \
+            -p nixUnstable
+
+      - name: Commit & Push changes
+        uses: benkaiser/rebase-commit-push@v1.1
+        with:
+          message: 'chore: update zig and zls'
+          rebase: true

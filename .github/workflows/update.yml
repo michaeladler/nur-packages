@@ -79,7 +79,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "nix --experimental-features 'nix-command flakes' build --no-link '.#zig' '.#zls'" \
+            --command "nix --experimental-features 'nix-command flakes' build --no-link '.#zig-master' '.#zls'" \
             -p nixUnstable
 
       - name: Commit & Push changes

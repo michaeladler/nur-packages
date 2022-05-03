@@ -1,6 +1,8 @@
 final: prev:
 
-prev.awesome.overrideAttrs (old: {
+let awesome = prev.awesome.override { lua = prev.luajit; }; in
+
+awesome.overrideAttrs (old: {
   version = "unstable-2022-03-21";
 
   src = final.fetchFromGitHub {

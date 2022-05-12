@@ -25,6 +25,7 @@ i3-gaps
 kas-container
 leakdice
 libubootenv
+lqx_kernel
 luaprompt
 neomutt
 neovim-unwrapped

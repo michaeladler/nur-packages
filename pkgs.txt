@@ -8,6 +8,7 @@ ccls
 chyle
 cinclude2dot
 clang-format-diff
+criterion
 dotdrop
 efibootguard
 emacsUnstable

@@ -80,6 +80,7 @@
             zig-master
             zls
             zoxide
+            criterion
 
             # re-exported to benefit from caching
             fwupd

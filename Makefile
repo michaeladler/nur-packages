@@ -2,7 +2,7 @@ NIX := nix --experimental-features "nix-command flakes"
 
 .PHONY: update-all
 # all but zig
-update-all: update-flakes update-firefox update-brave update-other update-pandoc
+update-all: update-flakes update-firefox update-brave update-criterion update-other update-pandoc
 
 .PHONY: build-all
 build-all:
@@ -20,6 +20,10 @@ update-firefox:
 .PHONY: update-brave
 update-brave:
 	pkgs/brave/update.sh
+
+.PHONY: update-criterion
+update-criterion:
+	pkgs/criterion/update.sh
 
 .PHONY: update-zig
 update-zig:

@@ -29,6 +29,7 @@ in
   # more up-to-date
   brave = callPackage ./pkgs/brave { };
   pandoc = callPackage ./pkgs/pandoc { };
+  criterion = callPackage ./pkgs/criterion { };
 
   # missing upstream
   aoc-cli = callPackage ./pkgs/aoc-cli { };

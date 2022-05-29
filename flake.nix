@@ -93,10 +93,6 @@
             # from emacs-overlay
             emacsUnstable
             ;
-
-          zen_kernel = pkgs.linuxPackages_zen.kernel;
-          #lqx_kernel = pkgs.linuxPackages_lqx.kernel;
-
         };
 
         defaultPackage = pkgs.hello;

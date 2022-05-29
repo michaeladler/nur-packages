@@ -9,6 +9,14 @@ build-all:
 	sed -E -e 's/(.*)/.#\1/' <pkgs.txt \
 		| xargs --delimiter='\n' $(NIX) build --show-trace -L -v --no-link
 
+.PHONY: build-lqx
+build-lqx:
+	$(NIX) build --show-trace -L -v --no-link '.#linux.lqx'
+
+.PHONY: build-zen
+build-zen:
+	$(NIX) build --show-trace -L -v --no-link '.#linux.zen'
+
 .PHONY: update-flakes
 update-flakes:
 	$(NIX) flake update

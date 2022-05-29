@@ -37,6 +37,10 @@
             firefoxAddons
             extraLuaJITPackages
             ;
+          linux = {
+            zen = pkgs.linuxPackages_zen.kernel;
+            lqx = pkgs.linuxPackages_lqx.kernel;
+          };
         };
 
         packages = flake-utils.lib.flattenTree {

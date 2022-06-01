@@ -12,4 +12,6 @@ awesome.overrideAttrs (old: {
     sha256 = "1qyy650rwxaakw4hmnvwv7lqxjz22xhbzq8vqlv6ry5g5gmg0gg3";
   };
 
+  patches = [];
+
 })

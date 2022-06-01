@@ -6,13 +6,13 @@ let
 in
 python3Packages.buildPythonPackage rec {
   pname = "dotdrop";
-  version = "unstable-2021-11-27";
+  version = "unstable-2022-05-31";
 
   src = fetchFromGitHub {
     owner = "deadc0de6";
     repo = "dotdrop";
-    rev = "8c97593c45fc86ad7791707a3c8fab137180d4fa"; # tags/v*
-    sha256 = "066w3mvsisrv3ni8l6l5vnjcszmvln70c196xymxsxjcxrvi3sjm";
+    rev = "910482f8c8ba25234e0eb208419f39c06985aab3"; # tags/v*
+    sha256 = "1m91aj07vajznhbhmchlvn6n9sq9wdv84v61x55cz60661dwc14b";
   };
 
   nativeBuildInputs = [ installShellFiles ];
@@ -25,6 +25,7 @@ python3Packages.buildPythonPackage rec {
       python_magic
       packaging
       requests
+      toml
     ];
 
   checkInputs = [ file python3Packages.pytestCheckHook ];

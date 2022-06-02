@@ -1,4 +1,4 @@
-name: Build lqx
+name: lqx
 
 on: [push, pull_request, workflow_dispatch]
 

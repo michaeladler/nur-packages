@@ -5,15 +5,14 @@
 , openssl
 }:
 
+let
+  pin = lib.importJSON ./pin.json;
+in
+
 craneLib.buildPackage rec {
-  pname = "cargo-llvm-cov";
-  version = "0.4.5";
+  inherit (pin) pname version;
 
-  src = fetchCrate {
-    inherit version pname;
-    sha256 = "sha256-sD3UMcpZxZQ0vJfMpF6/iVvVQ4vziwdSeJQSVMzoazE=";
-  };
-
+  src = fetchCrate pin;
   doCheck = false;
 
   meta = with lib; {

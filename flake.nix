@@ -2,22 +2,30 @@
   description = "My NUR";
 
   #inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  inputs.nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.emacs-overlay.url = "github:nix-community/emacs-overlay";
+  inputs = {
+    nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    nur.url = "github:nix-community/NUR";
+    crane = {
+      url = "github:ipetkov/crane";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
-  inputs.nur.url = github:nix-community/NUR;
-
-  outputs = { self, nixpkgs, flake-utils, nur, emacs-overlay }:
+  outputs = { self, nixpkgs, flake-utils, nur, emacs-overlay, crane }:
 
     {
       overlay = import ./overlay.nix;
     } // (flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
 
       let
+        craneOverlay = final: prev: {
+          craneLib = crane.lib.${system};
+        };
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ self.overlay emacs-overlay.overlay ];
+          overlays = [ craneOverlay self.overlay emacs-overlay.overlay ];
           config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {

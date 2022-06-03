@@ -1,11 +1,11 @@
 { lib
-, rustPlatform
+, craneLib
 , fetchFromGitHub
 , pkg-config
 , openssl
 }:
 
-rustPlatform.buildRustPackage {
+craneLib.buildPackage {
   pname = "aoc-cli";
   version = "unstable-2021-12-01";
 
@@ -15,8 +15,6 @@ rustPlatform.buildRustPackage {
     rev = "9022d5dd0765587672dce80b49c37da42af51c6a";
     sha256 = "10qb4mvkdmp1npsj7lykz0dhbqdy6577aj3x1nrbzf2l9if2a0ch";
   };
-
-  cargoSha256 = "sha256-L0BScNqN8NcShF7u4DssSfUDxwVHbpHEAfZqmbS/bsM=";
 
   nativeBuildInputs = [ pkg-config ];
 

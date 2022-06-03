@@ -16,11 +16,6 @@ in
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig-master = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
-  neomutt = (import ./pkgs/neomutt) final prev;
-  polybar = prev.polybar.override {
-    pulseSupport = true;
-    i3GapsSupport = true;
-  };
   ccls = (import ./pkgs/ccls) final prev;
   neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   fmt_8 = (import ./pkgs/fmt/fmt_8.nix) final prev;

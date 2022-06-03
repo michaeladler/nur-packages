@@ -78,12 +78,10 @@
             leakdice
             libubootenv
             luaprompt
-            neomutt
             neovim-unwrapped
             nix-direnv
             pandoc
             peda
-            polybar
             qmarkdown
             sbkeys
             sscep

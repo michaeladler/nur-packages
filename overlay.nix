@@ -55,6 +55,7 @@ in
   fmtlog = callPackage ./pkgs/fmtlog { };
   sbkeys = callPackage ./pkgs/sbkeys { };
   chyle = callPackage ./pkgs/chyle { };
+  cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

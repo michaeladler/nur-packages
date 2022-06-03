@@ -4,6 +4,7 @@ bear
 brave
 btrfs-du
 btrfs-list
+cargo-llvm-cov
 ccls
 chyle
 cinclude2dot

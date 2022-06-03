@@ -93,6 +93,7 @@
             zls
             zoxide
             criterion
+            cargo-llvm-cov
 
             # re-exported to benefit from caching
             fwupd

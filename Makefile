@@ -56,7 +56,7 @@ update-pandoc:
 
 .PHONY: trigger-ci
 trigger-ci:
-	gh workflow run "Update World"
+	gh workflow run "update packages"
 
 .PHONY: pkgs.txt
 pkgs.txt:

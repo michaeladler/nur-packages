@@ -2,13 +2,13 @@
 
 lua.pkgs.buildLuaPackage {
   pname = "lua-getch";
-  version = "unstable-2022-05-31";
+  version = "unstable-2022-06-04";
 
   src = fetchFromGitHub {
     owner = "max1220";
     repo = "lua-getch";
-    rev = "78d74b0a62dd94898e3cb8cb7945390a4a5eed28";
-    sha256 = "1l1gjfdd4gq01nqg40zgfpw8qqgnd3zg4h1yj0ii6h5gc459s2an";
+    rev = "90c2d5ad40a1584505b48897c99dbe431b2ed837";
+    sha256 = "0gm61sb7l62awmvrnr107vw23mmgan5vaxg8s3papch3pxdjwwpj";
   };
 
   nativeBuildInputs = [ pkg-config ];

@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub, qt6, cmake, pkg-config }:
+{ stdenv, lib, fetchFromGitHub, qt5, cmake, pkg-config }:
 
 stdenv.mkDerivation rec {
   pname = "qmarkdown";
@@ -7,13 +7,13 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "Peterkmoss";
     repo = "qmarkdown";
-    rev = "9a6e5fdf6f99e16dcbed86efe77258b86f43ad63"; # tags/*
-    sha256 = "12bfa7pp51zaifjyamv442dwdk3yp3d4m47g8l65a2vwdkvh792d";
+    rev = "979da49d1ddab29a7c5feb9ea61d42fcc9d5c085"; # pin
+    sha256 = "0jv9nn35393cx42j2s8ci7jjry6bxgr8f6qm0lrmax547indf53a";
   };
 
-  buildInputs = with qt6; [ qtbase qtwebengine qtwebchannel ];
+  buildInputs = with qt5; [ qtbase qtwebengine qtwebchannel ];
 
-  nativeBuildInputs = [ pkg-config cmake qt6.wrapQtAppsHook ];
+  nativeBuildInputs = [ pkg-config cmake qt5.wrapQtAppsHook ];
 
   installFlags = [ "DESTDIR=$(out)" "PREFIX=" ];
 

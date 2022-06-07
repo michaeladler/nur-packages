@@ -81,7 +81,6 @@
             neovim-unwrapped
             nix-direnv
             pandoc
-            peda
             qmarkdown
             sbkeys
             sscep

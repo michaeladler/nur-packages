@@ -42,7 +42,6 @@ in
   leakdice = callPackage ./pkgs/leakdice { };
   libubootenv = callPackage ./pkgs/libubootenv { };
   luaprompt = callPackage ./pkgs/luaprompt { };
-  peda = callPackage ./pkgs/peda { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };

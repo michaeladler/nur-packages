@@ -11,11 +11,11 @@ build-all:
 
 .PHONY: build-lqx
 build-lqx:
-	$(NIX) build --show-trace -L -v --no-link '.#linux.lqx'
+	$(NIX) build --show-trace -L -v --no-link '.#linux.lqx' '.#nvidia.lqx'
 
 .PHONY: build-zen
 build-zen:
-	$(NIX) build --show-trace -L -v --no-link '.#linux.zen'
+	$(NIX) build --show-trace -L -v --no-link '.#linux.zen' '.#nvidia.zen'
 
 .PHONY: update-flakes
 update-flakes:

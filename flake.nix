@@ -53,6 +53,10 @@
             zen = pkgs.linuxPackages_zen.nvidiaPackages.stable;
             lqx = pkgs.linuxPackages_lqx.nvidiaPackages.stable;
           };
+          cpupower = {
+            zen = pkgs.linuxPackages_zen.cpupower;
+            lqx = pkgs.linuxPackages_lqx.cpupower;
+          };
         };
 
         packages = flake-utils.lib.flattenTree {

@@ -16,11 +16,9 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ ];
 
   installPhase = ''
-    mkdir -p $out/lib/lua
-    mv lua $out/lib/lua/5.1
-
-    mkdir -p $out/lib/lua/static
-    mv src/*.so $out/lib/lua/static/
+    mkdir -p $out/share/lua/static
+    mv lua $out/share/lua/5.1
+    mv src/*.so $out/share/lua/static/
   '';
 
   meta = with lib; {

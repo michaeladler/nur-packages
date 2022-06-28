@@ -3,13 +3,13 @@ final: prev:
 let awesome = prev.awesome.override { lua = prev.luajit; }; in
 
 awesome.overrideAttrs (old: {
-  version = "unstable-2022-06-18";
+  version = "unstable-2022-06-27";
 
   src = final.fetchFromGitHub {
     owner = "awesomewm";
     repo = "awesome";
-    rev = "29c0057795efcd52616e97a8f61c98a4660ae2af";
-    sha256 = "049c4cka721y3b8i1kfp0hshf632walbwsfc36l3rg39zhhbk0nr";
+    rev = "02fa372d9e6e692b608cb2e1b46df45984830df1";
+    sha256 = "1ihzan11jww0fwwzkrfj46f8qqi6gj31n5i9k6sc7715jb3z15zb";
   };
 
   patches = [];

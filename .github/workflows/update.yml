@@ -38,7 +38,7 @@ jobs:
 
           nix-shell \
             --command "make -j update-all" \
-            -p nixUnstable update-nix-fetchgit
+            -p nixUnstable update-nix-fetchgit niv
           nix-shell \
             --command "nix --experimental-features 'nix-command flakes' flake check" \
             -p nixUnstable

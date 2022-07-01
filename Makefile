@@ -44,6 +44,7 @@ update-zig:
 
 .PHONY: update-other
 update-other:
+	niv update
 	find pkgs -name "*.nix" \
 		-not -path "pkgs/zig/*" \
 		-not -path "pkgs/zls/*" \

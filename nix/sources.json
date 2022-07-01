@@ -1,0 +1,14 @@
+{
+    "neovim": {
+        "branch": "master",
+        "description": "Vim-fork focused on extensibility and usability",
+        "homepage": "https://neovim.io",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "60604d6a9982319673e5d5e67f0cdc29465cfe54",
+        "sha256": "0w9vvlq96rs16m7ykmdkm5vrflwa0vda7p2m619ww2w5rxxd158b",
+        "type": "tarball",
+        "url": "https://github.com/neovim/neovim/archive/60604d6a9982319673e5d5e67f0cdc29465cfe54.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

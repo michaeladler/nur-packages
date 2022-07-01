@@ -1,14 +1,12 @@
-final: prev:
+final: prev: sources:
+
+let mysource = sources.neovim; in
 
 prev.neovim-unwrapped.overrideAttrs (old: {
-  version = "unstable-2022-06-30";
+  version = "nightly-${builtins.substring 0 7 mysource.rev}";
 
   src = prev.fetchFromGitHub {
-    owner = "neovim";
-    repo = "neovim";
-    rev = "ba5be650a796f868f1caf822370e694d24600666";
-    sha256 = "sha256-pa9aKMUt5IybeAyskz9UPakDohqspDX1O54A7/k1Lt8=";
-    fetchSubmodules = true;
+    inherit (mysource) owner repo rev sha256;
   };
 
 })

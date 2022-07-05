@@ -1,6 +1,6 @@
 { lib, lua, fetchFromGitHub, pkg-config }:
 
-lua.pkgs.buildLuaPackage {
+lua.pkgs.buildLuarocksPackage rec {
   pname = "lua-getch";
   version = "unstable-2022-06-04";
 
@@ -11,17 +11,11 @@ lua.pkgs.buildLuaPackage {
     sha256 = "0gm61sb7l62awmvrnr107vw23mmgan5vaxg8s3papch3pxdjwwpj";
   };
 
-  nativeBuildInputs = [ pkg-config ];
+  propagatedBuildInputs = [
+    lua
+  ];
 
-  postPatch = ''
-    patchShebangs .
-  '';
-
-  preBuild = ''
-    makeFlagsArray=(
-      LUA_LIBS=-lluajit-5.1
-      );
-  '';
+  knownRockspec = "${src}/lua-getch-0.0-1.rockspec";
 
   meta = with lib; {
     description = "Provides a way to get raw Keyboard data in Lua";

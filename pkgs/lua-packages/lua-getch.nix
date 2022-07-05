@@ -17,6 +17,11 @@ lua.pkgs.buildLuarocksPackage rec {
 
   knownRockspec = "${src}/lua-getch-0.0-1.rockspec";
 
+  patchPhase = ''
+    substituteInPlace lua/lua-getch/init.lua \
+      --replace "bit32" "bit"
+  '';
+
   meta = with lib; {
     description = "Provides a way to get raw Keyboard data in Lua";
     homepage = "https://github.com/max1220/lua-getch";

@@ -2,6 +2,7 @@
 , lib
 , fetchFromGitHub
 , autoreconfHook
+, autoconf-archive
 , pkgconfig
 , check
 , gnu-efi
@@ -16,16 +17,16 @@
 stdenv.mkDerivation rec {
 
   pname = "efibootguard";
-  version = "unstable-2022-05-05";
+  version = "unstable-2022-07-01";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "efibootguard";
-    rev = "9225675095c91df51d66a4b8c5e17700401382fc";
-    sha256 = "1w9w7k4l2r3knnb6y0i76bi0w0qnszmnsir0hqi0hlyhyn8fy5vr";
+    rev = "5fc32e98f7fcd2bc7fb7a6ea6de0f9fe214ce9ba";
+    sha256 = "06ja4qpfwwzxr8m67vjrhkz3jkj3xd9f95y42a3xcakdy2kbgyjy";
   };
 
-  nativeBuildInputs = [ autoreconfHook pkgconfig check (python3.withPackages (ps: with ps; [ shtab ])) installShellFiles ];
+  nativeBuildInputs = [ autoreconfHook autoconf-archive pkgconfig check (python3.withPackages (ps: with ps; [ shtab ])) installShellFiles ];
 
   buildInputs = [ gnu-efi zlib glibc pciutils ];
 

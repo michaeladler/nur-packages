@@ -5,10 +5,10 @@
         "homepage": "https://neovim.io",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "45ba2e147f7b7d17acb489d64acc257ceded0887",
-        "sha256": "1nn5lby53g5j5msb8xa9nndwrnh213a5bxiva2a9fzhbk4j1kbmp",
+        "rev": "d606c39a9cadcf2d627e93b1bdf18bea359d1c63",
+        "sha256": "12hw112f5m31a9j6vzcx213v1wmm4hcnqlw7smwbmi6wh1169cq7",
         "type": "tarball",
-        "url": "https://github.com/neovim/neovim/archive/45ba2e147f7b7d17acb489d64acc257ceded0887.tar.gz",
+        "url": "https://github.com/neovim/neovim/archive/d606c39a9cadcf2d627e93b1bdf18bea359d1c63.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

@@ -3,7 +3,6 @@ final: prev:
 let
   fetchFromGitHub = prev.fetchFromGitHub;
   callPackage = final.callPackage;
-  sources = import ./nix/sources.nix;
 in
 
 # do not make this 'rec'
@@ -18,7 +17,7 @@ in
   zig-master = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
   ccls = (import ./pkgs/ccls) final prev;
-  neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev sources;
+  neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   fmt_8 = (import ./pkgs/fmt/fmt_8.nix) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
 

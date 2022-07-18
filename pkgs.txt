@@ -6,6 +6,7 @@ btrfs-du
 btrfs-list
 cargo-llvm-cov
 ccls
+chromium-browserpass
 chyle
 cinclude2dot
 clang-format-diff

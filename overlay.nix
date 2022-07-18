@@ -50,6 +50,7 @@ in
   sbkeys = callPackage ./pkgs/sbkeys { };
   chyle = callPackage ./pkgs/chyle { };
   cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };
+  chromium-browserpass = callPackage ./pkgs/chromium-browserpass { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

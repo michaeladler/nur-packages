@@ -104,6 +104,7 @@
             zoxide
             criterion
             cargo-llvm-cov
+            chromium-browserpass
 
             # re-exported to benefit from caching
             fwupd

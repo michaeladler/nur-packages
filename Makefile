@@ -2,7 +2,7 @@ NIX := nix --experimental-features "nix-command flakes"
 
 .PHONY: update-all
 # all but zig
-update-all: update-flakes update-firefox update-brave update-criterion update-other update-pandoc update-cargo-llvm-cov
+update-all: update-flakes update-other
 
 .PHONY: build-all
 build-all:
@@ -21,38 +21,19 @@ build-zen:
 update-flakes:
 	$(NIX) flake update
 
-.PHONY: update-firefox
-update-firefox:
-	pkgs/firefox-bin-unwrapped/update.sh
-
-.PHONY: update-brave
-update-brave:
-	pkgs/brave/update.sh
-
-.PHONY: update-criterion
-update-criterion:
-	pkgs/criterion/update.sh
-
-.PHONY: update-cargo-llvm-cov
-update-cargo-llvm-cov:
-	cd pkgs/cargo-llvm-cov && ./update.sh
-
 .PHONY: update-zig
 update-zig:
-	pkgs/zig/update.sh
+	pkgs/zig/update-special.sh
 	update-nix-fetchgit ./pkgs/zls/default.nix
 
 .PHONY: update-other
 update-other:
+	find . -name update.sh -type f -executable | xargs -P$(shell nproc) -n1 sh
 	find pkgs -name "*.nix" \
 		-not -path "pkgs/zig/*" \
 		-not -path "pkgs/zls/*" \
 		-not -path "pkgs/pandoc/*" \
-		| while read fname; do echo "updating $$fname"; update-nix-fetchgit "$$fname"; done
-
-.PHONY: update-pandoc
-update-pandoc:
-	pkgs/pandoc/update.sh
+		| xargs -P$(shell nproc) -n1 update-nix-fetchgit
 
 .PHONY: trigger-ci
 trigger-ci:

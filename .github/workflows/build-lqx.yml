@@ -1,6 +1,10 @@
 name: lqx
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  workflow_dispatch:
+  schedule:
+    # NB: jobs may be delayed a couple of hours
+    - cron:  '0 3 * * *'
 
 jobs:
   build:

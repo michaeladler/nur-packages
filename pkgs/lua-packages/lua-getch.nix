@@ -7,8 +7,8 @@ lua.pkgs.buildLuarocksPackage rec {
   src = fetchFromGitHub {
     owner = "max1220";
     repo = "lua-getch";
-    rev = "6f6949a7d9d439a04662f39a340635991b68e733";
-    sha256 = "0jak8xbcsxp9gw2y175ldzrhhxyjq45yhgc5207slnj9xa7262qg";
+    rev = "c538b72eb5c38a9d1e0c3712481f0796f6714ce5";
+    sha256 = "06a2cqkiq2i0vbv8jb4qs1aggjqzcfv8hhs5kjm2vfpfdf6sd9qi";
   };
 
   propagatedBuildInputs = [

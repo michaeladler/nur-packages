@@ -23,7 +23,8 @@ in
 
   # more up-to-date
   brave = callPackage ./pkgs/brave { };
-  pandoc = callPackage ./pkgs/pandoc { };
+  # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!
+  pandoc-bin = callPackage ./pkgs/pandoc { };
   criterion = callPackage ./pkgs/criterion { };
 
   # missing upstream

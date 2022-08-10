@@ -108,7 +108,6 @@
             # re-exported to benefit from caching
             fwupd
             bear
-
             ;
         };
 

@@ -1,11 +1,11 @@
 { lib
-, craneLib
+, rustPlatform
 , fetchFromGitHub
 , pkg-config
 , openssl
 }:
 
-craneLib.buildPackage {
+rustPlatform.buildRustPackage rec {
   pname = "aoc-cli";
   version = "unstable-2021-12-01";
 
@@ -16,6 +16,8 @@ craneLib.buildPackage {
     sha256 = "10qb4mvkdmp1npsj7lykz0dhbqdy6577aj3x1nrbzf2l9if2a0ch";
   };
 
+  cargoHash = "sha256-L0BScNqN8NcShF7u4DssSfUDxwVHbpHEAfZqmbS/bsM=";
+
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ openssl ];
@@ -25,5 +27,4 @@ craneLib.buildPackage {
     homepage = "https://github.com/scarvalhojr/aoc-cli";
     license = licenses.mit;
   };
-
 }

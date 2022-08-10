@@ -5,7 +5,6 @@
   inputs = {
     nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
     nur.url = "github:nix-community/NUR";
     crane = {
       url = "github:ipetkov/crane";
@@ -13,7 +12,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, nur, emacs-overlay, crane }:
+  outputs = { self, nixpkgs, flake-utils, nur, crane }:
 
     {
       overlay = import ./overlay.nix;
@@ -25,7 +24,7 @@
         };
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ craneOverlay self.overlay emacs-overlay.overlay ];
+          overlays = [ craneOverlay self.overlay ];
           config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {
@@ -110,8 +109,6 @@
             fwupd
             bear
 
-            # from emacs-overlay
-            emacsUnstable
             ;
         };
 

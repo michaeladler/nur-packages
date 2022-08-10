@@ -13,7 +13,6 @@ clang-format-diff
 criterion
 dotdrop
 efibootguard
-emacsUnstable
 firefox-bin
 fmt_8
 fmtlog

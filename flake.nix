@@ -70,10 +70,13 @@
             brave
             btrfs-du
             btrfs-list
+            cargo-llvm-cov
             ccls
+            chromium-browserpass
             chyle
             cinclude2dot
             clang-format-diff
+            criterion
             dotdrop
             efibootguard
             firefox-bin
@@ -99,11 +102,9 @@
             sumneko-lua-language-server
             vcalendar-filter
             zig-master
+            zinit
             zls
             zoxide
-            criterion
-            cargo-llvm-cov
-            chromium-browserpass
 
             # re-exported to benefit from caching
             fwupd

@@ -37,5 +37,6 @@ sscep
 sumneko-lua-language-server
 vcalendar-filter
 zig-master
+zinit
 zls
 zoxide

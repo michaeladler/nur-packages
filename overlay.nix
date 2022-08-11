@@ -20,8 +20,8 @@ in
   neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   fmt_8 = (import ./pkgs/fmt/fmt_8.nix) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
+  zinit = (import ./pkgs/zinit) final prev;
 
-  # more up-to-date
   brave = callPackage ./pkgs/brave { };
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!
   pandoc-bin = callPackage ./pkgs/pandoc { };

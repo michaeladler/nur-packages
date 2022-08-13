@@ -2,13 +2,13 @@
 
 lua.pkgs.buildLuarocksPackage rec {
   pname = "lua-getch";
-  version = "unstable-2022-08-07";
+  version = "unstable-2022-08-13";
 
   src = fetchFromGitHub {
     owner = "max1220";
     repo = "lua-getch";
-    rev = "c538b72eb5c38a9d1e0c3712481f0796f6714ce5";
-    sha256 = "06a2cqkiq2i0vbv8jb4qs1aggjqzcfv8hhs5kjm2vfpfdf6sd9qi";
+    rev = "c30f21eeb4e82e6a8dd3afa751cb3d378162aec7";
+    sha256 = "056b2imbfppm4jc7nwsmidsrgrddd18gdi8kdggamflfjrnibcg9";
   };
 
   propagatedBuildInputs = [

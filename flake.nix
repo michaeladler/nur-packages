@@ -88,7 +88,6 @@
             go-crx3
             go-mod-outdated
             handlr
-            i3-gaps
             kas-container
             leakdice
             libubootenv
@@ -105,6 +104,7 @@
             zinit
             zls
             zoxide
+            thinkfan
 
             # re-exported to benefit from caching
             fwupd

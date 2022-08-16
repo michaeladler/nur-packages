@@ -12,7 +12,6 @@ in
   awesome-git = (import ./pkgs/awesome) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   handlr = (import ./pkgs/handlr) final prev;
-  i3-gaps = (import ./pkgs/i3-gaps) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig-master = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
@@ -21,6 +20,7 @@ in
   fmt_8 = (import ./pkgs/fmt/fmt_8.nix) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
   zinit = (import ./pkgs/zinit) final prev;
+  thinkfan = (import ./pkgs/thinkfan) final prev;
 
   brave = callPackage ./pkgs/brave { };
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!

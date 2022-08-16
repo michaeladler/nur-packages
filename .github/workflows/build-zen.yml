@@ -1,6 +1,7 @@
 name: zen
 
 on:
+  push:
   workflow_dispatch:
   schedule:
     # NB: jobs may be delayed a couple of hours

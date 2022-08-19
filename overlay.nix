@@ -52,6 +52,7 @@ in
   chyle = callPackage ./pkgs/chyle { };
   cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };
   chromium-browserpass = callPackage ./pkgs/chromium-browserpass { };
+  czmod = callPackage ./pkgs/czmod { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

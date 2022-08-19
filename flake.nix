@@ -105,6 +105,7 @@
             zls
             zoxide
             thinkfan
+            czmod
 
             # re-exported to benefit from caching
             fwupd

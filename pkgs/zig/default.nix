@@ -14,6 +14,8 @@ prev.zig.overrideAttrs (old: {
   nativeBuildInputs = [ ];
   buildInputs = [ ];
 
+  patches = [ ];
+
   doCheck = false;
 
   installPhase = let version = zig_versions.version; in

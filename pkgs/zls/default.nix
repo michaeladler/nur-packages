@@ -9,8 +9,8 @@ prev.zls.overrideAttrs (oa: {
   src = final.fetchFromGitHub {
     owner = "zigtools";
     repo = "zls";
-    rev = "eb60f75413f5ea988c40f91b184943569211a878";
-    sha256 = "1rxjh2dz410nbxniimljhabwy2hgkph12c3hn7kl1kc1jy7aisns";
+    rev = "a18ec394f16a17cc1db20dedaabc42ce9b7f9a9d";
+    sha256 = "1brfy6i3sy5ylhab70s8rwx0ai1ahn12lavxrqbh9mnj458sq8cm";
     fetchSubmodules = true;
   };
 

@@ -8,8 +8,8 @@ prev.thinkfan.overrideAttrs (old: {
   src = final.fetchFromGitHub {
     owner = "vmatare";
     repo = "thinkfan";
-    rev = "0df1e9fa1135fcde52742597af231b1f0c513065";
-    sha256 = "1is00g8ghib9dlkwaqn1qzs9r7s82fsp89p5rvzyw001rb7z4z3c";
+    rev = "11ce0006533e8344da83703f8821a854e578bb4d";
+    sha256 = "0qd60810hmbg6lv9y4618xw17bjqvv6kvx49rahiw0xhli507gky";
   };
 
 })

@@ -11,7 +11,6 @@ chyle
 cinclude2dot
 clang-format-diff
 criterion
-cryfs
 czmod
 dotdrop
 efibootguard

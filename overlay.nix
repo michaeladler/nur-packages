@@ -17,7 +17,6 @@ in
   zls = (import ./pkgs/zls) final prev;
   ccls = (import ./pkgs/ccls) final prev;
   neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
-  fmt_8 = (import ./pkgs/fmt/fmt_8.nix) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
   zinit = (import ./pkgs/zinit) final prev;
   thinkfan = (import ./pkgs/thinkfan) final prev;
@@ -47,7 +46,6 @@ in
   sscep = callPackage ./pkgs/sscep { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   kas-container = callPackage ./pkgs/kas-container { };
-  fmtlog = callPackage ./pkgs/fmtlog { };
   sbkeys = callPackage ./pkgs/sbkeys { };
   chyle = callPackage ./pkgs/chyle { };
   cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };

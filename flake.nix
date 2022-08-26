@@ -80,8 +80,6 @@
             dotdrop
             efibootguard
             firefox-bin
-            fmt_8
-            fmtlog
             fstabfmt
             fzy-lua-native
             git-hours
@@ -110,7 +108,6 @@
             # re-exported to benefit from caching
             fwupd
             bear
-            cryfs
             ;
         };
 

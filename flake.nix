@@ -80,6 +80,7 @@
             dotdrop
             efibootguard
             firefox-bin
+            fmtlog
             fstabfmt
             fzy-lua-native
             git-hours

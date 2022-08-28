@@ -15,6 +15,7 @@ czmod
 dotdrop
 efibootguard
 firefox-bin
+fmtlog
 fstabfmt
 fwupd
 fzy-lua-native

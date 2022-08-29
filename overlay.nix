@@ -53,6 +53,7 @@ in
   chromium-browserpass = callPackage ./pkgs/chromium-browserpass { };
   czmod = callPackage ./pkgs/czmod { };
   tlpui = callPackage ./pkgs/tlpui { };
+  skipcpio = callPackage ./pkgs/skipcpio { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

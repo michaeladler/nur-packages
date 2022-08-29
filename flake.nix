@@ -106,6 +106,7 @@
             thinkfan
             czmod
             tlpui
+            skipcpio
 
             # re-exported to benefit from caching
             fwupd

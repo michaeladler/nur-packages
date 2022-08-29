@@ -35,6 +35,7 @@ sbkeys
 sscep
 sumneko-lua-language-server
 thinkfan
+tlpui
 vcalendar-filter
 zig-master
 zinit

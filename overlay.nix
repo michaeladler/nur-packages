@@ -52,6 +52,7 @@ in
   cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };
   chromium-browserpass = callPackage ./pkgs/chromium-browserpass { };
   czmod = callPackage ./pkgs/czmod { };
+  tlpui = callPackage ./pkgs/tlpui { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

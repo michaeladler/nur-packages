@@ -105,6 +105,7 @@
             zoxide
             thinkfan
             czmod
+            tlpui
 
             # re-exported to benefit from caching
             fwupd

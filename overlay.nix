@@ -9,7 +9,7 @@ in
 {
 
   # overlays
-  awesome-git = (import ./pkgs/awesome) final prev;
+  awesome = (import ./pkgs/awesome) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   handlr = (import ./pkgs/handlr) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;

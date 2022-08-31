@@ -7,6 +7,7 @@ btrfs-list
 cargo-llvm-cov
 ccls
 chromium-browserpass
+chromium-floccus
 chyle
 cinclude2dot
 clang-format-diff

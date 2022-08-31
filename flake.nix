@@ -73,10 +73,12 @@
             cargo-llvm-cov
             ccls
             chromium-browserpass
+            chromium-floccus
             chyle
             cinclude2dot
             clang-format-diff
             criterion
+            czmod
             dotdrop
             efibootguard
             firefox-bin
@@ -96,17 +98,16 @@
             pandoc
             qmarkdown
             sbkeys
+            skipcpio
             sscep
             sumneko-lua-language-server
+            thinkfan
+            tlpui
             vcalendar-filter
             zig-master
             zinit
             zls
             zoxide
-            thinkfan
-            czmod
-            tlpui
-            skipcpio
 
             # re-exported to benefit from caching
             fwupd

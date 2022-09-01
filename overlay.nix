@@ -55,6 +55,7 @@ in
   sscep = callPackage ./pkgs/sscep { };
   tlpui = callPackage ./pkgs/tlpui { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
+  pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

@@ -108,6 +108,7 @@
             zinit
             zls
             zoxide
+            pam-fprint-grosshack
             ;
         };
 

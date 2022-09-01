@@ -28,6 +28,7 @@ libubootenv
 luaprompt
 neovim-unwrapped
 nix-direnv
+pam-fprint-grosshack
 pandoc
 qmarkdown
 sbkeys

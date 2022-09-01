@@ -1,6 +1,5 @@
 aoc-cli
 awesome
-bear
 brave
 btrfs-du
 btrfs-list
@@ -18,7 +17,6 @@ efibootguard
 firefox-bin
 fmtlog
 fstabfmt
-fwupd
 fzy-lua-native
 git-hours
 go-crx3

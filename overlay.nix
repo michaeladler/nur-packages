@@ -37,7 +37,6 @@ in
   cinclude2dot = callPackage ./pkgs/cinclude2dot { };
   clang-format-diff = callPackage ./pkgs/clang-format-diff { };
   czmod = callPackage ./pkgs/czmod { };
-  dotdrop = callPackage ./pkgs/dotdrop { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fmtlog = callPackage ./pkgs/fmtlog { };
   fstabfmt = callPackage ./pkgs/fstabfmt { };

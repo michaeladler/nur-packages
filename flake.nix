@@ -79,7 +79,6 @@
             clang-format-diff
             criterion
             czmod
-            dotdrop
             efibootguard
             firefox-bin
             fmtlog

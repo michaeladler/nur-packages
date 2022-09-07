@@ -108,6 +108,8 @@
             zls
             zoxide
             pam-fprint-grosshack
+
+            astroid
             ;
         };
 

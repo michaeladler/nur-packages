@@ -1,4 +1,5 @@
 aoc-cli
+astroid
 awesome
 brave
 btrfs-du

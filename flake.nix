@@ -110,6 +110,7 @@
             pam-fprint-grosshack
 
             astroid
+            nerdfonts-custom
             ;
         };
 

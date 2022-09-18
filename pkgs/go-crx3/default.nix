@@ -8,7 +8,7 @@ buildGo119Module {
     owner = "mmadfox";
     repo = "go-crx3";
     rev = "4f73dedc04a3898e6f18408ac628fcc7c49b8f2b"; # pin
-    sha256 = "sha256-hTyrlQIHLGIKxhh1915yNuzx2M9l7U4K4WEYKMxK4uc=";
+    sha256 = "1rz29b62h631w454xvb5rzcg3v1nf9ggfx8qqq564b070aasng45";
   };
 
   vendorSha256 = "sha256-uJFELBJy5lLmwvZizcIpgo6HcugX4jMIGN4d9NrAsVA=";

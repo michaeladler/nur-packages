@@ -1,17 +1,23 @@
-{ buildGoModule, fetchFromGitHub, lib }:
+{ buildGo119Module, fetchFromGitHub, lib }:
 
-buildGoModule {
+buildGo119Module {
   name = "go-crx3";
-  version = "unstable-2020-08-27";
+  version = "unstable-2022-09-14";
 
   src = fetchFromGitHub {
     owner = "mmadfox";
     repo = "go-crx3";
-    rev = "48e0282c5c42660fe762f75d0a8010105c93b889"; # pin
-    sha256 = "178y5f1kaczys9nyk9n6vn1mym9lvd5m49asvyina6r3dabznliz";
+    rev = "4f73dedc04a3898e6f18408ac628fcc7c49b8f2b"; # pin
+    sha256 = "sha256-hTyrlQIHLGIKxhh1915yNuzx2M9l7U4K4WEYKMxK4uc=";
   };
 
-  vendorSha256 = "sha256-ZNszEjwzCXaMcPYnes38WgTXsGfOOCL8zLV4cwuPo4M=";
+  vendorSha256 = "sha256-uJFELBJy5lLmwvZizcIpgo6HcugX4jMIGN4d9NrAsVA=";
+
+  patches = [
+    ./0001-added-go.sum.patch
+  ];
+
+  doCheck = false;
 
   meta = with lib; {
     homepage = "https://github.com/mmadfox/go-crx3";

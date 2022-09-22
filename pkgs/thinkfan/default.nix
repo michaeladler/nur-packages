@@ -1,15 +1,15 @@
 final: prev:
 
 prev.thinkfan.overrideAttrs (old: {
-  version = "unstable-2022-08-25";
+  version = "unstable-2022-09-21";
 
   buildInputs = old.buildInputs ++ [ prev.lm_sensors ];
 
   src = final.fetchFromGitHub {
     owner = "vmatare";
     repo = "thinkfan";
-    rev = "b5bf2e679c6820cdb119e1bc56e7e91f222e4376";
-    sha256 = "0p54g2vpv041fv10b3yf6pnjzx14788iyw2bbq8kv0gwbpjcc0sj";
+    rev = "ba96af6fe4a720bb65aa8d1c53bcb6dd9289a4df";
+    sha256 = "0y72kpz6mwf9zqsrdzq7m2pmxfz82zgvlqpsb8hc3xkd6k5304r8";
   };
 
 })

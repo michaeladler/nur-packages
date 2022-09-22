@@ -2,15 +2,15 @@ final: prev:
 
 # https://github.com/zigtools/zls/blob/master/default.nix
 prev.zls.overrideAttrs (oa: {
-  version = "unstable-2022-09-20";
+  version = "unstable-2022-09-21";
 
   nativeBuildInputs = [ final.zig-master ];
 
   src = final.fetchFromGitHub {
     owner = "zigtools";
     repo = "zls";
-    rev = "0fa788b7275891f5bd924ca983c8ff397de23cc7";
-    sha256 = "0jwzg89vg7zm2ilv104iy7i4c9gj362mq9hfki0d2vcgjrwi6ghs";
+    rev = "dac0d9019a24c26da25ab3334cba201e640c47d8";
+    sha256 = "18pnwc5b8r11cn69fghw7z4491mcr0p201f9ak16r5ms9a3igq46";
     fetchSubmodules = true;
   };
 

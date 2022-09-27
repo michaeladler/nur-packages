@@ -1,7 +1,7 @@
 { stdenv
 , lib
 , fetchFromGitHub
-, pkgconfig
+, pkg-config
 , makeWrapper
 , luajit
 , luajitPackages
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
     sha256 = "12dl9nzjvy1hl0f2pg1qjkakqa51py4ad9s7y4h9gy3kh14bc560";
   };
 
-  nativeBuildInputs = [ pkgconfig makeWrapper ];
+  nativeBuildInputs = [ pkg-config makeWrapper ];
 
   buildInputs = [ luajit readline luajitPackages.argparse ];
 

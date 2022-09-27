@@ -3,7 +3,7 @@
 , fetchFromGitHub
 , autoreconfHook
 , autoconf-archive
-, pkgconfig
+, pkg-config
 , check
 , gnu-efi
 , zlib
@@ -26,7 +26,7 @@ stdenv.mkDerivation rec {
     sha256 = "0c3lf7k256mhq49nq47nmps0rmak7vhq8zjba5x6qg5nqb2r9nnb";
   };
 
-  nativeBuildInputs = [ autoreconfHook autoconf-archive pkgconfig check (python3.withPackages (ps: with ps; [ shtab ])) installShellFiles ];
+  nativeBuildInputs = [ autoreconfHook autoconf-archive pkg-config check (python3.withPackages (ps: with ps; [ shtab ])) installShellFiles ];
 
   buildInputs = [ gnu-efi zlib glibc pciutils ];
 

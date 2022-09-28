@@ -19,6 +19,9 @@ prev.zinit.overrideAttrs (old: {
     cp *.zsh "$outdir"
     cp -R share "$outdir"
 
+    mkdir -p $out/share/zinit/doc
+    cp doc/*.1 $out/share/zinit/doc/
+
     installShellCompletion --zsh _zinit
     installManPage doc/*.1
   '';

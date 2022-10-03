@@ -15,6 +15,7 @@ python3Packages.buildPythonApplication {
   unpackPhase = "cp $src clang-format-diff.py";
   buildPhase = "true";
   setuptoolsCheckPhase = "true";
+  pythonOutputDistPhase = "true";
 
   installPhase = ''
     mkdir -p $out/bin

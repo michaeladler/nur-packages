@@ -1,6 +1,6 @@
-{ lib, python3Packages, fetchurl }:
+{ lib, stdenv, python3, fetchurl }:
 
-python3Packages.buildPythonApplication {
+stdenv.mkDerivation rec {
   pname = "clang-format-diff.py";
   version = "0.4.7";
 
@@ -10,12 +10,10 @@ python3Packages.buildPythonApplication {
   };
 
   checkInputs = [ ];
-  propagatedBuildInputs = [ ];
+  propagatedBuildInputs = [ python3 ];
 
   unpackPhase = "cp $src clang-format-diff.py";
   buildPhase = "true";
-  setuptoolsCheckPhase = "true";
-  pythonOutputDistPhase = "true";
 
   installPhase = ''
     mkdir -p $out/bin
@@ -28,4 +26,5 @@ python3Packages.buildPythonApplication {
     description = "Parses the output of a unified diff and reformats all contained lines with clang-format";
     license = "Apache-2.0 WITH LLVM-exception";
   };
+
 }

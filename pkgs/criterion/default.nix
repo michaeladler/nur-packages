@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchurl }:
+{ stdenv, lib, fetchurl, glibc }:
 
 let metadata = with builtins; fromJSON (readFile ./metadata.json); in
 
@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     mv lib/libcriterion* $out/lib
 
     find $out/lib -type f | while read fname; do
-      patchelf --set-rpath ${stdenv.glibc.out}/lib $fname
+      patchelf --set-rpath ${glibc.out}/lib $fname
     done
 
     mv include $out

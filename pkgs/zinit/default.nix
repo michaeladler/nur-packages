@@ -1,13 +1,13 @@
 final: prev:
 
 prev.zinit.overrideAttrs (old: {
-  version = "unstable-2022-10-03";
+  version = "unstable-2022-10-05";
 
   src = prev.fetchFromGitHub {
     owner = "zdharma-continuum";
     repo = "zinit";
-    rev = "7f6dc7da6c824b30c0e8e30ae0ecbda5be118e68";
-    sha256 = "043hl7dsyj5ih9kif3q7cbs6g39m7nnz80nd9dv39dwwdc4x9a1h";
+    rev = "be1533552afc9f7a478763e5645fa82e86536f89";
+    sha256 = "08wc3la6hsi7hqg9qmkzlgwl7fz7ggfd86g6n0cc381wqwkz4q9l";
   };
 
   installPhase = ''

@@ -16,7 +16,7 @@ in
   zig-master = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
   ccls = (import ./pkgs/ccls) final prev;
-  neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
+  #neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
   zinit = (import ./pkgs/zinit) final prev;
   thinkfan = (import ./pkgs/thinkfan) final prev;

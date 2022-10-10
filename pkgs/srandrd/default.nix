@@ -10,8 +10,8 @@ prev.srandrd.overrideAttrs (old: {
     sha256 = "1yiyxyjc2lkpc4rw41l8a7zh7df9knwspwgafdl39r1rd94kvc7m";
   };
 
-  patches = [
-    ./debounce.patch
-  ];
+  # patches = [
+  #   ./debounce.patch
+  # ];
 
 })

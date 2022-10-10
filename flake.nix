@@ -108,6 +108,7 @@
             zls
             zoxide
             pam-fprint-grosshack
+            srandrd
 
             astroid
             nerdfonts-custom

@@ -34,6 +34,7 @@ pandoc
 qmarkdown
 sbkeys
 skipcpio
+srandrd
 sscep
 sumneko-lua-language-server
 thinkfan

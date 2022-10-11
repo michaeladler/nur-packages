@@ -7,11 +7,11 @@ in
 
 buildPythonPackage rec {
   pname = "gbp";
-  version = "0.9.17";
+  version = "0.9.29";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-BZIRN8m5rYQp9D+oYOycmKNVLYWNypjcdqKlIHtYWO4=";
+    sha256 = "sha256-kmqYk7QaTZ94fSfTjlbzlJ+GJFKdxV4hVT7FZmZcOFI=";
   };
 
   propagatedBuildInputs = (with python3.pkgs; [ python-dateutil ]) ++ [ debian-devscripts ];

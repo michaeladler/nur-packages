@@ -34,6 +34,7 @@ update-other:
 		-not -path "pkgs/zls/*" \
 		-not -path "pkgs/pandoc/*" \
 		-not -path "pkgs/git-buildpackage/*" \
+		-not -path "pkgs/git/*" \
 		| xargs -P$(shell nproc) -n1 update-nix-fetchgit
 
 .PHONY: trigger-ci

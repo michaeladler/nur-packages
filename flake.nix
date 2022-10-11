@@ -110,6 +110,7 @@
             pam-fprint-grosshack
             srandrd
             git-latest
+            git-buildpackage
 
             astroid
             nerdfonts-custom

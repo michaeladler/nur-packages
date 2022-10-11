@@ -61,6 +61,7 @@ in
   tlpui = callPackage ./pkgs/tlpui { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
+  git-buildpackage = callPackage ./pkgs/git-buildpackage { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

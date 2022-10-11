@@ -18,6 +18,7 @@ firefox-bin
 fmtlog
 fstabfmt
 fzy-lua-native
+git-buildpackage
 git-hours
 git-latest
 go-crx3

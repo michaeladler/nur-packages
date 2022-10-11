@@ -38,6 +38,7 @@ sbkeys
 skipcpio
 srandrd
 sscep
+stylua
 sumneko-lua-language-server
 thinkfan
 tlpui

@@ -114,6 +114,7 @@
 
             astroid
             nerdfonts-custom
+            stylua
             ;
         };
 

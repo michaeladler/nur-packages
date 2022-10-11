@@ -109,6 +109,7 @@
             zoxide
             pam-fprint-grosshack
             srandrd
+            git-latest
 
             astroid
             nerdfonts-custom

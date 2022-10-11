@@ -19,6 +19,7 @@ fmtlog
 fstabfmt
 fzy-lua-native
 git-hours
+git-latest
 go-crx3
 go-mod-outdated
 handlr

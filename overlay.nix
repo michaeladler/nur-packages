@@ -21,6 +21,11 @@ in
   zinit = (import ./pkgs/zinit) final prev;
   thinkfan = (import ./pkgs/thinkfan) final prev;
   srandrd = (import ./pkgs/srandrd) final prev;
+  git-latest = ((import ./pkgs/git-latest) final prev).override {
+    sendEmailSupport = true;
+    withSsh = true;
+    withLibsecret = true;
+  };
 
   brave = callPackage ./pkgs/brave { };
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!

@@ -5,7 +5,7 @@ prev.git.overrideAttrs (old: rec {
 
   src = final.fetchurl {
     url = "https://www.kernel.org/pub/software/scm/git/git-${version}.tar.xz";
-    sha256 = "sha256-kj6t4msYFN540GvajgqfXai3xLMEs/kFD/tGTwMQMgo=";
+    sha256 = "02ij201lyipv1w2zkcq4ng2bga2xkw58xnkbs1wdw50qdgiasglj";
   };
 
 })

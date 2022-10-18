@@ -30,9 +30,10 @@ jobs:
 
       - name: build
         run: |
-          nix-shell \
-            --command "nix --experimental-features 'nix-command flakes' build --no-link '.#zig-master' '.#zls'" \
-            -p nixUnstable
+          timeout -s 9 5m \
+            nix-shell \
+              --command "nix --experimental-features 'nix-command flakes' build -L --no-link '.#zig-master' '.#zls'" \
+              -p nixUnstable
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.1

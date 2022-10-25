@@ -69,17 +69,4 @@ in
       pulseaudio = callPackage ./pkgs/lua-packages/pulseaudio.nix { inherit lua; };
     };
 
-  nerdfonts-custom = prev.nerdfonts.override {
-    # see pkgs/data/fonts/nerdfonts/shas.nix for valid names
-    fonts = [
-      "Gohu"
-      "Hack"
-      "Hermit"
-      "IBMPlexMono"
-      "Inconsolata"
-      "Iosevka"
-      "Noto"
-    ];
-  };
-
 }

@@ -113,7 +113,6 @@
             git-buildpackage
 
             astroid
-            nerdfonts-custom
             stylua
             ;
         };

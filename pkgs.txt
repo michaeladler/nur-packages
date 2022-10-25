@@ -29,7 +29,6 @@ leakdice
 libubootenv
 luaprompt
 neovim-unwrapped
-nerdfonts-custom
 nix-direnv
 pam-fprint-grosshack
 pandoc

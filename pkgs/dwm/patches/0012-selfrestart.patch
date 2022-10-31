@@ -1,0 +1,150 @@
+From 852f88c23a9c2bfc3a56a8abb15eeba86e7c990a Mon Sep 17 00:00:00 2001
+From: Michael Adler <adlerm@mailbox.org>
+Date: Sat, 10 Sep 2022 18:39:45 +0200
+Subject: [PATCH 12/16] selfrestart
+
+Restart dwm without the unnecessary dependency of an external script.
+
+https://dwm.suckless.org/patches/selfrestart/
+https://dwm.suckless.org/patches/restartsig/
+---
+ config.def.h |  2 +-
+ dwm.1        | 10 ++++++++++
+ dwm.c        | 27 +++++++++++++++++++++++++++
+ 3 files changed, 38 insertions(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index eaff8fc..67e87ed 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -129,6 +129,7 @@ static const Key keys[] = {
+ 	TAGKEYS(                        XK_7,                      6)
+ 	TAGKEYS(                        XK_8,                      7)
+ 	TAGKEYS(                        XK_9,                      8)
++    { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
+ 	{ MODKEY|ShiftMask,             XK_BackSpace, quit,        {0} },
+ };
+ 
+@@ -152,4 +153,3 @@ static const Button buttons[] = {
+ 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+ 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+ };
+-
+diff --git a/dwm.1 b/dwm.1
+index 31b23ec..b079c0a 100644
+--- a/dwm.1
++++ b/dwm.1
+@@ -151,6 +151,9 @@ Add/remove all windows with nth tag to/from the view.
+ .TP
+ .B Mod1\-Shift\-q
+ Quit dwm.
++.TP
++.B Mod1\-Control\-Shift\-q
++Restart dwm.
+ .SS Mouse commands
+ .TP
+ .B Mod1\-Button1
+@@ -164,6 +167,13 @@ Resize focused window while dragging. Tiled windows will be toggled to the float
+ .SH CUSTOMIZATION
+ dwm is customized by creating a custom config.h and (re)compiling the source
+ code. This keeps it fast, secure and simple.
++.SH SIGNALS
++.TP
++.B SIGHUP - 1
++Restart the dwm process.
++.TP
++.B SIGTERM - 15
++Cleanly terminate the dwm process.
+ .SH SEE ALSO
+ .BR dmenu (1),
+ .BR st (1)
+diff --git a/dwm.c b/dwm.c
+index f89af4d..d5e0606 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -241,6 +241,8 @@ static void setup(void);
+ static void seturgent(Client *c, int urg);
+ static void showhide(Client *c);
+ static void sigchld(int unused);
++static void sighup(int unused);
++static void sigterm(int unused);
+ static void sigdsblocks(const Arg *arg);
+ static void spawn(const Arg *arg);
+ static int stackpos(const Arg *arg);
+@@ -275,6 +277,7 @@ static int xerrorstart(Display *dpy, XErrorEvent *ee);
+ static void zoom(const Arg *arg);
+ static void load_xresources(void);
+ static void resource_load(XrmDatabase db, char *name, enum resource_type rtype, void *dst);
++static void self_restart(const Arg *arg);
+ 
+ /* variables */
+ static Client *prevzoom = NULL;
+@@ -305,6 +308,7 @@ static void (*handler[LASTEvent]) (XEvent *) = {
+ 	[UnmapNotify] = unmapnotify
+ };
+ static Atom wmatom[WMLast], netatom[NetLast];
++static int restart = 0;
+ static int running = 1;
+ static Cur *cursor[CurLast];
+ static Clr **scheme;
+@@ -1409,6 +1413,7 @@ pushstack(const Arg *arg) {
+ void
+ quit(const Arg *arg)
+ {
++	if(arg->i) restart = 1;
+ 	running = 0;
+ }
+ 
+@@ -1697,6 +1702,9 @@ setup(void)
+ 	/* clean up any zombies immediately */
+ 	sigchld(0);
+ 
++	signal(SIGHUP, sighup);
++	signal(SIGTERM, sigterm);
++
+ 	/* init screen */
+ 	screen = DefaultScreen(dpy);
+ 	sw = DisplayWidth(dpy, screen);
+@@ -1828,6 +1836,20 @@ signal:
+         sigqueue(fl.l_pid, SIGRTMIN, sv);
+ }
+ 
++void
++sighup(int unused)
++{
++	Arg a = {.i = 1};
++	quit(&a);
++}
++
++void
++sigterm(int unused)
++{
++	Arg a = {.i = 0};
++	quit(&a);
++}
++
+ void
+ spawn(const Arg *arg)
+ {
+@@ -2543,6 +2565,10 @@ load_xresources(void)
+ 	XCloseDisplay(display);
+ }
+ 
++static void self_restart(const Arg *arg) {
++    execlp("dwm", "dwm", NULL);
++}
++
+ int
+ main(int argc, char *argv[])
+ {
+@@ -2564,6 +2590,7 @@ main(int argc, char *argv[])
+ #endif /* __OpenBSD__ */
+ 	scan();
+ 	run();
++	if(restart) self_restart(NULL);
+ 	cleanup();
+ 	XCloseDisplay(dpy);
+ 	return EXIT_SUCCESS;
+-- 
+2.38.1
+

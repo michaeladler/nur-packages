@@ -13,6 +13,7 @@ cinclude2dot
 clang-format-diff
 criterion
 czmod
+dwm
 efibootguard
 firefox-bin
 fmtlog

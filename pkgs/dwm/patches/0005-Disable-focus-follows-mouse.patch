@@ -1,0 +1,24 @@
+From fbdb10242231f98fc77ac372a6b82ef237288809 Mon Sep 17 00:00:00 2001
+From: Michael Adler <therisen06@gmail.com>
+Date: Wed, 21 Apr 2021 15:46:05 +0200
+Subject: [PATCH 05/16] Disable focus follows mouse
+
+---
+ dwm.c | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/dwm.c b/dwm.c
+index f27b4d9..dec001d 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -265,7 +265,6 @@ static void (*handler[LASTEvent]) (XEvent *) = {
+ 	[ConfigureRequest] = configurerequest,
+ 	[ConfigureNotify] = configurenotify,
+ 	[DestroyNotify] = destroynotify,
+-	[EnterNotify] = enternotify,
+ 	[Expose] = expose,
+ 	[FocusIn] = focusin,
+ 	[KeyPress] = keypress,
+-- 
+2.38.1
+

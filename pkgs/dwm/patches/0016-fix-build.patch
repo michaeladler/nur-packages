@@ -1,0 +1,25 @@
+From f617edc331fbde3b2daa40df5d712d9573d108d2 Mon Sep 17 00:00:00 2001
+From: Michael Adler <adlerm@mailbox.org>
+Date: Mon, 31 Oct 2022 15:28:27 +0100
+Subject: [PATCH 16/16] fix build
+
+---
+ dwm.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/dwm.c b/dwm.c
+index 96f4eef..57e0975 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1898,8 +1898,6 @@ sigterm(int unused)
+ void
+ spawn(const Arg *arg)
+ {
+-	if (arg->v == dmenucmd)
+-		dmenumon[0] = '0' + selmon->num;
+ 	if (fork() == 0) {
+ 		if (dpy)
+ 			close(ConnectionNumber(dpy));
+-- 
+2.38.1
+

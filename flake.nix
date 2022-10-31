@@ -111,6 +111,7 @@
             srandrd
             git-latest
             git-buildpackage
+            dwm
 
             astroid
             stylua

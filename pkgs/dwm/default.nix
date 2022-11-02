@@ -24,9 +24,8 @@ prev.dwm.overrideAttrs (old: {
     ./patches/0011-actualfullscreen.patch
     ./patches/0012-selfrestart.patch
     ./patches/0013-preserveonrestart.patch
-    ./patches/0014-center-first-window.patch
-    ./patches/0015-vanitygaps.patch
-    ./patches/0016-fix-build.patch
+    ./patches/0014-vanitygaps.patch
+    ./patches/0015-fix-build.patch
   ];
 
 })

@@ -1,7 +1,7 @@
-From 90edf62945b7cc55e93a5366cc45f07e1e47ac94 Mon Sep 17 00:00:00 2001
+From 588ba6cb81981d5f43d206cb842efcbe8cf6fce5 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Mon, 31 Oct 2022 15:21:27 +0100
-Subject: [PATCH 15/16] vanitygaps
+Subject: [PATCH 14/15] vanitygaps
 
 Inspired by some of the functionality of i3-gaps this patch adds (inner)
 gaps between client windows and (outer) gaps between windows and the
@@ -17,13 +17,13 @@ NB: You may also want to disable resizehints to get even gaps.
 https://dwm.suckless.org/patches/vanitygaps/
 ---
  config.def.h |  38 ++-
- dwm.c        |  46 +--
- vanitygaps.c | 818 +++++++++++++++++++++++++++++++++++++++++++++++++++
- 3 files changed, 863 insertions(+), 39 deletions(-)
+ dwm.c        |  37 +--
+ vanitygaps.c | 809 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 854 insertions(+), 30 deletions(-)
  create mode 100644 vanitygaps.c
 
 diff --git a/config.def.h b/config.def.h
-index 13a53ed..c2e8e36 100644
+index 67e87ed..b46e21f 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -3,6 +3,11 @@
@@ -38,7 +38,7 @@ index 13a53ed..c2e8e36 100644
  static int showbar            = 1;        /* 0 means no bar */
  static int topbar             = 1;        /* 0 means bottom bar */
  static const char *fonts[]          = { "monospace:size=10" };
-@@ -42,11 +47,26 @@ static int nmaster     = 1;    /* number of clients in master area */
+@@ -41,11 +46,26 @@ static int nmaster     = 1;    /* number of clients in master area */
  static int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
  static int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
  
@@ -66,7 +66,7 @@ index 13a53ed..c2e8e36 100644
  	{ NULL,       NULL },
  };
  
-@@ -105,6 +125,22 @@ static const Key keys[] = {
+@@ -104,6 +124,22 @@ static const Key keys[] = {
  	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
  	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
  	{ MODKEY,                       XK_Return, zoom,           {0} },
@@ -90,7 +90,7 @@ index 13a53ed..c2e8e36 100644
  	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 diff --git a/dwm.c b/dwm.c
-index 8eae225..96f4eef 100644
+index 5d5b579..4a9da5b 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -135,6 +135,10 @@ struct Monitor {
@@ -104,7 +104,7 @@ index 8eae225..96f4eef 100644
  	unsigned int seltags;
  	unsigned int sellt;
  	unsigned int tagset[2];
-@@ -250,7 +254,6 @@ static void spawn(const Arg *arg);
+@@ -249,7 +253,6 @@ static void spawn(const Arg *arg);
  static int stackpos(const Arg *arg);
  static void tag(const Arg *arg);
  static void tagmon(const Arg *arg);
@@ -112,7 +112,7 @@ index 8eae225..96f4eef 100644
  static void togglebar(const Arg *arg);
  static void togglefloating(const Arg *arg);
  static void togglefullscr(const Arg *arg);
-@@ -717,6 +720,10 @@ createmon(void)
+@@ -714,6 +717,10 @@ createmon(void)
  	m->nmaster = nmaster;
  	m->showbar = showbar;
  	m->topbar = topbar;
@@ -123,7 +123,7 @@ index 8eae225..96f4eef 100644
  	m->lt[0] = &layouts[0];
  	m->lt[1] = &layouts[1 % LENGTH(layouts)];
  	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
-@@ -1961,43 +1968,6 @@ tagmon(const Arg *arg)
+@@ -1958,34 +1965,6 @@ tagmon(const Arg *arg)
  	sendmon(selmon->sel, dirtomon(arg->i));
  }
  
@@ -153,15 +153,6 @@ index 8eae225..96f4eef 100644
 -			if (ty + HEIGHT(c) < m->wh)
 -				ty += HEIGHT(c);
 -		}
--
--	if (n == 1 && selmon->sel->CenterThisWindow) {
--		double ratio = 0.80, mw = selmon->mw, mh = selmon->mh;
--		resizeclient(selmon->sel,
--			(mw - mw * ratio) / 2,
--			(mh - mh * ratio) / 2,
--			mw * ratio,
--			mh * ratio);
--	}
 -}
 -
  void
@@ -169,10 +160,10 @@ index 8eae225..96f4eef 100644
  {
 diff --git a/vanitygaps.c b/vanitygaps.c
 new file mode 100644
-index 0000000..5ebf99f
+index 0000000..c336ee9
 --- /dev/null
 +++ b/vanitygaps.c
-@@ -0,0 +1,818 @@
+@@ -0,0 +1,809 @@
 +/* Key binding functions */
 +static void defaultgaps(const Arg *arg);
 +static void incrgaps(const Arg *arg);
@@ -981,15 +972,6 @@ index 0000000..5ebf99f
 +			resize(c, sx, sy, sw - (2*c->bw), (sh / sfacts) + ((i - m->nmaster) < srest ? 1 : 0) - (2*c->bw), 0);
 +			sy += HEIGHT(c) + ih;
 +		}
-+
-+	if (n == 1 && selmon->sel->CenterThisWindow) {
-+		double ratio = 0.80, mw = selmon->mw, mh = selmon->mh;
-+		resizeclient(selmon->sel,
-+			(mw - mw * ratio) / 2,
-+			(mh - mh * ratio) / 2,
-+			mw * ratio,
-+			mh * ratio);
-+	}
 +}
 -- 
 2.38.1

@@ -1,7 +1,7 @@
-From 1ab2614d09228cc45493143a493afc90d9289ba0 Mon Sep 17 00:00:00 2001
+From 24ff9b739504c4a4d24f2f8cc57d86bb57b3c34b Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 16:48:56 +0200
-Subject: [PATCH 03/16] Cycles through all avaiable layouts using MOD-CTRL-,
+Subject: [PATCH 03/15] Cycles through all avaiable layouts using MOD-CTRL-,
  and MOD-CTRL-.
 
 This adds a "NULL, NULL" layout at the end of the list, which should always be the last layout in your list.

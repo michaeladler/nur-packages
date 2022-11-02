@@ -1,7 +1,7 @@
-From 403084ae089d69eba9f120362d5aa7d630fd2612 Mon Sep 17 00:00:00 2001
+From f90562933b4e8d3fd0babc70f2637c7ea4f238a9 Mon Sep 17 00:00:00 2001
 From: Michael Adler <michael.adler@siemens.com>
 Date: Wed, 21 Sep 2022 16:23:54 +0200
-Subject: [PATCH 01/16] optimize for performance
+Subject: [PATCH 01/15] optimize for performance
 
 ---
  config.mk | 2 +-

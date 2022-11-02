@@ -1,7 +1,7 @@
-From 852f88c23a9c2bfc3a56a8abb15eeba86e7c990a Mon Sep 17 00:00:00 2001
+From 6ea991534fbd6f59073e62ecc61b9763ddb278b7 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 18:39:45 +0200
-Subject: [PATCH 12/16] selfrestart
+Subject: [PATCH 12/15] selfrestart
 
 Restart dwm without the unnecessary dependency of an external script.
 

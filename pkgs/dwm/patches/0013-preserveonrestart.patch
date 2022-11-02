@@ -1,7 +1,7 @@
-From 1e0ed4660e76e49ef2fc7b825e8e22e6447f2ae1 Mon Sep 17 00:00:00 2001
+From 07c8b9f96da4a142e49b41f7060b7c4c1a0d62ae Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 18:35:29 +0200
-Subject: [PATCH 13/16] preserveonrestart
+Subject: [PATCH 13/15] preserveonrestart
 
  By default, when dwm is recompiled-restarted all clients will lose it's
  current tag and collapse to first tag. This patch preserves clients on

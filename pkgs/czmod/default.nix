@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "czmod";
-  version = "unstable-2021-02-15";
+  version = "unstable-2022-11-04";
 
   src = fetchFromGitHub {
     owner = "skywind3000";
     repo = "czmod";
-    rev = "c406a6c0975014f88d2bc138b679c195a8337948";
-    sha256 = "1w3sa6p661ph2jyq34sdly5qf55wajrq4nf493lc4m7swlx374fp";
+    rev = "dedff7ed7ce05697c83c5adb0e0ff55429c7800e";
+    sha256 = "1md7swg206mmn3lq3b7rbd2j8a82g0bn8d7bsfk2n5mkb25y9969";
   };
 
   nativeBuildInputs = [ ];

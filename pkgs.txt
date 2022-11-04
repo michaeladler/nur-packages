@@ -4,6 +4,7 @@ awesome
 brave
 btrfs-du
 btrfs-list
+cargo-generate
 cargo-llvm-cov
 ccls
 chromium-browserpass

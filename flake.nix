@@ -113,8 +113,10 @@
             git-buildpackage
             dwm
 
+            # fill cache
             astroid
             stylua
+            cargo-generate
             ;
         };
 

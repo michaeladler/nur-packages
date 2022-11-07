@@ -26,7 +26,7 @@ jobs:
         run: |
           nix-shell \
             --command "make update-zig" \
-            -p nixUnstable update-nix-fetchgit
+            -p nixUnstable update-nix-fetchgit just
 
       - name: build
         run: |

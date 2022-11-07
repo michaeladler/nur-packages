@@ -21,7 +21,7 @@ jobs:
           make -d pkgs.txt
           nix-shell \
             --command "make build-all" \
-            -p nixUnstable
+            -p nixUnstable just
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.1

@@ -38,7 +38,7 @@ jobs:
 
           nix-shell \
             --command "make -j update-all" \
-            -p nixUnstable update-nix-fetchgit
+            -p nixUnstable update-nix-fetchgit just
           nix-shell \
             --command "nix --experimental-features 'nix-command flakes' flake check" \
             -p nixUnstable
@@ -49,7 +49,7 @@ jobs:
         run: |
           nix-shell \
             --command "make build-all" \
-            -p nixUnstable
+            -p nixUnstable just
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.1

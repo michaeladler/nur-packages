@@ -24,7 +24,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "make build-lqx" \
+            --command "just build-lqx" \
             -p nixUnstable just
 
       - name: Commit & Push changes

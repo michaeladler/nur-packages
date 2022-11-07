@@ -37,7 +37,7 @@ jobs:
           echo "access-tokens = github.com=$GITHUB_TOKEN" >>~/.config/nix/nix.conf
 
           nix-shell \
-            --command "make -j update-all" \
+            --command "just update-all" \
             -p nixUnstable update-nix-fetchgit just
           nix-shell \
             --command "nix --experimental-features 'nix-command flakes' flake check" \
@@ -48,7 +48,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "make build-all" \
+            --command "just build-all" \
             -p nixUnstable just
 
       - name: Commit & Push changes

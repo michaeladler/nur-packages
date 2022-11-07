@@ -24,7 +24,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "make build-zen" \
+            --command "just build-zen" \
             -p nixUnstable just
 
       - name: Commit & Push changes

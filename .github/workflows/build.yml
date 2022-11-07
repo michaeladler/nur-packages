@@ -18,9 +18,8 @@ jobs:
 
       - name: build
         run: |
-          make -d pkgs.txt
           nix-shell \
-            --command "make build-all" \
+            --command "just packagelist build-all" \
             -p nixUnstable just
 
       - name: Commit & Push changes

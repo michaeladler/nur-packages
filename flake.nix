@@ -113,6 +113,7 @@
             git-buildpackage
             dwm
             chromium-vimium
+            chromium-xbrowsersync
 
             # fill cache
             astroid

@@ -64,6 +64,7 @@ in
   pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
   git-buildpackage = callPackage ./pkgs/git-buildpackage { };
   chromium-vimium = callPackage ./pkgs/chromium-vimium { };
+  chromium-xbrowsersync = callPackage ./pkgs/chromium-xbrowsersync { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

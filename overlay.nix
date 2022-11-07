@@ -63,6 +63,7 @@ in
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
   git-buildpackage = callPackage ./pkgs/git-buildpackage { };
+  chromium-vimium = callPackage ./pkgs/chromium-vimium { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

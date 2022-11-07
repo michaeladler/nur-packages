@@ -9,6 +9,7 @@ cargo-llvm-cov
 ccls
 chromium-browserpass
 chromium-floccus
+chromium-vimium
 chyle
 cinclude2dot
 clang-format-diff

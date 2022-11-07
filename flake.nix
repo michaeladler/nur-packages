@@ -112,6 +112,7 @@
             git-latest
             git-buildpackage
             dwm
+            chromium-vimium
 
             # fill cache
             astroid

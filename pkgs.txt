@@ -10,6 +10,7 @@ ccls
 chromium-browserpass
 chromium-floccus
 chromium-vimium
+chromium-xbrowsersync
 chyle
 cinclude2dot
 clang-format-diff

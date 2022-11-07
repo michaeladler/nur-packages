@@ -6,7 +6,6 @@ btrfs-du
 btrfs-list
 cargo-generate
 cargo-llvm-cov
-ccls
 chromium-browserpass
 chromium-floccus
 chromium-vimium

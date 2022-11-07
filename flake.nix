@@ -71,7 +71,6 @@
             btrfs-du
             btrfs-list
             cargo-llvm-cov
-            ccls
             chromium-browserpass
             chromium-floccus
             chyle

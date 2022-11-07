@@ -15,7 +15,6 @@ in
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig-master = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;
-  ccls = (import ./pkgs/ccls) final prev;
   dwm = (import ./pkgs/dwm) final prev;
   #neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;

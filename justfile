@@ -5,12 +5,12 @@ update-rust-pkg PKG:
     set -eux
     update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
     git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
+        sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/{{ PKG }}/default.nix
         {{ NIX }} build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
-            EXPECTED=$(grep "specified: " {{ PKG }}.log | sed -E -e 's/\s*specified:\s+(.*)/\1/')
             ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
-            sed -i -e "s,$EXPECTED,$ACTUAL," ./pkgs/{{ PKG }}/default.nix
+            sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
         }
-        {{ NIX }} build '.#{{ PKG }}'
+        {{ NIX }} build --show-trace -L -v --no-link '.#{{ PKG }}'
     }
 
 build-lqx:

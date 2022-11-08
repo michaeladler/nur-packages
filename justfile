@@ -33,8 +33,8 @@ update-all-rust-pkgs: (update-rust-pkg "aoc-cli")
 
 update-other:
     #!/usr/bin/env bash
-    set -eux
-    find . -name update.sh -type f -executable | xargs -P$(shell nproc) -n1 sh
+    set -euo pipefail
+    find . -name update.sh -type f -executable | xargs -P`nproc` -n1 bash
     find pkgs -name "*.nix" \
         -not -path "pkgs/zig/*" \
         -not -path "pkgs/zls/*" \
@@ -43,7 +43,11 @@ update-other:
         -not -path "pkgs/git-latest/*" \
         -not -path "pkgs/aoc-cli/*" \
         -not -path "pkgs/chromium-vimium/*" \
-    | xargs -P$(shell nproc) -n1 update-nix-fetchgit
+        -not -path "pkgs/chromium-xbrowsersync/*" \
+        | while read -r fname; do
+            echo "updating $fname"
+            update-nix-fetchgit "$fname"
+        done
 
 update-zig:
     #!/usr/bin/env bash
@@ -56,5 +60,5 @@ update-flakes:
 
 update-all: update-flakes update-other update-all-rust-pkgs
 
-trigger-ci:
+ci-update-packages:
     gh workflow run "update packages"

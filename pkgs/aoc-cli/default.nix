@@ -12,11 +12,11 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "scarvalhojr";
     repo = "aoc-cli";
-    rev = "cf76e4d69713f810c051fcca1c18cfd113eb5d69";
-    sha256 = "1yybh404i1c74ixm602a4wxyaz94zanhzs3ldy671y71lp50qzgg";
+    rev = "7861bc3741cc365b7e2dada5c0ddd4b11aef4767";
+    sha256 = "15v2zbpsj785xyapml0kc3vpdsaaj9m0kac9zv5m7fys54w847yq";
   };
 
-  cargoHash = "sha256-jUILT5kynH7KLCtJIPr24KWBzZqdp2KIvyGMjZ8rbDM=";
+  cargoHash = "sha256-FpW1SOXz8lmXj93h+CxtB3gnyym29HN4ImNhUAJ5jAk=";
 
   nativeBuildInputs = [ pkg-config ];
 

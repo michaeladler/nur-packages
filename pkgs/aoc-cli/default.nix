@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "aoc-cli";
-  version = "unstable-2022-11-10";
+  version = "unstable-2022-11-11";
 
   src = fetchFromGitHub {
     owner = "scarvalhojr";
     repo = "aoc-cli";
-    rev = "7861bc3741cc365b7e2dada5c0ddd4b11aef4767";
-    sha256 = "15v2zbpsj785xyapml0kc3vpdsaaj9m0kac9zv5m7fys54w847yq";
+    rev = "f546a416f766de3f3327e00e97fb051896133054";
+    sha256 = "0fp0rxmfddx0n177whmajhvqlll2rhkdygcj0a6pskfw8fanslpp";
   };
 
-  cargoHash = "sha256-FpW1SOXz8lmXj93h+CxtB3gnyym29HN4ImNhUAJ5jAk=";
+  cargoHash = "sha256-duWWJf7BmDgmHC2Eye7sFxevLmm+UUYkq8O1cZdJFwE=";
 
   nativeBuildInputs = [ pkg-config ];
 

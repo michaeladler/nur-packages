@@ -12,8 +12,8 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "scarvalhojr";
     repo = "aoc-cli";
-    rev = "f546a416f766de3f3327e00e97fb051896133054";
-    sha256 = "0fp0rxmfddx0n177whmajhvqlll2rhkdygcj0a6pskfw8fanslpp";
+    rev = "1b627fb51dc1f04c5c183adc9e09e343cb5d34ca";
+    sha256 = "13r7yg0h6wg5xrdb69gc90nqh4fxbfxs8rcs9pzvmbyis8qnk0na";
   };
 
   cargoHash = "sha256-duWWJf7BmDgmHC2Eye7sFxevLmm+UUYkq8O1cZdJFwE=";

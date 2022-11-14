@@ -62,3 +62,6 @@ update-all: update-flakes update-other update-all-rust-pkgs
 
 ci-update-packages:
     gh workflow run "update packages"
+
+ci-zen:
+    gh workflow run "zen"

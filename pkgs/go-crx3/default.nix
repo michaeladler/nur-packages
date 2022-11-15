@@ -2,20 +2,16 @@
 
 buildGo119Module {
   name = "go-crx3";
-  version = "unstable-2022-09-14";
+  version = "unstable-2022-11-14";
 
   src = fetchFromGitHub {
     owner = "mmadfox";
     repo = "go-crx3";
-    rev = "4f73dedc04a3898e6f18408ac628fcc7c49b8f2b"; # pin
-    sha256 = "1rz29b62h631w454xvb5rzcg3v1nf9ggfx8qqq564b070aasng45";
+    rev = "b26a1a153fb1cf57d4758cd34855558a246e204d";
+    sha256 = "056jk8l8457siwgh9q2zxllpzivx2fbz1jfjyy38zbcb6brcjg0a";
   };
 
   vendorSha256 = "sha256-uJFELBJy5lLmwvZizcIpgo6HcugX4jMIGN4d9NrAsVA=";
-
-  patches = [
-    ./0001-added-go.sum.patch
-  ];
 
   doCheck = false;
 

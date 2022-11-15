@@ -1,18 +1,5 @@
 NIX := "nix --experimental-features 'nix-command flakes'"
 
-update-rust-pkg PKG:
-    #!/usr/bin/env bash
-    set -eux
-    update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
-    git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
-        sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/{{ PKG }}/default.nix
-        {{ NIX }} build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
-            ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
-            sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
-        }
-        {{ NIX }} build --show-trace -L -v --no-link '.#{{ PKG }}'
-    }
-
 build-lqx:
     {{ NIX }} build --show-trace -L -v --no-link '.#linux.lqx' '.#nvidia.lqx' '.#cpupower.lqx'
 
@@ -65,3 +52,29 @@ ci-update-packages:
 
 ci-zen:
     gh workflow run "zen"
+
+update-rust-pkg PKG:
+    #!/usr/bin/env bash
+    set -eux
+    update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
+    git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
+        sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/{{ PKG }}/default.nix
+        {{ NIX }} build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
+            ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
+            sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
+        }
+        {{ NIX }} build --show-trace -L -v --no-link '.#{{ PKG }}'
+    }
+
+update-go-pkg PKG:
+    #!/usr/bin/env bash
+    set -eux
+    update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
+    git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
+        sed -i -E -e 's,vendorSha256 = .*,vendorSha256 = lib.fakeSha256;,' ./pkgs/{{ PKG }}/default.nix
+        {{ NIX }} build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
+            ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
+            sed -i -E -e "s,vendorSha256 = .*,vendorSha256 = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
+        }
+        {{ NIX }} build --show-trace -L -v --no-link '.#{{ PKG }}'
+    }

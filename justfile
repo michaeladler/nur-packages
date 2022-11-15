@@ -18,6 +18,8 @@ packagelist:
 
 update-all-rust-pkgs: (update-rust-pkg "aoc-cli")
 
+update-all-go-pkgs: (update-rust-pkg "go-crx3")
+
 update-other:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -29,6 +31,7 @@ update-other:
         -not -path "pkgs/git-buildpackage/*" \
         -not -path "pkgs/git-latest/*" \
         -not -path "pkgs/aoc-cli/*" \
+        -not -path "pkgs/go-crx3/*" \
         -not -path "pkgs/chromium-vimium/*" \
         -not -path "pkgs/chromium-xbrowsersync/*" \
         | while read -r fname; do
@@ -45,7 +48,7 @@ update-zig:
 update-flakes:
     {{ NIX }} flake update
 
-update-all: update-flakes update-other update-all-rust-pkgs
+update-all: update-flakes update-other update-all-rust-pkgs update-all-go-pkgs
 
 ci-update-packages:
     gh workflow run "update packages"

@@ -1,5 +1,8 @@
 NIX := "nix --experimental-features 'nix-command flakes'"
 
+build PKG:
+    {{ NIX }} build --show-trace -L -v '.#{{ PKG }}'
+
 build-lqx:
     {{ NIX }} build --show-trace -L -v --no-link '.#linux.lqx' '.#nvidia.lqx' '.#cpupower.lqx'
 

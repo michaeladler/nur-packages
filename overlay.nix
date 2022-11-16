@@ -64,6 +64,7 @@ in
   git-buildpackage = callPackage ./pkgs/git-buildpackage { };
   chromium-vimium = callPackage ./pkgs/chromium-vimium { };
   chromium-xbrowsersync = callPackage ./pkgs/chromium-xbrowsersync { };
+  msktutil = callPackage ./pkgs/msktutil { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

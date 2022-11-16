@@ -113,6 +113,7 @@
             dwm
             chromium-vimium
             chromium-xbrowsersync
+            msktutil
 
             # fill cache
             astroid

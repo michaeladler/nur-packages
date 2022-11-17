@@ -1,7 +1,7 @@
 From 6c56418930c92e68c87d3d20042367fe74f28760 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 16:56:07 +0200
-Subject: [PATCH 07/15] pertag
+Subject: [PATCH 07/16] pertag
 
 This patch keeps layout, mwfact, barpos and nmaster per tag.
 

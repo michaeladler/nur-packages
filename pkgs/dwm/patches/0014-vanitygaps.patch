@@ -1,7 +1,7 @@
 From 588ba6cb81981d5f43d206cb842efcbe8cf6fce5 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Mon, 31 Oct 2022 15:21:27 +0100
-Subject: [PATCH 14/15] vanitygaps
+Subject: [PATCH 14/16] vanitygaps
 
 Inspired by some of the functionality of i3-gaps this patch adds (inner)
 gaps between client windows and (outer) gaps between windows and the

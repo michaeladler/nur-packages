@@ -26,6 +26,7 @@ prev.dwm.overrideAttrs (old: {
     ./patches/0013-preserveonrestart.patch
     ./patches/0014-vanitygaps.patch
     ./patches/0015-fix-build.patch
+    ./patches/0016-autostart.patch
   ];
 
 })

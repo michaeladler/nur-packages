@@ -1,7 +1,7 @@
 From 2f40e1357404ac1a6df83e13ad8a26f16058b9f6 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 16:51:06 +0200
-Subject: [PATCH 04/15] New clients attach at the bottom of the stack instead
+Subject: [PATCH 04/16] New clients attach at the bottom of the stack instead
  of the top.
 
 Some users find this to be a less obtrusive attachment behavior, since no existing clients are ever moved, only resized.

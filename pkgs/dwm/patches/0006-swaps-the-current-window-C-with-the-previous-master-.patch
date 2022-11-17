@@ -1,7 +1,7 @@
 From 7f98fd764e4af5616b37b2187ddfeffa22063f98 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 16:54:13 +0200
-Subject: [PATCH 06/15] swaps the current window (C) with the previous master
+Subject: [PATCH 06/16] swaps the current window (C) with the previous master
  (P) when zooming
 
 https://dwm.suckless.org/patches/zoomswap/

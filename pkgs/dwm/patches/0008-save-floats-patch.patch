@@ -1,7 +1,7 @@
 From 6216410586cccc29547622b81882f8d37108a81a Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 17:02:55 +0200
-Subject: [PATCH 08/15] save floats patch
+Subject: [PATCH 08/16] save floats patch
 
 This patch saves size and position of every floating window before it is
 forced into tiled mode. If the window is made floating again, the old

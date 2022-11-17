@@ -1,7 +1,7 @@
 From 7f10e4f93081fb52cb8ee2f76697358562576c20 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sat, 10 Sep 2022 18:21:03 +0200
-Subject: [PATCH 11/15] actualfullscreen
+Subject: [PATCH 11/16] actualfullscreen
 
 Actually toggle fullscreen for a window, instead of toggling the status
 bar and the monocle layout.

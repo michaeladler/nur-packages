@@ -86,7 +86,6 @@
             git-hours
             go-crx3
             go-mod-outdated
-            handlr
             kas-container
             leakdice
             libubootenv

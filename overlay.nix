@@ -11,7 +11,6 @@ in
   # overlays
   awesome = (import ./pkgs/awesome) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
-  handlr = (import ./pkgs/handlr) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig-master = (import ./pkgs/zig) final prev;
   zls = (import ./pkgs/zls) final prev;

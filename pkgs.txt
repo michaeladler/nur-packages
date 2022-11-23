@@ -26,6 +26,7 @@ git-hours
 git-latest
 go-crx3
 go-mod-outdated
+herbstluftwm
 kas-container
 leakdice
 libubootenv

@@ -113,6 +113,7 @@
             chromium-vimium
             chromium-xbrowsersync
             msktutil
+            herbstluftwm
 
             # fill cache
             astroid

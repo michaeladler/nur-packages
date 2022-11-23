@@ -10,6 +10,7 @@ in
 
   # overlays
   awesome = (import ./pkgs/awesome) final prev;
+  herbstluftwm = (import ./pkgs/herbstluftwm) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   zig-master = (import ./pkgs/zig) final prev;

@@ -114,6 +114,7 @@
             chromium-xbrowsersync
             msktutil
             herbstluftwm
+            notmuch-mailmover
 
             # fill cache
             astroid

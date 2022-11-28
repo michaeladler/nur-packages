@@ -31,6 +31,7 @@
 , libXrender
 , libXScrnSaver
 , libxshmfence
+, libkrb5
 , libXtst
 , mesa
 , nspr
@@ -78,6 +79,7 @@ rpath = lib.makeLibraryPath [
   libXrandr
   libXrender
   libxshmfence
+  libkrb5
   libXtst
   libuuid
   mesa

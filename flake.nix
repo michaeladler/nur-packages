@@ -120,6 +120,7 @@
             astroid
             stylua
             cargo-generate
+            marksman
             ;
         };
 

@@ -21,7 +21,7 @@ packagelist:
 
 update-all-rust-pkgs: (update-rust-pkg "aoc-cli") (update-rust-pkg "notmuch-mailmover")
 
-update-all-go-pkgs: (update-rust-pkg "go-crx3")
+update-all-go-pkgs: (update-rust-pkg "go-crx3") (update-rust-pkg "bed")
 
 update-other:
     #!/usr/bin/env bash
@@ -33,14 +33,14 @@ update-other:
         -not -path "pkgs/pandoc/*" \
         -not -path "pkgs/git-buildpackage/*" \
         -not -path "pkgs/git-latest/*" \
-        -not -path "pkgs/go-crx3/*" \
         -not -path "pkgs/chromium-vimium/*" \
         -not -path "pkgs/chromium-xbrowsersync/*" \
-        -not -path "pkgs/aoc-cli/*" \
-        -not -path "pkgs/notmuch-mailmover/*" \
         | while read -r fname; do
-            echo "updating $fname"
-            update-nix-fetchgit "$fname"
+            # skip go/rust packages
+            grep -E -q "(buildGo|buildRustPackage)" "$fname" || {
+                echo "updating $fname"
+                update-nix-fetchgit "$fname"
+            }
         done
 
 update-zig:

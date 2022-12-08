@@ -1,6 +1,7 @@
 aoc-cli
 astroid
 awesome
+bed
 brave
 btrfs-du
 btrfs-list

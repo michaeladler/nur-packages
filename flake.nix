@@ -115,6 +115,7 @@
             msktutil
             herbstluftwm
             notmuch-mailmover
+            bed
 
             # fill cache
             astroid

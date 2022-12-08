@@ -34,6 +34,7 @@ in
 
   # missing upstream
   aoc-cli = callPackage ./pkgs/aoc-cli { };
+  bed = callPackage ./pkgs/bed { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };

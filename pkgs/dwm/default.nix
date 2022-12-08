@@ -2,12 +2,12 @@ final: prev:
 
 prev.dwm.overrideAttrs (old: {
 
-  version = "unstable-2022-10-28";
+  version = "unstable-2022-12-07";
 
   src = final.fetchgit {
     url = "git://git.suckless.org/dwm";
-    rev = "ba56fe9fea0a28d8184a727a987836a0903e2682";
-    sha256 = "0b8fnhf59miqgsvmgn1rbh6llb8ii09s3vgvi8kqvb4d35nmpx3g";
+    rev = "89f9905714c1c1b2e8b09986dfbeca15b68d8af8";
+    sha256 = "17rd1qx9snfarnwrzmnmcyjk2iyij42hln2r5mj8zagxxn4biwr9";
   };
 
   patches = (old.patches or [ ]) ++ [

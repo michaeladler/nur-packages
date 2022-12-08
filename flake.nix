@@ -119,10 +119,9 @@
 
             # fill cache
             astroid
+            stylua
             cargo-generate
             marksman
-            rocm-opencl-icd
-            rocm-opencl-runtime
             ;
         };
 

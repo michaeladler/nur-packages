@@ -6,7 +6,6 @@ brave
 btrfs-du
 btrfs-list
 cargo-generate
-cargo-llvm-cov
 chromium-browserpass
 chromium-floccus
 chromium-vimium

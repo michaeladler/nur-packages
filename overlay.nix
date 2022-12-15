@@ -37,7 +37,6 @@ in
   bed = callPackage ./pkgs/bed { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };
-  cargo-llvm-cov = callPackage ./pkgs/cargo-llvm-cov { };
   chromium-browserpass = callPackage ./pkgs/chromium-browserpass { };
   chromium-floccus = callPackage ./pkgs/chromium-floccus { };
   chyle = callPackage ./pkgs/chyle { };

@@ -55,7 +55,6 @@
             brave
             btrfs-du
             btrfs-list
-            cargo-llvm-cov
             chromium-browserpass
             chromium-floccus
             chyle

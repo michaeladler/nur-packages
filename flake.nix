@@ -6,25 +6,18 @@
     nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     nur.url = "github:nix-community/NUR";
-    crane = {
-      url = "github:ipetkov/crane";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, flake-utils, nur, crane }:
+  outputs = { self, nixpkgs, flake-utils, nur }:
 
     {
       overlay = import ./overlay.nix;
     } // (flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
 
       let
-        craneOverlay = final: prev: {
-          craneLib = crane.lib.${system};
-        };
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ craneOverlay self.overlay ];
+          overlays = [ self.overlay ];
           config.allowUnfree = true;
         };
         nurPkgs = import nixpkgs {

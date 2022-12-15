@@ -1,11 +1,7 @@
 {
-  description = "My NUR";
-
-  #inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs = {
     nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    nur.url = "github:nix-community/NUR";
   };
 
   outputs = { self, nixpkgs, flake-utils, nur }:
@@ -19,10 +15,6 @@
           inherit system;
           overlays = [ self.overlay ];
           config.allowUnfree = true;
-        };
-        nurPkgs = import nixpkgs {
-          inherit system;
-          overlays = [ nur.overlay ];
         };
 
       in

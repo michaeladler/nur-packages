@@ -9,6 +9,9 @@ build-lqx:
 build-zen:
     {{ NIX }} build --show-trace -L -v --no-link '.#linux.zen' '.#nvidia.zen' '.#cpupower.zen'
 
+build-linux:
+    {{ NIX }} build --show-trace -L -v --no-link '.#linux.vanilla' '.#nvidia.vanilla' '.#cpupower.vanilla'
+
 build-all:
     sed -E -e 's/(.*)/.#\1/' <pkgs.txt | xargs --delimiter='\n' {{ NIX }} build --show-trace -L -v --no-link
 

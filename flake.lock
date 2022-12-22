@@ -17,11 +17,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1671707131,
-        "narHash": "sha256-x8VBlh3p0ONl65RkOAnGWzKWo9AeeWyagc8/RexYO6A=",
+        "lastModified": 1671707260,
+        "narHash": "sha256-lAXNC1hGXvIn9sj+QJbv4RBGIzASM7dSNIv0A6fCudE=",
         "owner": "michaeladler",
         "repo": "nixpkgs",
-        "rev": "d4901ba22bdb273e6ed4cc4b9b50bd48439f7d46",
+        "rev": "03b9e4eb666a8c49a145a1c3a8726d36e259ab2e",
         "type": "github"
       },
       "original": {

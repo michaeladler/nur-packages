@@ -1,5 +1,5 @@
 ---
-name: lqx
+name: linux
 
 on:
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "just build-lqx" \
+            --command "just build-linux" \
             -p nixUnstable just
 
       - name: Commit & Push changes

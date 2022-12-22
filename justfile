@@ -1,24 +1,22 @@
-NIX := "nix --experimental-features 'nix-command flakes'"
-
 build PKG:
-    {{ NIX }} build --show-trace -L -v '.#{{ PKG }}'
+    nix build --show-trace -L --no-link '.#{{ PKG }}'
 
 build-lqx:
-    {{ NIX }} build --show-trace -L -v --no-link '.#linux.lqx' '.#nvidia.lqx' '.#cpupower.lqx'
+    nix build --show-trace -L --no-link '.#linux.lqx' '.#nvidia.lqx' '.#cpupower.lqx'
 
 build-zen:
-    {{ NIX }} build --show-trace -L -v --no-link '.#linux.zen' '.#nvidia.zen' '.#cpupower.zen'
+    nix build --show-trace -L --no-link '.#linux.zen' '.#nvidia.zen' '.#cpupower.zen'
 
 build-linux:
-    {{ NIX }} build --show-trace -L -v --no-link '.#linux.vanilla' '.#nvidia.vanilla' '.#cpupower.vanilla'
+    nix build --show-trace -L --no-link '.#linux.vanilla' '.#nvidia.vanilla' '.#cpupower.vanilla'
 
 build-all:
-    sed -E -e 's/(.*)/.#\1/' <pkgs.txt | xargs --delimiter='\n' {{ NIX }} build --show-trace -L -v --no-link
+    sed -E -e 's/(.*)/.#\1/' <pkgs.txt | xargs --delimiter='\n' nix build --show-trace -L --no-link
 
 packagelist:
     #!/usr/bin/env bash
     set -eu
-    {{ NIX }} eval --impure --expr 'let flake = builtins.getFlake (toString ./.); in (builtins.toJSON (builtins.attrNames flake.packages.x86_64-linux)) ' \
+    nix eval --impure --expr 'let flake = builtins.getFlake (toString ./.); in (builtins.toJSON (builtins.attrNames flake.packages.x86_64-linux)) ' \
         | python -c 'import sys, json; raw = input().encode().decode("unicode_escape").strip("\""); pkgs = json.loads(raw); print("\n".join(pkgs))' \
         | tee pkgs.txt
 
@@ -53,7 +51,7 @@ update-zig:
     update-nix-fetchgit ./pkgs/zls/default.nix
 
 update-flakes:
-    {{ NIX }} flake update
+    nix flake update
 
 update-all: update-flakes update-other update-all-rust-pkgs update-all-go-pkgs
 
@@ -69,11 +67,11 @@ update-rust-pkg PKG:
     update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
     git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
         sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/{{ PKG }}/default.nix
-        {{ NIX }} build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
+        nix build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
             ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
             sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
         }
-        {{ NIX }} build --show-trace -L -v --no-link '.#{{ PKG }}'
+        nix build --show-trace -L -v --no-link '.#{{ PKG }}'
     }
 
 update-go-pkg PKG:
@@ -82,9 +80,9 @@ update-go-pkg PKG:
     update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
     git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
         sed -i -E -e 's,vendorSha256 = .*,vendorSha256 = lib.fakeSha256;,' ./pkgs/{{ PKG }}/default.nix
-        {{ NIX }} build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
+        nix build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
             ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
             sed -i -E -e "s,vendorSha256 = .*,vendorSha256 = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
         }
-        {{ NIX }} build --show-trace -L -v --no-link '.#{{ PKG }}'
+        nix build --show-trace -L -v --no-link '.#{{ PKG }}'
     }

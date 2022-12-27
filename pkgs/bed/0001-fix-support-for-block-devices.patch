@@ -1,56 +1,41 @@
-From 4cd656f7b2b2908856f493034fbb2ab5289c2da1 Mon Sep 17 00:00:00 2001
+From 07f28f4c4920c7ca40c23a5e7efc0d81ae039772 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
-Date: Wed, 7 Dec 2022 21:40:19 +0100
+Date: Tue, 27 Dec 2022 21:12:41 +0100
 Subject: [PATCH] fix: support for block devices
 
-Currently it's not possible to edit devices (e.g. /dev/sda1) since
-a new file is created and then moved to its destination.
 ---
- window/manager.go | 14 ++++++--------
- 1 file changed, 6 insertions(+), 8 deletions(-)
+ window/manager.go | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
 
 diff --git a/window/manager.go b/window/manager.go
-index 712a5f3..d73d4e0 100644
+index 4e3866c..965bcc6 100644
 --- a/window/manager.go
 +++ b/window/manager.go
-@@ -4,7 +4,6 @@ import (
- 	"bytes"
- 	"errors"
- 	"fmt"
--	"math/rand"
- 	"os"
- 	"os/exec"
- 	"path/filepath"
-@@ -550,23 +549,22 @@ func (m *Manager) writeFile(r *event.Range, name string) (string, int64, error)
+@@ -553,6 +553,24 @@ func (m *Manager) writeFile(r *event.Range, name string) (string, int64, error)
  		window.name = filepath.Base(name)
  		window.mu.Unlock()
  	}
--	tmpf, err := os.OpenFile(
--		name+"-"+strconv.FormatUint(rand.Uint64(), 16),
--		os.O_RDWR|os.O_CREATE|os.O_EXCL, m.filePerm(name),
-+	f, err := os.OpenFile(
-+		name,
-+		os.O_RDWR|os.O_CREATE, m.filePerm(name),
- 	) //#nosec G404
- 	if err != nil {
- 		return name, 0, err
- 	}
--	defer os.Remove(tmpf.Name())
--	n, err := window.writeTo(r, tmpf)
--	tmpf.Close()
-+	defer f.Close()
-+	n, err := window.writeTo(r, f)
- 	if err != nil {
- 		return name, 0, err
- 	}
- 	if window.filename == name {
- 		window.savedChangedTick = window.changedTick
- 	}
--	return name, n, os.Rename(tmpf.Name(), name)
-+	return name, n, nil
- }
- 
- func (m *Manager) filePerm(name string) os.FileMode {
++	if fi, err := os.Lstat(name); err == nil && fi.Mode()&os.ModeType == os.ModeDevice {
++		f, err := os.OpenFile(name, os.O_RDWR, 0)
++		if err != nil {
++			return name, 0, err
++		}
++		defer f.Close()
++		if err := f.Truncate(0); err != nil {
++			return name, 0, err
++		}
++		n, err := window.writeTo(r, f)
++		if err != nil {
++			return name, 0, err
++		}
++		if window.filename == name {
++			window.savedChangedTick = window.changedTick
++		}
++		return name, n, nil
++	}
+ 	tmpf, err := os.OpenFile(
+ 		name+"-"+strconv.FormatUint(rand.Uint64(), 16),
+ 		os.O_RDWR|os.O_CREATE|os.O_EXCL, m.filePerm(name),
 -- 
-2.38.1
+2.39.0
 

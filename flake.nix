@@ -103,7 +103,6 @@
             herbstluftwm
             notmuch-mailmover
             bed
-            aocf
 
             # fill cache
             astroid

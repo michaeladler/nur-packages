@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "skipcpio";
-  version = "unstable-2022-12-28";
+  version = "unstable-2022-12-30";
 
   src = fetchFromGitHub {
     owner = "dracutdevs";
     repo = "dracut";
-    rev = "94dcac7ccdfeb2ff7bd7c59c0f8bf46d0698ce3f";
-    sha256 = "07rfnsbg1v8lx5cnczyb4f878j7jjpyf2mz5di8v6x5c6ci9xfkd";
+    rev = "10cf8e46f43a7a2094e4d861c1296db6af0e0fa1";
+    sha256 = "0blpxvbmli2vn2h7vzpjagmqn3l7iimx701206svkmi427595f2c";
   };
 
   buildInputs = [ pkg-config ];

@@ -17,10 +17,6 @@ buildGoModule {
 
   dontPatchELF = true;
 
-  patches = [
-    ./0001-fix-support-for-block-devices.patch
-  ];
-
   meta = with lib; {
     homepage = "https://github.com/itchyny/bed";
     description = "Binary editor written in Go";

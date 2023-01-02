@@ -65,6 +65,7 @@ in
   chromium-xbrowsersync = callPackage ./pkgs/chromium-xbrowsersync { };
   msktutil = callPackage ./pkgs/msktutil { };
   notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
+  clipboard = callPackage ./pkgs/clipboard { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

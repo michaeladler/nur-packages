@@ -1,5 +1,5 @@
 build PKG:
-    nix build --show-trace -L --no-link '.#{{ PKG }}'
+    nix build --show-trace -L '.#{{ PKG }}'
 
 build-lqx:
     nix build --show-trace -L --no-link '.#linux.lqx' '.#nvidia.lqx' '.#cpupower.lqx'

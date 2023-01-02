@@ -102,6 +102,7 @@
             herbstluftwm
             notmuch-mailmover
             bed
+            clipboard
 
             # fill cache
             astroid

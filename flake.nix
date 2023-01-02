@@ -74,7 +74,6 @@
             go-crx3
             go-mod-outdated
             kas-container
-            leakdice
             libubootenv
             luaprompt
             neovim-unwrapped

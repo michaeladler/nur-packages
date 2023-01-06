@@ -1,14 +1,14 @@
 { stdenv, lib, fetchFromGitHub, pkgconfig, autoreconfHook, kerberos, cyrus_sasl, openldap }:
 
 stdenv.mkDerivation rec {
-  version = "unstable-2022-11-25";
+  version = "unstable-2022-12-23";
   name = "msktutil";
 
   src = fetchFromGitHub {
     owner = "msktutil";
     repo = "msktutil";
-    rev = "802e2993e83680901533ecde573640a63afb6d89";
-    sha256 = "16j98k6pclqhxar4n0ia0250pnym2mkirpy507v0dwz1ybmpb2qh";
+    rev = "7c1338ea4a7679966c5eb671eeb63fb68c0a05f4";
+    sha256 = "0hymw8j6v147z2w22z4p98spx74hxhy4bmpas6iwkwgmmq9nghgy";
   };
 
   nativeBuildInputs = [ pkgconfig autoreconfHook ];

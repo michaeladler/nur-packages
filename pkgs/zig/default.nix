@@ -21,7 +21,7 @@ prev.zig.overrideAttrs (old: {
   installPhase = let version = zig_versions.version; in
     ''
       mkdir -p "$out/bin"
-      mv * "$out/"
+      cp -a * "$out/"
       install -m0644 -D $out/LICENSE $out/share/${old.pname}/LICENSE
       rm -f $out/LICENSE
       ln -s "$out/zig" "$out/bin/zig"

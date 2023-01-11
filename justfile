@@ -27,7 +27,10 @@ update-all-go-pkgs: (update-rust-pkg "go-crx3") (update-rust-pkg "bed")
 update-other:
     #!/usr/bin/env bash
     set -euo pipefail
-    find . -name update.sh -type f -executable | xargs -P`nproc` -n1 bash
+    find . -name update.sh -type f -executable | while read -r fname; do 
+        echo "Running $fname"
+        sh -c $fname
+    done
     find pkgs -name "*.nix" \
         -not -path "pkgs/pandoc/*" \
         -not -path "pkgs/git-buildpackage/*" \

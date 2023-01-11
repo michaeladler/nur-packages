@@ -13,8 +13,6 @@ in
   herbstluftwm = (import ./pkgs/herbstluftwm) final prev;
   firefox-bin-unwrapped = (import ./pkgs/firefox-bin-unwrapped) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
-  zig-master = (import ./pkgs/zig) final prev;
-  zls = (import ./pkgs/zls) final prev;
   dwm = (import ./pkgs/dwm) final prev;
   #neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;

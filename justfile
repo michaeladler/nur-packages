@@ -29,8 +29,6 @@ update-other:
     set -euo pipefail
     find . -name update.sh -type f -executable | xargs -P`nproc` -n1 bash
     find pkgs -name "*.nix" \
-        -not -path "pkgs/zig/*" \
-        -not -path "pkgs/zls/*" \
         -not -path "pkgs/pandoc/*" \
         -not -path "pkgs/git-buildpackage/*" \
         -not -path "pkgs/git-latest/*" \
@@ -43,12 +41,6 @@ update-other:
                 update-nix-fetchgit "$fname"
             }
         done
-
-update-zig:
-    #!/usr/bin/env bash
-    set -eux
-    pkgs/zig/update-special.sh
-    update-nix-fetchgit ./pkgs/zls/default.nix
 
 update-flakes:
     nix flake update

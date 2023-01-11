@@ -2,7 +2,6 @@
 [![lqx](https://github.com/michaeladler/nur-packages/actions/workflows/build-lqx.yml/badge.svg)](https://github.com/michaeladler/nur-packages/actions/workflows/build-lqx.yml)
 [![zen](https://github.com/michaeladler/nur-packages/actions/workflows/build-zen.yml/badge.svg)](https://github.com/michaeladler/nur-packages/actions/workflows/build-zen.yml)
 [![update packages](https://github.com/michaeladler/nur-packages/actions/workflows/update.yml/badge.svg)](https://github.com/michaeladler/nur-packages/actions/workflows/update.yml)
-[![update zig](https://github.com/michaeladler/nur-packages/actions/workflows/update-zig.yml/badge.svg)](https://github.com/michaeladler/nur-packages/actions/workflows/update-zig.yml)
 
 # nur-packages
 

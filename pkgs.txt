@@ -48,7 +48,5 @@ sumneko-lua-language-server
 thinkfan
 tlpui
 vcalendar-filter
-zig-master
 zinit
-zls
 zoxide

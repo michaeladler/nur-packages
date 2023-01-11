@@ -87,9 +87,7 @@
             thinkfan
             tlpui
             vcalendar-filter
-            zig-master
             zinit
-            zls
             zoxide
             pam-fprint-grosshack
             srandrd

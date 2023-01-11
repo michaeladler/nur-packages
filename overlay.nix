@@ -31,7 +31,7 @@ in
   criterion = callPackage ./pkgs/criterion { };
 
   # missing upstream
-  aoc-cli = callPackage ./pkgs/aoc-cli { };
+  age-plugin-yubikey = callPackage ./pkgs/age-plugin-yubikey {};
   bed = callPackage ./pkgs/bed { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };

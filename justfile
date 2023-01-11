@@ -20,7 +20,7 @@ packagelist:
         | python -c 'import sys, json; raw = input().encode().decode("unicode_escape").strip("\""); pkgs = json.loads(raw); print("\n".join(pkgs))' \
         | tee pkgs.txt
 
-update-all-rust-pkgs: (update-rust-pkg "aoc-cli") (update-rust-pkg "notmuch-mailmover")
+update-all-rust-pkgs: (update-rust-pkg "age-plugin-yubikey") (update-rust-pkg "notmuch-mailmover")
 
 update-all-go-pkgs: (update-rust-pkg "go-crx3") (update-rust-pkg "bed")
 

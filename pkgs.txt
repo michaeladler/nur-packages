@@ -1,4 +1,4 @@
-aoc-cli
+age-plugin-yubikey
 astroid
 awesome
 bed

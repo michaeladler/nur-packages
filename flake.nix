@@ -53,7 +53,7 @@
 
         packages = flake-utils.lib.flattenTree {
           inherit (pkgs)
-            aoc-cli
+            age-plugin-yubikey
             awesome
             brave
             btrfs-du

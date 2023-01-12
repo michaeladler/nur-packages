@@ -2,18 +2,22 @@
 
 stdenv.mkDerivation rec {
   pname = "clipboard";
-  version = "unstable-2023-01-10";
+  version = "unstable-2023-01-11";
 
   src = fetchFromGitHub {
     owner = "Slackadays";
     repo = "Clipboard";
-    rev = "1fbf0159c0524729e003175b3b401d618db7e737";
-    sha256 = "0nrw2gmqc4mmbl4yja3njm0fjkqmzdvwj6m0dhdyx74fcff9z50s";
+    rev = "bb0a7dc92df6a9bc585cdd916a3f9844b17f44db";
+    sha256 = "1hsj8hwy7ln69ccz4g1fcsy2h7j2jj50vmxng7cyp7zzb030dnzh";
   };
 
   nativeBuildInputs = [ pkg-config cmake ];
 
   buildInputs = [ xorg.libX11 ];
+
+  cmakeFlags = [
+    "-DINSTALL_PREFIX=$out"
+  ];
 
   meta = with lib; {
     homepage = "https://github.com/Slackadays/Clipboard";

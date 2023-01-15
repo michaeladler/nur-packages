@@ -16,9 +16,7 @@ clang-format-diff
 clipboard
 criterion
 czmod
-dwm
 efibootguard
-firefox-bin
 fmtlog
 fstabfmt
 fzy-lua-native

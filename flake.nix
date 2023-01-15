@@ -66,7 +66,6 @@
             criterion
             czmod
             efibootguard
-            firefox-bin
             fmtlog
             fstabfmt
             fzy-lua-native
@@ -92,7 +91,6 @@
             srandrd
             git-latest
             git-buildpackage
-            dwm
             chromium-vimium
             chromium-xbrowsersync
             msktutil

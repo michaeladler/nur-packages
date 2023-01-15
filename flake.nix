@@ -76,7 +76,6 @@
             kas-container
             libubootenv
             luaprompt
-            neovim-unwrapped
             nix-direnv
             pandoc
             qmarkdown

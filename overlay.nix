@@ -16,6 +16,7 @@ in
   zinit = (import ./pkgs/zinit) final prev;
   thinkfan = (import ./pkgs/thinkfan) final prev;
   srandrd = (import ./pkgs/srandrd) final prev;
+  waybar-hyprland = (import ./pkgs/waybar-hyprland.nix) final prev;
   git-latest = ((import ./pkgs/git-latest) final prev).override {
     sendEmailSupport = true;
     withSsh = true;
@@ -28,7 +29,7 @@ in
   criterion = callPackage ./pkgs/criterion { };
 
   # missing upstream
-  age-plugin-yubikey = callPackage ./pkgs/age-plugin-yubikey {};
+  age-plugin-yubikey = callPackage ./pkgs/age-plugin-yubikey { };
   bed = callPackage ./pkgs/bed { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };

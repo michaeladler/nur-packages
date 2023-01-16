@@ -45,5 +45,6 @@ sumneko-lua-language-server
 thinkfan
 tlpui
 vcalendar-filter
+waybar-hyprland
 zinit
 zoxide

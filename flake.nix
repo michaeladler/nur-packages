@@ -98,6 +98,7 @@
             notmuch-mailmover
             bed
             clipboard
+            waybar-hyprland
 
             # fill cache
             astroid

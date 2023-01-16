@@ -13,6 +13,7 @@ prev.waybar.overrideAttrs (old: {
 
   mesonFlags = old.mesonFlags ++ [
     "-Dmpris=disabled"
+    "-Dexperimental=true"
   ];
 
   # see https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=waybar-hyprland-git

@@ -1,6 +1,5 @@
 age-plugin-yubikey
 astroid
-awesome
 bed
 brave
 btrfs-du

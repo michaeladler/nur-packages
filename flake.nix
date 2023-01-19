@@ -54,7 +54,6 @@
         packages = flake-utils.lib.flattenTree {
           inherit (pkgs)
             age-plugin-yubikey
-            awesome
             brave
             btrfs-du
             btrfs-list

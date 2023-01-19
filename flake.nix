@@ -94,7 +94,6 @@
             chromium-vimium
             chromium-xbrowsersync
             msktutil
-            herbstluftwm
             notmuch-mailmover
             bed
             clipboard

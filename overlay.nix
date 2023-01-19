@@ -10,7 +10,6 @@ in
 
   # overlays
   awesome = (import ./pkgs/awesome) final prev;
-  herbstluftwm = (import ./pkgs/herbstluftwm) final prev;
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
   sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
   zinit = (import ./pkgs/zinit) final prev;

@@ -103,7 +103,10 @@
             stylua
             cargo-generate
             marksman
+
             ;
+
+          zen_nvidia_open = pkgs.linuxPackages_zen.nvidiaPackages.latest.open;
         };
 
         defaultPackage = pkgs.hello;

@@ -13,7 +13,7 @@ buildGoModule {
 
   vendorSha256 = "sha256-IJydneOVUOkuUPezcljLqGhq8rojqwx5LeAycXHbOUU=";
 
-  checkInputs = [ which ];
+  nativeCheckInputs = [ which ];
 
   dontPatchELF = true;
 

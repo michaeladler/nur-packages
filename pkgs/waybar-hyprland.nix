@@ -7,8 +7,8 @@ prev.waybar.overrideAttrs (old: {
   src = final.fetchFromGitHub {
     owner = "Alexays";
     repo = "Waybar";
-    rev = "fea7ec9133a80535447df887077bcbe9379929ce";
-    sha256 = "0qp1sfmnc4ixzknfjcagxj3rxf2v3vnyzhl39r7bzyrr9ka17ihh";
+    rev = "e7af29ac1e2189f3d39d513feb814dab10b86fd7";
+    sha256 = "09c70931xlfs1yhx384v3pnlaw9fwarw1ix0rpb1dyq0c0yx9gg7";
   };
 
   mesonFlags = old.mesonFlags ++ [

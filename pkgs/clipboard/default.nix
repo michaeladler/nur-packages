@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, xorg }:
+{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, xorg, wayland }:
 
 stdenv.mkDerivation rec {
   pname = "clipboard";
@@ -13,11 +13,12 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkg-config cmake ];
 
-  buildInputs = [ xorg.libX11 ];
+  buildInputs = [ xorg.libX11 wayland ];
 
-  cmakeFlags = [
-    "-DINSTALL_PREFIX=$out"
-  ];
+  postPatch = ''
+    substituteInPlace CMakeLists.txt \
+      --replace 'INSTALL_PREFIX "/usr"' "INSTALL_PREFIX $out"
+  '';
 
   meta = with lib; {
     homepage = "https://github.com/Slackadays/Clipboard";

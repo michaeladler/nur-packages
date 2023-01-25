@@ -47,3 +47,4 @@ waybar-hyprland
 zen_nvidia_open
 zinit
 zoxide
+zstd-optimized

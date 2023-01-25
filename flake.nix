@@ -103,6 +103,7 @@
             stylua
             cargo-generate
             marksman
+            zstd-optimized
 
             ;
 

@@ -21,6 +21,10 @@ in
     withLibsecret = true;
   };
 
+  zstd-optimized = prev.zstd.override {
+    stdenv = final.stdenvAdapters.optimizeX86-64-v3 prev.stdenv;
+  };
+
   brave = callPackage ./pkgs/brave { };
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!
   pandoc-bin = callPackage ./pkgs/pandoc { };

@@ -16,6 +16,7 @@ in
   srandrd = (import ./pkgs/srandrd) final prev;
   waybar-hyprland = (import ./pkgs/waybar-hyprland.nix) final prev;
   git-latest = ((import ./pkgs/git-latest) final prev).override {
+    stdenv = final.stdenvAdapters.optimizeX86-64-v3 prev.stdenv;
     sendEmailSupport = true;
     withSsh = true;
     withLibsecret = true;

@@ -1,0 +1,30 @@
+From ff3e8e37c9c3885657817feb82772dd3e1497d50 Mon Sep 17 00:00:00 2001
+From: Jack Grigg <thestr4d@gmail.com>
+Date: Sun, 29 Jan 2023 14:27:20 +0000
+Subject: [PATCH] Treat `pcsc::Error::NoSmartcard` as a "YubiKey disconnected"
+ error
+
+Some SmartCard readers report this error when no SmartCard is inserted,
+so we need to check for it when filtering for connected YubiKeys (along
+with `pcsc::Error::RemovedCard` which some _other_ SmartCard readers
+report instead).
+
+Closes str4d/age-plugin-yubikey#81.
+---
+ CHANGELOG.md | 2 ++
+ src/key.rs   | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/key.rs b/src/key.rs
+index 813de5a..0eb47a5 100644
+--- a/src/key.rs
++++ b/src/key.rs
+@@ -41,7 +41,7 @@ pub(crate) fn is_connected(reader: Reader) -> bool {
+ pub(crate) fn filter_connected(reader: &Reader) -> bool {
+     match reader.open() {
+         Err(yubikey::Error::PcscError {
+-            inner: Some(pcsc::Error::RemovedCard),
++            inner: Some(pcsc::Error::NoSmartcard | pcsc::Error::RemovedCard),
+         }) => {
+             warn!(
+                 "{}",

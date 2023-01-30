@@ -8,20 +8,24 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "age-plugin-yubikey";
-  version = "unstable-2023-01-03";
+  version = "unstable-2023-01-29";
 
   src = fetchFromGitHub {
     owner = "str4d";
     repo = "age-plugin-yubikey";
-    rev = "f34c534e8479e4c50095a98f48941d079bd179a3";
-    sha256 = "0lb03y2m88k5a968q804rik237bp111njvc8ckhj8cdpfp1h4pwm";
+    rev = "84830103936b3a59085381e7155480a86575ceca";
+    sha256 = "1cfx7xsz5ninl7kzm4z30i8w456vc5zy40rk89y2yjvvhy81c3ys";
   };
 
-  cargoSha256 = "sha256-abrgWuhiiM/ah20Cz9dVjTzsYzZjSngV750zrFFz8LI=";
+  cargoSha256 = "sha256-mmnq037Omy3MiXGkOKEC55Xb5SRmeeUfx7ODoJssbmI=";
 
   nativeBuildInputs = lib.optionals stdenv.isLinux [ pkg-config ];
 
   buildInputs = [ pcsclite ];
+
+  patches = [
+    ./ff3e8e37c9c3885657817feb82772dd3e1497d50.patch
+  ];
 
   meta = with lib; {
     description = "YubiKey plugin for age clients";

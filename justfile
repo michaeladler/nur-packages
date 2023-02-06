@@ -22,7 +22,7 @@ packagelist:
 
 update-all-rust-pkgs: (update-rust-pkg "age-plugin-yubikey") (update-rust-pkg "notmuch-mailmover")
 
-update-all-go-pkgs: (update-rust-pkg "go-crx3") (update-rust-pkg "bed")
+update-all-go-pkgs: (update-go-pkg "go-crx3") (update-go-pkg "bed")
 
 update-other:
     #!/usr/bin/env bash

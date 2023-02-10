@@ -98,6 +98,7 @@
             bed
             clipboard
             waybar-hyprland
+            boxxy
 
             # fill cache
             astroid

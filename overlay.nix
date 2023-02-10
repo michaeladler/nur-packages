@@ -66,6 +66,7 @@ in
   msktutil = callPackage ./pkgs/msktutil { };
   notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
   clipboard = callPackage ./pkgs/clipboard { };
+  boxxy = callPackage ./pkgs/boxxy { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

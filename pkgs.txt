@@ -1,6 +1,7 @@
 age-plugin-yubikey
 astroid
 bed
+boxxy
 brave
 btrfs-du
 btrfs-list

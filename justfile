@@ -20,9 +20,44 @@ packagelist:
         | python -c 'import sys, json; raw = input().encode().decode("unicode_escape").strip("\""); pkgs = json.loads(raw); print("\n".join(pkgs))' \
         | tee pkgs.txt
 
-update-all-rust-pkgs: (update-rust-pkg "age-plugin-yubikey") (update-rust-pkg "notmuch-mailmover")
+update-all-rust-pkgs:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    git grep -l buildRustPackage -- "*.nix" | while read fname; do
+        pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
+        echo "Updating $pname"
 
-update-all-go-pkgs: (update-go-pkg "go-crx3") (update-go-pkg "bed")
+        update-nix-fetchgit ./pkgs/$pname/default.nix
+        git diff --exit-code ./pkgs/$pname/default.nix || {
+            sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/$pname/default.nix
+            nix build ".#$pname" 1>$pname.log 2>&1 || {
+                ACTUAL=$(grep "got: " $pname.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
+                sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/$pname/default.nix
+            }
+            nix build --show-trace -L -v --no-link ".#$pname"
+        }
+
+    done
+
+update-all-go-pkgs:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    set -x
+    git grep -l buildGo -- "*.nix" | while read fname; do
+        pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
+        echo "Updating $pname"
+
+        update-nix-fetchgit ./pkgs/$pname/default.nix
+        git diff --exit-code ./pkgs/$pname/default.nix || {
+            sed -i -E -e 's,vendorSha256 = .*,vendorSha256 = lib.fakeSha256;,' ./pkgs/$pname/default.nix
+            nix build ".#$pname" 1>$pname.log 2>&1 || {
+                ACTUAL=$(grep "got: " $pname.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
+                sed -i -E -e "s,vendorSha256 = .*,vendorSha256 = \"$ACTUAL\";," ./pkgs/$pname/default.nix
+            }
+            nix build --show-trace -L -v --no-link ".#$pname"
+        }
+
+    done
 
 update-other:
     #!/usr/bin/env bash
@@ -55,29 +90,3 @@ ci-update-packages:
 
 ci-zen:
     gh workflow run "zen"
-
-update-rust-pkg PKG:
-    #!/usr/bin/env bash
-    set -eux
-    update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
-    git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
-        sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/{{ PKG }}/default.nix
-        nix build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
-            ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
-            sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
-        }
-        nix build --show-trace -L -v --no-link '.#{{ PKG }}'
-    }
-
-update-go-pkg PKG:
-    #!/usr/bin/env bash
-    set -eux
-    update-nix-fetchgit ./pkgs/{{ PKG }}/default.nix
-    git diff --exit-code ./pkgs/{{ PKG }}/default.nix || {
-        sed -i -E -e 's,vendorSha256 = .*,vendorSha256 = lib.fakeSha256;,' ./pkgs/{{ PKG }}/default.nix
-        nix build '.#{{ PKG }}' 1>{{ PKG }}.log 2>&1 || {
-            ACTUAL=$(grep "got: " {{ PKG }}.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
-            sed -i -E -e "s,vendorSha256 = .*,vendorSha256 = \"$ACTUAL\";," ./pkgs/{{ PKG }}/default.nix
-        }
-        nix build --show-trace -L -v --no-link '.#{{ PKG }}'
-    }

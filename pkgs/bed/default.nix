@@ -1,7 +1,7 @@
 { buildGoModule, fetchFromGitHub, lib, which }:
 
 buildGoModule {
-  name = "bed";
+  pname = "bed";
   version = "unstable-2022-12-25";
 
   src = fetchFromGitHub {

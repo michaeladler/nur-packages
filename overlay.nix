@@ -22,12 +22,12 @@ in
     withSsh = true;
     withLibsecret = true;
   };
+  brave = (import ./pkgs/brave) final prev;
 
   zstd-optimized = prev.zstd.override {
     stdenv = final.stdenvAdapters.optimizeX86-64-v3 prev.stdenv;
   };
 
-  brave = callPackage ./pkgs/brave { };
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!
   pandoc-bin = callPackage ./pkgs/pandoc { };
   criterion = callPackage ./pkgs/criterion { };
@@ -66,7 +66,6 @@ in
   msktutil = callPackage ./pkgs/msktutil { };
   notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
   clipboard = callPackage ./pkgs/clipboard { };
-  boxxy = callPackage ./pkgs/boxxy { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

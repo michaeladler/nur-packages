@@ -1,10 +1,8 @@
 age-plugin-yubikey
-astroid
 bed
 brave
 btrfs-du
 btrfs-list
-cargo-generate
 chromium-browserpass
 chromium-floccus
 chromium-vimium
@@ -26,7 +24,6 @@ go-mod-outdated
 kas-container
 libubootenv
 luaprompt
-marksman
 msktutil
 neovim-unwrapped
 nix-direnv
@@ -38,7 +35,6 @@ sbkeys
 skipcpio
 srandrd
 sscep
-stylua
 sumneko-lua-language-server
 thinkfan
 tlpui

@@ -4,6 +4,7 @@
 , fetchFromGitHub
 , pkg-config
 , pcsclite
+, openssl
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -21,7 +22,7 @@ rustPlatform.buildRustPackage rec {
 
   nativeBuildInputs = lib.optionals stdenv.isLinux [ pkg-config ];
 
-  buildInputs = [ pcsclite ];
+  buildInputs = [ pcsclite openssl ];
 
   meta = with lib; {
     description = "YubiKey plugin for age clients";

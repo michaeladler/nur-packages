@@ -66,7 +66,6 @@
             czmod
             efibootguard
             fmtlog
-            fstabfmt
             fzy-lua-native
             git-hours
             go-crx3

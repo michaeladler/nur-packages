@@ -45,7 +45,6 @@ in
   czmod = callPackage ./pkgs/czmod { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fmtlog = callPackage ./pkgs/fmtlog { };
-  fstabfmt = callPackage ./pkgs/fstabfmt { };
   fzy-lua-native = callPackage ./pkgs/fzy-lua-native { };
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };

@@ -17,7 +17,6 @@ criterion
 czmod
 efibootguard
 fmtlog
-fstabfmt
 fzy-lua-native
 git-buildpackage
 git-hours

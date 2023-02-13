@@ -1,7 +1,7 @@
 { buildGo119Module, fetchFromGitHub, lib }:
 
 buildGo119Module {
-  name = "go-crx3";
+  pname = "go-crx3";
   version = "unstable-2022-11-14";
 
   src = fetchFromGitHub {

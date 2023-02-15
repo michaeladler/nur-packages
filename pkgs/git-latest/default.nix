@@ -1,11 +1,11 @@
 final: prev:
 
 prev.git.overrideAttrs (old: rec {
-  version = "2.39.1";
+  version = "2.39.2";
 
   src = final.fetchurl {
     url = "https://www.kernel.org/pub/software/scm/git/git-${version}.tar.xz";
-    sha256 = "0qf1wly7zagg23svpv533va5v213y7y3lfw76ldkf35k8w48m8s0";
+    sha256 = "1mpjvhyw8mv2q941xny4d0gw3mb6b4bqaqbh73jd8b1v6zqpaps7";
   };
 
 })

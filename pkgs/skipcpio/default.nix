@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "dracutdevs";
     repo = "dracut";
-    rev = "61ceb35f4079ae8d0ee1635b56dd8bc88149b4a8";
-    sha256 = "1nk3vxndmvqfb0v2l59fm8kz92hsqs2331n550iqmmhxa755bvy1";
+    rev = "c5dca3d68915cef077fda2bc5292e12f82cf6dd6";
+    sha256 = "0cynvdgwk0ffvgc9dv4r0lvgpy09kynk7q7pdylvz3a24ap5n5c2";
   };
 
   buildInputs = [ pkg-config ];

@@ -21,6 +21,7 @@ git-hours
 git-latest
 go-crx3
 go-mod-outdated
+himalaya
 kas-container
 libubootenv
 luaprompt

@@ -103,6 +103,7 @@
 
             # fill cache
             zstd-optimized
+            himalaya
 
             ;
 

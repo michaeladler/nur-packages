@@ -2,16 +2,16 @@
 
 buildGoModule {
   pname = "chyle";
-  version = "unstable-2022-05-06";
+  version = "unstable-2023-01-24";
 
   src = fetchFromGitHub {
     owner = "antham";
     repo = "chyle";
-    rev = "28089c39b9277d9915cfe2e2968b272768063fb2"; # tags/*
-    sha256 = "1flrlz6djf9ad445k3q7h2isrkb2wbbspl4pi4fpsq26qil28ni5";
+    rev = "a5a93845007270e7d8011863fde68b97d76c3d88"; # tags/*
+    sha256 = "0ayyz7dy5h3i3sl765g9k5h1a4lb5912sc117nv79lvw7if09h0d";
   };
 
-  vendorSha256 = "sha256-+HE5cQYJ0QrMxcOeBJZVAqtTwMBSt0dgo5kqg8IOngk=";
+  vendorSha256 = "sha256-+xJ9H+/RS/h7h8KBz1fz06n6XBizRJdUfTm3Ln+0JtE=";
 
   doCheck = false;
 

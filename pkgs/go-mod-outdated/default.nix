@@ -2,16 +2,16 @@
 
 buildGoModule {
   pname = "go-mod-outdated";
-  version = "unstable-2022-05-09";
+  version = "unstable-2023-02-19";
 
   src = fetchFromGitHub {
     owner = "psampaz";
     repo = "go-mod-outdated";
-    rev = "32fc7a3d5dfe9f8f2b631447313bcb79830858be";
-    sha256 = "0c945qzbqv56i0lsvcxwic1wg9xgb87k2pjwyzhwcdvx3kgjrzk0";
+    rev = "bb79367d102a05221196613dde574f1a0b81b556";
+    sha256 = "0jxbx200p3pih510gvvmkj0c68giaxqsgqy9k7qybbxskxy7nzwl";
   };
 
-  vendorSha256 = "sha256-nkjIwzT9JblKzWKOBFW+uYYbJulN6n6Fp+WH/8pEQK8=";
+  vendorSha256 = "sha256-SAFXivHCBFB9aKKyPwk3YRQY6IrPBls5HtK/20kPV0o=";
 
   meta = with lib; {
     description = "Find outdated dependencies of your Go projects";

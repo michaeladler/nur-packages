@@ -23,6 +23,12 @@ in
     withLibsecret = true;
   };
   brave = (import ./pkgs/brave) final prev;
+  golangci-lint = prev.golangci-lint.override {
+    buildGoModule = final.buildGo120Module;
+  };
+  go-tools = prev.go-tools.override {
+    buildGoModule = final.buildGo120Module;
+  };
 
   zstd-optimized = prev.zstd.override {
     stdenv = final.stdenvAdapters.optimizeX86-64-v3 prev.stdenv;

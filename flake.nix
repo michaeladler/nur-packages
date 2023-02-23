@@ -104,7 +104,8 @@
             # fill cache
             zstd-optimized
             himalaya
-
+            golangci-lint
+            go-tools
             ;
 
           zen_nvidia_open = pkgs.linuxPackages_zen.nvidiaPackages.latest.open;

@@ -43,7 +43,7 @@ update-all-go-pkgs:
     #!/usr/bin/env bash
     set -euo pipefail
     set -x
-    git grep -l buildGo -- "*.nix" | while read fname; do
+    git grep -l buildGo -- "./pkgs/*.nix" | while read fname; do
         pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
         echo "Updating $pname"
 

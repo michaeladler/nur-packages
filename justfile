@@ -89,4 +89,7 @@ ci-update-packages:
     gh workflow run "update packages"
 
 ci-zen:
-    gh workflow run "zen"
+    gh workflow run zen
+
+ci-lqx:
+    gh workflow run lqx

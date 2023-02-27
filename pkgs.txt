@@ -13,6 +13,7 @@ clang-format-diff
 clipboard
 criterion
 czmod
+demo-magic
 efibootguard
 fmtlog
 fzy-lua-native

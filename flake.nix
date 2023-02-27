@@ -100,6 +100,7 @@
             bed
             clipboard
             waybar-hyprland
+            demo-magic
 
             # fill cache
             zstd-optimized

@@ -101,6 +101,7 @@
             clipboard
             waybar-hyprland
             demo-magic
+            zellij
 
             # fill cache
             zstd-optimized

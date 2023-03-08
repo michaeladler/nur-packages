@@ -72,7 +72,6 @@ in
   notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
   clipboard = callPackage ./pkgs/clipboard { };
   demo-magic = callPackage ./pkgs/demo-magic { };
-  zellij = callPackage ./pkgs/zellij { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

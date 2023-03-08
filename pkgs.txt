@@ -44,7 +44,6 @@ thinkfan
 tlpui
 vcalendar-filter
 waybar-hyprland
-zellij
 zen_nvidia_open
 zinit
 zoxide

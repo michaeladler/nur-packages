@@ -33,7 +33,7 @@ neovim-unwrapped
 nix-direnv
 notmuch-mailmover
 pam-fprint-grosshack
-pandoc
+pandoc-bin
 qmarkdown
 sbkeys
 skipcpio

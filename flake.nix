@@ -78,7 +78,7 @@
             luaprompt
             neovim-unwrapped
             nix-direnv
-            pandoc
+            pandoc-bin
             qmarkdown
             sbkeys
             skipcpio

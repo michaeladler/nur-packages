@@ -69,7 +69,6 @@ update-other:
     find pkgs -name "*.nix" \
         -not -path "pkgs/pandoc/*" \
         -not -path "pkgs/git-buildpackage/*" \
-        -not -path "pkgs/git-latest/*" \
         -not -path "pkgs/chromium-vimium/*" \
         -not -path "pkgs/chromium-xbrowsersync/*" \
         | while read -r fname; do

@@ -19,7 +19,6 @@ fmtlog
 fzy-lua-native
 git-buildpackage
 git-hours
-git-latest
 go-crx3
 go-mod-outdated
 go-tools

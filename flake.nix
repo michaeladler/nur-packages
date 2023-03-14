@@ -91,7 +91,6 @@
             zoxide
             pam-fprint-grosshack
             srandrd
-            git-latest
             git-buildpackage
             chromium-vimium
             chromium-xbrowsersync

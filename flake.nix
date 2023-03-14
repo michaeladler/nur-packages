@@ -100,10 +100,9 @@
             clipboard
             waybar-hyprland
             demo-magic
+            checksec
 
             # fill cache
-            zstd-optimized
-            himalaya
             golangci-lint
             go-tools
             ;

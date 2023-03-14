@@ -3,6 +3,7 @@ bed
 brave
 btrfs-du
 btrfs-list
+checksec
 chromium-browserpass
 chromium-floccus
 chromium-vimium
@@ -23,7 +24,6 @@ go-crx3
 go-mod-outdated
 go-tools
 golangci-lint
-himalaya
 kas-container
 libubootenv
 luaprompt
@@ -46,4 +46,3 @@ waybar-hyprland
 zen_nvidia_open
 zinit
 zoxide
-zstd-optimized

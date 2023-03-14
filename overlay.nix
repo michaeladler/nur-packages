@@ -24,9 +24,11 @@ in
     buildGoModule = final.buildGo120Module;
   };
 
-  zstd-optimized = prev.zstd.override {
-    stdenv = final.stdenvAdapters.optimizeX86-64-v3 prev.stdenv;
-  };
+  checksec = prev.checksec.overrideAttrs (old: {
+    preFixup = ''
+      sed -i -e '/# sanitize/I,+1 d' $out/bin/checksec
+    '';
+  });
 
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!
   pandoc-bin = callPackage ./pkgs/pandoc { };

@@ -1,5 +1,5 @@
 ---
-name: zen
+name: build-linux-zen
 
 on:
   workflow_dispatch:

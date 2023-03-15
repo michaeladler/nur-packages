@@ -79,7 +79,7 @@ update-flakes:
 update-all: update-flakes update-other update-all-rust-pkgs update-all-go-pkgs
 
 ci-update-packages:
-    gh workflow run "update packages"
+    gh workflow run update
 
 ci-zen:
-    gh workflow run zen
+    gh workflow run build-linux-zen

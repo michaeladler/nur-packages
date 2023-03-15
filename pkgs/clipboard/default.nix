@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "Slackadays";
     repo = "Clipboard";
-    rev = "e505ffcde40632a1e0506b74b32ab9699e39bcda";
-    sha256 = "0kamxin9ibcgnda7xvpr7bjyda4bkdraybx4b7dicwkhvrn7jf68";
+    rev = "c70a5cb9ff8eb98414c8061c313db7fb795806b7";
+    sha256 = "1w2a8vnfz3j1zfp27lsnyka8snjh9f6jj2z36dhj909a7034gzpl";
   };
 
   nativeBuildInputs = [ pkg-config cmake ];

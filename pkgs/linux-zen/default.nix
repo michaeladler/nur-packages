@@ -1,13 +1,12 @@
 { lib, pkgs, fetchurl, buildLinux, ... }:
 
 let
-  version = "6.2.6";
-  zen_suffix = "zen1";
+  metadata = with builtins; fromJSON (readFile ./metadata.json);
 in
 
-buildLinux ({
-  inherit version;
-  modDirVersion = "${version}-${zen_suffix}";
+buildLinux (rec {
+  inherit (metadata) version;
+  modDirVersion = "${version}-${metadata.zen_suffix}";
 
   src = fetchurl {
     url = "mirror://kernel/linux/kernel/v6.x/linux-6.2.tar.xz";
@@ -18,8 +17,8 @@ buildLinux ({
     {
       name = "zen";
       patch = fetchurl {
-        url = "https://github.com/zen-kernel/zen-kernel/releases/download/v${version}-${zen_suffix}/v${version}-${zen_suffix}.patch.xz";
-        sha256 = "07sfhzghlsxckvkw32csvlf7rwa0dsajymasgp17h01llp4l5d1a";
+        url = metadata.zen_url;
+        sha256 = metadata.zen_sha256;
       };
     }
   ];
@@ -32,7 +31,7 @@ buildLinux ({
   '';
 
   extraMeta = {
-    branch = "6.2";
+    branch = lib.versions.majorMinor version;
     description = "Linux ZEN";
   };
 })

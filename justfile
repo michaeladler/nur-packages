@@ -56,7 +56,7 @@ update-all-go-pkgs:
 update-other:
     #!/usr/bin/env bash
     set -euo pipefail
-    find . -name update.sh -type f -executable | while read -r fname; do 
+    find . -name update.sh -type f -executable | while read -r fname; do
         echo "Running $fname"
         sh -c $fname
     done

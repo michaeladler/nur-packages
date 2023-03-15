@@ -85,6 +85,7 @@
             waybar-hyprland
             demo-magic
             checksec
+            linux-zen
             ;
 
         };

@@ -1,17 +1,11 @@
 build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
-build-lqx:
-    nix build --show-trace -L --no-link '.#linux.lqx' '.#nvidia.lqx' '.#cpupower.lqx'
-
 build-zen:
-    nix build --show-trace -L --no-link '.#linux.zen' '.#nvidia.zen' '.#cpupower.zen'
-
-build-linux:
-    nix build --show-trace -L --no-link '.#linux.vanilla' '.#nvidia.vanilla' '.#cpupower.vanilla'
+    nix build --show-trace -L --no-link '.#linux-zen'
 
 build-all:
-    sed -E -e 's/(.*)/.#\1/' <pkgs.txt | xargs --delimiter='\n' nix build --show-trace -L --no-link
+    sed -E -e 's/(.*)/.#\1/' <pkgs.txt | grep -v linux-zen | xargs --delimiter='\n' nix build --show-trace -L --no-link
 
 packagelist:
     #!/usr/bin/env bash
@@ -89,6 +83,3 @@ ci-update-packages:
 
 ci-zen:
     gh workflow run zen
-
-ci-lqx:
-    gh workflow run lqx

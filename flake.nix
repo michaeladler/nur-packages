@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:michaeladler/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -37,21 +37,6 @@
             firefoxAddons
             extraLuaJITPackages
             ;
-          linux = {
-            zen = pkgs.linuxPackages_zen.kernel;
-            lqx = pkgs.linuxPackages_lqx.kernel;
-            vanilla = pkgs.linuxPackages_6_0.kernel;
-          };
-          nvidia = {
-            zen = pkgs.linuxPackages_zen.nvidiaPackages.latest;
-            lqx = pkgs.linuxPackages_lqx.nvidiaPackages.latest;
-            vanilla = pkgs.linuxPackages_6_0.nvidiaPackages.latest;
-          };
-          cpupower = {
-            zen = pkgs.linuxPackages_zen.cpupower;
-            lqx = pkgs.linuxPackages_lqx.cpupower;
-            vanilla = pkgs.linuxPackages_6_0.cpupower;
-          };
         };
 
         packages = flake-utils.lib.flattenTree {
@@ -100,13 +85,8 @@
             waybar-hyprland
             demo-magic
             checksec
-
-            # fill cache
-            golangci-lint
-            go-tools
             ;
 
-          zen_nvidia_open = pkgs.linuxPackages_zen.nvidiaPackages.latest.open;
         };
 
       }));

@@ -22,8 +22,6 @@ git-buildpackage
 git-hours
 go-crx3
 go-mod-outdated
-go-tools
-golangci-lint
 kas-container
 libubootenv
 luaprompt
@@ -42,6 +40,5 @@ thinkfan
 tlpui
 vcalendar-filter
 waybar-hyprland
-zen_nvidia_open
 zinit
 zoxide

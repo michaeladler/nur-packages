@@ -65,6 +65,7 @@ update-other:
         -not -path "pkgs/git-buildpackage/*" \
         -not -path "pkgs/chromium-vimium/*" \
         -not -path "pkgs/chromium-xbrowsersync/*" \
+        -not -path "pkgs/linux-zen/*" \
         | while read -r fname; do
             # skip go/rust packages
             grep -E -q "(buildGo|buildRustPackage)" "$fname" || {

@@ -3,6 +3,9 @@ name: build-linux-zen
 
 on:
   workflow_dispatch:
+  schedule:
+    # NB: jobs may be delayed a couple of hours
+    - cron:  '0 0 * * *'
 
 jobs:
   build:
@@ -22,6 +25,9 @@ jobs:
           name: nur-packages
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
+      - name: update
+        run: bash -x ./pkgs/linux-zen/update.sh
+
       - name: build
         run: |
           nix-shell \
@@ -31,5 +37,5 @@ jobs:
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.1
         with:
-          message: 'chore: update package list'
+          message: 'chore: update linux-zen'
           rebase: true

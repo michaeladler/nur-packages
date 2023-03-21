@@ -17,13 +17,13 @@
 stdenv.mkDerivation rec {
 
   pname = "efibootguard";
-  version = "unstable-2022-12-16";
+  version = "unstable-2023-02-04";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "efibootguard";
-    rev = "b6f68012fae836b470606b53aaa46fe7871ff99b";
-    sha256 = "1ikl0j2q0vn0fhfnvwqycc18pmf1z02zjlb1j95lpbn5ab990rcc";
+    rev = "490dc4dd5d698566c2ead150256c2f8e01dd5151";
+    sha256 = "1g9vcdrya5z37a3620bvx94qn3k3nfvs91pab78kr66xswbxf8v0";
   };
 
   nativeBuildInputs = [ autoreconfHook autoconf-archive pkg-config check (python3.withPackages (ps: with ps; [ shtab ])) installShellFiles ];

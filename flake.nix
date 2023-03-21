@@ -35,50 +35,51 @@
         {
           inherit (pkgs)
             age-plugin-yubikey
+            bed
             brave
             btrfs-du
             btrfs-list
+            checksec
             chromium-browserpass
             chromium-floccus
+            chromium-vimium
+            chromium-xbrowsersync
             chyle
             cinclude2dot
             clang-format-diff
+            clipboard
             criterion
             czmod
+            demo-magic
             efibootguard
             fmtlog
             fzy-lua-native
+            git-buildpackage
             git-hours
             go-crx3
             go-mod-outdated
+            himalaya
             kas-container
             libubootenv
+            linux-zen
             luaprompt
+            msktutil
             nix-direnv
+            notmuch-mailmover
+            pam-fprint-grosshack
             pandoc-bin
             qmarkdown
             sbkeys
             skipcpio
+            srandrd
             sscep
             sumneko-lua-language-server
             thinkfan
             tlpui
             vcalendar-filter
+            waybar-hyprland
             zinit
             zoxide
-            pam-fprint-grosshack
-            srandrd
-            git-buildpackage
-            chromium-vimium
-            chromium-xbrowsersync
-            msktutil
-            notmuch-mailmover
-            bed
-            clipboard
-            waybar-hyprland
-            demo-magic
-            checksec
-            linux-zen
             ;
         });
 

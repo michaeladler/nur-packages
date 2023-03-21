@@ -40,34 +40,35 @@ in
   btrfs-list = callPackage ./pkgs/btrfs-list { };
   chromium-browserpass = callPackage ./pkgs/chromium-browserpass { };
   chromium-floccus = callPackage ./pkgs/chromium-floccus { };
+  chromium-vimium = callPackage ./pkgs/chromium-vimium { };
+  chromium-xbrowsersync = callPackage ./pkgs/chromium-xbrowsersync { };
   chyle = callPackage ./pkgs/chyle { };
   cinclude2dot = callPackage ./pkgs/cinclude2dot { };
   clang-format-diff = callPackage ./pkgs/clang-format-diff { };
+  clipboard = callPackage ./pkgs/clipboard { };
   czmod = callPackage ./pkgs/czmod { };
+  demo-magic = callPackage ./pkgs/demo-magic { };
   efibootguard = callPackage ./pkgs/efibootguard { };
   fmtlog = callPackage ./pkgs/fmtlog { };
   fzy-lua-native = callPackage ./pkgs/fzy-lua-native { };
+  git-buildpackage = callPackage ./pkgs/git-buildpackage { };
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
+  himalaya = callPackage ./pkgs/himalaya { };
   kas-container = callPackage ./pkgs/kas-container { };
   libubootenv = callPackage ./pkgs/libubootenv { };
+  linux-zen = callPackage ./pkgs/linux-zen { };
   luaprompt = callPackage ./pkgs/luaprompt { };
+  msktutil = callPackage ./pkgs/msktutil { };
+  notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
+  pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sbkeys = callPackage ./pkgs/sbkeys { };
   skipcpio = callPackage ./pkgs/skipcpio { };
   sscep = callPackage ./pkgs/sscep { };
   tlpui = callPackage ./pkgs/tlpui { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
-  pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
-  git-buildpackage = callPackage ./pkgs/git-buildpackage { };
-  chromium-vimium = callPackage ./pkgs/chromium-vimium { };
-  chromium-xbrowsersync = callPackage ./pkgs/chromium-xbrowsersync { };
-  msktutil = callPackage ./pkgs/msktutil { };
-  notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
-  clipboard = callPackage ./pkgs/clipboard { };
-  demo-magic = callPackage ./pkgs/demo-magic { };
-  linux-zen = callPackage ./pkgs/linux-zen { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

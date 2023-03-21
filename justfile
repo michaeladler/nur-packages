@@ -2,10 +2,10 @@ build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
 build-zen:
-    nix build --show-trace -L --no-link '.#linux-zen'
+    nix-build-uncached ./ci-zen.nix
 
 build-all:
-    sed -E -e 's/(.*)/.#\1/' <pkgs.txt | grep -v linux-zen | xargs --delimiter='\n' nix build --show-trace -L --no-link
+    nix-build-uncached ./ci.nix
 
 packagelist:
     #!/usr/bin/env bash
@@ -57,24 +57,22 @@ update-other:
     #!/usr/bin/env bash
     set -euo pipefail
     find . -name update.sh -type f -executable \
-        -not -path "pkgs/linux-zen/*" \
-        | while read -r fname; do
-        echo "Running $fname"
-        sh -c $fname
-    done
-    find pkgs -name "*.nix" \
-        -not -path "pkgs/pandoc/*" \
-        -not -path "pkgs/git-buildpackage/*" \
-        -not -path "pkgs/chromium-vimium/*" \
-        -not -path "pkgs/chromium-xbrowsersync/*" \
-        -not -path "pkgs/linux-zen/*" \
-        | while read -r fname; do
+        -not -path "pkgs/linux-zen/*" |
+        while read -r fname; do
+            echo "Running $fname"
+            sh -c "$fname"
+        done
+    find pkgs -name "*.nix" | while read -r fname; do
+        dir=$(dirname "$fname")
+        # only update if update.sh does not exist
+        [[ -e $dir/update.sh ]] || {
             # skip go/rust packages
             grep -E -q "(buildGo|buildRustPackage)" "$fname" || {
                 echo "updating $fname"
                 update-nix-fetchgit "$fname"
             }
-        done
+        }
+    done
 
 update-flakes:
     nix flake update
@@ -85,4 +83,4 @@ ci-update-packages:
     gh workflow run update
 
 ci-zen:
-    gh workflow run build-linux-zen
+    gh workflow run update-linux-zen

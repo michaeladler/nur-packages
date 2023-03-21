@@ -25,9 +25,8 @@
       legacyPackages = forAllSystems (system:
         let pkgs = mkPkgs system; in
         {
-          inherit (pkgs)
-            extraLuaJITPackages
-            ;
+          inherit (pkgs) extraLuaJITPackages;
+          zenPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-zen);
         });
 
       packages = forAllSystems (system:
@@ -61,7 +60,6 @@
             himalaya
             kas-container
             libubootenv
-            linux-zen
             luaprompt
             msktutil
             nix-direnv

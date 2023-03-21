@@ -32,7 +32,7 @@ jobs:
         run: |
           nix-shell \
             --command "just build-zen" \
-            -p nixUnstable just
+            -p nixUnstable nix-build-uncached just
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.1

@@ -55,7 +55,6 @@ in
   git-hours = callPackage ./pkgs/git-hours { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
-  himalaya = callPackage ./pkgs/himalaya { };
   kas-container = callPackage ./pkgs/kas-container { };
   libubootenv = callPackage ./pkgs/libubootenv { };
   linux-zen = callPackage ./pkgs/linux-zen { };

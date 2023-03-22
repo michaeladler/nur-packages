@@ -34,6 +34,7 @@
         {
           inherit (pkgs)
             age-plugin-yubikey
+            atool2
             bed
             brave
             btrfs-du

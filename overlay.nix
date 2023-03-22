@@ -35,6 +35,7 @@ in
 
   # missing upstream
   age-plugin-yubikey = callPackage ./pkgs/age-plugin-yubikey { };
+  atool2 = callPackage ./pkgs/atool2 { };
   bed = callPackage ./pkgs/bed { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
   btrfs-list = callPackage ./pkgs/btrfs-list { };

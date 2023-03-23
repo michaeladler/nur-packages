@@ -26,7 +26,14 @@ stdenv.mkDerivation rec {
     sha256 = "1g9vcdrya5z37a3620bvx94qn3k3nfvs91pab78kr66xswbxf8v0";
   };
 
-  nativeBuildInputs = [ autoreconfHook autoconf-archive pkg-config check (python3.withPackages (ps: with ps; [ shtab ])) installShellFiles ];
+  nativeBuildInputs = [
+    autoreconfHook
+    autoconf-archive
+    pkg-config
+    check
+    (python3.withPackages (ps: with ps; [ shtab ]))
+    installShellFiles
+  ];
 
   buildInputs = [ gnu-efi zlib glibc pciutils ];
 

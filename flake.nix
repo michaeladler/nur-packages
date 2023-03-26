@@ -56,6 +56,7 @@
             fzy-lua-native
             git-buildpackage
             git-hours
+            gitui
             go-crx3
             go-mod-outdated
             kas-container

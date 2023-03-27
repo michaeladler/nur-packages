@@ -1,6 +1,6 @@
-{ lib, lua, fetchFromGitHub, pkg-config }:
+{ lib, buildLuarocksPackage, fetchFromGitHub, pkg-config }:
 
-lua.pkgs.buildLuarocksPackage rec {
+buildLuarocksPackage rec {
   pname = "lua-getch";
   version = "unstable-2023-01-11";
 
@@ -10,10 +10,6 @@ lua.pkgs.buildLuarocksPackage rec {
     rev = "78300ba06d6de069a08be8cafe280a16a29f38cd";
     sha256 = "0nwl3b5ghkx9gpypwrmxfhcws1i7ypp4kfnxdhay2ywqyld7fajq";
   };
-
-  propagatedBuildInputs = [
-    lua
-  ];
 
   knownRockspec = "${src}/lua-getch-0.0-1.rockspec";
 

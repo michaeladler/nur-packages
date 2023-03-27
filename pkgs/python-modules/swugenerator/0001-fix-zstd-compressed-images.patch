@@ -1,0 +1,30 @@
+From a5d9061cea32b57283517a47d750e04b90d72adb Mon Sep 17 00:00:00 2001
+From: Michael Adler <michael.adler@siemens.com>
+Date: Mon, 27 Mar 2023 11:27:25 +0200
+Subject: [PATCH] fix: zstd-compressed images
+
+It's currently not possible to generate zstd-compressed images because
+as soon as the "compressed" attribute is defined, the Python code
+overrides the value with "zlib".
+
+Signed-off-by: Michael Adler <michael.adler@siemens.com>
+---
+ swugenerator/generator.py | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/swugenerator/generator.py b/swugenerator/generator.py
+index eaa3e6d..8d51557 100644
+--- a/swugenerator/generator.py
++++ b/swugenerator/generator.py
+@@ -83,8 +83,6 @@ class SWUGenerator:
+ 
+             if "compressed" in entry and not self.nocompress:
+                 cmp = entry["compressed"]
+-                if cmp:
+-                    cmp = "zlib"
+                 if cmp not in ("zlib", "zstd"):
+                     logging.critical("Wrong compression algorithm: %s", cmp)
+                     sys.exit(1)
+-- 
+2.39.2
+

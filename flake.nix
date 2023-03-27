@@ -10,7 +10,7 @@
 
       mkPkgs = system: import nixpkgs {
         inherit system;
-        overlays = [ self.overlays.default ];
+        overlays = [ self.overlays.default self.overlays.python ];
         config.allowUnfree = true;
       };
 
@@ -19,13 +19,14 @@
     {
       overlays = {
         default = import ./overlay.nix;
+        python = import ./overlay-python.nix;
       };
 
       # we have to use legacyPackages for sets of derivations (trees)
       legacyPackages = forAllSystems (system:
         let pkgs = mkPkgs system; in
         {
-          inherit (pkgs) extraLuaJITPackages;
+          inherit (pkgs) extraLuaJITPackages python3Packages;
           zenPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-zen);
         });
 

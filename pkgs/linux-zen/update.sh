@@ -4,7 +4,8 @@ set -eu
 
 GH_REPO=zen-kernel/zen-kernel
 
-VERSION=$(curl --silent "https://api.github.com/repos/$GH_REPO/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+VERSION=$(curl --silent "https://api.github.com/repos/$GH_REPO/releases" |
+    jq -r 'map(select(.tag_name | contains("zen")) | .tag_name) | .[0]')
 if [[ $VERSION =~ v([0-9]+\.[0-9]+\.[0-9]+)-(.+) ]]; then
     version=${BASH_REMATCH[1]}
     zen_suffix=${BASH_REMATCH[2]}

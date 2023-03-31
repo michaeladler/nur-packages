@@ -38,11 +38,6 @@ buildPythonPackage {
     "swugenerator"
   ];
 
-  patches = [
-    ./0001-refactor-remove-setuptools-from-install_requires.patch
-    ./0001-fix-zstd-compressed-images.patch
-  ];
-
   makeWrapperArgs = [ "--prefix PATH : ${lib.makeBinPath [ openssl opensc gzip zstd ]}" ];
 
   meta = with lib; {

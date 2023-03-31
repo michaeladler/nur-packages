@@ -17,6 +17,7 @@ packagelist:
 update-all-rust-pkgs:
     #!/usr/bin/env bash
     set -euo pipefail
+    echo "Updating all Rust packages"
     git grep -l buildRustPackage -- "*.nix" | while read fname; do
         pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
         echo "Updating $pname"
@@ -36,7 +37,7 @@ update-all-rust-pkgs:
 update-all-go-pkgs:
     #!/usr/bin/env bash
     set -euo pipefail
-    set -x
+    echo "Updating all Go packages"
     git grep -l buildGo -- "./pkgs/*.nix" | while read fname; do
         pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
         echo "Updating $pname"
@@ -56,6 +57,7 @@ update-all-go-pkgs:
 update-other:
     #!/usr/bin/env bash
     set -euo pipefail
+    echo "Updating other packages"
     find . -name update.sh -type f -executable \
         -not -path "pkgs/linux-zen/*" |
         while read -r fname; do

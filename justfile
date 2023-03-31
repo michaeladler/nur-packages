@@ -25,9 +25,11 @@ update-all-rust-pkgs:
         update-nix-fetchgit ./pkgs/$pname/default.nix
         git diff --exit-code ./pkgs/$pname/default.nix || {
             sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/$pname/default.nix
+            sed -i -E -e 's,cargoSha256 = .*,cargoSha256 = lib.fakeHash;,' ./pkgs/$pname/default.nix
             nix build ".#$pname" 1>$pname.log 2>&1 || {
                 ACTUAL=$(grep "got: " $pname.log | sed -E -e 's/\s*got:\s+(.*)/\1/')
                 sed -i -E -e "s,cargoHash = .*,cargoHash = \"$ACTUAL\";," ./pkgs/$pname/default.nix
+                sed -i -E -e "s,cargoSha256 = .*,cargoSha256 = \"$ACTUAL\";," ./pkgs/$pname/default.nix
             }
             nix build --show-trace -L -v --no-link ".#$pname"
         }

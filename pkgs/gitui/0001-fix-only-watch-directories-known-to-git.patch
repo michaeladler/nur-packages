@@ -1,4 +1,4 @@
-From 086ac7846c1c77e788bb5fc12a3727cf9d172c2a Mon Sep 17 00:00:00 2001
+From 124ff42724219646f130d3fbef12947c847eea23 Mon Sep 17 00:00:00 2001
 From: Michael Adler <adlerm@mailbox.org>
 Date: Sun, 26 Mar 2023 14:52:54 +0200
 Subject: [PATCH] fix: only watch directories known to git
@@ -8,11 +8,11 @@ enter (due to permissions). Also, gitui doesn't respect gitignore when
 setting up the file watches which can result in a very expensive
 operation for huge file trees.
 ---
- src/watcher.rs | 35 ++++++++++++++++++++++++++---------
- 1 file changed, 26 insertions(+), 9 deletions(-)
+ src/watcher.rs | 36 +++++++++++++++++++++++++++---------
+ 1 file changed, 27 insertions(+), 9 deletions(-)
 
 diff --git a/src/watcher.rs b/src/watcher.rs
-index ee0c3aa..38a3d4f 100644
+index ee0c3aa..4c51047 100644
 --- a/src/watcher.rs
 +++ b/src/watcher.rs
 @@ -1,4 +1,5 @@
@@ -21,34 +21,18 @@ index ee0c3aa..38a3d4f 100644
  use crossbeam_channel::{unbounded, Sender};
  use notify::{
  	Config, Error, PollWatcher, RecommendedWatcher, RecursiveMode,
-@@ -8,7 +9,12 @@ use notify_debouncer_mini::{
+@@ -8,7 +9,9 @@ use notify_debouncer_mini::{
  	new_debouncer, new_debouncer_opt, DebouncedEvent,
  };
  use scopetime::scope_time;
 -use std::{path::Path, thread, time::Duration};
 +use std::{
-+	collections::HashSet,
-+	path::{Path, PathBuf},
-+	thread,
-+	time::Duration,
++	collections::HashSet, path::PathBuf, thread, time::Duration,
 +};
  
  pub struct RepoWatcher {
  	receiver: crossbeam_channel::Receiver<()>,
-@@ -81,6 +87,12 @@ fn create_watcher(
- ) {
- 	scope_time!("create_watcher");
- 
-+	let repo_path = RepoPath::Path(PathBuf::from(workdir));
-+	let commit = utils::get_head(&repo_path).unwrap();
-+	let files = tree_files(&repo_path, commit).unwrap();
-+	let dirs: HashSet<&Path> =
-+		files.iter().filter_map(|f| f.path.parent()).collect();
-+
- 	if poll {
- 		let config = Config::default()
- 			.with_poll_interval(Duration::from_secs(2));
-@@ -88,19 +100,24 @@ fn create_watcher(
+@@ -88,20 +91,35 @@ fn create_watcher(
  			timeout, None, tx, config,
  		)
  		.expect("Watch create error");
@@ -57,12 +41,7 @@ index ee0c3aa..38a3d4f 100644
 -			.watch(Path::new(&workdir), RecursiveMode::Recursive)
 -			.expect("Watch error");
 +
-+		let watcher = bouncer.watcher();
-+		for dir in dirs {
-+			watcher
-+				.watch(dir, RecursiveMode::NonRecursive)
-+				.expect("Watch error");
-+		}
++		add_git_dirs(workdir, bouncer.watcher());
  
  		std::mem::forget(bouncer);
  	} else {
@@ -72,15 +51,31 @@ index ee0c3aa..38a3d4f 100644
 -			.watcher()
 -			.watch(Path::new(&workdir), RecursiveMode::Recursive)
 -			.expect("Watch error");
-+		let watcher = bouncer.watcher();
-+		for dir in dirs {
-+			watcher
-+				.watch(dir, RecursiveMode::NonRecursive)
-+				.expect("Watch error");
-+		}
++		add_git_dirs(workdir, bouncer.watcher());
  
  		std::mem::forget(bouncer);
  	};
+ }
++
++fn add_git_dirs(workdir: &str, watcher: &mut dyn Watcher) {
++	let pb = PathBuf::from(workdir);
++	let repo_path = RepoPath::Path(pb.clone());
++	let commit = utils::get_head(&repo_path).unwrap();
++	let files = tree_files(&repo_path, commit).unwrap();
++	let dirs: HashSet<PathBuf> = files
++		.iter()
++		.filter_map(|file| {
++			pb.join(&file.path).parent().map(|p| PathBuf::from(p))
++		})
++		.collect();
++	for dir in &dirs {
++		if let Err(err) =
++			watcher.watch(dir, RecursiveMode::NonRecursive)
++		{
++			log::error!("Failed to watch {}: {}", dir.display(), err);
++		}
++	}
++}
 -- 
 2.39.2
 

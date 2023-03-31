@@ -1,6 +1,6 @@
 {
-  "version": "6.2.8",
-  "zen_url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.2.8-zen1/v6.2.8-zen1.patch.xz",
-  "zen_suffix": "zen1",
-  "zen_sha256": "18n41acky3l4lcympij7abcf53g796vwaln4d25bzbchnmmvjhm0"
+  "version": "6.2.9",
+  "zen_url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.2.9-lqx1/v6.2.9-lqx1.patch.xz",
+  "zen_suffix": "lqx1",
+  "zen_sha256": "1kd9agnffmnkcdnpa3n6ymk7dhdpvgk3i8mbipyky09l0dc9b5rb"
 }

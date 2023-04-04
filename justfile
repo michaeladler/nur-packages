@@ -5,7 +5,10 @@ build-zen:
     nix-build-uncached ./ci-zen.nix
 
 build-all:
-    nix-build-uncached ./ci.nix
+    #!/usr/bin/env bash
+    # broken:
+    # nix-build-uncached ./ci.nix
+    sed -E -e 's/(.*)/.#\1/' <pkgs.txt | xargs --delimiter='\n' nix build --show-trace -L --no-link
 
 packagelist:
     #!/usr/bin/env bash

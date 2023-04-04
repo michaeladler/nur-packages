@@ -1,19 +1,19 @@
-{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, zlib }:
+{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, libyaml, zlib }:
 
 stdenv.mkDerivation rec {
   pname = "libubootenv";
-  version = "unstable-2023-02-23";
+  version = "unstable-2023-04-01";
 
   src = fetchFromGitHub {
     owner = "sbabic";
     repo = "libubootenv";
-    rev = "ce04db9178fb48d590b098e99189fca67880bcb0";
-    sha256 = "0ax28y8r7xp72sjyi5a1zzdms4mc79hg4ng9a3qd0ph1igkadm46";
+    rev = "ba3e1e7a980b7fd72e18405633927c6e3d299544";
+    sha256 = "1jy58d8ysb2d05kh9h1nzghj797sxlw8vyf5dcc9k1k5zh58i35k";
   };
 
   nativeBuildInputs = [ cmake pkg-config ];
 
-  buildInputs = [ zlib ];
+  buildInputs = [ zlib libyaml ];
 
   meta = with lib; {
     homepage = "https://github.com/sbabic/libubootenv";

@@ -26,6 +26,7 @@ go-crx3
 go-mod-outdated
 kas-container
 libubootenv
+lua-language-server
 luaprompt
 msktutil
 nix-direnv
@@ -37,7 +38,6 @@ sbkeys
 skipcpio
 srandrd
 sscep
-lua-language-server
 thinkfan
 tlpui
 vcalendar-filter

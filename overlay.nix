@@ -10,7 +10,7 @@ in
 
   # overlays
   nix-direnv = (import ./pkgs/nix-direnv) final prev;
-  sumneko-lua-language-server = (import ./pkgs/sumneko-lua-language-server) final prev;
+  lua-language-server = (import ./pkgs/lua-language-server) final prev;
   zinit = (import ./pkgs/zinit) final prev;
   thinkfan = (import ./pkgs/thinkfan) final prev;
   srandrd = (import ./pkgs/srandrd) final prev;

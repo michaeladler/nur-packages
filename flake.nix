@@ -74,7 +74,7 @@
             skipcpio
             srandrd
             sscep
-            sumneko-lua-language-server
+            lua-language-server
             thinkfan
             tlpui
             vcalendar-filter

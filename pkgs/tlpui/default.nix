@@ -2,13 +2,13 @@
 
 python3Packages.buildPythonPackage rec {
   pname = "tlpui";
-  version = "unstable-2023-03-25";
+  version = "unstable-2023-04-08";
 
   src = fetchFromGitHub {
     owner = "d4nj1";
     repo = "TLPUI";
-    rev = "e6a2e9391b8068da056234fc1beec00ceb889dd8";
-    sha256 = "07gi0i6wqjb5h0hmy7i7bjscfrf9v825xv85j7fxinxwrj42053y";
+    rev = "e5f5ae6210910174561e66b33ac8c622d8cb2bb2";
+    sha256 = "0znp2y1kl9xq5p8r8ykb7m97dr1sljqj2gxwrcnfvsx1l4q86qzv";
   };
 
   nativeBuildInputs = [ gobject-introspection ];

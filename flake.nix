@@ -65,6 +65,7 @@
             libubootenv
             luaprompt
             msktutil
+            neovim-unwrapped
             nix-direnv
             notmuch-mailmover
             pam-fprint-grosshack

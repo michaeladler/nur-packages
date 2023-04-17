@@ -2,13 +2,13 @@ final: prev:
 
 prev.waybar.overrideAttrs (old: {
 
-  version = "unstable-2023-04-13";
+  version = "unstable-2023-04-17";
 
   src = final.fetchFromGitHub {
     owner = "Alexays";
     repo = "Waybar";
-    rev = "61648c55d9442b0b81989b8a069c66885e4da364";
-    sha256 = "1g27jz5s41jp7piyc56ra59ffrid89zcngv40zsyc493njlmivz1";
+    rev = "a9a222346990b46e4c928a1c57cf0678120721de";
+    sha256 = "0aa5062zypa57iibnd3hbs638vrm5wn6lnqrycshc7ac1xay2i1s";
   };
 
   mesonFlags = old.mesonFlags ++ [

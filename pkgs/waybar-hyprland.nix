@@ -13,6 +13,7 @@ prev.waybar.overrideAttrs (old: {
 
   mesonFlags = old.mesonFlags ++ [
     "-Dmpris=disabled"
+    "-Dcava=disabled"
     "-Dexperimental=true"
   ];
 

@@ -82,6 +82,7 @@
             waybar-hyprland
             zinit
             zoxide
+            asciinema-edit
             ;
         });
 

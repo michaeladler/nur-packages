@@ -36,7 +36,7 @@ in
 
   # missing upstream
   age-plugin-yubikey = callPackage ./pkgs/age-plugin-yubikey { };
-  gitui = callPackage ./pkgs/gitui { };
+  asciinema-edit = callPackage ./pkgs/asciinema-edit { };
   atool2 = callPackage ./pkgs/atool2 { };
   bed = callPackage ./pkgs/bed { };
   btrfs-du = callPackage ./pkgs/btrfs-du { };
@@ -56,6 +56,7 @@ in
   fzy-lua-native = callPackage ./pkgs/fzy-lua-native { };
   git-buildpackage = callPackage ./pkgs/git-buildpackage { };
   git-hours = callPackage ./pkgs/git-hours { };
+  gitui = callPackage ./pkgs/gitui { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
   kas-container = callPackage ./pkgs/kas-container { };

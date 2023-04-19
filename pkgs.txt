@@ -1,4 +1,5 @@
 age-plugin-yubikey
+asciinema-edit
 atool2
 bed
 brave

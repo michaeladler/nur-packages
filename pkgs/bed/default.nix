@@ -2,13 +2,13 @@
 
 buildGoModule {
   pname = "bed";
-  version = "unstable-2022-12-25";
+  version = "unstable-2023-04-25";
 
   src = fetchFromGitHub {
     owner = "itchyny";
     repo = "bed";
-    rev = "c0b31fdd1f5476ba7abaf9bb5cab5ee972ea7bf7";
-    sha256 = "0a7njvvscvp8xi9fswsyv9mvj3b3hj5ldhvbcnrvkqj1gbq22zy8";
+    rev = "e328be7ff154ebfd15713c3c9a4b5775231593a4";
+    sha256 = "08vbna7y87crvkgziwxjkrqb5vwbjhvm5vflc07sfsd6y2w5g1q5";
   };
 
   vendorSha256 = "sha256-IJydneOVUOkuUPezcljLqGhq8rojqwx5LeAycXHbOUU=";

@@ -34,10 +34,6 @@ rustPlatform.buildRustPackage rec {
   # environment: delete them.
   postPatch = "rm .cargo/config";
 
-  patches = [
-    ./0001-fix-only-watch-directories-known-to-git.patch
-  ];
-
   meta = with lib; {
     description = "Blazing fast terminal-ui for Git written in Rust";
     homepage = "https://github.com/extrawurst/gitui";

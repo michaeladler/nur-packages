@@ -51,6 +51,10 @@ buildLinux (args // rec {
       ];
 
   structuredExtraConfig = with lib.kernel; {
+    # optimize for v3
+    GENERIC_CPU = lib.mkForce no;
+    GENERIC_CPU3 = yes;
+
     EXPERT = no;
     WERROR = no;
 

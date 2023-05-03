@@ -29,6 +29,7 @@
         {
           inherit (pkgs) luajitPackages python3Packages;
           zenPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-zen);
+          cachyosPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-cachyos);
         });
 
       packages = forAllSystems (system:

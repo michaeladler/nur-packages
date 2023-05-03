@@ -27,6 +27,8 @@ go-crx3
 go-mod-outdated
 kas-container
 libubootenv
+linux-cachyos
+linux-zen
 lua-language-server
 luaprompt
 msktutil

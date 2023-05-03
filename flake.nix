@@ -84,6 +84,8 @@
             zinit
             zoxide
             asciinema-edit
+            linux-cachyos
+            linux-zen
             ;
         });
 

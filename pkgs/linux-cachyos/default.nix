@@ -1,3 +1,6 @@
+# based on https://github.com/chaotic-cx/nyx/blob/main/pkgs/linux-cachyos/default.nix
+# ...but usually more up to date
+
 { argsOverride ? { }
 , buildLinux
 , fetchFromGitHub

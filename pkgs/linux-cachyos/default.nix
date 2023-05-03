@@ -16,13 +16,6 @@ let
   major = "6.3";
   minor = "1";
 
-  config-src = fetchFromGitHub {
-    owner = "CachyOS";
-    repo = "linux-cachyos";
-    rev = "d754a255474c3b1656c88f2eeb1b5c22573a386c";
-    hash = lib.fakeHash;
-  };
-
   patches-src = fetchFromGitHub {
     owner = "CachyOS";
     repo = "kernel-patches";
@@ -44,8 +37,6 @@ buildLinux (args // rec {
   allowImportFromDerivation = true;
 
   extraMeta = { maintainers = with lib; [ maintainers.dr460nf1r3 ]; };
-
-  configfile = "${config-src}/linux-cachyos/config";
 
   # see https://github.com/CachyOS/linux-cachyos/blob/master/linux-cachyos/PKGBUILD
   kernelPatches =

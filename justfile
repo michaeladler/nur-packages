@@ -67,7 +67,7 @@ update-other:
     set -euo pipefail
     echo "Updating other packages"
     find . -name update.sh -type f -executable \
-        -not -path "pkgs/linux-zen/*" |
+        -not -path "pkgs/linux-zen/*" -and -not -path "pkgs/linux-cachyos/*" |
         while read -r fname; do
             echo "Running $fname"
             sh -c "$fname"

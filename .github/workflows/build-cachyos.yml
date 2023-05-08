@@ -1,5 +1,5 @@
 ---
-name: update-linux-zen
+name: update-linux-cachyos
 
 on:
   workflow_dispatch:
@@ -26,12 +26,12 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: update
-        run: bash -x ./pkgs/linux-zen/update.sh
+        run: bash -x ./pkgs/linux-cachyos/update.sh
 
       - name: build
         run: |
           nix-shell \
-            --command "just build-zen" \
+            --command "just build-cachyos" \
             -p nixUnstable nix-build-uncached just
 
       - name: Commit & Push changes

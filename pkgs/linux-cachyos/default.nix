@@ -13,14 +13,14 @@
 , ...
 } @ args:
 let
-  major = "6.3";
-  minor = "1";
+  metadata = with builtins; fromJSON (readFile ./metadata.json);
+  inherit (metadata) major minor;
 
   patches-src = fetchFromGitHub {
     owner = "CachyOS";
     repo = "kernel-patches";
-    rev = "739c4aef6420677d33971a9e8b7e36ea97b12fff";
-    hash = "sha256-Oje2Y+JMT+lZyeRM1iRvRu7g9hH96v61j1YuMUmCilw=";
+    rev = metadata.patches_rev;
+    sha256 = metadata.patches_hash;
   };
 in
 

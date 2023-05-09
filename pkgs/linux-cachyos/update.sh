@@ -11,7 +11,7 @@ MINOR="${MINOR#*=}"
 PATCHES_REV=$(curl -s -L -f \ -H "Accept: application/vnd.github+json" \
     -H "X-GitHub-Api-Version: 2022-11-28" \
     "https://api.github.com/repos/CachyOS/kernel-patches/git/refs/heads/master" | jq -r '.object.sha')
-PATCHES_HASH=$(nix-prefetch-url "https://github.com/CachyOS/kernel-patches/archive/$PATCHES_REV.tar.gz")
+PATCHES_HASH=$(nix-prefetch-url --unpack "https://github.com/CachyOS/kernel-patches/archive/$PATCHES_REV.tar.gz")
 
 SCRIPTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cat <<EOF >"$SCRIPTDIR/metadata.json"

@@ -31,7 +31,7 @@ buildLinux (args // rec {
 
   src = fetchurl {
     url = "mirror://kernel/linux/kernel/v6.x/linux-${major}.${minor}.tar.xz";
-    sha256 = "sha256-eGIPtKfV4NsdTrjVscbiB7pdGVZO+mOWelm22vibPyo=";
+    sha256 = metadata.kernel_hash;
   };
 
   allowImportFromDerivation = true;

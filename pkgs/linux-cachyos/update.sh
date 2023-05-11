@@ -24,10 +24,13 @@ PATCHES_REV=$(curl -s -L -f \ -H "Accept: application/vnd.github+json" \
     "https://api.github.com/repos/CachyOS/kernel-patches/git/refs/heads/master" | jq -r '.object.sha')
 PATCHES_HASH=$(nix-prefetch-url --unpack "https://github.com/CachyOS/kernel-patches/archive/$PATCHES_REV.tar.gz")
 
+KERNEL_HASH=$(nix-prefetch-url "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$MAJOR.$MINOR.tar.xz")
+
 cat <<EOF >"$SCRIPTDIR/metadata.json"
 {
   "major": "$MAJOR",
   "minor": "$MINOR",
+  "kernel_hash": "$KERNEL_HASH",
   "patches_rev": "$PATCHES_REV",
   "patches_hash": "$PATCHES_HASH"
 }

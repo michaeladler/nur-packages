@@ -1,6 +1,7 @@
 {
   "major": "6.3",
-  "minor": "1",
-  "patches_rev": "086ee65adea261152acf0788597bfb686b25ea34",
-  "patches_hash": "14yfhc452nbnzqlhmfads36f4bdqnj5g6wpq2f616llvc5asi2nx"
+  "minor": "2",
+  "kernel_hash": "0a2kki763lrlafh6kf9ca8nxrdrk5043k7vdzy4pjgyahbrfq4mn",
+  "patches_rev": "d2b92b14e924b821d9ec8dea3f947f46e061dd88",
+  "patches_hash": "1y25037h89wsj7lidv0y68kgzyivyz2ks56iyysg8lw6pi55hf38"
 }

@@ -73,6 +73,7 @@ in
   sscep = callPackage ./pkgs/sscep { };
   tlpui = callPackage ./pkgs/tlpui { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
+  colorized-logs = callPackage ./pkgs/colorized-logs { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

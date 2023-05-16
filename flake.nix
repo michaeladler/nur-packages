@@ -86,6 +86,7 @@
             asciinema-edit
             linux-cachyos
             linux-zen
+            colorized-logs
             ;
         });
 

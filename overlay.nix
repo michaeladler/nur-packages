@@ -16,6 +16,7 @@ in
   srandrd = (import ./pkgs/srandrd) final prev;
   waybar-hyprland = (import ./pkgs/waybar-hyprland.nix) final prev;
   brave = (import ./pkgs/brave) final prev;
+  gnu-efi = (import ./pkgs/gnu-efi) final prev;
   neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   golangci-lint = prev.golangci-lint.override {
     buildGoModule = final.buildGo120Module;

@@ -87,6 +87,7 @@
             linux-cachyos
             linux-zen
             colorized-logs
+            gnu-efi
             ;
         });
 

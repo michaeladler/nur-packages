@@ -29,6 +29,7 @@ go-mod-outdated
 kas-container
 libubootenv
 linux-cachyos
+linux-lqx
 linux-zen
 lua-language-server
 luaprompt

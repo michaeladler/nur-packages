@@ -29,6 +29,7 @@
         {
           inherit (pkgs) luajitPackages python3Packages;
           zenPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-zen);
+          lqxPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-lqx);
           cachyosPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-cachyos);
         });
 
@@ -86,6 +87,7 @@
             asciinema-edit
             linux-cachyos
             linux-zen
+            linux-lqx
             colorized-logs
             ;
         });

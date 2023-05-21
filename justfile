@@ -4,6 +4,9 @@ build PKG:
 build-zen:
     nix-build --keep-failed ci-zen.nix
 
+build-lqx:
+    nix-build --keep-failed ci-lqx.nix
+
 build-cachyos:
     nix-build --keep-failed ci-cachyos.nix
 

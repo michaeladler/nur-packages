@@ -2,9 +2,6 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 set -eu
 
-# pinned, for now
-exit 0
-
 GH_REPO=zen-kernel/zen-kernel
 
 VERSION=$(curl --silent "https://api.github.com/repos/$GH_REPO/releases" |

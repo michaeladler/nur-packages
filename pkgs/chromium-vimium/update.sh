@@ -10,7 +10,14 @@ GH_REPO=vimium
 
 echo "Updating $GH_OWNER/$GH_REPO"
 
-LATEST_RELEASE_TAG=$(curl --header "Authorization: token $GITHUB_TOKEN" --silent "https://api.github.com/repos/$GH_OWNER/$GH_REPO/tags" | jq -r '.[] | .name' | grep "^v.*" | sort -V | tail -n1)
+LATEST_RELEASE_TAG=$(
+    curl --header "Authorization: token $GITHUB_TOKEN" --silent "https://api.github.com/repos/$GH_OWNER/$GH_REPO/tags" |
+        jq -r '.[] | .name' |
+        grep "^v.*" |
+        grep -v '^v\.' |
+        sort -V |
+        tail -n1
+)
 LATEST_RELEASE_TAG=${LATEST_RELEASE_TAG:1}
 OUR_TAG=$(grep "^\s*version\s*=" default.nix | awk -F= '{print $2;}' | tr -d '"; ')
 

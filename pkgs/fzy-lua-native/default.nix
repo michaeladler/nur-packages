@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation {
   pname = "fzy-lua-native";
-  version = "unstable-2023-04-01";
+  version = "unstable-2023-06-08";
 
   src = fetchFromGitHub {
     owner = "romgrk";
     repo = "fzy-lua-native";
-    rev = "45148b3f70d244e8b8b5db60df447a2b7ac2de9d";
-    sha256 = "1c59vdjdhbn7xjvh112m35xqqr1fmqb05m6lkk3zj77kdfv3svav";
+    rev = "820f745b7c442176bcc243e8f38ef4b985febfaf";
+    sha256 = "1zhrql0ym0l24jvdjbz6qsf6j896cklazgksssa384gfd8s33bi5";
   };
 
   buildInputs = [ ];

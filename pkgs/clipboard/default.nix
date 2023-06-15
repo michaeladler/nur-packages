@@ -1,19 +1,19 @@
-{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, xorg, wayland }:
+{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, xorg, wayland, alsa-lib }:
 
 stdenv.mkDerivation rec {
   pname = "clipboard";
-  version = "unstable-2023-06-11";
+  version = "unstable-2023-06-15";
 
   src = fetchFromGitHub {
     owner = "Slackadays";
     repo = "Clipboard";
-    rev = "f76b750cb6bf1fe4bd0c6b4b01a2dae86beafec7";
-    sha256 = "0fg3m2jilr5rwgwazngd281m8rwy4k9sg3z76yhkp9iiknjw87l7";
+    rev = "871752c6fbb27c1172f8a069b82ccc4909fc176b";
+    sha256 = "1az5417sfvn252fbzpw0nld4jrc293gzqb043mg17d1pcwjxqbl1";
   };
 
   nativeBuildInputs = [ pkg-config cmake ];
 
-  buildInputs = [ xorg.libX11 wayland ];
+  buildInputs = [ xorg.libX11 wayland alsa-lib ];
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

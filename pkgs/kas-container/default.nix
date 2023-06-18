@@ -7,8 +7,8 @@ stdenvNoCC.mkDerivation {
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "kas";
-    rev = "c582cfb53ed7a8207a22a19cb98fe2232d4f73ee";
-    sha256 = "0iwylzxyrdhizmy81fg8ymqp8vnlv9ylh2x376c1dgqyi6s2655y";
+    rev = "207d236bae183eebbd00e1d845eec1ece69a75bf";
+    sha256 = "1qk60svr69q6z0vv69hgqv9yvmhcx435fp5fy6f9lbmzm7v0cqpp";
   };
 
   installPhase = ''

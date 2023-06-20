@@ -10,16 +10,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "gitui";
-  version = "unstable-2023-06-08";
+  version = "unstable-2023-06-19";
 
   src = fetchFromGitHub {
     owner = "extrawurst";
     repo = "gitui";
-    rev = "ff48840f2380368034e80dbcd6742b033873e8e5";
-    sha256 = "0i04wlq5l1sd2vb1sr2jri1vz5a0s4k9lxg8pwfy51kppqfcszwg";
+    rev = "be801a336f7fa1297c5184ffb26e7defb2fad7c3";
+    sha256 = "0bfgxm6b3z6fwcywaq63mm2v7a4iv6q87a3cm3xhaym617v8x30n";
   };
 
-  cargoHash = "sha256-hlw+oMGdaLiNwec6VV2/qZiQrDt8XQyGTwI3VkXxuCU=";
+  cargoHash = "sha256-f0Up022cVyIlEsiMxI+79q0+xhGm2aEYu+lCP4xReFc=";
 
   nativeBuildInputs = [ pkg-config ];
 

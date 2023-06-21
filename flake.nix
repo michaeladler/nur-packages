@@ -38,6 +38,7 @@
         {
           inherit (pkgs)
             age-plugin-yubikey
+            asciinema-edit
             atool2
             bed
             brave
@@ -52,6 +53,7 @@
             cinclude2dot
             clang-format-diff
             clipboard
+            colorized-logs
             criterion
             czmod
             demo-magic
@@ -65,30 +67,28 @@
             go-mod-outdated
             kas-container
             libubootenv
+            linux-cachyos
+            linux-lqx
+            linux-zen
+            lua-language-server
             luaprompt
             msktutil
             neovim-unwrapped
             nix-direnv
             notmuch-mailmover
-            pam-fprint-grosshack
             pandoc-bin
             qmarkdown
             sbkeys
             skipcpio
             srandrd
             sscep
-            lua-language-server
             thinkfan
             tlpui
             vcalendar-filter
             waybar-hyprland
+            zellij
             zinit
             zoxide
-            asciinema-edit
-            linux-cachyos
-            linux-zen
-            linux-lqx
-            colorized-logs
             ;
         });
 

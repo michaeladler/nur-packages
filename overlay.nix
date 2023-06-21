@@ -67,7 +67,6 @@ in
   luaprompt = callPackage ./pkgs/luaprompt { };
   msktutil = callPackage ./pkgs/msktutil { };
   notmuch-mailmover = callPackage ./pkgs/notmuch-mailmover { };
-  pam-fprint-grosshack = callPackage ./pkgs/pam-fprint-grosshack { };
   qmarkdown = callPackage ./pkgs/qmarkdown { };
   sbkeys = callPackage ./pkgs/sbkeys { };
   skipcpio = callPackage ./pkgs/skipcpio { };
@@ -75,6 +74,7 @@ in
   tlpui = callPackage ./pkgs/tlpui { };
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   colorized-logs = callPackage ./pkgs/colorized-logs { };
+  zellij = callPackage ./pkgs/zellij { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

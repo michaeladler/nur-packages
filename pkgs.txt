@@ -37,7 +37,6 @@ msktutil
 neovim-unwrapped
 nix-direnv
 notmuch-mailmover
-pam-fprint-grosshack
 pandoc-bin
 qmarkdown
 sbkeys
@@ -48,5 +47,6 @@ thinkfan
 tlpui
 vcalendar-filter
 waybar-hyprland
+zellij
 zinit
 zoxide

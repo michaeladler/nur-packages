@@ -5,6 +5,7 @@ set -eu
 GH_REPO=floccusaddon/floccus
 
 VERSION=$(curl --silent "https://api.github.com/repos/$GH_REPO/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+VERSION=${VERSION#"v"}
 VERSION_OLD=$(jq -r '.version' <"$SCRIPT_DIR"/metadata.json || echo "")
 
 if [ "$VERSION_OLD" = "$VERSION" ]; then

@@ -1,6 +1,6 @@
 {
-  "version": "6.3.8",
-  "lqx_url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.3.8-lqx1/v6.3.8-lqx1.patch.xz",
+  "version": "6.3.9",
+  "lqx_url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.3.9-lqx1/v6.3.9-lqx1.patch.xz",
   "lqx_suffix": "lqx1",
-  "lqx_sha256": "1lcr4g38qs7rp9kwlpdgi970i5l27p204gyrwz8h2njk1ib71qrw"
+  "lqx_sha256": "056z6k7qv107lv1ajmwzvv01q2grf61gfdgqpdb4x0vlsm1mbl5m"
 }

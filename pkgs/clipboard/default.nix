@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "clipboard";
-  version = "unstable-2023-06-19";
+  version = "unstable-2023-06-22";
 
   src = fetchFromGitHub {
     owner = "Slackadays";
     repo = "Clipboard";
-    rev = "138a78c00a329c66c40c325de1f67a2b7ac77ada";
-    sha256 = "1h3vrxpmkhx097skzz6hd40ksz1bqqjn2fw0r16zh4javwl6dxl8";
+    rev = "c4faa8c7de126fb76d68d8c4d3850bcd343f1776";
+    sha256 = "0s2r0jpdv5wfjgzb8rngir71bibzy7fpc96qsrf7wi978ri4b6ja";
   };
 
   nativeBuildInputs = [ pkg-config cmake ];

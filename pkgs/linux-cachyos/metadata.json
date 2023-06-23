@@ -1,7 +1,7 @@
 {
   "major": "6.3",
-  "minor": "8",
-  "kernel_hash": "0m89safyzi0rklsqvii5vkg92rdmvnl4lvyk6m648bhf4lhx88s3",
-  "patches_rev": "b48aab3ad74e67960d50381cc4cbbe5de3d78774",
-  "patches_hash": "0nfd1mmvc4kxdlh5jrnsddv0gf2rkz3cjjsjdiw4w1xvqq61c0xy"
+  "minor": "9",
+  "kernel_hash": "0gmi55hhdw1f1qyvd04v17x596yh8wis42vmcd8vhymik49z5v21",
+  "patches_rev": "2592d1340bf116d9e61516742ae457744adc1d51",
+  "patches_hash": "1zf1kyipnm8d0jgcbjg6y3h2nyki2i8a8k3xhcip10sd1pkfkrdm"
 }

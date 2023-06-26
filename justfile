@@ -1,3 +1,5 @@
+UPDATE_NIX_FETCHGIT := "nix run  'github:NixOS/nixpkgs/nixos-23.05#update-nix-fetchgit'"
+
 build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
@@ -31,7 +33,7 @@ update-all-rust-pkgs:
         pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
         echo "Updating $pname"
 
-        update-nix-fetchgit ./pkgs/$pname/default.nix
+        {{ UPDATE_NIX_FETCHGIT }} ./pkgs/$pname/default.nix
         git diff --exit-code ./pkgs/$pname/default.nix || {
             sed -i -E -e 's,cargoHash = .*,cargoHash = lib.fakeHash;,' ./pkgs/$pname/default.nix
             sed -i -E -e 's,cargoSha256 = .*,cargoSha256 = lib.fakeHash;,' ./pkgs/$pname/default.nix
@@ -53,7 +55,7 @@ update-all-go-pkgs:
         pname=$(grep "^\s*pname" "$fname" | sed -E -e 's/.*=\s*"(.*)".*/\1/')
         echo "Updating $pname"
 
-        update-nix-fetchgit ./pkgs/$pname/default.nix
+        {{ UPDATE_NIX_FETCHGIT }} ./pkgs/$pname/default.nix
         git diff --exit-code ./pkgs/$pname/default.nix || {
             sed -i -E -e 's,vendorSha256 = .*,vendorSha256 = lib.fakeSha256;,' ./pkgs/$pname/default.nix
             nix build ".#$pname" 1>$pname.log 2>&1 || {
@@ -82,7 +84,7 @@ update-other:
             # skip go/rust packages
             grep -E -q "(buildGo|buildRustPackage)" "$fname" || {
                 echo "updating $fname"
-                update-nix-fetchgit "$fname"
+                {{ UPDATE_NIX_FETCHGIT }} "$fname"
             }
         }
     done

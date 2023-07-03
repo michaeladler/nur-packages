@@ -9,8 +9,8 @@ buildLinux (rec {
   modDirVersion = "${version}-${metadata.zen_suffix}";
 
   src = fetchurl {
-    url = "mirror://kernel/linux/kernel/v6.x/linux-6.3.tar.xz";
-    sha256 = "sha256-ujSR9e1r0nCjcMRAQ049aQhfzdUoki+gHnPXZX23Ox4=";
+    url = "mirror://kernel/linux/kernel/v6.x/linux-6.4.tar.xz";
+    sha256 = "sha256-j6BYjwws7KRMrHeg45ukjJ8AprncaXYcAqXT76yNp/M=";
   };
 
   kernelPatches = [

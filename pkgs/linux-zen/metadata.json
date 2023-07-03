@@ -1,6 +1,6 @@
 {
-  "version": "6.3.9",
-  "zen_url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.3.9-zen1/v6.3.9-zen1.patch.xz",
+  "version": "6.4.1",
+  "zen_url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.4.1-zen1/v6.4.1-zen1.patch.xz",
   "zen_suffix": "zen1",
-  "zen_sha256": "0fqfqi1nawdmc5zpvjmmvdcvhy80r48f3iaj51199afirwhds4ir"
+  "zen_sha256": "01lzca97b74078hx708r06rxd3r9ghhsb9n73jnacpfh4l30avpa"
 }

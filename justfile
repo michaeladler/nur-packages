@@ -9,9 +9,6 @@ build-zen:
 build-lqx:
     nix-build --keep-failed ci-lqx.nix
 
-build-cachyos:
-    nix-build --keep-failed ci-cachyos.nix
-
 build-all:
     #!/usr/bin/env bash
     # broken:
@@ -72,7 +69,7 @@ update-other:
     set -euo pipefail
     echo "Updating other packages"
     find . -name update.sh -type f -executable \
-        -not -path "pkgs/linux-zen/*" -and -not -path "pkgs/linux-cachyos/*" |
+        -not -path "pkgs/linux-zen/*" |
         while read -r fname; do
             echo "Running $fname"
             sh -c "$fname"

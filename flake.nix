@@ -30,7 +30,6 @@
           inherit (pkgs) luajitPackages python3Packages;
           zenPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-zen);
           lqxPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-lqx);
-          cachyosPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-cachyos);
         });
 
       packages = forAllSystems (system:
@@ -67,7 +66,6 @@
             go-mod-outdated
             kas-container
             libubootenv
-            linux-cachyos
             linux-lqx
             linux-zen
             lua-language-server

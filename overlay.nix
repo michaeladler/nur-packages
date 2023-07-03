@@ -61,7 +61,6 @@ in
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
   kas-container = callPackage ./pkgs/kas-container { };
   libubootenv = callPackage ./pkgs/libubootenv { };
-  linux-cachyos = callPackage ./pkgs/linux-cachyos { };
   linux-zen = callPackage ./pkgs/linux-zen { };
   linux-lqx = callPackage ./pkgs/linux-lqx { };
   luaprompt = callPackage ./pkgs/luaprompt { };

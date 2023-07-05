@@ -51,7 +51,6 @@
             chyle
             cinclude2dot
             clang-format-diff
-            clipboard
             colorized-logs
             criterion
             czmod

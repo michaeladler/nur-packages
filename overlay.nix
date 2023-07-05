@@ -48,7 +48,6 @@ in
   chyle = callPackage ./pkgs/chyle { };
   cinclude2dot = callPackage ./pkgs/cinclude2dot { };
   clang-format-diff = callPackage ./pkgs/clang-format-diff { };
-  clipboard = callPackage ./pkgs/clipboard { };
   czmod = callPackage ./pkgs/czmod { };
   demo-magic = callPackage ./pkgs/demo-magic { };
   efibootguard = callPackage ./pkgs/efibootguard { };

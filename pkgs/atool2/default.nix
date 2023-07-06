@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "atool2";
-  version = "unstable-2022-09-13";
+  version = "unstable-2023-07-05";
 
   src = fetchFromGitHub {
     owner = "solsticedhiver";
     repo = "atool2";
-    rev = "c135b880f063d0ba4d7d9f041e63cd9662ff5693";
-    sha256 = "0fw3a1qvy0z6iidandrxhf18hki3b5ks6l31mzrs66883vx8gcww";
+    rev = "1db9e4679600a1d1ed65cf4920aa010923345eaf";
+    sha256 = "1avawl8cvgi41ac9c2xk1b53fp69rdzcg5h8j6p3m6bf6f1i8f01";
   };
 
   nativeBuildInputs = [ autoreconfHook ];

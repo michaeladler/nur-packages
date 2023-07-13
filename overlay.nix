@@ -73,6 +73,7 @@ in
   vcalendar-filter = callPackage ./pkgs/vcalendar-filter { };
   colorized-logs = callPackage ./pkgs/colorized-logs { };
   zellij = callPackage ./pkgs/zellij { };
+  poop = callPackage ./pkgs/poop { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

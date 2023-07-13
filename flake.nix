@@ -86,6 +86,7 @@
             zellij
             zinit
             zoxide
+            poop
             ;
         });
 

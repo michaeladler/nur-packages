@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 set -euo pipefail
+
+cd "$SCRIPT_DIR"
 
 GH_REPO=andrewrk/poop
 

@@ -83,7 +83,6 @@
             tlpui
             vcalendar-filter
             waybar-hyprland
-            zellij
             zinit
             zoxide
             poop

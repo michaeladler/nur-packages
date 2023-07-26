@@ -5,10 +5,9 @@ on:
   workflow_dispatch:
   schedule:
     # NB: jobs may be delayed a couple of hours
-    - cron:  '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
-
   update-all:
     runs-on: ubuntu-latest
 
@@ -24,7 +23,7 @@ jobs:
       - uses: cachix/cachix-action@v12
         with:
           name: nur-packages
-          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
       - name: free some disk space
         run: df -h && sudo rm -rf "/usr/local/share/boost" "$AGENT_TOOLSDIRECTORY" && df -h
@@ -42,5 +41,5 @@ jobs:
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.3
         with:
-          message: 'chore: update packages'
+          message: "chore: update packages"
           rebase: true

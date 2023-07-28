@@ -4,15 +4,13 @@ build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
 build-zen:
-    nix-build-uncached --keep-failed ci-zen.nix
+    nix-build --keep-failed ci-zen.nix
 
 build-lqx:
-    nix-build-uncached --keep-failed ci-lqx.nix
+    nix-build --keep-failed ci-lqx.nix
 
 build-all:
     #!/usr/bin/env bash
-    # broken:
-    # nix-build-uncached ./ci.nix
     grep -v "^linux" pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L --no-link
 
 packagelist:

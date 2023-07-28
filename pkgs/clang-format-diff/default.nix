@@ -1,24 +1,19 @@
 { lib, stdenv, python3, fetchurl }:
 
 stdenv.mkDerivation rec {
-  pname = "clang-format-diff.py";
-  version = "0.4.7";
+  pname = "clang-format-diff";
+  version = "16.0.6";
 
   src = fetchurl {
-    url = "https://github.com/llvm/llvm-project/raw/f93169226a298f8fb22d768671d5564030c0ffa9/clang/tools/clang-format/clang-format-diff.py";
-    sha256 = "00sr7v8ijg05y76c29wglmxdbk22w4nk3kdsr90a6n4hmgi4a8vz";
+    url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/clang-${version}.src.tar.xz";
+    sha256 = "1186b6e6eefeadd09912ed73b3729e85b59f043724bb2818a95a2ec024571840";
   };
 
   checkInputs = [ ];
   propagatedBuildInputs = [ python3 ];
 
-  unpackPhase = "cp $src clang-format-diff.py";
-  buildPhase = "true";
-
   installPhase = ''
-    mkdir -p $out/bin
-    cp clang-format-diff.py $out/bin/
-    chmod +x $out/bin/*
+    install -D -m0755 tools/clang-format/clang-format-diff.py $out/bin/clang-format-diff.py
   '';
 
   meta = with lib; {

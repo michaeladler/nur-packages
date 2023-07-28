@@ -1,4 +1,12 @@
 let
-  outputs = builtins.getFlake (toString ./.);
+  flake = builtins.getFlake (toString ./.);
+  flake-utils = flake.inputs.flake-utils.lib;
+
+  pkgs = flake.legacyPackages.x86_64-linux.zenPackages;
 in
-outputs.legacyPackages.x86_64-linux.zenPackages.kernel
+
+flake-utils.flattenTree (
+  pkgs.kernel //
+  pkgs.nvidiaPackages.latest.open //
+  pkgs.turbostat
+)

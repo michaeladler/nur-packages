@@ -4,10 +4,10 @@ build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
 build-zen:
-    nix-build --keep-failed ci-zen.nix
+    nix-build-uncached --keep-failed ci-zen.nix
 
 build-lqx:
-    nix-build --keep-failed ci-lqx.nix
+    nix-build-uncached --keep-failed ci-lqx.nix
 
 build-all:
     #!/usr/bin/env bash

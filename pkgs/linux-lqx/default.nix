@@ -6,7 +6,7 @@ in
 
 buildLinux (rec {
   inherit (metadata) version;
-  modDirVersion = "${version}-${metadata.lqx_suffix}";
+  modDirVersion = "${version}-${metadata.suffix}";
 
   src = fetchurl {
     url = "mirror://kernel/linux/kernel/v6.x/linux-6.4.tar.xz";
@@ -17,8 +17,7 @@ buildLinux (rec {
     {
       name = "lqx";
       patch = fetchurl {
-        url = metadata.lqx_url;
-        sha256 = metadata.lqx_sha256;
+        inherit (metadata) url sha256;
       };
     }
   ];
@@ -32,6 +31,6 @@ buildLinux (rec {
 
   extraMeta = {
     branch = lib.versions.majorMinor version;
-    description = "Linux lqx";
+    description = "Linux LQX";
   };
 })

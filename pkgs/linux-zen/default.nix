@@ -6,7 +6,7 @@ in
 
 buildLinux (rec {
   inherit (metadata) version;
-  modDirVersion = "${version}-${metadata.zen_suffix}";
+  modDirVersion = "${version}-${metadata.suffix}";
 
   src = fetchurl {
     url = "mirror://kernel/linux/kernel/v6.x/linux-6.4.tar.xz";
@@ -17,8 +17,7 @@ buildLinux (rec {
     {
       name = "zen";
       patch = fetchurl {
-        url = metadata.zen_url;
-        sha256 = metadata.zen_sha256;
+        inherit (metadata) url sha256;
       };
     }
   ];

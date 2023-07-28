@@ -41,7 +41,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "just build-all" \
+            --command "just build-all build-zen" \
             -p nixUnstable nix-build-uncached just
 
       - name: Commit & Push changes

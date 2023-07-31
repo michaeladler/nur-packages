@@ -7,8 +7,8 @@ GH_REPO=Snaipe/Criterion
 VERSION=$(curl --silent "https://api.github.com/repos/$GH_REPO/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
 VERSION=${VERSION#"v"}
 VERSION_OLD=
-if [[ -e metadata.json ]]; then
-    VERSION_OLD=$(jq -r '.version' <"$SCRIPT_DIR"/metadata.json || echo "")
+if [[ -e "$SCRIPT_DIR/metadata.json" ]]; then
+    VERSION_OLD=$(jq -r '.version' <"$SCRIPT_DIR/metadata.json" || echo "")
 fi
 
 if [ "$VERSION_OLD" = "$VERSION" ]; then

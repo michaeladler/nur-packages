@@ -13,6 +13,7 @@ if [ "$OLD_VERSION" = "$VERSION" ]; then
     echo "poop: no update available"
     exit 0
 fi
+echo "poop: $OLD_VERSION -> $VERSION"
 
 URL="https://github.com/$GH_REPO/releases/download/$VERSION/x86_64-linux-poop"
 SHA256=$(nix-prefetch-url "$URL")

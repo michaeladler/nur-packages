@@ -15,8 +15,8 @@ if [ "$VERSION_OLD" = "$VERSION" ]; then
     echo "$GH_REPO: no update available"
     exit 0
 fi
+echo "criterion: $VERSION_OLD -> $VERSION"
 
-echo "Updating from $VERSION_OLD to $VERSION ..."
 URL="https://github.com/Snaipe/Criterion/releases/download/v${VERSION}/criterion-${VERSION}-linux-x86_64.tar.xz"
 SHA256=$(nix-prefetch-url "$URL")
 printf '{"version": "%s", "url": "%s", "sha256": "%s"}\n' "$VERSION" "$URL" "$SHA256" >"$SCRIPT_DIR/metadata.json"

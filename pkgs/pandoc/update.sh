@@ -12,7 +12,7 @@ if [ "$VERSION_OLD" = "$VERSION" ]; then
     exit 0
 fi
 
-echo "Updating from $VERSION_OLD to $VERSION ..."
+echo "$GH_REPO: $VERSION_OLD -> $VERSION"
 URL="https://github.com/$GH_REPO/releases/download/$VERSION/pandoc-$VERSION-linux-amd64.tar.gz"
 SHA256=$(nix-prefetch-url "$URL")
 printf '{"version": "%s", "url": "%s", "sha256": "%s"}\n' "$VERSION" "$URL" "$SHA256" >"$SCRIPT_DIR/metadata.json"

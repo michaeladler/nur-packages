@@ -66,23 +66,21 @@ update-other:
     #!/usr/bin/env bash
     set -euo pipefail
     echo "Updating other packages"
-    find . -name update.sh -type f -executable \
-        -not -path "pkgs/linux-zen/*" |
-        while read -r fname; do
-            echo "Running $fname"
-            sh -c "$fname"
-        done
-    find pkgs -name "*.nix" | while read -r fname; do
-        dir=$(dirname "$fname")
-        # only update if update.sh does not exist
-        [[ -e $dir/update.sh ]] || {
-            # skip go/rust packages
-            grep -E -q "(buildGo|buildRustPackage)" "$fname" || {
-                echo "updating $fname"
-                {{ UPDATE_NIX_FETCHGIT }} "$fname"
-            }
+    find . -name update.sh -type f -executable | xargs -n1 -P$(nproc) bash -c
+    find pkgs -name "*.nix" | xargs -n1 -P$(nproc) just _update-one
+
+_update-one FNAME:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    dir=$(dirname "{{ FNAME }}")
+    # only update if update.sh does not exist
+    [[ -e $dir/update.sh ]] || {
+        # skip go/rust packages
+        grep -E -q "(buildGo|buildRustPackage)" "{{ FNAME }}" || {
+            {{ UPDATE_NIX_FETCHGIT }} "{{ FNAME }}"
+            echo "{{ FNAME }}: done"
         }
-    done
+    }
 
 update-flakes:
     nix flake update

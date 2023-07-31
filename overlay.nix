@@ -55,7 +55,6 @@ in
   fzy-lua-native = callPackage ./pkgs/fzy-lua-native { };
   git-buildpackage = callPackage ./pkgs/git-buildpackage { };
   git-hours = callPackage ./pkgs/git-hours { };
-  gitui = callPackage ./pkgs/gitui { };
   go-crx3 = callPackage ./pkgs/go-crx3 { };
   go-mod-outdated = callPackage ./pkgs/go-mod-outdated { };
   kas-container = callPackage ./pkgs/kas-container { };

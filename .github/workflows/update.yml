@@ -33,15 +33,12 @@ jobs:
           name: nur-packages
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
-      - name: update
+      - name: update and build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: nix run 'nixpkgs#just' -- update-all
-
-      - name: build
         run: |
           nix-shell \
-            --command "just build-all build-zen" \
+            --command "just update-all build-all build-zen" \
             -p nixUnstable just
 
       - name: Commit & Push changes

@@ -11,13 +11,13 @@
 stdenv.mkDerivation rec {
 
   pname = "luaprompt";
-  version = "unstable-2023-07-25";
+  version = "unstable-2023-07-31";
 
   src = fetchFromGitHub {
     owner = "dpapavas";
     repo = "luaprompt";
-    rev = "1e4171298b2ba58f74f7d84417de542c7438493d";
-    sha256 = "0h9sndg426vhakv2id3f1bzn09jjcm36bkkjzikl7a4ph9q9km84";
+    rev = "f64f1b13416057fc9606e85b70222adfa9312d0e";
+    sha256 = "16n5yqzzzvf56wd0i7hkqs29bv2gnd9wbs3dmgyyc1f57sr3klhr";
   };
 
   nativeBuildInputs = [ pkg-config makeWrapper ];

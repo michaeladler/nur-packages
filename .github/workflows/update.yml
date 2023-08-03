@@ -38,7 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           nix-shell \
-            --command "just update-all build-all build-zen" \
+            --command "just update-all build-all" \
             -p nixUnstable just
 
       - name: Commit & Push changes

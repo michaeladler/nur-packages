@@ -22,7 +22,7 @@ jobs:
       - name: build
         run: |
           nix-shell \
-            --command "just packagelist build-all build-zen" \
+            --command "just packagelist build-all" \
             -p nixUnstable just
 
       - name: Commit & Push changes

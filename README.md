@@ -11,7 +11,7 @@ This repository hosts my Nix packages. For a list of packages, see [pkgs.txt](pk
 No need to build on your machine:
 
 ```bash
-$ cachix use nur-packages
+$ cachix use michaeladler
 ```
 
 ## Updates

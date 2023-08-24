@@ -87,6 +87,7 @@
             zinit
             zoxide
             poop
+            gtk-chtheme
             ;
         });
 

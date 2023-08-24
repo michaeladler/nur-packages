@@ -23,6 +23,7 @@ git-buildpackage
 git-hours
 go-crx3
 go-mod-outdated
+gtk-chtheme
 kas-container
 libubootenv
 linux-lqx

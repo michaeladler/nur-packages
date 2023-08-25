@@ -87,6 +87,7 @@
             zoxide
             poop
             gtk-chtheme
+            hikari
             ;
         });
 

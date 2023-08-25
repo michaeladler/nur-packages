@@ -21,6 +21,7 @@ in
   go-tools = prev.go-tools.override {
     buildGoModule = final.buildGo120Module;
   };
+  hikari = (import ./pkgs/hikari) final prev;
 
   checksec = prev.checksec.overrideAttrs (old: {
     preFixup = ''

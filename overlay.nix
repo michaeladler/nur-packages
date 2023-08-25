@@ -14,7 +14,6 @@ in
   zinit = (import ./pkgs/zinit) final prev;
   thinkfan = (import ./pkgs/thinkfan) final prev;
   srandrd = (import ./pkgs/srandrd) final prev;
-  waybar-hyprland = (import ./pkgs/waybar-hyprland.nix) final prev;
   neovim-unwrapped = (import ./pkgs/neovim-unwrapped) final prev;
   golangci-lint = prev.golangci-lint.override {
     buildGoModule = final.buildGo120Module;

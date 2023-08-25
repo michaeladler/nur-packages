@@ -83,7 +83,6 @@
             thinkfan
             tlpui
             vcalendar-filter
-            waybar-hyprland
             zinit
             zoxide
             poop

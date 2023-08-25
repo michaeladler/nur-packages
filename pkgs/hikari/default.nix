@@ -6,6 +6,7 @@ prev.hikari.overrideAttrs (old: {
     ./0001_xwayland.patch
     ./0002_gtk4.patch
     ./0003_disable-outputs.patch # this one is from me
+    ./0004_cflags.patch
   ];
 
 })

@@ -1,33 +1,28 @@
-{ stdenv, lib, fetchFromGitHub, pkg-config }:
+{ stdenv, lib, fetchurl, pkg-config }:
 
 stdenv.mkDerivation rec {
   pname = "skipcpio";
-  version = "unstable-2023-08-24";
+  version = "unstable-2022-08-18";
 
-  src = fetchFromGitHub {
-    owner = "dracutdevs";
-    repo = "dracut";
-    rev = "23389f6d48871212eba46e34db67e0c9f4368078";
-    sha256 = "0qbac4v55qgybxfpi4y28x0mha5ajyabrpyqvflkbf3py7j69fdz";
+  src = fetchurl {
+    url = "https://github.com/dracutdevs/dracut/raw/aa0369a4a31764fde06214358b0774fb1095af01/src/skipcpio/skipcpio.c";
+    sha256 = "195nlglv3zxzc6mvq70c0m9zj683z0wm9a32x5v6fphmsrd8m59a";
   };
 
   buildInputs = [ pkg-config ];
 
   phases = [ "unpackPhase" "buildPhase" "installPhase" ];
 
-  patchPhase = ''
-    patchShebangs configure
+  unpackPhase = ''
+    cp $src skipcpio.c
   '';
 
-  configurePhase = false;
-
   buildPhase = ''
-    make src/skipcpio/skipcpio
+    cc -O2 -o skipcpio skipcpio.c
   '';
 
   installPhase = ''
-    mkdir -p $out/bin
-    mv src/skipcpio/skipcpio $out/bin/
+    install -D -m0755 skipcpio $out/bin/skipcpio
   '';
 
   meta = with lib; {

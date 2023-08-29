@@ -45,5 +45,4 @@ sscep
 thinkfan
 tlpui
 vcalendar-filter
-zinit
 zoxide

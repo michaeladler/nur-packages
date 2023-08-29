@@ -83,7 +83,6 @@
             thinkfan
             tlpui
             vcalendar-filter
-            zinit
             zoxide
             poop
             gtk-chtheme

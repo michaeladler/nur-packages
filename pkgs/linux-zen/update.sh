@@ -12,7 +12,7 @@ if [[ $VERSION =~ v([0-9]+\.[0-9]+\.[0-9]+)-(.+) ]]; then
     VERSION=${BASH_REMATCH[1]}
     SUFFIX=${BASH_REMATCH[2]}
 else
-    echo "Unable to extract version number"
+    echo "Unable to extract version number from $VERSION"
     exit 1
 fi
 

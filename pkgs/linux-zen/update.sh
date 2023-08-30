@@ -13,7 +13,7 @@ if [[ $VERSION =~ v([0-9]+\.[0-9]+\.[0-9]+)-(.+) ]]; then
     SUFFIX=${BASH_REMATCH[2]}
 else
     echo "Unable to extract version number from $VERSION"
-    exit 1
+    exit 0
 fi
 
 VERSION_OLD=$(jq -r '.version' <"$SCRIPT_DIR"/metadata.json || echo "")

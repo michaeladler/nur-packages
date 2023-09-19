@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchFromGitHub, pkgconfig, autoreconfHook, kerberos, cyrus_sasl, openldap }:
+{ stdenv, lib, fetchFromGitHub, pkg-config, autoreconfHook, kerberos, cyrus_sasl, openldap }:
 
 stdenv.mkDerivation rec {
   version = "unstable-2022-12-23";
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
     sha256 = "0hymw8j6v147z2w22z4p98spx74hxhy4bmpas6iwkwgmmq9nghgy";
   };
 
-  nativeBuildInputs = [ pkgconfig autoreconfHook ];
+  nativeBuildInputs = [ pkg-config autoreconfHook ];
   buildInputs = [ kerberos cyrus_sasl openldap ];
 
   postInstall = ''

@@ -4,6 +4,7 @@ atool2
 bed
 btrfs-du
 btrfs-list
+buku
 checksec
 chromium-browserpass
 chromium-floccus

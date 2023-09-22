@@ -21,9 +21,9 @@
 
     {
       overlays = {
-        default = import ./overlay.nix;
-        python = import ./overlay-python.nix;
-        lua = import ./overlay-lua.nix;
+        default = import ./overlays/common.nix;
+        python = import ./overlays/python.nix;
+        lua = import ./overlays/lua.nix;
       };
 
       # we have to use legacyPackages for sets of derivations (trees)
@@ -87,6 +87,7 @@
             poop
             gtk-chtheme
             hikari
+            buku
             ;
         });
 

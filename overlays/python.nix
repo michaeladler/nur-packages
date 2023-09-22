@@ -5,17 +5,17 @@ rec {
   python3 = prev.python3.override {
     packageOverrides = self: super: {
 
-      libconf = final.callPackage ./pkgs/python-modules/libconf.nix {
+      libconf = final.callPackage ../pkgs/python-modules/libconf.nix {
         inherit (final) lib;
         inherit (super) buildPythonPackage fetchPypi;
       };
 
-      python-libarchive = final.callPackage ./pkgs/python-modules/python-libarchive.nix {
+      python-libarchive = final.callPackage ../pkgs/python-modules/python-libarchive.nix {
         inherit (final) lib;
         inherit (super) buildPythonPackage fetchPypi;
       };
 
-      swugenerator = final.callPackage ./pkgs/python-modules/swugenerator {
+      swugenerator = final.callPackage ../pkgs/python-modules/swugenerator {
         #inherit (final) lib fetchFromGitHub;
         inherit (super) buildPythonPackage pytestCheckHook;
         inherit (self) libconf python-libarchive;

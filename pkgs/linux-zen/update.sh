@@ -6,7 +6,7 @@ GH_REPO=zen-kernel/zen-kernel
 
 VERSION=$(curl --silent "https://api.github.com/repos/$GH_REPO/releases" |
     jq -r 'map(select(.tag_name | contains("zen")) | .tag_name) | .[0]')
-URL="https://github.com/$GH_REPO/releases/download/$VERSION/$VERSION.patch.xz"
+URL="https://github.com/$GH_REPO/releases/download/$VERSION/linux-$VERSION.patch.zst"
 
 if [[ $VERSION =~ v([0-9]+\.[0-9]+\.[0-9]+)-(.+) ]]; then
     VERSION=${BASH_REMATCH[1]}

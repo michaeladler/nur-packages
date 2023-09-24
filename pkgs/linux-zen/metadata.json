@@ -1,6 +1,6 @@
 {
-  "version": "6.5.4",
-  "url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.5.4-zen2/linux-v6.5.4-zen2.patch.zst",
-  "suffix": "zen2",
-  "sha256": "193bhka5f7yck9yjq75ln2rk7wphl3vxnwdh9lnkzv4wcsm7sg9c"
+  "version": "6.5.5",
+  "url": "https://github.com/zen-kernel/zen-kernel/releases/download/v6.5.5-zen1/linux-v6.5.5-zen1.patch.zst",
+  "suffix": "zen1",
+  "sha256": "1bgaa4z6xgvlq9qwagdfwr7nl0yz9bw5zsd9a20vd3ca76hl81pp"
 }

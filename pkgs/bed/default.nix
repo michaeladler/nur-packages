@@ -1,6 +1,6 @@
-{ buildGoModule, fetchFromGitHub, lib, which }:
+{ buildGo121Module, fetchFromGitHub, lib, which }:
 
-buildGoModule {
+buildGo121Module {
   pname = "bed";
   version = "unstable-2023-04-25";
 

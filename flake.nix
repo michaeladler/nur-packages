@@ -53,7 +53,6 @@
             chyle
             cinclude2dot
             clang-format-diff
-            clipmon
             colorized-logs
             criterion
             czmod

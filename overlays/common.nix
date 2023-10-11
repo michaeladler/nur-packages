@@ -68,7 +68,6 @@ in
   colorized-logs = callPackage ../pkgs/colorized-logs { };
   poop = callPackage ../pkgs/poop { };
   gtk-chtheme = callPackage ../pkgs/gtk-chtheme { };
-  clipmon = callPackage ../pkgs/clipmon { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

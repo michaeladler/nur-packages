@@ -4,7 +4,6 @@ atool2
 bed
 btrfs-du
 btrfs-list
-buku
 checksec
 chromium-browserpass
 chromium-floccus
@@ -13,6 +12,7 @@ chromium-xbrowsersync
 chyle
 cinclude2dot
 clang-format-diff
+clipmon
 colorized-logs
 criterion
 czmod

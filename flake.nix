@@ -53,6 +53,7 @@
             chyle
             cinclude2dot
             clang-format-diff
+            clipmon
             colorized-logs
             criterion
             czmod
@@ -64,6 +65,8 @@
             git-hours
             go-crx3
             go-mod-outdated
+            gtk-chtheme
+            hikari
             kas-container
             libubootenv
             linux-lqx
@@ -75,6 +78,7 @@
             nix-direnv
             notmuch-mailmover
             pandoc-bin
+            poop
             qmarkdown
             sbkeys
             skipcpio
@@ -84,10 +88,6 @@
             tlpui
             vcalendar-filter
             zoxide
-            poop
-            gtk-chtheme
-            hikari
-            buku
             ;
         });
 

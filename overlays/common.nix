@@ -18,7 +18,6 @@ in
     buildGoModule = final.buildGo120Module;
   };
   hikari = (import ../pkgs/hikari) final prev;
-  buku = prev.buku.override { withServer = true; } ;
 
   checksec = prev.checksec.overrideAttrs (old: {
     preFixup = ''
@@ -69,6 +68,7 @@ in
   colorized-logs = callPackage ../pkgs/colorized-logs { };
   poop = callPackage ../pkgs/poop { };
   gtk-chtheme = callPackage ../pkgs/gtk-chtheme { };
+  clipmon = callPackage ../pkgs/clipmon { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     rec {

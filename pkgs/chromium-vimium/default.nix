@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
   pname = "chromium-vimium";
-  version = "2.0.1";
+  version = "2.0.2";
 
   src = fetchurl {
     url = "https://github.com/philc/vimium/archive/refs/tags/v${version}.zip";
-    sha256 = "0g62rlsvjynm5zkkjx309k83h62x8kjbn9bk6y7ka4yvj3aj8dkl";
+    sha256 = "1l31z1rwhq0i6alks7c6vla5h0157sq30p941rmc2kzb14jrvdd2";
   };
 
   nativeBuildInputs = with pkgs; [ unzip go-crx3 ];

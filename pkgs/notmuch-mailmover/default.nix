@@ -12,11 +12,11 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "5bb3104accd3c6f8364afcc15d373c5ef16f3197";
-    sha256 = "183kwn8flc8hlp10q7435wrwx9vyfk5shxcn51j6s5w30xamm56p";
+    rev = "01a153a8feaaed6ed656a637324299691287c401";
+    sha256 = "0vb5m971njvrx0gzlrg4ivi0zf95bqwj88s69f4p3mxblw586ryp";
   };
 
-  cargoHash = "sha256-TtpJKdWwzBBaa9k2mhJDNByPdBFtdqKsvmVXATg9Mc4=";
+  cargoHash = "sha256-glU/jS9OCxBCIMob/NEfUfHTLkF9hj7VKYiHTY+wNcM=";
 
   nativeBuildInputs = [ installShellFiles ];
 

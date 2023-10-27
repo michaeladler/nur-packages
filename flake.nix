@@ -31,8 +31,6 @@
         let pkgs = mkPkgs system; in
         {
           inherit (pkgs) luajitPackages python3Packages;
-          zenPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-zen);
-          lqxPackages = with pkgs; lib.recurseIntoAttrs (linuxPackagesFor linux-lqx);
         });
 
       packages = forAllSystems (system:
@@ -68,8 +66,6 @@
             hikari
             kas-container
             libubootenv
-            linux-lqx
-            linux-zen
             lua-language-server
             luaprompt
             msktutil

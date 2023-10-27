@@ -54,8 +54,6 @@ in
   go-mod-outdated = callPackage ../pkgs/go-mod-outdated { };
   kas-container = callPackage ../pkgs/kas-container { };
   libubootenv = callPackage ../pkgs/libubootenv { };
-  linux-zen = callPackage ../pkgs/linux-zen { };
-  linux-lqx = callPackage ../pkgs/linux-lqx { };
   luaprompt = callPackage ../pkgs/luaprompt { };
   msktutil = callPackage ../pkgs/msktutil { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };

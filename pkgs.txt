@@ -27,8 +27,6 @@ gtk-chtheme
 hikari
 kas-container
 libubootenv
-linux-lqx
-linux-zen
 lua-language-server
 luaprompt
 msktutil

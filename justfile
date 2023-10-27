@@ -3,12 +3,6 @@ UPDATE_NIX_FETCHGIT := "nix run  'github:NixOS/nixpkgs/nixos-23.05#update-nix-fe
 build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
-build-zen:
-    nix-build --keep-failed ci-zen.nix
-
-build-lqx:
-    nix-build --keep-failed ci-lqx.nix
-
 build-all:
     #!/usr/bin/env bash
     grep -v "^linux" pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L --no-link
@@ -89,6 +83,3 @@ update-all: update-flakes update-other update-all-rust-pkgs update-all-go-pkgs
 
 ci-update-packages:
     gh workflow run update
-
-ci-zen:
-    gh workflow run update-linux-zen

@@ -82,6 +82,7 @@
             tlpui
             vcalendar-filter
             zoxide
+            chezmoi
             ;
         });
 

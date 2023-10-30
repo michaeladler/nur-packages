@@ -76,7 +76,6 @@
             qmarkdown
             sbkeys
             skipcpio
-            srandrd
             sscep
             thinkfan
             tlpui

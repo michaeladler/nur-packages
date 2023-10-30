@@ -5,6 +5,7 @@ bed
 btrfs-du
 btrfs-list
 checksec
+chezmoi
 chromium-browserpass
 chromium-floccus
 chromium-vimium

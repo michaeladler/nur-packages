@@ -63,7 +63,6 @@
             go-crx3
             go-mod-outdated
             gtk-chtheme
-            hikari
             kas-container
             libubootenv
             lua-language-server

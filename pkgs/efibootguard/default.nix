@@ -22,8 +22,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "efibootguard";
-    rev = "b96b83544fc3fe0d65b78a5d57c21e35ffc1e250";
-    sha256 = "1x76hrqyylpm9ki92x3hj21lj5vn1fkzd4r62ab380jqfdjwmv31";
+    rev = "365df23b85878e44017ac191f44cfedbd57d80cd";
+    sha256 = "03rp3ncwqh7sa9814675vcv8m0r20fagf96bs5bnvmx1ixrnhdmc";
   };
 
   nativeBuildInputs = [

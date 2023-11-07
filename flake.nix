@@ -41,9 +41,11 @@
             asciinema-edit
             atool2
             bed
+            brave
             btrfs-du
             btrfs-list
             checksec
+            chezmoi
             chromium-browserpass
             chromium-floccus
             chromium-vimium
@@ -81,7 +83,6 @@
             tlpui
             vcalendar-filter
             zoxide
-            chezmoi
             ;
         });
 

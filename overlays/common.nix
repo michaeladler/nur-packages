@@ -9,6 +9,7 @@ in
 {
 
   # overlays
+  brave = (import ../pkgs/brave) final prev;
   nix-direnv = (import ../pkgs/nix-direnv) final prev;
   lua-language-server = (import ../pkgs/lua-language-server) final prev;
   thinkfan = (import ../pkgs/thinkfan) final prev;

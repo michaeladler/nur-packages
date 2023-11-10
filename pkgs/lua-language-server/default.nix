@@ -1,13 +1,13 @@
 final: prev:
 
 prev.lua-language-server.overrideAttrs (old: {
-  version = "unstable-2023-11-07";
+  version = "unstable-2023-11-09";
 
   src = prev.fetchFromGitHub {
     owner = "LuaLS";
     repo = "lua-language-server";
-    rev = "5a763b0ceecc9a817c8ce534dc726f5f6f6e1ac9"; # tags/*
-    sha256 = "005ivd80i8h1xrwpy8d7gf4kvqrgvmr1wlb3n3431n2bxnirfkx2";
+    rev = "ee590a4cd1bc972ffe19e232b176aa1ffaba2d47"; # tags/*
+    sha256 = "1slhdlk832x8ffyaxi0918hnb3ai5va8q7dr2i5fy1qsfiplfbj2";
     fetchSubmodules = true;
   };
 

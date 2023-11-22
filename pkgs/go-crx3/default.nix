@@ -11,7 +11,7 @@ buildGo119Module {
     sha256 = "14zwsjhzjc79fxw6qj2h46n01lz8zsshqjdqmxrvz344h4c00dpn";
   };
 
-  vendorSha256 = "sha256-LEIB/VZA3rqTeH9SesZ/jrfVddl6xtmoRWHP+RwGmCk=";
+  vendorHash = "sha256-LEIB/VZA3rqTeH9SesZ/jrfVddl6xtmoRWHP+RwGmCk=";
 
   doCheck = false;
 

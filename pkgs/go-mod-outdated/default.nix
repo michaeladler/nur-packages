@@ -11,7 +11,7 @@ buildGoModule {
     sha256 = "0jxbx200p3pih510gvvmkj0c68giaxqsgqy9k7qybbxskxy7nzwl";
   };
 
-  vendorSha256 = "sha256-SAFXivHCBFB9aKKyPwk3YRQY6IrPBls5HtK/20kPV0o=";
+  vendorHash = "sha256-SAFXivHCBFB9aKKyPwk3YRQY6IrPBls5HtK/20kPV0o=";
 
   meta = with lib; {
     description = "Find outdated dependencies of your Go projects";

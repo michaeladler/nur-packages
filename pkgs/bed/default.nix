@@ -11,7 +11,7 @@ buildGo121Module {
     sha256 = "1wpp5s8vzr21sk0hxsi2cla48jrx7m9q7zdnnxi7g0g8fpvy5a56";
   };
 
-  vendorSha256 = "sha256-l+sUXpP4AIEdrtttTekqb/ce5QpYvv8esFkSvUMteak=";
+  vendorHash = "sha256-l+sUXpP4AIEdrtttTekqb/ce5QpYvv8esFkSvUMteak=";
 
   nativeCheckInputs = [ which ];
 

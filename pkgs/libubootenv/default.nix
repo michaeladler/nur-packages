@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "libubootenv";
-  version = "unstable-2023-10-08";
+  version = "unstable-2023-12-06";
 
   src = fetchFromGitHub {
     owner = "sbabic";
     repo = "libubootenv";
-    rev = "3f4d15e36ceb58085b08dd13f3f2788e9299877b";
-    sha256 = "1w7qm0d39nbyi3s860w3j3v8c4vncw5ab9lw1a0k659sa1pi9f4b";
+    rev = "c478e8d92bd7676a249693f7d132bed7b17ae158";
+    sha256 = "0ggmw8mg2fgqw1cg494xb1spdh0i9a8zninkzxsyi8ws1qkrif61";
   };
 
   nativeBuildInputs = [ cmake pkg-config ];

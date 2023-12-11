@@ -47,7 +47,6 @@
             checksec
             chezmoi
             chromium-browserpass
-            chromium-floccus
             chromium-vimium
             chromium-xbrowsersync
             chyle

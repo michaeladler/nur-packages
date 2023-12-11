@@ -37,7 +37,6 @@ in
   btrfs-list = callPackage ../pkgs/btrfs-list { };
   chezmoi = callPackage ../pkgs/chezmoi { };
   chromium-browserpass = callPackage ../pkgs/chromium-browserpass { };
-  chromium-floccus = callPackage ../pkgs/chromium-floccus { };
   chromium-vimium = callPackage ../pkgs/chromium-vimium { };
   chromium-xbrowsersync = callPackage ../pkgs/chromium-xbrowsersync { };
   chyle = callPackage ../pkgs/chyle { };

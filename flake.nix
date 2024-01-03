@@ -70,7 +70,6 @@
             luaprompt
             msktutil
             neovim-unwrapped
-            nix-direnv
             notmuch-mailmover
             pandoc-bin
             poop

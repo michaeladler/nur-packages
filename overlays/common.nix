@@ -59,7 +59,6 @@ in
   sbkeys = callPackage ../pkgs/sbkeys { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   sscep = callPackage ../pkgs/sscep { };
-  tlpui = callPackage ../pkgs/tlpui { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
   colorized-logs = callPackage ../pkgs/colorized-logs { };
   poop = callPackage ../pkgs/poop { };

@@ -78,7 +78,6 @@
             skipcpio
             sscep
             thinkfan
-            tlpui
             vcalendar-filter
             zoxide
             ;

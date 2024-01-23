@@ -9,16 +9,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "age-plugin-yubikey";
-  version = "unstable-2023-04-09";
+  version = "unstable-2024-01-22";
 
   src = fetchFromGitHub {
     owner = "str4d";
     repo = "age-plugin-yubikey";
-    rev = "acc783d0d3697b4be71fb52b3b763f2e44e2ce6c";
-    sha256 = "1amql7wxsfcqll38mm2v7iwnfvv5vn1i8rmpzp12gckn5ksg61ki";
+    rev = "d31c60f733b2934865b32951b9ff77e1b1a53d04";
+    sha256 = "0g0f7p3g7rs3qlfhy2lgbh1cih7jkqr2h2wrddzmj8sagwn19yn4";
   };
 
-  cargoHash = "sha256-7X0rDaAnFkvJDfJ0FKvQ1FO6soV+2uJPCsyPshn+YDc=";
+  cargoHash = "sha256-SK1ImaLrNye8CwxqNGHA09h5YXzIG5KsTjaONh39CSs=";
 
   nativeBuildInputs = lib.optionals stdenv.isLinux [ pkg-config ];
 

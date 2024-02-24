@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "kilobyte";
     repo = "colorized-logs";
-    rev = "4e21897f91659441c3e8a312e787933aca2c6fe0";
-    sha256 = "0qjpk0cq3rka0f8ficd58mhfx9wr82hagj9ywa99wzsk2q2iabkq";
+    rev = "2fb2ea5db6c830b8426a2e7084e0ad5af83f1070";
+    sha256 = "0124axfiw6qln3sw6g1kz0r0r72p63001fb9g74lr3n7cadf6xhl";
   };
 
   nativeBuildInputs = [ cmake ];

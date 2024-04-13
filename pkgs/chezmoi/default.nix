@@ -6,16 +6,16 @@
 
 buildGoModule rec {
   pname = "chezmoi";
-  version = "unstable-2024-03-31";
+  version = "unstable-2024-04-12";
 
   src = fetchFromGitHub {
     owner = "twpayne";
     repo = "chezmoi";
-    rev = "4f76edb5295068569d7c6311020ac0094c77ef44"; # tags/*
-    sha256 = "1lcqwh66lsm0zs1sg71zbblld1brcnf152dda3hqhmqssri5glv7";
+    rev = "d6ad485c86aa6501f5a7754ccba2a2b03d46c1a2"; # tags/*
+    sha256 = "11wd008svn8hadd10pc2bmf6ngsm50fdn25gaj8bh9wfizymcn3j";
   };
 
-  vendorHash = "sha256-IbNEKj8wJpsQO9bXrsH4OJUIhez9merFSWydhSHbvRQ=";
+  vendorHash = "sha256-8Puy1IKLMENduWyOAJtvpd7FV1a0IdmkMYztIJdeaBs=";
 
   doCheck = false;
 

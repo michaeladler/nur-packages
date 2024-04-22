@@ -1,14 +1,14 @@
-{ buildGo121Module, fetchFromGitHub, lib, which }:
+{ buildGoModule, fetchFromGitHub, lib, which }:
 
-buildGo121Module {
+buildGoModule {
   pname = "bed";
-  version = "unstable-2024-03-30";
+  version = "unstable-2024-04-15";
 
   src = fetchFromGitHub {
     owner = "itchyny";
     repo = "bed";
-    rev = "891b0ddb93cfc052ca0acf2c27087e1698e77ba0";
-    sha256 = "103jmbz3ip09p2pgx6w99lg3bypxjysi1dsnflm1f7kmgxbk3jdg";
+    rev = "d1fc3617de2083208cbbfb13db98f2d8e3157c7d";
+    sha256 = "07gd0n9gngdid4gzamdi0vwp1m65nj77y70a9y09p1x9a5ns7445";
   };
 
   vendorHash = "sha256-l+sUXpP4AIEdrtttTekqb/ce5QpYvv8esFkSvUMteak=";

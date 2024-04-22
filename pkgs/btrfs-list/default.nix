@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "btrfs-list";
-  version = "unstable-2022-03-13";
+  version = "unstable-2024-04-16";
 
   src = fetchFromGitHub {
     owner = "speed47";
     repo = "btrfs-list";
-    rev = "4564559c850734f75071db2a1d923fa3c791ef9e";
-    sha256 = "01p8kyfgm8kxpwcs0p092nhs180z3pw044a9g7cb7c8zzn2ymm16";
+    rev = "30bb31e0a7e3aef08bc30a81fedb34d34be9f1e4";
+    sha256 = "1rnwdf0c8dcna30266msrrwy0hm8affbjww2akijlwvli93c6v3i";
   };
 
   buildInputs = [ perl ];

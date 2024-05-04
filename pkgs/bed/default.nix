@@ -2,16 +2,16 @@
 
 buildGoModule {
   pname = "bed";
-  version = "unstable-2024-04-15";
+  version = "unstable-2024-05-03";
 
   src = fetchFromGitHub {
     owner = "itchyny";
     repo = "bed";
-    rev = "d1fc3617de2083208cbbfb13db98f2d8e3157c7d";
-    sha256 = "07gd0n9gngdid4gzamdi0vwp1m65nj77y70a9y09p1x9a5ns7445";
+    rev = "7f1e7e7c0ecc7534666258b5c009eb461fe424ac";
+    sha256 = "03qnva2zivxf0qsxwis6r6cnwflazadfcs1ybq6a3av653i2fq4b";
   };
 
-  vendorHash = "sha256-l+sUXpP4AIEdrtttTekqb/ce5QpYvv8esFkSvUMteak=";
+  vendorHash = "sha256-OirZrytw/gy/wi/q4USPQk5O8LjirNDsRdh1ma9pUjs=";
 
   nativeCheckInputs = [ which ];
 

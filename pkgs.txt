@@ -13,6 +13,7 @@ chromium-xbrowsersync
 chyle
 cinclude2dot
 clang-format-diff
+cliphist
 colorized-logs
 criterion
 czmod

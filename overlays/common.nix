@@ -1,7 +1,6 @@
 final: prev:
 
 let
-  fetchFromGitHub = prev.fetchFromGitHub;
   callPackage = final.callPackage;
 in
 
@@ -13,9 +12,6 @@ in
   lua-language-server = (import ../pkgs/lua-language-server) final prev;
   thinkfan = (import ../pkgs/thinkfan) final prev;
   neovim-unwrapped = (import ../pkgs/neovim-unwrapped) final prev;
-  golangci-lint = prev.golangci-lint.override {
-    buildGoModule = final.buildGo120Module;
-  };
 
   checksec = prev.checksec.overrideAttrs (old: {
     preFixup = ''
@@ -26,6 +22,7 @@ in
   # do not use 'pandoc' as name! otherwise webkitgtk will be rebuilt and this is *very* expensive!
   pandoc-bin = callPackage ../pkgs/pandoc { };
   criterion = callPackage ../pkgs/criterion { };
+  cliphist = callPackage ../pkgs/cliphist { };
 
   # missing upstream
   age-plugin-yubikey = callPackage ../pkgs/age-plugin-yubikey { };
@@ -65,7 +62,7 @@ in
   gtk-chtheme = callPackage ../pkgs/gtk-chtheme { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
-    rec {
+    {
       lua-getch = callPackage ../pkgs/lua-packages/lua-getch.nix { inherit lua; };
       pulseaudio = callPackage ../pkgs/lua-packages/pulseaudio.nix { inherit lua; };
     };

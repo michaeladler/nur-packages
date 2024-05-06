@@ -80,6 +80,7 @@
             thinkfan
             vcalendar-filter
             zoxide
+            cliphist
             ;
         });
 

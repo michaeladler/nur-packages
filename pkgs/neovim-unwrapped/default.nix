@@ -1,13 +1,13 @@
 final: prev:
 
 prev.neovim-unwrapped.overrideAttrs (old: {
-  version = "unstable-2023-12-30";
+  version = "unstable-2024-05-16";
 
   src = prev.fetchFromGitHub {
     owner = "neovim";
     repo = "neovim";
-    rev = "8744ee8783a8597f9fce4a573ae05aca2f412120"; # tags/*
-    sha256 = "1j3z7jay0m6g06v04falrzr062g07xr4svbrc3hywlqi2h6rrvk5";
+    rev = "27fb62988e922c2739035f477f93cc052a4fee1e"; # tags/*
+    sha256 = "0bd9hxnskyfg7k51yxf3gnqhv9l3y4m91yqd8svzj7d5sb2jxc1n";
     fetchSubmodules = true;
   };
 

@@ -22,6 +22,7 @@ efibootguard
 fmtlog
 fzy-lua-native
 git-buildpackage
+git-fixup
 git-hours
 go-crx3
 go-mod-outdated

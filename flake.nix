@@ -52,6 +52,7 @@
             chyle
             cinclude2dot
             clang-format-diff
+            cliphist
             colorized-logs
             criterion
             czmod
@@ -60,6 +61,7 @@
             fmtlog
             fzy-lua-native
             git-buildpackage
+            git-fixup
             git-hours
             go-crx3
             go-mod-outdated
@@ -80,7 +82,6 @@
             thinkfan
             vcalendar-filter
             zoxide
-            cliphist
             ;
         });
 

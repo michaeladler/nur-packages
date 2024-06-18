@@ -44,6 +44,7 @@ in
   fmtlog = callPackage ../pkgs/fmtlog { };
   fzy-lua-native = callPackage ../pkgs/fzy-lua-native { };
   git-buildpackage = callPackage ../pkgs/git-buildpackage { };
+  git-fixup = callPackage ../pkgs/git-fixup { };
   git-hours = callPackage ../pkgs/git-hours { };
   go-crx3 = callPackage ../pkgs/go-crx3 { };
   go-mod-outdated = callPackage ../pkgs/go-mod-outdated { };

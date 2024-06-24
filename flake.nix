@@ -67,6 +67,7 @@
             go-mod-outdated
             gtk-chtheme
             kas-container
+            librewolf-unwrapped
             libubootenv
             lua-language-server
             luaprompt

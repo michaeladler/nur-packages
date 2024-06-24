@@ -38,6 +38,7 @@ in
   chyle = callPackage ../pkgs/chyle { };
   cinclude2dot = callPackage ../pkgs/cinclude2dot { };
   clang-format-diff = callPackage ../pkgs/clang-format-diff { };
+  colorized-logs = callPackage ../pkgs/colorized-logs { };
   czmod = callPackage ../pkgs/czmod { };
   demo-magic = callPackage ../pkgs/demo-magic { };
   efibootguard = callPackage ../pkgs/efibootguard { };
@@ -48,19 +49,19 @@ in
   git-hours = callPackage ../pkgs/git-hours { };
   go-crx3 = callPackage ../pkgs/go-crx3 { };
   go-mod-outdated = callPackage ../pkgs/go-mod-outdated { };
+  gtk-chtheme = callPackage ../pkgs/gtk-chtheme { };
   kas-container = callPackage ../pkgs/kas-container { };
+  librewolf-unwrapped = callPackage ../pkgs/librewolf { };
   libubootenv = callPackage ../pkgs/libubootenv { };
   luaprompt = callPackage ../pkgs/luaprompt { };
   msktutil = callPackage ../pkgs/msktutil { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
+  poop = callPackage ../pkgs/poop { };
   qmarkdown = callPackage ../pkgs/qmarkdown { };
   sbkeys = callPackage ../pkgs/sbkeys { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   sscep = callPackage ../pkgs/sscep { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
-  colorized-logs = callPackage ../pkgs/colorized-logs { };
-  poop = callPackage ../pkgs/poop { };
-  gtk-chtheme = callPackage ../pkgs/gtk-chtheme { };
 
   extraLuaJITPackages = let lua = prev.luajit; in
     {

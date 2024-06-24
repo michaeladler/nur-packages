@@ -5,7 +5,7 @@ build PKG:
 
 build-all:
     #!/usr/bin/env bash
-    grep -v "^linux" pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L --no-link
+    grep -v "^librewolf" pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L --no-link
 
 packagelist:
     #!/usr/bin/env bash

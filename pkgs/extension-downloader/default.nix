@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, rustPlatform }:
+{ lib, fetchFromGitHub, rustPlatform, pkg-config, openssl }:
 
 rustPlatform.buildRustPackage {
   pname = "extension-downloader";
@@ -12,6 +12,10 @@ rustPlatform.buildRustPackage {
   };
 
   cargoHash = "sha256-UnIauCMUeMPtdSfuF87hoBFgYmSqKnm8MQn8Do3CFr0=";
+
+  nativeBuildInputs = [ pkg-config ];
+
+  buildInputs = [ openssl ];
 
   meta = with lib; {
     description = "Download browser extensions for Firefox and Chromium-based browsers";

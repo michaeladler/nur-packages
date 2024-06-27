@@ -2,16 +2,16 @@
 
 rustPlatform.buildRustPackage {
   pname = "extension-downloader";
-  version = "unstable-2024-06-26";
+  version = "unstable-2024-06-27";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "extension-downloader";
-    rev = "92caff9d5e794d80fb4d5a6c490bcfc482c6bda2";
-    sha256 = "1798259h1alnp1vzkp9m3bvwg5lixd56ff00qc04vqa6f09iwwxc";
+    rev = "2b59cdde55fabf9173e7b1cbc817f523df1d7c0a";
+    sha256 = "1f7cy770ppasniib0zw8s9n4rb34z12wdh70s48x7pb0w68h1xm3";
   };
 
-  cargoHash = "sha256-pkQJJ5PnQb3do0IXCPAtslapVApKXLl07q3qeKN8lck=";
+  cargoHash = "sha256-UnIauCMUeMPtdSfuF87hoBFgYmSqKnm8MQn8Do3CFr0=";
 
   meta = with lib; {
     description = "Download browser extensions for Firefox and Chromium-based browsers";

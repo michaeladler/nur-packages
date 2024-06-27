@@ -42,6 +42,7 @@ in
   czmod = callPackage ../pkgs/czmod { };
   demo-magic = callPackage ../pkgs/demo-magic { };
   efibootguard = callPackage ../pkgs/efibootguard { };
+  extension-downloader = callPackage ../pkgs/extension-downloader { };
   fmtlog = callPackage ../pkgs/fmtlog { };
   fzy-lua-native = callPackage ../pkgs/fzy-lua-native { };
   git-buildpackage = callPackage ../pkgs/git-buildpackage { };

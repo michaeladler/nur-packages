@@ -57,6 +57,7 @@
             czmod
             demo-magic
             efibootguard
+            extension-downloader
             fmtlog
             fzy-lua-native
             git-buildpackage

@@ -2,13 +2,13 @@
 
 buildGoModule {
   pname = "go-crx3";
-  version = "unstable-2024-06-22";
+  version = "unstable-2024-06-26";
 
   src = fetchFromGitHub {
     owner = "mmadfox";
     repo = "go-crx3";
-    rev = "4a031289411a8895b5d0f759ca6ecc63ec92e7e0";
-    sha256 = "0h7n546zjk2c0rjlsvs4777g5zw8nnhy4xhkili27kgbxnc8y04a";
+    rev = "94c08009bbd26902aa352caa26b33726006b0707";
+    sha256 = "1cd5q260n3ywvxzs4xm25qh8d8ivr5mqa6l1kk4z9b7s3kyzfyr7";
   };
 
   vendorHash = "sha256-LEIB/VZA3rqTeH9SesZ/jrfVddl6xtmoRWHP+RwGmCk=";

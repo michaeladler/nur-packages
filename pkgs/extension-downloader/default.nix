@@ -7,11 +7,11 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "extension-downloader";
-    rev = "2b59cdde55fabf9173e7b1cbc817f523df1d7c0a";
-    sha256 = "1f7cy770ppasniib0zw8s9n4rb34z12wdh70s48x7pb0w68h1xm3";
+    rev = "7e374530a1eefbe486b0753776aa940fd599b83e";
+    sha256 = "112pjg5c6pd0hsi9pv8c0w5ki8xrdm5qn92gz15axnszm78znfs8";
   };
 
-  cargoHash = "sha256-UnIauCMUeMPtdSfuF87hoBFgYmSqKnm8MQn8Do3CFr0=";
+  cargoHash = "sha256-zKAwdNUrxGFSwX9/FOU/Nz9wkF5//tElTslqI59hNyg=";
 
   nativeBuildInputs = [ pkg-config ];
 

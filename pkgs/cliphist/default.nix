@@ -2,13 +2,13 @@
 
 buildGoModule {
   pname = "cliphist";
-  version = "unstable-2024-05-26";
+  version = "unstable-2024-06-29";
 
   src = fetchFromGitHub {
     owner = "sentriz";
     repo = "cliphist";
-    rev = "c3be9a342a2d067077a5701a06df936caf87d2d5";
-    sha256 = "02pz0gavl3al1k4sxwqk7j6la663cmpbdbvmzvbnxfmhqzm5m8ky";
+    rev = "c164c4c3f88c4bde94b0fe6edc5672b9bf1c0c8a";
+    sha256 = "0a6z9fzam1v6ggr0g7vrfbbzna9kryvs8l9rcfagmb7lc15hqz9i";
   };
 
   vendorHash = "sha256-M5n7/QWQ5POWE4hSCMa0+GOVhEDCOILYqkSYIGoy/l0=";

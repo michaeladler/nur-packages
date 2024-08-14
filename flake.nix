@@ -12,7 +12,7 @@
 
       mkPkgs = system: import nixpkgs {
         inherit system;
-        overlays = [ self.overlays.default self.overlays.python self.overlays.lua ];
+        overlays = [ self.overlays.default self.overlays.python ];
         config.allowUnfree = true;
       };
 
@@ -22,7 +22,6 @@
       overlays = {
         default = import ./overlays/common.nix;
         python = import ./overlays/python.nix;
-        lua = import ./overlays/lua.nix;
       };
 
       # we have to use legacyPackages for sets of derivations (trees)
@@ -67,7 +66,6 @@
             go-mod-outdated
             gtk-chtheme
             kas-container
-            librewolf-unwrapped
             libubootenv
             lua-language-server
             luaprompt

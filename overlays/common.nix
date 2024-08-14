@@ -52,7 +52,6 @@ in
   go-mod-outdated = callPackage ../pkgs/go-mod-outdated { };
   gtk-chtheme = callPackage ../pkgs/gtk-chtheme { };
   kas-container = callPackage ../pkgs/kas-container { };
-  librewolf-unwrapped = callPackage ../pkgs/librewolf { };
   libubootenv = callPackage ../pkgs/libubootenv { };
   luaprompt = callPackage ../pkgs/luaprompt { };
   msktutil = callPackage ../pkgs/msktutil { };
@@ -63,11 +62,4 @@ in
   skipcpio = callPackage ../pkgs/skipcpio { };
   sscep = callPackage ../pkgs/sscep { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
-
-  extraLuaJITPackages = let lua = prev.luajit; in
-    {
-      lua-getch = callPackage ../pkgs/lua-packages/lua-getch.nix { inherit lua; };
-      pulseaudio = callPackage ../pkgs/lua-packages/pulseaudio.nix { inherit lua; };
-    };
-
 }

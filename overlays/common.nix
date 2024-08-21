@@ -6,6 +6,9 @@ in
 
 # do not make this 'rec'
 {
+  # customized
+  kanshi = (import ../pkgs/kanshi) final prev;
+
   # missing upstream
   asciinema-edit = callPackage ../pkgs/asciinema-edit { };
   atool2 = callPackage ../pkgs/atool2 { };

@@ -1,0 +1,41 @@
+--- a/main.c
++++ b/main.c
+@@ -3,6 +3,7 @@
+ #include <fcntl.h>
+ #include <getopt.h>
+ #include <limits.h>
++#include <regex.h>
+ #include <signal.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -33,9 +34,26 @@ static bool match_profile_output(struct kanshi_profile_output *output,
+ 	assert(sizeof(identifier) >= strlen(make) + strlen(model) + strlen(serial_number) + 3);
+ 	snprintf(identifier, sizeof(identifier), "%s %s %s", make, model, serial_number);
+ 
+-	return strcmp(output->name, "*") == 0 ||
++	bool is_direct_match = strcmp(output->name, "*") == 0 ||
+ 		strcmp(output->name, head->name) == 0 ||
+ 		strcmp(output->name, identifier) == 0;
++	if (is_direct_match) {
++		return 1;
++	}
++
++	/* else: treat output->name as a regular expression */
++	regex_t regex;
++	int res = regcomp(&regex, output->name, REG_EXTENDED | REG_NOSUB);
++	if (res) {
++		char error_message[128];
++		regerror(res, &regex, error_message, sizeof(error_message));
++		fprintf(stderr, "'%s' is not a valid regular expression: %s\n", output->name, error_message);
++		return 0;
++	}
++
++	bool is_regex_match = regexec(&regex, identifier, 0, NULL, 0) == 0;
++	regfree(&regex);
++	return is_regex_match;
+ }
+ 
+ static bool match_profile(struct kanshi_state *state,
+-- 
+2.45.2
+

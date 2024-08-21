@@ -51,6 +51,7 @@
             git-buildpackage
             go-crx3
             go-mod-outdated
+            kanshi
             kas-container
             libubootenv
             luaprompt

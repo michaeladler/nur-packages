@@ -5,7 +5,7 @@
 , installShellFiles
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
   version = "unstable-2024-08-01";
 

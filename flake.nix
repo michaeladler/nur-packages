@@ -57,7 +57,7 @@
             luaprompt
             notmuch-mailmover
             poop
-            qmarkdown
+            river-bsp-layout
             skipcpio
             vcalendar-filter
             zoxide

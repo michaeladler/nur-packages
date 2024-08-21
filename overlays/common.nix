@@ -31,7 +31,7 @@ in
   luaprompt = callPackage ../pkgs/luaprompt { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
   poop = callPackage ../pkgs/poop { };
-  qmarkdown = callPackage ../pkgs/qmarkdown { };
+  river-bsp-layout = callPackage ../pkgs/river-bsp-layout { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
 }

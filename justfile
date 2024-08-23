@@ -60,7 +60,10 @@ update-other:
     #!/usr/bin/env bash
     set -euo pipefail
     echo "Updating other packages"
-    find . -name update.sh -type f -executable | xargs -n1 -P$(nproc) bash -c
+    find . -name update.sh -type f -executable | while read -r fname; do
+        echo "Running $fname"
+        bash -c "$fname"
+    done
     find pkgs -name "*.nix" | xargs -n1 -P$(nproc) just _update-one
 
 _update-one FNAME:

@@ -5,16 +5,16 @@
 
 rustPlatform.buildRustPackage {
   pname = "river-bsp-layout";
-  version = "unstable-2024-09-15";
+  version = "unstable-2024-09-23";
 
   src = fetchFromGitHub {
     owner = "areif-dev";
     repo = "river-bsp-layout";
-    rev = "526761bbd66f151420252735f9823a6c33156956";
-    sha256 = "0rgq933ja0lqayhqj109c5pdpccgh59ns63djq2pfrjxx9bskylq";
+    rev = "9b228dff36b165819c429408a741d90b000a294e";
+    sha256 = "0wbbpqwkfk9lif71b3qim3id9iki34wjzx4z4v6rhii8314471vb";
   };
 
-  cargoHash = "sha256-ZAznaUkXKmMS1ul4joa271/195PquZ/8Q1SkRvsFS9M=";
+  cargoHash = "sha256-yJHQbZUX3AMMsOnYDKzRLl810qqQcQjIHV5g0/Ci6pw=";
 
   meta = with lib; {
     description = "Custom River layout manager that creates a Binary Space Partition / Grid layout using river-layout-toolkit";

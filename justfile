@@ -14,30 +14,21 @@ packagelist:
         | python -c 'import sys, json; raw = input().encode().decode("unicode_escape").strip("\""); pkgs = json.loads(raw); print("\n".join(pkgs))' \
         | tee pkgs.txt
 
-update-other:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    echo "Updating other packages"
-    find . -name update.sh -type f -executable | while read -r fname; do
-        echo "Running $fname"
-        bash -c "$fname"
-    done
-    find pkgs -name "*.nix" | xargs -n1 -P$(nproc) just _update-one
-
-_update-one FNAME:
+# Update a single package
+update FNAME:
     #!/usr/bin/env bash
     set -euo pipefail
     dir=$(dirname "{{ FNAME }}")
-    # only update if update.sh does not exist
-    [[ -e $dir/update.sh ]] || {
+    echo "{{ FNAME }}: starting update"
+    if [[ -e $dir/update.sh ]]; then
+        $dir/update.sh
+    else
         {{ UPDATE_NIX_FETCHGIT }} "{{ FNAME }}"
-        echo "{{ FNAME }}: done"
-    }
+    fi
+    echo "{{ FNAME }}: done"
 
-update-flakes:
+update-all: update-flakes
+    #!/usr/bin/env bash
+    set -euxo pipefail
     nix flake update
-
-update-all: update-flakes update-other
-
-ci-update-packages:
-    gh workflow run update
+    find pkgs -name "*.nix" | xargs -n1 -P$(nproc) just update

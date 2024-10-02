@@ -3,24 +3,32 @@
 , fetchFromGitHub
 , notmuch
 , installShellFiles
+, pkg-config
+, lua5_4
 }:
 
 rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
-  version = "0.3.0-unstable-2024-10-02";
+  version = "0.3.0-unstable-2024-10-01";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "cb0d2f6645d163c186ed76c1ba48637f60e19431";
-    sha256 = "sha256-1upLZcUrQrAkQfrEA8SmlPY38yaR8moJbEjdm24kQHo=";
+    rev = "06cec836e7eb5f497a6dce9d6f1301981755a2f9";
+    sha256 = "sha256-PEZ/ltXHD+ePNd2IPkCOm0h7jG3PUrYyPubABcsQb0E=";
   };
 
-  cargoHash = "sha256-Jb+yQj7wjyALWmDDPL53oP52wDBFPfbWIT+zrPIAJ54=";
+  cargoHash = "sha256-3LIi24GQLo6WDW7MzQz9XgKqvNojtSEHqkWan8m+t9c=";
 
-  nativeBuildInputs = [ installShellFiles ];
+  nativeBuildInputs = [
+    installShellFiles
+    pkg-config
+  ];
 
-  buildInputs = [ notmuch ];
+  buildInputs = [
+    notmuch
+    lua5_4
+  ];
 
   postInstall = ''
     installManPage share/notmuch-mailmover.1.gz

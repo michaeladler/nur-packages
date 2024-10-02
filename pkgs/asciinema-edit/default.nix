@@ -2,7 +2,7 @@
 
 buildGoModule {
   pname = "asciinema-edit";
-  version = "unstable-2023-02-19";
+  version = "0.0.6-unstable-2019-01-30";
 
   src = fetchFromGitHub {
     owner = "cirocosta";

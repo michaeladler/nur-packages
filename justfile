@@ -20,14 +20,14 @@ update FNAME:
     set -euo pipefail
     dir=$(dirname "{{ FNAME }}")
     echo "{{ FNAME }}: starting update"
-    if [[ -e $dir/update.sh ]]; then
+    if [[ -x $dir/update.sh ]]; then
         $dir/update.sh
     else
         {{ UPDATE_NIX_FETCHGIT }} "{{ FNAME }}"
     fi
     echo "{{ FNAME }}: done"
 
-update-all: update-flakes
+update-all:
     #!/usr/bin/env bash
     set -euxo pipefail
     nix flake update

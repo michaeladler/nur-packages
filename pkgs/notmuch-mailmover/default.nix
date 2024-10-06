@@ -14,8 +14,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "98372ca59d86afac411e290cfe6f6bb6a381af10";
-    sha256 = "sha256-QJ6xspZm9LliakzQ8G0WuUceNI230qXD738epC3ibZA=";
+    rev = "0edae3e6ccf986cdb09b9affd9d6cbdd217dec72";
+    sha256 = "sha256-fYXxxFpgNFmZ8FRRpYLmh5PfcMUJT7y5Mf2RIbFrQ28=";
   };
 
   cargoHash = "sha256-dh0aBESndU6x/gmjzNQd8Qq3nTLKXf03T6EMxgKKpLA=";

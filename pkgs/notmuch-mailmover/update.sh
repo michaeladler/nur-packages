@@ -1,2 +1,2 @@
 #!/bin/sh
-exec nix-update --flake --version=branch=next notmuch-mailmover
+exec nix-update --flake --version=branch=main notmuch-mailmover

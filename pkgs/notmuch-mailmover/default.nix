@@ -3,27 +3,35 @@
 , fetchFromGitHub
 , notmuch
 , installShellFiles
+, pkg-config
+, lua5_4
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
-  version = "unstable-2024-08-01";
+  version = "0.3.0-unstable-2024-10-07";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "460cf44f59aa99345f71798619414c6bfed6c151";
-    sha256 = "0nilgdmj1r0nc41ri9xxbgw3hjmmnqynf2cf8ph6rzy480xmjc9j";
+    rev = "d9881f2003c756ecc3859c621b15814a60958eff";
+    sha256 = "sha256-17TwR5ITlFICd2cP2ualRytxQCWRfc1i5cfco2dmRxo=";
   };
 
-  cargoHash = "sha256-pPRFiYgH9QFlNqGuEhmRnVKXu6banLNH1KQV4r8YoXQ=";
+  cargoHash = "sha256-GEzgr9tELRq4GtVG93PCdkotz2sDtmzm2NhjlA53pNY=";
 
-  nativeBuildInputs = [ installShellFiles ];
+  nativeBuildInputs = [
+    installShellFiles
+    pkg-config
+  ];
 
-  buildInputs = [ notmuch ];
+  buildInputs = [
+    notmuch
+    lua5_4
+  ];
 
   postInstall = ''
-    installManPage share/notmuch-mailmover.1
+    installManPage share/notmuch-mailmover.1.gz
     installShellCompletion --cmd notmuch-mailmover \
       --bash share/notmuch-mailmover.bash \
       --fish share/notmuch-mailmover.fish \

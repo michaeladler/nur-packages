@@ -1,11 +1,6 @@
-{ lib, stdenv, fetchFromGitHub, perl, perlPackages }:
+{ lib, fetchFromGitHub, perl, perlPackages }:
 
-with lib;
-
-let metadata = sources.mutt-filters;
-
-in
-perlPackages.buildPerlPackage rec {
+perlPackages.buildPerlPackage {
   pname = "vcalendar-filter";
   version = "unstable-2016-06-07";
 
@@ -28,7 +23,7 @@ perlPackages.buildPerlPackage rec {
     install -D -m0755 vcalendar-filter $out/bin/vcalendar-filter
   '';
 
-  meta = {
+  meta = with lib; {
     description =
       "vcalendar-filter is a simple filter to give plain text representations of vcards";
     license = licenses.gpl3Plus;

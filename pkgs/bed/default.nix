@@ -7,8 +7,8 @@ buildGoModule {
   src = fetchFromGitHub {
     owner = "itchyny";
     repo = "bed";
-    rev = "38ae0fb61e3076b4a66441d5fd156b103e35c017";
-    sha256 = "sha256-w4av6KAfJZwJMTQ95/ptimI77cyW6d5k+shmKjA13T4=";
+    rev = "3848992cf86b31acbe0540d998d81da6b696444f";
+    sha256 = "sha256-oATHQIOs3Sd+HaksEUooruMExE7LDEJJ97gnnY6ENRM=";
   };
 
   vendorHash = "sha256-q81aV9a2I7iMGS+6ZQCXtYE5cqCyoIovd4Juy7D8Miw=";

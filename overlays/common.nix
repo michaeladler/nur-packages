@@ -22,7 +22,6 @@ in
   go-mod-outdated = callPackage ../pkgs/go-mod-outdated { };
   kas-container = callPackage ../pkgs/kas-container { };
   libubootenv = callPackage ../pkgs/libubootenv { };
-  luaprompt = callPackage ../pkgs/luaprompt { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
   river-bsp-layout = callPackage ../pkgs/river-bsp-layout { };
   skipcpio = callPackage ../pkgs/skipcpio { };

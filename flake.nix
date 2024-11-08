@@ -48,7 +48,6 @@
             kanshi
             kas-container
             libubootenv
-            luaprompt
             notmuch-mailmover
             river-bsp-layout
             skipcpio

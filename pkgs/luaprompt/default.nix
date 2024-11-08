@@ -8,7 +8,7 @@
 , readline
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
 
   pname = "luaprompt";
   version = "unstable-2024-10-27";

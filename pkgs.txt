@@ -1,3 +1,4 @@
+aerc
 asciinema-edit
 bed
 btrfs-list

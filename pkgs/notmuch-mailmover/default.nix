@@ -9,16 +9,16 @@
 
 rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
-  version = "0.5.0-unstable-2024-11-25";
+  version = "0.5.0-unstable-2024-12-02";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "fe20946d2b21a212f61d38df0d5c6cb464841811";
-    sha256 = "sha256-hCDyWDY7ER3J3lvVd/8JeVXhEHiVJqzUdP5MSyb+kVQ=";
+    rev = "fe85559d4ce15caafa7e09300a3b9435a4dd3029";
+    sha256 = "sha256-kGcsuKemc4HoqgJfnv8vR/mGnr9mroBpJvHE2RH9rP0=";
   };
 
-  cargoHash = "sha256-V6l7CPctIOUzTtyXlNFg/JNrwmKZ5cgNv5vG4Uj05pc=";
+  cargoHash = "sha256-eEVlmBJerBg0FdfmhQ9FJaHhA6VuqXHpsamwlqptXvc=";
 
   nativeBuildInputs = [
     installShellFiles

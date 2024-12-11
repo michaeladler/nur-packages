@@ -12,13 +12,13 @@
 
 buildPythonPackage {
   pname = "swugenerator";
-  version = "unstable-2024-12-01";
+  version = "unstable-2024-12-10";
 
   src = fetchFromGitHub {
     owner = "sbabic";
     repo = "swugenerator";
-    rev = "31a9c0f6ad6b9ba01781d238e39a09d2bdd8d47c";
-    sha256 = "1qxyyrjcrabf34nl11nljwphk3kzvhribbrnjh7y47cd4yij2yql";
+    rev = "9ba3756a849fe8538a35dba2510791e8e76c7c44";
+    sha256 = "0nxvgry9cdxlr65kn15hmnlal0m2nmh2ja3kwwz29yr36jd3i8kz";
   };
 
   propagatedBuildInputs = [ libconf ];

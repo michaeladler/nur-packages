@@ -19,7 +19,6 @@ in
   demo-magic = callPackage ../pkgs/demo-magic { };
   efibootguard = callPackage ../pkgs/efibootguard { };
   extension-downloader = callPackage ../pkgs/extension-downloader { };
-  fmtlog = callPackage ../pkgs/fmtlog { };
   go-mod-outdated = callPackage ../pkgs/go-mod-outdated { };
   kas-container = callPackage ../pkgs/kas-container { };
   libubootenv = callPackage ../pkgs/libubootenv { };

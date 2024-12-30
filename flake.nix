@@ -44,7 +44,6 @@
             demo-magic
             efibootguard
             extension-downloader
-            fmtlog
             go-mod-outdated
             kanshi
             kas-container

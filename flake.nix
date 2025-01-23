@@ -35,7 +35,6 @@
         let pkgs = mkPkgs system; in
         {
           inherit (pkgs)
-            aerc
             asciinema-edit
             bed
             btrfs-list

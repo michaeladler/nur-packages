@@ -7,7 +7,6 @@ in
 # do not make this 'rec'
 {
   # customized
-  aerc = (import ../pkgs/aerc) final prev;
   kanshi = (import ../pkgs/kanshi) final prev;
 
   # missing upstream

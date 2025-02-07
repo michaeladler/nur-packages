@@ -2,16 +2,16 @@
 
 rustPlatform.buildRustPackage {
   pname = "extension-downloader";
-  version = "0.1.0-unstable-2025-02-03";
+  version = "0.1.0-unstable-2025-02-07";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "extension-downloader";
-    rev = "38393b93b3748316852d9157b114cf68c04d53d6";
+    rev = "8e37314f59f2907fb13442aa5c00771383873d34";
     sha256 = "sha256-NTS0x2EfWX11Mcr/aTEX/bF24PsfwlmDuYb0Y8oHb9A=";
   };
 
-  cargoHash = "sha256-e4RoS1JQnlr0hBoaDKozqFFaZ17FKwEcVnpJE1RZ5bU=";
+  cargoHash = "sha256-ug/B3mrtAEUT0r56W6N2NRMYrARPpsk/FZ51SGC9Gws=";
 
   nativeBuildInputs = [ pkg-config ];
 

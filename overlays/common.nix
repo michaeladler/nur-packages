@@ -22,7 +22,6 @@ in
   kas-container = callPackage ../pkgs/kas-container { };
   libubootenv = callPackage ../pkgs/libubootenv { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
-  river-bsp-layout = callPackage ../pkgs/river-bsp-layout { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
 }

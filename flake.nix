@@ -48,7 +48,6 @@
             kas-container
             libubootenv
             notmuch-mailmover
-            river-bsp-layout
             skipcpio
             vcalendar-filter
             zoxide

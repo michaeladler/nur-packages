@@ -11,6 +11,7 @@ kanshi
 kas-container
 libubootenv
 notmuch-mailmover
+semantic-web-lsp
 skipcpio
 vcalendar-filter
 zoxide

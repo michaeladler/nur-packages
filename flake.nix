@@ -51,6 +51,7 @@
             skipcpio
             vcalendar-filter
             zoxide
+            semantic-web-lsp
             ;
         });
 

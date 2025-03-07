@@ -24,4 +24,5 @@ in
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
+  semantic-web-lsp = callPackage ../pkgs/semantic-web-lsp { };
 }

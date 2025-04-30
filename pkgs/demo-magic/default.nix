@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "demo-magic";
-  version = "unstable-2024-05-28";
+  version = "unstable-2025-04-29";
 
   src = fetchFromGitHub {
     owner = "paxtonhare";
     repo = "demo-magic";
-    rev = "8f338e9771502f71a77d6c779aed2dae614fdb0d";
-    sha256 = "10pv3370gkkkj6zils6rg1gwfdg8psz56654z08z72qgkyag52k5";
+    rev = "2a2f439c26a93286dc2adc6ef2a81755af83f36e";
+    sha256 = "1f7g5gn76vbpsns0j4jn0ijc5zgfdh15ja4gcg8k62wkaxbvn3ng";
   };
 
   installPhase =

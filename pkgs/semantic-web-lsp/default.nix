@@ -2,7 +2,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "semantic-web-lsp";
-  version = "0.1.0";
+  version = "0.2.0";
 
   src = fetchFromGitHub {
     owner = "ajuvercr";

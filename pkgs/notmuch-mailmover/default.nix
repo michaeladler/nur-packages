@@ -9,13 +9,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
-  version = "0.7.0-unstable-2025-06-01";
+  version = "0.7.0-unstable-2025-06-02";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "56c1b2cb483728ea48c60d61dcf10dcfad840115";
-    sha256 = "sha256-et7/BmlaPH8lTDIy+onLCW0WoWWgorJIEC5rRa0K9vw=";
+    rev = "2a2191e0686da1b906004d4eb2b4d20009d97b05";
+    sha256 = "sha256-izFGq3rhMCF9lFj0J83HHVhzAOpDxksEj9s0OI2MTDw=";
   };
 
   cargoHash = "sha256-ZFFoOEFqgdv5lv0tiLoBvX8sRSz29j07vOIzmkxjHZg=";

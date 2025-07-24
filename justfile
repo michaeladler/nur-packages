@@ -5,7 +5,7 @@ build PKG:
 
 build-all:
     #!/usr/bin/env bash
-    cat pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L --no-link
+    cat pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L
 
 packagelist:
     #!/usr/bin/env bash

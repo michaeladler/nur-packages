@@ -20,25 +20,15 @@ jobs:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
           pathsToPush: |
             ./result
-            ./result-1
-            ./result-2
-            ./result-3
-            ./result-4
-            ./result-5
-            ./result-6
-            ./result-7
-            ./result-8
-            ./result-9
-            ./result-10
-            ./result-11
-            ./result-12
-            ./result-13
 
       - name: build
         run: |
           nix-shell \
             --command "just packagelist build-all" \
             -p nixVersions.latest just
+
+      - name: cachix push
+        run: find . -type l -name 'result*' | xargs cachix push michaeladler
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.3

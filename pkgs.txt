@@ -7,11 +7,9 @@ demo-magic
 efibootguard
 extension-downloader
 go-mod-outdated
-kanshi
 kas-container
 libubootenv
 notmuch-mailmover
-semantic-web-lsp
 skipcpio
 vcalendar-filter
 zoxide

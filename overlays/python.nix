@@ -21,6 +21,10 @@ rec {
         inherit (self) libconf python-libarchive;
       };
 
+      linux-entra-sso = final.callPackage ../pkgs/python-modules/linux-entra-sso {
+        inherit (super) buildPythonPackage pytestCheckHook;
+      };
+
     };
   };
   python3Packages = python3.pkgs;

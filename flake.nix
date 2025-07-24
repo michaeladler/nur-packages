@@ -44,14 +44,12 @@
             efibootguard
             extension-downloader
             go-mod-outdated
-            kanshi
             kas-container
             libubootenv
             notmuch-mailmover
             skipcpio
             vcalendar-filter
             zoxide
-            semantic-web-lsp
             ;
         });
 

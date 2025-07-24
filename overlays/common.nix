@@ -6,9 +6,6 @@ in
 
 # do not make this 'rec'
 {
-  # customized
-  kanshi = (import ../pkgs/kanshi) final prev;
-
   # missing upstream
   asciinema-edit = callPackage ../pkgs/asciinema-edit { };
   bed = callPackage ../pkgs/bed { };
@@ -24,5 +21,4 @@ in
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
-  semantic-web-lsp = callPackage ../pkgs/semantic-web-lsp { };
 }

@@ -18,6 +18,7 @@ in
   kas-container = callPackage ../pkgs/kas-container { };
   libubootenv = callPackage ../pkgs/libubootenv { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
+  quickenv = callPackage ../pkgs/quickenv { };
   skipcpio = callPackage ../pkgs/skipcpio { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
 }

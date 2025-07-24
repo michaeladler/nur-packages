@@ -46,6 +46,7 @@
             kas-container
             libubootenv
             notmuch-mailmover
+            quickenv
             skipcpio
             vcalendar-filter
             zoxide

@@ -37,7 +37,6 @@
           inherit (pkgs)
             asciinema-edit
             bed
-            btrfs-list
             cinclude2dot
             colorized-logs
             demo-magic

@@ -37,6 +37,7 @@
           inherit (pkgs)
             asciinema-edit
             bed
+            bookmarkfs
             cinclude2dot
             colorized-logs
             demo-magic

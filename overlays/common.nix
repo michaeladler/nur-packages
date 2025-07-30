@@ -9,6 +9,7 @@ in
   # missing upstream
   asciinema-edit = callPackage ../pkgs/asciinema-edit { };
   bed = callPackage ../pkgs/bed { };
+  bookmarkfs = callPackage ../pkgs/bookmarkfs { };
   cinclude2dot = callPackage ../pkgs/cinclude2dot { };
   colorized-logs = callPackage ../pkgs/colorized-logs { };
   demo-magic = callPackage ../pkgs/demo-magic { };

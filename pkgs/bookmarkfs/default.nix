@@ -15,7 +15,6 @@
   jansson,
   nettle,
   readline,
-  tcl,
   uriparser,
   xxHash,
 }:
@@ -50,7 +49,6 @@ stdenv.mkDerivation {
     jansson
     nettle
     readline
-    tcl
     uriparser
     xxHash
   ];
@@ -60,7 +58,6 @@ stdenv.mkDerivation {
     "--enable-bookmarkfs-fsck"
     "--enable-bookmarkfs-mkfs"
     "--enable-bookmarkctl"
-    "--enable-fsck-handler-tcl"
     "--enable-backend-firefox"
     "--enable-backend-chromium"
   ];

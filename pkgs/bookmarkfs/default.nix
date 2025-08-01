@@ -65,7 +65,7 @@ stdenv.mkDerivation {
   meta = {
     description = "FUSE-based pseudo-filesystem for managing web browser bookmarks";
     homepage = "https://git.sr.ht/~cismonx/bookmarkfs";
-    license = lib.licenses.gpl3Only;
+    license = lib.licenses.gpl3Plus;
     maintainers = [ ];
     platforms = lib.platforms.unix;
   };

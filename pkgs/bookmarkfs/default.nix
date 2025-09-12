@@ -21,13 +21,13 @@
 
 stdenv.mkDerivation {
   pname = "bookmarkfs";
-  version = "0.1.4-unstable-2025-08-30";
+  version = "0.1.4-unstable-2025-09-11";
 
   src = fetchFromSourcehut {
     owner = "~cismonx";
     repo = "bookmarkfs";
-    rev = "601d22cacc46a6ecfca059a08e5a307a66b7ab08";
-    sha256 = "sha256-NTtTWOojOaM60lbpgXov22QOFmL2I3TYee1I7tyApyk=";
+    rev = "daa569475c79af60ee7e672068278d7dabd6a582";
+    sha256 = "sha256-pp59/xJpg/8WQ6W+zcRXsBXEBA2eAbU+ZzMJQV1z7kA=";
   };
 
   nativeBuildInputs = [

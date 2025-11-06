@@ -10,13 +10,13 @@
 
 buildPythonPackage {
   pname = "linux-entra-sso";
-  version = "unstable-2025-09-11";
+  version = "unstable-2025-11-05";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "linux-entra-sso";
-    rev = "dfad03505f8f48e83bb8facf7a8bb9939adcd5e7";
-    sha256 = "1xj6hkanwi9z9k2ccqd5vxzy7kb9l7i7jr90bdl24n2z4db3zgv4";
+    rev = "d0a69d6aaed828a064033e156c84288fb3346bb2";
+    sha256 = "09h2pc1k4jpnrgnxz0q973sj9yi8k13dr8vpkb4mazn781xl85z6";
   };
 
   nativeBuildInputs = [ zip git which ];

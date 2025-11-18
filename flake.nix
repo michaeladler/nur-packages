@@ -49,6 +49,7 @@
             notmuch-mailmover
             quickenv
             skipcpio
+            sso-mib
             vcalendar-filter
             zoxide
             ;

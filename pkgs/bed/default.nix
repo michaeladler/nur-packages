@@ -1,4 +1,9 @@
-{ buildGoModule, fetchFromGitHub, lib, which }:
+{
+  buildGoModule,
+  fetchFromGitHub,
+  lib,
+  which,
+}:
 
 buildGoModule {
   pname = "bed";

@@ -1,4 +1,9 @@
-{ lib, buildPythonPackage, fetchPypi, libarchive }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  libarchive,
+}:
 
 buildPythonPackage rec {
   pname = "python-libarchive";

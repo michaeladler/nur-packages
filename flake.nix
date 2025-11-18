@@ -3,18 +3,24 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       systems = [
         "x86_64-linux"
       ];
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
 
-      mkPkgs = system: import nixpkgs {
-        inherit system;
-        overlays = [ self.overlays.default self.overlays.python ];
-        config.allowUnfree = true;
-      };
+      mkPkgs =
+        system:
+        import nixpkgs {
+          inherit system;
+          overlays = [
+            self.overlays.default
+            self.overlays.python
+          ];
+          config.allowUnfree = true;
+        };
 
     in
 
@@ -25,14 +31,21 @@
       };
 
       # we have to use legacyPackages for sets of derivations (trees)
-      legacyPackages = forAllSystems (system:
-        let pkgs = mkPkgs system; in
+      legacyPackages = forAllSystems (
+        system:
+        let
+          pkgs = mkPkgs system;
+        in
         {
           inherit (pkgs) luajitPackages python3Packages;
-        });
+        }
+      );
 
-      packages = forAllSystems (system:
-        let pkgs = mkPkgs system; in
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = mkPkgs system;
+        in
         {
           inherit (pkgs)
             asciinema-edit
@@ -53,7 +66,8 @@
             vcalendar-filter
             zoxide
             ;
-        });
+        }
+      );
 
     };
 }

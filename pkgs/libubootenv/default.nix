@@ -1,4 +1,12 @@
-{ stdenv, lib, fetchFromGitHub, cmake, pkg-config, libyaml, zlib }:
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  cmake,
+  pkg-config,
+  libyaml,
+  zlib,
+}:
 
 stdenv.mkDerivation rec {
   pname = "libubootenv";
@@ -11,9 +19,15 @@ stdenv.mkDerivation rec {
     sha256 = "0lxfdrnkzlbl5ap3926ga5crdnz15jdgs1g1vw0b238aviyyciin";
   };
 
-  nativeBuildInputs = [ cmake pkg-config ];
+  nativeBuildInputs = [
+    cmake
+    pkg-config
+  ];
 
-  buildInputs = [ zlib libyaml ];
+  buildInputs = [
+    zlib
+    libyaml
+  ];
 
   meta = with lib; {
     homepage = "https://github.com/sbabic/libubootenv";

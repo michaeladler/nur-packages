@@ -1,4 +1,9 @@
-{ lib, fetchFromGitHub, perl, perlPackages }:
+{
+  lib,
+  fetchFromGitHub,
+  perl,
+  perlPackages,
+}:
 
 perlPackages.buildPerlPackage {
   pname = "vcalendar-filter";
@@ -12,7 +17,10 @@ perlPackages.buildPerlPackage {
   };
 
   buildInputs = [ perl ];
-  propagatedBuildInputs = with perlPackages; [ DataICal TextAutoformat ];
+  propagatedBuildInputs = with perlPackages; [
+    DataICal
+    TextAutoformat
+  ];
 
   preConfigure = "touch Makefile.PL";
   doCheck = false;
@@ -24,8 +32,7 @@ perlPackages.buildPerlPackage {
   '';
 
   meta = with lib; {
-    description =
-      "vcalendar-filter is a simple filter to give plain text representations of vcards";
+    description = "vcalendar-filter is a simple filter to give plain text representations of vcards";
     license = licenses.gpl3Plus;
     homepage = "https://github.com/terabyte/mutt-filters";
     platforms = platforms.all;

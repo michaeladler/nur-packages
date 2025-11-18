@@ -1,17 +1,18 @@
-{ stdenv
-, lib
-, fetchFromGitHub
-, autoreconfHook
-, autoconf-archive
-, pkg-config
-, check
-, gnu-efi
-, zlib
-, glibc
-, pciutils
-, python3
-, python3Packages
-, installShellFiles
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  autoreconfHook,
+  autoconf-archive,
+  pkg-config,
+  check,
+  gnu-efi,
+  zlib,
+  glibc,
+  pciutils,
+  python3,
+  python3Packages,
+  installShellFiles,
 }:
 
 stdenv.mkDerivation rec {
@@ -35,7 +36,12 @@ stdenv.mkDerivation rec {
     installShellFiles
   ];
 
-  buildInputs = [ gnu-efi zlib glibc pciutils ];
+  buildInputs = [
+    gnu-efi
+    zlib
+    glibc
+    pciutils
+  ];
 
   configureFlags = [
     "--with-gnuefi-include-dir=${gnu-efi}/include/efi"

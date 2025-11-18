@@ -1,10 +1,11 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, notmuch
-, installShellFiles
-, pkg-config
-, lua5_4
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  notmuch,
+  installShellFiles,
+  pkg-config,
+  lua5_4,
 }:
 
 rustPlatform.buildRustPackage {

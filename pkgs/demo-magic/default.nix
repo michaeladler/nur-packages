@@ -1,4 +1,10 @@
-{ stdenv, lib, fetchFromGitHub, writeShellApplication, pv }:
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  writeShellApplication,
+  pv,
+}:
 
 stdenv.mkDerivation rec {
   pname = "demo-magic";

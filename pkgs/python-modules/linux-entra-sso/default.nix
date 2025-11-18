@@ -1,11 +1,12 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, python3Packages
-, zip
-, git
-, which
-, ...
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  python3Packages,
+  zip,
+  git,
+  which,
+  ...
 }:
 
 buildPythonPackage {
@@ -19,7 +20,11 @@ buildPythonPackage {
     sha256 = "09h2pc1k4jpnrgnxz0q973sj9yi8k13dr8vpkb4mazn781xl85z6";
   };
 
-  nativeBuildInputs = [ zip git which ];
+  nativeBuildInputs = [
+    zip
+    git
+    which
+  ];
 
   dependencies = with python3Packages; [
     pydbus

@@ -1,4 +1,9 @@
-{ lib, fetchFromGitHub, buildGoModule, i3status }:
+{
+  lib,
+  fetchFromGitHub,
+  buildGoModule,
+  i3status,
+}:
 
 buildGoModule {
   pname = "go-mod-outdated";

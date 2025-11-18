@@ -1,4 +1,9 @@
-{ stdenv, lib, fetchurl, pkg-config }:
+{
+  stdenv,
+  lib,
+  fetchurl,
+  pkg-config,
+}:
 
 stdenv.mkDerivation rec {
   pname = "skipcpio";
@@ -11,7 +16,11 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ pkg-config ];
 
-  phases = [ "unpackPhase" "buildPhase" "installPhase" ];
+  phases = [
+    "unpackPhase"
+    "buildPhase"
+    "installPhase"
+  ];
 
   unpackPhase = ''
     cp $src skipcpio.c

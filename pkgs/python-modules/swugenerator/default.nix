@@ -1,13 +1,14 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, pytestCheckHook
-, libconf
-, python-libarchive
-, openssl
-, opensc
-, gzip
-, zstd
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  pytestCheckHook,
+  libconf,
+  python-libarchive,
+  openssl,
+  opensc,
+  gzip,
+  zstd,
 }:
 
 buildPythonPackage {
@@ -38,7 +39,16 @@ buildPythonPackage {
     "swugenerator"
   ];
 
-  makeWrapperArgs = [ "--prefix PATH : ${lib.makeBinPath [ openssl opensc gzip zstd ]}" ];
+  makeWrapperArgs = [
+    "--prefix PATH : ${
+      lib.makeBinPath [
+        openssl
+        opensc
+        gzip
+        zstd
+      ]
+    }"
+  ];
 
   meta = with lib; {
     description = "A host tool to generate SWU update package for SWUpdate";

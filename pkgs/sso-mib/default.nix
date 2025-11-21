@@ -18,8 +18,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "sso-mib";
-    rev = "4a2430c43fd40b42274d85ca717ce561bd3852b0";
-    sha256 = "sha256-91So/+BmNAhRqU1mJJROWocRijArga3Yg2GGeIz/Des=";
+    rev = "0389d4400f9efe642b1ac7117e0436a29e7466fd";
+    sha256 = "sha256-TZCYpHfCqaRKoyzoaUmAT1dtYWhkpnvrljI2y7DhCkQ=";
   };
 
   nativeBuildInputs = [

@@ -62,6 +62,10 @@ stdenv.mkDerivation {
     "--enable-backend-chromium"
   ];
 
+  env = {
+    NIX_CFLAGS_COMPILE = "-std=gnu11";
+  };
+
   meta = {
     description = "FUSE-based pseudo-filesystem for managing web browser bookmarks";
     homepage = "https://git.sr.ht/~cismonx/bookmarkfs";

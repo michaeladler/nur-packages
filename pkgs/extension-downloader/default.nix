@@ -8,13 +8,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "extension-downloader";
-  version = "0.2.0-unstable-2026-01-07";
+  version = "0.2.0-unstable-2026-02-01";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "extension-downloader";
-    rev = "a0759e14e997d786af7dfc63bb47b76fffc87455";
-    sha256 = "sha256-TrozDUz04N+hWqu3yPkz4db69yIGcsiNnmXXa5iDjOQ=";
+    rev = "3f90472a97e737f27abb4b1d80e8ac4889682422";
+    sha256 = "sha256-X5ArwnrIWLNw+CIZ6DYJytTeciZFkO0pxcamQF2kCMs=";
   };
 
   cargoHash = "sha256-XnDq/B2fA5Yo+aTFqGmFVACOht8Bu8cIJbIBPkhXluo=";

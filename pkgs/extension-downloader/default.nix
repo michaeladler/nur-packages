@@ -4,6 +4,7 @@
   rustPlatform,
   pkg-config,
   openssl,
+  cacert,
 }:
 
 rustPlatform.buildRustPackage {
@@ -22,6 +23,8 @@ rustPlatform.buildRustPackage {
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ openssl ];
+
+  checkInputs = [ cacert ];
 
   meta = with lib; {
     description = "Download browser extensions for Firefox and Chromium-based browsers";

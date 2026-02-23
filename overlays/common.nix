@@ -23,4 +23,7 @@ in
   skipcpio = callPackage ../pkgs/skipcpio { };
   sso-mib = callPackage ../pkgs/sso-mib { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
+
+  # customized
+  bogofilter = (import ../pkgs/bogofilter) final prev;
 }

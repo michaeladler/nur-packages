@@ -65,6 +65,7 @@
             sso-mib
             vcalendar-filter
             zoxide
+            bogofilter
             ;
         }
       );

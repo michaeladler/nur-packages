@@ -5,6 +5,7 @@
   python3,
   glib,
   makeWrapper,
+  jq,
 }:
 
 let
@@ -29,13 +30,26 @@ stdenv.mkDerivation {
 
   buildInputs = [ glib ];
 
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [
+    makeWrapper
+    jq
+  ];
 
   dontBuild = true;
 
   installPhase = ''
     mkdir -p $out/bin
     cp linux-entra-sso.py $out/bin/.linux-entra-sso.py-wrapped
+
+    mkdir -p $out/lib/mozilla/native-messaging-hosts
+    jq ".path = \"$out/bin/linux-entra-sso\"" \
+        platform/firefox/linux_entra_sso.json \
+        >$out/lib/mozilla/native-messaging-hosts/linux_entra_sso.json
+
+    mkdir -p $out/etc/chromium/native-messaging-hosts
+    jq ".path = \"$out/bin/linux-entra-sso\"" \
+        platform/chrome/linux_entra_sso.json |
+        sed '/{extension_id}/d' >$out/etc/chromium/native-messaging-hosts/linux_entra_sso.json
 
     makeWrapper ${myPythonEnv}/bin/python $out/bin/linux-entra-sso \
       --add-flags "$out/bin/.linux-entra-sso.py-wrapped" \
@@ -44,7 +58,7 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     homepage = "https://github.com/siemens/linux-entra-sso";
-    description = "A simple CLI tool to interact with a Microsoft Identity Broker";
+    description = "Browser plugin for Linux to SSO on Microsoft Entra ID using a locally running microsoft identity broker (Intune)";
     maintainers = [ maintainers.michaeladler ];
     platforms = platforms.linux;
     license = licenses.mpl20;

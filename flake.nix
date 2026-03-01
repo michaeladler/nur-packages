@@ -60,7 +60,6 @@
             kas-container
             libubootenv
             notmuch-mailmover
-            quickenv
             skipcpio
             sso-mib
             vcalendar-filter

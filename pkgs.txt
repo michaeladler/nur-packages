@@ -11,7 +11,6 @@ go-mod-outdated
 kas-container
 libubootenv
 notmuch-mailmover
-quickenv
 skipcpio
 sso-mib
 vcalendar-filter

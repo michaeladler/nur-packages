@@ -2,7 +2,6 @@
   lib,
   fetchFromGitHub,
   buildGoModule,
-  i3status,
 }:
 
 buildGoModule {

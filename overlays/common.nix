@@ -20,8 +20,10 @@ in
   libubootenv = callPackage ../pkgs/libubootenv { };
   notmuch-mailmover = callPackage ../pkgs/notmuch-mailmover { };
   skipcpio = callPackage ../pkgs/skipcpio { };
-  sso-mib = callPackage ../pkgs/sso-mib { };
   vcalendar-filter = callPackage ../pkgs/vcalendar-filter { };
+
+  sso-mib = callPackage ../pkgs/sso-mib { };
+  linux-entra-sso = callPackage ../pkgs/linux-entra-sso { };
 
   # customized
   bogofilter = (import ../pkgs/bogofilter) final prev;

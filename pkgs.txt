@@ -10,6 +10,7 @@ extension-downloader
 go-mod-outdated
 kas-container
 libubootenv
+linux-entra-sso
 notmuch-mailmover
 skipcpio
 sso-mib

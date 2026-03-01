@@ -1,4 +1,4 @@
-UPDATE_NIX_FETCHGIT := "nix run  'github:NixOS/nixpkgs/nixos-24.05#update-nix-fetchgit'"
+UPDATE_NIX_FETCHGIT := "nix run  'github:NixOS/nixpkgs/nixos-25.11#update-nix-fetchgit'"
 
 build PKG:
     nix build --show-trace -L '.#{{ PKG }}'

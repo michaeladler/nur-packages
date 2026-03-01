@@ -61,10 +61,12 @@
             libubootenv
             notmuch-mailmover
             skipcpio
-            sso-mib
             vcalendar-filter
             zoxide
             bogofilter
+
+            sso-mib
+            linux-entra-sso
             ;
         }
       );

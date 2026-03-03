@@ -26,6 +26,5 @@ in
   linux-entra-sso = callPackage ../pkgs/linux-entra-sso { };
 
   # customized
-  bogofilter = (import ../pkgs/bogofilter) final prev;
   jay = callPackage ../pkgs/jay { };
 }

@@ -63,7 +63,6 @@
             skipcpio
             vcalendar-filter
             zoxide
-            bogofilter
             jay
 
             sso-mib

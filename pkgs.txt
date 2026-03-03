@@ -1,6 +1,5 @@
 asciinema-edit
 bed
-bogofilter
 bookmarkfs
 cinclude2dot
 colorized-logs

@@ -64,6 +64,7 @@
             vcalendar-filter
             zoxide
             bogofilter
+            jay
 
             sso-mib
             linux-entra-sso

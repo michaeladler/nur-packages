@@ -27,4 +27,5 @@ in
 
   # customized
   bogofilter = (import ../pkgs/bogofilter) final prev;
+  jay = callPackage ../pkgs/jay { };
 }

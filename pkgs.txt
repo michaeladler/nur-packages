@@ -3,6 +3,7 @@ bed
 bookmarkfs
 cinclude2dot
 colorized-logs
+czmod
 demo-magic
 efibootguard
 extension-downloader
@@ -15,4 +16,3 @@ notmuch-mailmover
 skipcpio
 sso-mib
 vcalendar-filter
-zoxide

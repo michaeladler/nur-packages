@@ -8,11 +8,10 @@ build-all:
     cat pkgs.txt | sed -E -e 's/(.*)/.#\1/' | xargs --delimiter='\n' nix build --show-trace -L
 
 packagelist:
-    #!/usr/bin/env bash
-    set -eu
-    nix eval --impure --expr 'let flake = builtins.getFlake (toString ./.); in (builtins.toJSON (builtins.attrNames flake.packages.x86_64-linux)) ' \
-        | python -c 'import sys, json; raw = input().encode().decode("unicode_escape").strip("\""); pkgs = json.loads(raw); print("\n".join(pkgs))' \
-        | tee pkgs.txt
+    #!/bin/sh
+    exec nix eval --json --impure --expr 'let flake = builtins.getFlake (toString ./.); in builtins.attrNames flake.packages.x86_64-linux' |
+        jq -r 'sort | unique | .[]' |
+        tee pkgs.txt
 
 # Update a single package
 update FNAME:

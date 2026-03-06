@@ -23,10 +23,9 @@ stdenv.mkDerivation {
     install -D -s -m0755 czmod $out/bin/czmod
 
     install -D czmod.zsh \
-      $out/share/zsh/plugins/czmod/czmod.zsh
+      $out/share/zsh/plugins/czmod/czmod.plugin.zsh
 
-    ln -s $out/share/zsh/plugins/czmod \
-      $out/share/czmod
+    ln -s $out/bin/czmod $out/share/zsh/plugins/czmod/czmod \
   '';
 
   meta = with lib; {

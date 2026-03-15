@@ -56,6 +56,7 @@ rustPlatform.buildRustPackage {
   postInstall = ''
     install -D etc/jay.portal $out/share/xdg-desktop-portal/portals/jay.portal
     install -D etc/jay-portals.conf $out/share/xdg-desktop-portal/jay-portals.conf
+    install -D etc/jay.desktop $out/share/wayland-sessions/jay.desktop
   ''
   + lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     for shell in bash fish zsh; do

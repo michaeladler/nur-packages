@@ -24,8 +24,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "mahkoh";
     repo = "jay";
-    rev = "ec74723e403d7d7dd9ffa0bf9c77e4363d53ff2d";
-    sha256 = "sha256-RGQMdMNS+gfjppFrWX3NTF3YSyc0w9nJzX8OZiX4z6g=";
+    rev = "7a936feddbe3fc85f63b69d9654e416313f9ba72";
+    sha256 = "sha256-tBtB6TzdDb4XQykZ2RND86oRmWHdVcG5PJDNvvbsWsU=";
   };
 
   cargoHash = "sha256-y6Z57W6K9yNOseTcJ5EVpdiQwl2+ZtGKblvqyi4Ok9w=";

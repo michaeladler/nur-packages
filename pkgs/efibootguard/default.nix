@@ -18,13 +18,13 @@
 stdenv.mkDerivation rec {
 
   pname = "efibootguard";
-  version = "unstable-2026-01-08";
+  version = "unstable-2026-03-20";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "efibootguard";
-    rev = "9ac678328583700c61511c116fc16926e8dd8b32";
-    sha256 = "0kz514msv60chwmk4sy9h6wv65arm09gk7xpn7pqr8na2xh3wh7z";
+    rev = "d5ad3990f266c632dbd98a1606ff0d054dee672b";
+    sha256 = "15i3yp1220sabvbwa3pwb52wjflc3a957fx0cm6gv3fjkv39k3ik";
   };
 
   nativeBuildInputs = [

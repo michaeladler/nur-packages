@@ -19,13 +19,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "jay";
-  version = "1.12.0-unstable-2026-04-06";
+  version = "1.12.0-unstable-2026-04-08";
 
   src = fetchFromGitHub {
     owner = "mahkoh";
     repo = "jay";
-    rev = "d57cfdc8090885ee1fe24744e00419b3121444d3";
-    sha256 = "sha256-2S5J5pmahtJ0MNPGNfwjRFQHApkMnQXOtqc5F8tKVaQ=";
+    rev = "a07f1bcdfd0ab9fc96d6d968b3ca386a5f4ff473";
+    sha256 = "sha256-hMB7HMucHMOE+vBp39pijCZwYed73o0FTnxtfXW3ORw=";
   };
 
   cargoHash = "sha256-N7wOqXGYolTMSAG4PCLjNwg2+rz4ctjuo0Y/BdLPU1o=";

@@ -8,7 +8,6 @@ demo-magic
 efibootguard
 extension-downloader
 go-mod-outdated
-jay
 kas-container
 libubootenv
 linux-entra-sso

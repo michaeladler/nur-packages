@@ -12,5 +12,6 @@ libubootenv
 linux-entra-sso
 notmuch-mailmover
 skipcpio
+ssh-tpm-agent
 sso-mib
 vcalendar-filter

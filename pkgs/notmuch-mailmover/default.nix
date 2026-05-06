@@ -10,7 +10,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
-  version = "0.7.1-unstable-2026-05-01";
+  version = "0-unstable-2026-05-01";
 
   src = fetchFromGitHub {
     owner = "michaeladler";

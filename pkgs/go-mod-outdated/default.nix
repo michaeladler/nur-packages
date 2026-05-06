@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "go-mod-outdated";
-  version = "0.9.0-unstable-2023-02-19";
+  version = "0-unstable-2023-02-19";
 
   src = fetchFromGitHub {
     owner = "psampaz";

@@ -9,7 +9,7 @@
 
 buildGoModule (finalAttrs: {
   pname = "ssh-tpm-agent";
-  version = "0.9.0-unstable-2026-04-27";
+  version = "0-unstable-2026-04-27";
 
   src = fetchFromGitHub {
     owner = "Foxboron";

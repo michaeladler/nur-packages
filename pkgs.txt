@@ -11,6 +11,7 @@ kas-container
 libubootenv
 linux-entra-sso
 notmuch-mailmover
+rtk
 skipcpio
 ssh-tpm-agent
 sso-mib

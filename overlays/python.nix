@@ -17,7 +17,7 @@ rec {
 
       swugenerator = final.callPackage ../pkgs/python-modules/swugenerator {
         #inherit (final) lib fetchFromGitHub;
-        inherit (super) buildPythonPackage pytestCheckHook;
+        inherit (super) buildPythonPackage pytestCheckHook setuptools;
         inherit (self) libconf python-libarchive;
       };
     };

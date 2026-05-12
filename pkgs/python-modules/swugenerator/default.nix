@@ -2,6 +2,7 @@
   lib,
   fetchFromGitHub,
   buildPythonPackage,
+  setuptools,
   pytestCheckHook,
   libconf,
   python-libarchive,
@@ -14,6 +15,7 @@
 buildPythonPackage {
   pname = "swugenerator";
   version = "unstable-2026-03-08";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sbabic";
@@ -21,6 +23,8 @@ buildPythonPackage {
     rev = "6b93019cd92bcb6887083c0196766504eefbd2b0";
     sha256 = "014vzx59w8d3iq0rjp6d41y9n47gk0pqimb9jdnyzjw588da57a3";
   };
+
+  build-system = [ setuptools ];
 
   propagatedBuildInputs = [ libconf ];
 
@@ -34,6 +38,10 @@ buildPythonPackage {
   checkInputs = [
     python-libarchive
   ];
+
+  # Integration tests compare the produced SWU bytewise against a checked-in
+  # reference, which breaks with newer openssl versions. Keep unit tests.
+  disabledTestPaths = [ "tests/test_integration.py" ];
 
   pythonImportsCheck = [
     "swugenerator"

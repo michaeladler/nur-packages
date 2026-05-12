@@ -8,6 +8,7 @@
     let
       systems = [
         "x86_64-linux"
+        "aarch64-linux"
       ];
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
 
@@ -31,13 +32,9 @@
 
     {
 
-      overlays = forAllSystems (
-        system:
-        (lib.my.mapModules ./overlays import)
-        // {
-          default = final: prev: self.packages."${system}";
-        }
-      );
+      overlays = (lib.my.mapModules ./overlays import) // {
+        default = final: prev: self.packages.${prev.stdenv.hostPlatform.system} or { };
+      };
 
       # we have to use legacyPackages for sets of derivations (trees)
       legacyPackages = forAllSystems (

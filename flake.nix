@@ -4,22 +4,13 @@
   };
 
   outputs =
-    { self, nixpkgs }@inputs:
+    { self, nixpkgs }:
     let
       systems = [
         "x86_64-linux"
         "aarch64-linux"
       ];
       forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
-
-      lib = nixpkgs.lib.extend (
-        self: super: {
-          my = import ./lib {
-            inherit inputs;
-            lib = self;
-          };
-        }
-      );
 
       # Discover packages under ./pkgs as { name = path; }. This must not
       # force values, otherwise applying the overlay below leads to infinite
@@ -44,9 +35,7 @@
           in
           if v == "directory" && !(hasPrefix "_" n) && pathExists (path + "/default.nix") then
             nameValuePair n path
-          else if
-            v == "regular" && !(hasPrefix "_" n) && n != "default.nix" && hasSuffix ".nix" n
-          then
+          else if v == "regular" && !(hasPrefix "_" n) && n != "default.nix" && hasSuffix ".nix" n then
             nameValuePair (removeSuffix ".nix" n) path
           else
             nameValuePair "__skip_${n}" null
@@ -60,37 +49,21 @@
       # under ./pkgs to nixpkgs. `packages` and `legacyPackages` are derived
       # from a nixpkgs instance with this overlay applied.
       packagesOverlay =
-        final: prev:
-        nixpkgs.lib.genAttrs packageNames (n: final.callPackage pkgPaths.${n} { });
-
-      otherOverlays = lib.my.mapModules ./overlays import;
+        final: prev: nixpkgs.lib.genAttrs packageNames (n: final.callPackage pkgPaths.${n} { });
 
       mkPkgs =
         system:
         import nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = [ packagesOverlay ] ++ (nixpkgs.lib.attrValues otherOverlays);
+          overlays = [ packagesOverlay ];
         };
 
     in
 
     {
 
-      overlays = otherOverlays // {
-        default = packagesOverlay;
-      };
-
-      # we have to use legacyPackages for sets of derivations (trees)
-      legacyPackages = forAllSystems (
-        system:
-        let
-          pkgs = mkPkgs system;
-        in
-        {
-          inherit (pkgs) luajitPackages python3Packages;
-        }
-      );
+      overlays.default = packagesOverlay;
 
       packages = forAllSystems (
         system:

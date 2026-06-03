@@ -13,7 +13,7 @@
 
 stdenv.mkDerivation {
   pname = "sso-mib";
-  version = "0-unstable-2026-05-07";
+  version = "0.9.0-unstable-2026-05-07";
 
   src = fetchFromGitHub {
     owner = "siemens";

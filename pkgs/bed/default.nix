@@ -7,7 +7,7 @@
 
 buildGoModule {
   pname = "bed";
-  version = "0-unstable-2024-12-01";
+  version = "0.2.8-unstable-2024-12-01";
 
   src = fetchFromGitHub {
     owner = "itchyny";

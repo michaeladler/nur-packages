@@ -15,8 +15,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "junhoyeo";
     repo = "tokscale";
-    rev = "c9111b06441a4493e89d9678a0072a760beaefa3";
-    hash = "sha256-TWy79RihztfI8XNKckpSGaXUtSGNcL5xyo8Vp0vM4K8=";
+    rev = "aebe4ea8b9a80d84cb2ff0e3b3472db9ac34051d";
+    hash = "sha256-Vo5QcSEeayE+6F+J9iey1VMxukHSySZN61f1qL/0FPY=";
   };
 
   cargoHash = "sha256-0CXSvQ2jP8vzYmnIPDZRSR0kFTJN1FTy7R/UMujAWgU=";

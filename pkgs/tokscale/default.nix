@@ -10,16 +10,16 @@
 
 rustPlatform.buildRustPackage {
   pname = "tokscale";
-  version = "3.1.3-unstable-2026-06-21";
+  version = "4.0.0-unstable-2026-06-23";
 
   src = fetchFromGitHub {
     owner = "junhoyeo";
     repo = "tokscale";
-    rev = "633ea94688210c6ef7d14ed51bb9113aee29b06a";
-    hash = "sha256-FQ6TIOVj+yZ71IGdaZU5lxVHonB8QeucYu6oQEfZ//E=";
+    rev = "4efba6152b2ae08f0985b2bb16edd6029a1a803d";
+    hash = "sha256-ZBTlXEawaUzgSHBFbm0euKp/mIAkWaphdL4mvc1ZBHg=";
   };
 
-  cargoHash = "sha256-ZX7i9wAbqJwf8PW5EDRXvvFnrJQG0czVU7unCZadxLY=";
+  cargoHash = "sha256-OIZK8zfq3WINgYROM09xF5GQ4L6br1enDGkxEu7Gwu0=";
 
   nativeBuildInputs = [
     pkg-config

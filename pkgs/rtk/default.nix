@@ -11,7 +11,7 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rtk";
-  version = "latest-unstable-2026-06-12";
+  version = "dev-0.43.0-rc.286-unstable-2026-06-12";
 
   src = fetchFromGitHub {
     owner = "rtk-ai";

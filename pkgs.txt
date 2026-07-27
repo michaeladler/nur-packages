@@ -15,5 +15,4 @@ rtk
 skipcpio
 ssh-tpm-agent
 sso-mib
-tokscale
 vcalendar-filter

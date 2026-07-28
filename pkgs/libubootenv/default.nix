@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation rec {
   pname = "libubootenv";
-  version = "unstable-2026-01-27";
+  version = "unstable-2026-07-27";
 
   src = fetchFromGitHub {
     owner = "sbabic";
     repo = "libubootenv";
-    rev = "138114e8c1d2fb64f524fc04e0c99d8290f1201b";
-    sha256 = "1fhsy7p1grxpznyfjkqpiwnl4dxxpnkj6lmxdgkc6qp685lkzp63";
+    rev = "c421174006d5c6ffd817fb8ded9a5873a2f6f003";
+    sha256 = "01z2dfkm2g99w5phjskrqqnjmdz9wi4kjvjbnsws2mz0gpw6shq6";
   };
 
   nativeBuildInputs = [

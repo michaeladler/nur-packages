@@ -35,8 +35,9 @@ stdenv.mkDerivation {
   ];
 
   meta = with lib; {
-    homepage = "https://github.com/OleksandrChekhovskyi/hax";
     description = "A minimalist, terminal-native coding agent written in C.";
+    mainProgram = "hax";
+    homepage = "https://github.com/OleksandrChekhovskyi/hax";
     maintainers = [ maintainers.michaeladler ];
     platforms = platforms.unix;
     license = licenses.mit;

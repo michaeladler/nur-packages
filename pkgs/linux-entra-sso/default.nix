@@ -19,13 +19,13 @@ in
 
 stdenv.mkDerivation {
   pname = "linux-entra-sso";
-  version = "unstable-2026-08-03";
+  version = "unstable-2026-08-06";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "linux-entra-sso";
-    rev = "676854c762e3e2fc0db2075bd02d52dac98ff0b5";
-    sha256 = "1m0sbjpy9zn6j9dzrhphf5xjf9z8jvxi57nhnjdsvs68jhxvr5vz";
+    rev = "aff8ec817c4ad7fe64c2bddc15f3be1a65abfc1a";
+    sha256 = "11bbkgv5awfgclg0k18bd7qi0i2kcs4d812ric2y6cyi65h2558w";
   };
 
   buildInputs = [ glib ];

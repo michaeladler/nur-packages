@@ -16,6 +16,10 @@ rustPlatform.buildRustPackage {
     sha256 = "06a27q8jjp6kqdvkmilgvs32m37nmx8wn3mijy40kq9db6k0jhgx";
   };
 
+  patches = [
+    ./0001-Revert-broken-patch.patch
+  ];
+
   cargoHash = "sha256-txaNB1nkKEMpCZC6mGmXNbp7McoJdlo5CybFByMgHCQ=";
 
   buildInputs = [ bubblewrap ];

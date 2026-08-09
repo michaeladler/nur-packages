@@ -2,6 +2,7 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  installShellFiles,
 }:
 
 rustPlatform.buildRustPackage {
@@ -18,6 +19,14 @@ rustPlatform.buildRustPackage {
   cargoHash = "sha256-axM21y0HKtn2KOtXXXXdn8jv9vgWCn02snNxTnsf2g4=";
 
   doCheck = false;
+
+  nativeBuildInputs = [
+    installShellFiles
+  ];
+
+  postInstall = ''
+    installManPage man/man1/landstrip.1
+  '';
 
   meta = with lib; {
     description = "A sandbox for coding agents with parametrized state.";

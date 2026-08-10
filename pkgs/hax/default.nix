@@ -7,8 +7,6 @@
   pkgconf,
   curl,
   jansson,
-  diffutils,
-
 }:
 
 stdenv.mkDerivation {
@@ -31,7 +29,6 @@ stdenv.mkDerivation {
   buildInputs = [
     curl
     jansson
-    diffutils
   ];
 
   meta = with lib; {

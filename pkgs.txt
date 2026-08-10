@@ -16,6 +16,7 @@ notmuch-mailmover
 rtk
 sandlock
 skipcpio
+ssh-askpass-zigtk
 ssh-tpm-agent
 sso-mib
 vcalendar-filter

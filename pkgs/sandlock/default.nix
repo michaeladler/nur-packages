@@ -6,13 +6,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "sandlock";
-  version = "unstable-2026-08-11";
+  version = "unstable-2026-08-14";
 
   src = fetchFromGitHub {
     owner = "multikernel";
     repo = "sandlock";
-    rev = "3fa12208960e6a5689470d258cb4c83369c5e84b";
-    sha256 = "1x3nassnvcb8gw5ff3g79q4grkrjnvfvwn6x7avv1gwdd882xsw1";
+    rev = "4e85b5025f884172d61e33aa788af3dbec996854";
+    sha256 = "0gay2r209p3xs6fy9bpj8dyxkf9f6y83wv9a50da0lqzg09wxy3f";
   };
 
   cargoHash = "sha256-CrfQDoocRBEVXFn/9b1k3qztIVV1wg580LWs3nOPx/4=";

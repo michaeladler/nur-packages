@@ -11,8 +11,8 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "multikernel";
     repo = "sandlock";
-    rev = "233093b0105e16d76083f6e1a7f780ae11b8e10e";
-    sha256 = "1ah364nqx21f22zwj5svpfiqm380w3rlrnkd9yvhkwqq5c174q9x";
+    rev = "1f2ea34c893eecd26dab6a450aeb8a468a3703b6";
+    sha256 = "0f85rfmwrhbz34mp10401g5q2iaw3jd6r1idl8d2zw7rd5xf4x3g";
   };
 
   cargoHash = "sha256-CrfQDoocRBEVXFn/9b1k3qztIVV1wg580LWs3nOPx/4=";

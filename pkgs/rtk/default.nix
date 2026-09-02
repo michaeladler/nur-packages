@@ -11,13 +11,13 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rtk";
-  version = "dev-0.47.0-rc.381-unstable-2026-08-26";
+  version = "dev-0.47.0-rc.391-unstable-2026-09-01";
 
   src = fetchFromGitHub {
     owner = "rtk-ai";
     repo = "rtk";
-    rev = "8dae5a750fe307d1fee105a2ff4a9d1ca54ac791";
-    hash = "sha256-PwqRmOPe0RRbEQzVK7cvl2tM+p9YpVJqoI6LxSXWhx4=";
+    rev = "bdaa79289eff16f4a6dc11ece067c0ff1a67d197";
+    hash = "sha256-vbc+/ci+9zOoB9z1ZIozttbr67945jhwgPSPQ929mrY=";
   };
 
   strictDeps = true;

@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ssh-askpass-zigtk";
-  version = "0.1.0";
+  version = "0.1.0-unstable-2026-07-21";
   strictDeps = true;
   __structuredAttrs = true;
 

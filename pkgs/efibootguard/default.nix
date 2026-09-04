@@ -18,7 +18,7 @@
 stdenv.mkDerivation rec {
 
   pname = "efibootguard";
-  version = "unstable-2026-07-07";
+  version = "0.22-unstable-2026-07-07";
 
   src = fetchFromGitHub {
     owner = "siemens";

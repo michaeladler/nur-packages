@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation rec {
   pname = "libubootenv";
-  version = "unstable-2026-08-19";
+  version = "0.3.7-unstable-2026-08-19";
 
   src = fetchFromGitHub {
     owner = "sbabic";

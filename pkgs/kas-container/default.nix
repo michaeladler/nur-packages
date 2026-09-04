@@ -6,7 +6,7 @@
 
 stdenvNoCC.mkDerivation {
   pname = "kas-container";
-  version = "unstable-2026-08-31";
+  version = "5.5-unstable-2026-08-31";
 
   src = fetchFromGitHub {
     owner = "siemens";

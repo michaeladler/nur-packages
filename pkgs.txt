@@ -9,12 +9,9 @@ extension-downloader
 go-mod-outdated
 hax
 kas-container
-landstrip
 libubootenv
 linux-entra-sso
 notmuch-mailmover
-rtk
-sandlock
 skipcpio
 ssh-askpass-zigtk
 ssh-tpm-agent

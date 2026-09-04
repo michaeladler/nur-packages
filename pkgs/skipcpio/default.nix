@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation rec {
   pname = "skipcpio";
-  version = "unstable-2022-08-18";
+  version = "059-unstable-2024-03-21";
 
   src = fetchurl {
     url = "https://github.com/dracutdevs/dracut/raw/aa0369a4a31764fde06214358b0774fb1095af01/src/skipcpio/skipcpio.c";

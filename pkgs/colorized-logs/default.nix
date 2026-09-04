@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation rec {
   pname = "colorized-logs";
-  version = "unstable-2025-03-29";
+  version = "2.7-unstable-2025-03-29";
 
   src = fetchFromGitHub {
     owner = "kilobyte";

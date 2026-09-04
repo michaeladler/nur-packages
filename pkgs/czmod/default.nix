@@ -6,7 +6,7 @@
 
 stdenv.mkDerivation {
   pname = "czmod";
-  version = "unstable-2022-11-04";
+  version = "1.0.0-unstable-2022-11-03";
 
   src = fetchFromGitHub {
     owner = "skywind3000";

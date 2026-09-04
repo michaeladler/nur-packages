@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation rec {
   pname = "demo-magic";
-  version = "unstable-2025-04-29";
+  version = "0-unstable-2025-04-29";
 
   src = fetchFromGitHub {
     owner = "paxtonhare";

@@ -7,7 +7,7 @@
 
 perlPackages.buildPerlPackage {
   pname = "vcalendar-filter";
-  version = "unstable-2016-06-07";
+  version = "0-unstable-2016-06-07";
 
   src = fetchFromGitHub {
     owner = "terabyte";

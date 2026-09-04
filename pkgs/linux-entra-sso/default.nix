@@ -19,7 +19,7 @@ in
 
 stdenv.mkDerivation {
   pname = "linux-entra-sso";
-  version = "unstable-2026-09-01";
+  version = "1.10.2-unstable-2026-09-01";
 
   src = fetchFromGitHub {
     owner = "siemens";

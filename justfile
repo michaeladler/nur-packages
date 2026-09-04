@@ -53,6 +53,9 @@ update FNAME:
 
 update-all:
     #!/usr/bin/env bash
-    set -euxo pipefail
+    set -euo pipefail
+    echo "Updating nix flakes..."
     nix flake update
-    find pkgs -name "*.nix" | xargs -n1 -P$(nproc) just update
+    echo "Updating packages..."
+    find pkgs -name "*.nix" | parallel -j$(nproc) just update
+    echo "Success!"

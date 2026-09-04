@@ -1,5 +1,3 @@
-UPDATE_NIX_FETCHGIT := "nix run  'github:NixOS/nixpkgs/nixos-25.11#update-nix-fetchgit'"
-
 build PKG:
     nix build --show-trace -L '.#{{ PKG }}'
 
@@ -48,13 +46,9 @@ packagelist:
 update FNAME:
     #!/usr/bin/env bash
     set -euo pipefail
-    dir=$(dirname "{{ FNAME }}")
+    pkg=$(basename "$(dirname "{{ FNAME }}")")
     echo "{{ FNAME }}: starting update"
-    if [[ -x $dir/update.sh ]]; then
-        $dir/update.sh
-    else
-        {{ UPDATE_NIX_FETCHGIT }} "{{ FNAME }}"
-    fi
+    nix-update --flake --version=branch "$pkg"
     echo "{{ FNAME }}: done"
 
 update-all:

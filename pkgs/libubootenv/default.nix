@@ -8,7 +8,7 @@
   zlib,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "libubootenv";
   version = "0.3.7-unstable-2026-08-19";
 

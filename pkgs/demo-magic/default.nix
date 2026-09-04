@@ -6,7 +6,7 @@
   pv,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "demo-magic";
   version = "0-unstable-2025-04-29";
 
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
       };
     in
     ''
-      install -D -m 0644 ${src}/demo-magic.sh $out/share/demo-magic.sh
+      install -D -m 0644 ${finalAttrs.src}/demo-magic.sh $out/share/demo-magic.sh
       install -D -m0755 ${wrapper}/bin/demo-magic.sh $out/bin/demo-magic.sh
     '';
 
@@ -43,4 +43,4 @@ stdenv.mkDerivation rec {
     platforms = platforms.all;
     license = licenses.mit;
   };
-}
+})

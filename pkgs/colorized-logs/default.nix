@@ -5,7 +5,7 @@
   cmake,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "colorized-logs";
   version = "2.7-unstable-2025-03-29";
 

@@ -11,11 +11,10 @@
   glibc,
   pciutils,
   python3,
-  python3Packages,
   installShellFiles,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
 
   pname = "efibootguard";
   version = "0.22-unstable-2026-07-07";

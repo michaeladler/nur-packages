@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           nix-shell \
-            --command "just update-all build-all" \
+            --command "just update-all" \
             -p nixVersions.latest just nix-update parallel
 
       - name: Commit & Push changes

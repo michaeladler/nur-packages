@@ -5,36 +5,7 @@ build-all:
     #!/usr/bin/env bash
     set -uo pipefail
     mapfile -t pkgs < pkgs.txt
-    # Fast path: try building everything at once.
-    if printf '.#%s\n' "${pkgs[@]}" | xargs --delimiter='\n' nix build --show-trace -L; then
-        exit 0
-    fi
-    echo "::: bulk build failed, retrying packages individually" >&2
-    overall_failed=()
-    reverted=()
-    for pkg in "${pkgs[@]}"; do
-        if nix build --show-trace -L ".#${pkg}"; then
-            continue
-        fi
-        nix_file="pkgs/${pkg}/default.nix"
-        if [[ -f $nix_file ]] && ! git diff --quiet -- "$nix_file"; then
-            echo "::: ${pkg}: build failed and ${nix_file} is modified, reverting and retrying" >&2
-            git checkout -- "$nix_file"
-            if nix build --show-trace -L ".#${pkg}"; then
-                reverted+=("$pkg")
-                continue
-            fi
-        fi
-        overall_failed+=("$pkg")
-    done
-    if (( ${#reverted[@]} > 0 )); then
-        echo "::: reverted packages (build succeeded after revert): ${reverted[*]}" >&2
-    fi
-    if (( ${#overall_failed[@]} > 0 )); then
-        echo "::: packages that still failed: ${overall_failed[*]}" >&2
-        exit 1
-    fi
-    echo "::: build-all succeeded (with ${#reverted[@]} reverts)" >&2
+    printf '.#%s\n' "${pkgs[@]}" | xargs --delimiter='\n' nix build --show-trace -L
 
 packagelist:
     #!/bin/sh
@@ -48,7 +19,7 @@ update FNAME:
     set -euo pipefail
     pkg=$(basename "$(dirname "{{ FNAME }}")")
     echo "{{ FNAME }}: starting update"
-    nix-update --flake --version=branch --use-update-script "$pkg"
+    nix-update --commit --build --flake --version=branch --use-update-script "$pkg"
     echo "{{ FNAME }}: done"
 
 update-all:

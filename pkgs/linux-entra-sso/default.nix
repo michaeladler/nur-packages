@@ -6,6 +6,7 @@
   glib,
   makeWrapper,
   jq,
+  nix-update-script,
 }:
 
 let
@@ -19,13 +20,13 @@ in
 
 stdenv.mkDerivation {
   pname = "linux-entra-sso";
-  version = "1.10.2-unstable-2026-09-01";
+  version = "1.10.2";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "linux-entra-sso";
     rev = "24eaf809cfeaf1269efbaa8c038b3431f4d9fb30";
-    sha256 = "0qkbds1rl3z59iywl3p57p9l3ca698n96rc7jvbjrwgay204h0in";
+    sha256 = "sha256-NgJIgPDq8SzXlodlkyxKRrFB0z3lDsp9TOUPmoNua2I=";
   };
 
   buildInputs = [ glib ];
@@ -55,6 +56,13 @@ stdenv.mkDerivation {
       --add-flags "$out/bin/.linux-entra-sso.py-wrapped" \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ glib ]}"
   '';
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version=stable"
+    ];
+  };
 
   meta = with lib; {
     homepage = "https://github.com/siemens/linux-entra-sso";

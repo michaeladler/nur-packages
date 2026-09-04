@@ -2,6 +2,7 @@
   stdenv,
   lib,
   fetchFromGitHub,
+  fetchurl,
   python3,
   glib,
   makeWrapper,
@@ -18,7 +19,7 @@ let
 
 in
 
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "linux-entra-sso";
   version = "1.10.2";
 
@@ -27,6 +28,11 @@ stdenv.mkDerivation {
     repo = "linux-entra-sso";
     rev = "24eaf809cfeaf1269efbaa8c038b3431f4d9fb30";
     sha256 = "sha256-NgJIgPDq8SzXlodlkyxKRrFB0z3lDsp9TOUPmoNua2I=";
+  };
+
+  xpiSrc = fetchurl {
+    url = "https://github.com/siemens/linux-entra-sso/releases/download/v${finalAttrs.version}/linux_entra_sso-${finalAttrs.version}.xpi";
+    hash = "sha256-VSeNGqlNcHisEm/33fQalxTCZKuVgU2fppYdCk1n1R8=";
   };
 
   buildInputs = [ glib ];
@@ -61,6 +67,8 @@ stdenv.mkDerivation {
     extraArgs = [
       "--flake"
       "--version=stable"
+      "--custom-dep"
+      "xpiSrc"
     ];
   };
 
@@ -71,4 +79,4 @@ stdenv.mkDerivation {
     platforms = platforms.linux;
     license = licenses.mpl20;
   };
-}
+})

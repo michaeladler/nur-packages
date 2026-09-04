@@ -9,11 +9,12 @@
   libuuid,
   glib,
   json-glib,
+  nix-update-script,
 }:
 
 stdenv.mkDerivation {
   pname = "sso-mib";
-  version = "0.10.2-unstable-2026-09-01";
+  version = "0.10.2";
 
   src = fetchFromGitHub {
     owner = "siemens";
@@ -34,6 +35,13 @@ stdenv.mkDerivation {
     glib
     json-glib
   ];
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version=stable"
+    ];
+  };
 
   meta = with lib; {
     homepage = "https://github.com/siemens/sso-mib";

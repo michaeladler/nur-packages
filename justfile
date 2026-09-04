@@ -48,7 +48,7 @@ update FNAME:
     set -euo pipefail
     pkg=$(basename "$(dirname "{{ FNAME }}")")
     echo "{{ FNAME }}: starting update"
-    nix-update --flake --version=branch "$pkg"
+    nix-update --flake --version=branch --use-update-script "$pkg"
     echo "{{ FNAME }}: done"
 
 update-all:

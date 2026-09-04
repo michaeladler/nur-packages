@@ -33,7 +33,12 @@ buildGoModule (finalAttrs: {
   # https://github.com/Foxboron/ssh-tpm-agent/pull/94#issuecomment-2932568075
   doCheck = false;
 
-  passthru.updateScript = nix-update-script { };
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version=branch"
+    ];
+  };
 
   meta = {
     description = "SSH agent with support for TPM sealed keys for public key authentication";

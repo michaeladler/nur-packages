@@ -5,6 +5,7 @@
   zig,
   pkg-config,
   gtk4,
+  nix-update-script,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -17,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "tty.fail";
     owner = "mrus";
     repo = "ssh-askpass-zigtk";
-    tag = "v${finalAttrs.version}";
+    rev = "b459e950acb8a63ef4a855d9b06ff4c305638922";
     hash = "sha256-2NoM3TLSTJ4Gf+C+qGvq/Y2q9Va+wmmcM9FE9xeunWE=";
   };
 
@@ -29,6 +30,13 @@ stdenv.mkDerivation (finalAttrs: {
   propagatedBuildInputs = [ gtk4 ];
 
   doCheck = true;
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version=branch"
+    ];
+  };
 
   meta = {
     description = "ssh-askpass using GTK4 without X11 dependencies and written in Zig";

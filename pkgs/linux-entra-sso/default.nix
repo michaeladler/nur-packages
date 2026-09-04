@@ -61,6 +61,9 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper ${myPythonEnv}/bin/python $out/bin/linux-entra-sso \
       --add-flags "$out/bin/.linux-entra-sso.py-wrapped" \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ glib ]}"
+
+    mkdir -p $out/share/mozilla/extensions
+    cp ${finalAttrs.xpiSrc} $out/share/mozilla/extensions/linux-entra-sso@example.com.xpi
   '';
 
   passthru.updateScript = nix-update-script {

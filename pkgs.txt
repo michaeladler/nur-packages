@@ -1,12 +1,8 @@
 asciinema-edit
 bed
-cinclude2dot
 colorized-logs
-czmod
 demo-magic
 efibootguard
-extension-downloader
-go-mod-outdated
 hax
 kas-container
 libubootenv

@@ -5,7 +5,7 @@
   pkg-config,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "skipcpio";
   version = "059-unstable-2024-03-21";
 

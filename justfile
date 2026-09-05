@@ -28,5 +28,5 @@ update-all:
     echo "Updating nix flakes..."
     nix flake update
     echo "Updating packages..."
-    find pkgs -name "*.nix" | parallel -j$(nproc) just update
+    find pkgs -name "*.nix" | xargs -r -I{} just update {}
     echo "Success!"

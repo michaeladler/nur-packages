@@ -25,13 +25,18 @@ jobs:
           name: michaeladler
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: update and build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           nix-shell \
             --command "just update-all" \
-            -p nixVersions.latest just nix-update parallel
+            -p nixVersions.latest just nix-update
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.3

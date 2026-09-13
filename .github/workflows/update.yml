@@ -41,5 +41,5 @@ jobs:
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.3
         with:
-          message: "chore: update packages"
+          message: "chore: update lock file"
           rebase: true

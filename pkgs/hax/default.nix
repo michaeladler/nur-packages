@@ -11,13 +11,13 @@
 
 stdenv.mkDerivation {
   pname = "hax";
-  version = "0.5.0-unstable-2026-09-14";
+  version = "0.5.0-unstable-2026-09-16";
 
   src = fetchFromGitHub {
     owner = "OleksandrChekhovskyi";
     repo = "hax";
-    rev = "998ae96de106862d37ece395284fcf0c5a087b95";
-    sha256 = "sha256-qYJYoY27VG/UHf++rgUFgsybe4+USTCCQ1//7Ojvx/w=";
+    rev = "c6b3813e5802adba7f6aa2c21bb726ffd894a426";
+    sha256 = "sha256-sMCRLiI9a5x2bQugY2yM7W+j89p7G5DS9caJuFpnfkI=";
   };
 
   nativeBuildInputs = [

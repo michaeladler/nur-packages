@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "demo-magic";
-  version = "0-unstable-2025-04-29";
+  version = "0-unstable-2026-09-17";
 
   src = fetchFromGitHub {
     owner = "paxtonhare";
     repo = "demo-magic";
-    rev = "2a2f439c26a93286dc2adc6ef2a81755af83f36e";
-    sha256 = "1f7g5gn76vbpsns0j4jn0ijc5zgfdh15ja4gcg8k62wkaxbvn3ng";
+    rev = "142f0e70c6242456f166aaa75dd3de829ab7fe73";
+    sha256 = "sha256-mFsEDQLXJTIJq6XwHqrsAmPTGHXMrMBu1Ecr+HmYyNQ=";
   };
 
   installPhase =

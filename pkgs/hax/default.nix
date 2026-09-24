@@ -7,11 +7,12 @@
   pkgconf,
   curl,
   jansson,
+  nix-update-script,
 }:
 
 stdenv.mkDerivation {
   pname = "hax";
-  version = "0.5.0-unstable-2026-09-23";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "OleksandrChekhovskyi";
@@ -30,6 +31,13 @@ stdenv.mkDerivation {
     curl
     jansson
   ];
+
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version=stable"
+    ];
+  };
 
   meta = with lib; {
     description = "A minimalist, terminal-native coding agent written in C.";

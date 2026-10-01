@@ -1,4 +1,5 @@
 bed
+cargo-clean-all
 colorized-logs
 demo-magic
 efibootguard
@@ -7,6 +8,7 @@ kas-container
 libubootenv
 linux-entra-sso
 notmuch-mailmover
+ratex
 skipcpio
 ssh-askpass-zigtk
 ssh-tpm-agent

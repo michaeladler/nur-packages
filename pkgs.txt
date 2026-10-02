@@ -1,3 +1,4 @@
+agentaps
 bed
 cargo-clean-all
 colorized-logs
@@ -8,6 +9,7 @@ kas-container
 libubootenv
 linux-entra-sso
 notmuch-mailmover
+ratex
 skipcpio
 ssh-askpass-zigtk
 ssh-tpm-agent

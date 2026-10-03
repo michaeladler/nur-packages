@@ -47,6 +47,12 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   doCheck = false;
 
+  postInstall = ''
+    install -Dm444 ${./agentaps.desktop} $out/share/applications/agentaps.desktop
+    install -Dm444 ${finalAttrs.src}/assets/packaging/icon.png \
+      $out/share/icons/hicolor/512x512/apps/agentaps.png
+  '';
+
   postFixup =
     let
       runtimeDependencies = [

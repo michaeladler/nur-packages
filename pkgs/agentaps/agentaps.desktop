@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Agentaps
+GenericName=Agent Workspace
+Comment=Desktop client for coding agents that speak the Agent Client Protocol
+Exec=agentaps
+Icon=agentaps
+Terminal=false
+Categories=Development;Utility;
+Keywords=agent;acp;ai;claude;codex;opencode;llm;

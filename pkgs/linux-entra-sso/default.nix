@@ -21,7 +21,7 @@ in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "linux-entra-sso";
-  version = "1.10.2";
+  version = "1.12.0";
 
   src = fetchFromGitHub {
     owner = "siemens";
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   xpiSrc = fetchurl {
     url = "https://github.com/siemens/linux-entra-sso/releases/download/v${finalAttrs.version}/linux_entra_sso-${finalAttrs.version}.xpi";
-    hash = "sha256-VSeNGqlNcHisEm/33fQalxTCZKuVgU2fppYdCk1n1R8=";
+    hash = "sha256-PDNynvr37evvhG+19b0wjOgrdlSyDQzmMTm8qLIKt5s=";
   };
 
   buildInputs = [ glib ];

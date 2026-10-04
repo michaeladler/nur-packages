@@ -12,11 +12,11 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "503ff3b07686e08d9cfe2197cf89a7537072cbef";
-    sha256 = "sha256-zp+4oGqY2/uczt8aYKVKzNFwEO+w+2tQwkV9bLQl5Co=";
+    rev = "3fddcc78c91ac931270219313eb5d74c88a86049";
+    sha256 = "sha256-dSeEWJA2JJ3ymopN2FVMVChSmt5sKz0TEyDBl1TFcNc=";
   };
 
-  cargoHash = "sha256-pxMOR/QhyRt7onArIyQPf2qhA/paMKm83pm/7MbOPJk=";
+  cargoHash = "sha256-0CBW0qeZ/k9/V7GYU8mfQQJxxhbaNWnP3C9Am277dSY=";
 
   nativeBuildInputs = [
     installShellFiles

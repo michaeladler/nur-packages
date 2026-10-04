@@ -7,29 +7,32 @@
 
 rustPlatform.buildRustPackage {
   pname = "cb-rs";
-  version = "0-unstable-2026-10-03";
+  version = "0-unstable-2026-10-04";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "3fddcc78c91ac931270219313eb5d74c88a86049";
-    sha256 = "sha256-dSeEWJA2JJ3ymopN2FVMVChSmt5sKz0TEyDBl1TFcNc=";
+    rev = "50d2385cd6468138ce2c9b9ce66682ae440d01f9";
+    sha256 = "sha256-ZTfL3AycCRzUVWG56wxHYzgZnrjxg08FG2vHObmjygo=";
   };
 
-  cargoHash = "sha256-0CBW0qeZ/k9/V7GYU8mfQQJxxhbaNWnP3C9Am277dSY=";
+  cargoHash = "sha256-SHXsXNU83i0EX9QJ4RqUgswgiOaqsI+E32LEK2fp0IU=";
 
   nativeBuildInputs = [
     installShellFiles
   ];
 
   postInstall = ''
-    $out/bin/cb man > cb.1
-    installManPage cb.1
+    installManPage man/cb.1
 
-    installShellCompletion --cmd cb \
-      --bash <($out/bin/cb completions bash) \
-      --fish <($out/bin/cb completions fish) \
-      --zsh <($out/bin/cb completions zsh)
+    installShellCompletion \
+      --bash completions/cb.bash \
+      --fish completions/cb.fish \
+      --zsh completions/_cb
+
+    # Elvish and PowerShell (optional manual install):
+    install -Dm644 completions/cb.elv $out/share/elvish/lib/cb.elv
+    install -Dm644 completions/_cb.ps1 $out/share/powershell/Modules/cb/_cb.ps1
   '';
 
   meta = {

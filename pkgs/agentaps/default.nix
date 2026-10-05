@@ -17,16 +17,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "agentaps";
-  version = "0.4.0";
+  version = "0.4.0-unstable-2026-10-05";
 
   src = fetchFromGitHub {
     owner = "domenkozar";
     repo = "agentaps";
-    rev = "v${finalAttrs.version}";
-    sha256 = "sha256-/DIcohzFT0Rm6alPhBnuvJuKh6lAHwDkZJ3jwUCyDZA=";
+    rev = "85e6422257495845f1b7574705b40b1fd0afa8ba";
+    sha256 = "sha256-rPCCSvIMJQsAuGtEDuaAKUcvzhFOk5QhRfmk3sma5o0=";
   };
 
-  cargoHash = "sha256-R2VPjxwElvLPbikwuxILwV7ShSOy3mJjqinaK8dNipk=";
+  cargoHash = "sha256-KM/djQsiAZafmP+t8F6DQkvroCPnx59oTBKDxtK5/yU=";
 
   nativeBuildInputs = [
     pkg-config
@@ -74,7 +74,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   passthru.updateScript = nix-update-script {
     extraArgs = [
       "--flake"
-      "--version=stable"
+      "--version=branch"
     ];
   };
 

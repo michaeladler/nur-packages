@@ -10,16 +10,16 @@
 
 rustPlatform.buildRustPackage {
   pname = "notmuch-mailmover";
-  version = "0.7.1-unstable-2026-06-01";
+  version = "0.7.1-unstable-2026-10-05";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "notmuch-mailmover";
-    rev = "e54a4b6ece6c61958ca101beb6179e12f2212e5b";
-    sha256 = "sha256-bMolo1M6CpBYdPNgdZwqdNHisSNCRBYHZkjt2wl2TK4=";
+    rev = "46daa8aee3d29be89d54a609044c1dc646be56fa";
+    sha256 = "sha256-B4hpFb/KxLYnRXUJPPym6BNlFyjvF5VwPNS+WcuDMhA=";
   };
 
-  cargoHash = "sha256-J650EZdDJXI+6QZQUq8GUW5sxBfFLJ1fKiEiEZEC0Hc=";
+  cargoHash = "sha256-X/T9oMCW/ONakxrLozrgr9auFlS3zJFqLoTkkFznpTY=";
 
   nativeBuildInputs = [
     installShellFiles
@@ -32,7 +32,7 @@ rustPlatform.buildRustPackage {
   ];
 
   postInstall = ''
-    installManPage share/notmuch-mailmover.1.gz
+    installManPage share/notmuch-mailmover.1
     installShellCompletion --cmd notmuch-mailmover \
       --bash share/notmuch-mailmover.bash \
       --fish share/notmuch-mailmover.fish \

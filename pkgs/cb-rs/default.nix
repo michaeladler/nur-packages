@@ -7,13 +7,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "cb-rs";
-  version = "0-unstable-2026-10-04";
+  version = "0.1.0-unstable-2026-10-04";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "50d2385cd6468138ce2c9b9ce66682ae440d01f9";
-    sha256 = "sha256-ZTfL3AycCRzUVWG56wxHYzgZnrjxg08FG2vHObmjygo=";
+    rev = "40ac62ce4412af7595b75749fd32eddd68536b26";
+    sha256 = "sha256-pw3QtVrhu8TmeDizBgMzcBNzCHpCoMD8ZvWb56n+wVQ=";
   };
 
   cargoHash = "sha256-SHXsXNU83i0EX9QJ4RqUgswgiOaqsI+E32LEK2fp0IU=";

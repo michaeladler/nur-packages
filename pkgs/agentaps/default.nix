@@ -17,16 +17,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "agentaps";
-  version = "0.4.0-unstable-2026-10-05";
+  version = "0.5.0-unstable-2026-10-05";
 
   src = fetchFromGitHub {
     owner = "domenkozar";
     repo = "agentaps";
-    rev = "85e6422257495845f1b7574705b40b1fd0afa8ba";
-    sha256 = "sha256-rPCCSvIMJQsAuGtEDuaAKUcvzhFOk5QhRfmk3sma5o0=";
+    rev = "6e42edcd7ac66f84e1df666bccd983439e5e19b8";
+    sha256 = "sha256-xEPt4DNaGX1C1iqzKRJmT1R5UkLYfU947KMH2rW5+os=";
   };
 
-  cargoHash = "sha256-KM/djQsiAZafmP+t8F6DQkvroCPnx59oTBKDxtK5/yU=";
+  cargoHash = "sha256-wg56HjRsGm0noQRD5hdHQkmbe56h3JHfZunuPzko66I=";
 
   nativeBuildInputs = [
     pkg-config

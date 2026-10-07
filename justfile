@@ -1,5 +1,5 @@
 build PKG:
-    nix build --show-trace -L '.#{{ PKG }}'
+    nix build --print-out-paths --show-trace -L '.#{{ PKG }}'
 
 build-all:
     #!/usr/bin/env bash

@@ -7,32 +7,27 @@
 
 rustPlatform.buildRustPackage {
   pname = "cb-rs";
-  version = "0.1.0-unstable-2026-10-04";
+  version = "0.1.0-unstable-2026-10-08";
 
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "40ac62ce4412af7595b75749fd32eddd68536b26";
-    sha256 = "sha256-pw3QtVrhu8TmeDizBgMzcBNzCHpCoMD8ZvWb56n+wVQ=";
+    rev = "65be8de0ba62257f466c751ea16780d8b62a2e19";
+    sha256 = "sha256-mg+UUZc7AXv/ARUwg3pAS1wYsjZ255pF5/yjfA4gPV0=";
   };
 
-  cargoHash = "sha256-SHXsXNU83i0EX9QJ4RqUgswgiOaqsI+E32LEK2fp0IU=";
+  cargoHash = "sha256-N1phsTs7Ans8oTqBpnrRiLPBD6upGDPMuiSYGXNH0Yc=";
 
   nativeBuildInputs = [
     installShellFiles
   ];
 
   postInstall = ''
-    installManPage man/cb.1
-
+    installManPage share/man/cb.1
     installShellCompletion \
-      --bash completions/cb.bash \
-      --fish completions/cb.fish \
-      --zsh completions/_cb
-
-    # Elvish and PowerShell (optional manual install):
-    install -Dm644 completions/cb.elv $out/share/elvish/lib/cb.elv
-    install -Dm644 completions/_cb.ps1 $out/share/powershell/Modules/cb/_cb.ps1
+      --bash share/completions/cb.bash \
+      --fish share/completions/cb.fish \
+      --zsh  share/completions/_cb
   '';
 
   meta = {

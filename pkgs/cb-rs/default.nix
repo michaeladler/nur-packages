@@ -30,6 +30,10 @@ craneLib.buildPackage rec {
       --zsh  share/completions/_cb
   '';
 
+  # cachix needs cargoArtifacts pushed separately: buildDepsOnly output is a
+  # build-time input, so it is not part of the package's runtime closure.
+  passthru.cargoArtifacts = cargoArtifacts;
+
   meta = {
     description = "a cut/copy/paste tool for the command line";
     homepage = "https://github.com/michaeladler/cb-rs";

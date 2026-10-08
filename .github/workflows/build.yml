@@ -32,7 +32,14 @@ jobs:
             -p nixVersions.latest just
 
       - name: cachix push
-        run: find . -type l -name 'result*' | xargs cachix push michaeladler
+        run: |
+          # cargoArtifacts are build-time inputs, absent from ./result's closure.
+          # Substituting the package alone never builds them, so build first.
+          while read -r pkg; do
+            nix build --no-link --print-out-paths ".#$pkg.passthru.cargoArtifacts" 2>/dev/null |
+              xargs -r cachix push michaeladler
+          done < pkgs.txt
+          find . -type l -name 'result*' | xargs cachix push michaeladler
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.3

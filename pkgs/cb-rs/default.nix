@@ -9,8 +9,8 @@ craneLib.buildPackage rec {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "65be8de0ba62257f466c751ea16780d8b62a2e19";
-    sha256 = "sha256-mg+UUZc7AXv/ARUwg3pAS1wYsjZ255pF5/yjfA4gPV0=";
+    rev = "72ce654f2fee4c947cfbb3e8e9a95aff2a5b88bc";
+    sha256 = "0jycii9g38wpbyb5cyhd2ccw2z0zdr68yfzfjgc91zrix8f95q75";
   };
 
   cargoArtifacts = craneLib.buildDepsOnly {

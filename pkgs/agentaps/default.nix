@@ -17,13 +17,13 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "agentaps";
-  version = "0.5.1-unstable-2026-10-07";
+  version = "0.5.1-unstable-2026-10-08";
 
   src = fetchFromGitHub {
     owner = "domenkozar";
     repo = "agentaps";
-    rev = "10fb199fb58d73268daafeee1d21f970b8894fff";
-    sha256 = "sha256-SNEta/MIe409Ko6MRIJpSFLyDivqROiZdHRkbv7HnVA=";
+    rev = "7bdd55e9fff52171c1822ba93aa2862663644416";
+    sha256 = "sha256-rLqZomapRFH4tPTegwv9gpopZnwnphLY+Wxk2cNPH7U=";
   };
 
   cargoHash = "sha256-WOU9AZiEDWa76U04m7+YwwGj/Mp5nLfaOf5VkJFHS+Y=";

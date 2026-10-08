@@ -1,10 +1,16 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    crane.url = "github:ipetkov/crane";
   };
 
   outputs =
-    { self, nixpkgs }:
+    {
+      self,
+      nixpkgs,
+      crane,
+      ...
+    }:
     let
       systems = [
         "x86_64-linux"
@@ -49,7 +55,11 @@
       # under ./pkgs to nixpkgs. `packages` and `legacyPackages` are derived
       # from a nixpkgs instance with this overlay applied.
       packagesOverlay =
-        final: prev: nixpkgs.lib.genAttrs packageNames (n: final.callPackage pkgPaths.${n} { });
+        final: prev:
+        let
+          callPackage = nixpkgs.lib.callPackageWith (final // { craneLib = crane.mkLib final; });
+        in
+        nixpkgs.lib.genAttrs packageNames (n: callPackage pkgPaths.${n} { });
 
       mkPkgs =
         system:

@@ -1,14 +1,11 @@
 {
   lib,
-  rustPlatform,
+  craneLib,
   fetchFromGitHub,
   installShellFiles,
 }:
 
-rustPlatform.buildRustPackage {
-  pname = "cb-rs";
-  version = "0.1.0-unstable-2026-10-08";
-
+craneLib.buildPackage rec {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
@@ -16,7 +13,10 @@ rustPlatform.buildRustPackage {
     sha256 = "sha256-mg+UUZc7AXv/ARUwg3pAS1wYsjZ255pF5/yjfA4gPV0=";
   };
 
-  cargoHash = "sha256-N1phsTs7Ans8oTqBpnrRiLPBD6upGDPMuiSYGXNH0Yc=";
+  cargoArtifacts = craneLib.buildDepsOnly {
+    inherit src;
+    strictDeps = true;
+  };
 
   nativeBuildInputs = [
     installShellFiles
@@ -35,4 +35,5 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/michaeladler/cb-rs";
     license = lib.licenses.asl20;
   };
+
 }

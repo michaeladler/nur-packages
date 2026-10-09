@@ -1,6 +1,11 @@
 build PKG:
     nix build --print-out-paths --show-trace -L '.#{{ PKG }}'
 
+# nix build --print-out-paths pipes push only the runtime closure; this pushes
+# the full build closure so the package builds without downloading build deps.
+push PKG cache="michaeladler":
+    nix-store -qR --include-outputs $(nix-store -qd $(nix build --print-out-paths -L '.#{{ PKG }}')) | grep -v '\.drv$' | cachix push {{ cache }}
+
 build-all:
     #!/usr/bin/env bash
     set -uo pipefail

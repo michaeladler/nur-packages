@@ -10,17 +10,18 @@
   glib,
   json-glib,
   nix-update-script,
+  cyrus_sasl,
 }:
 
 stdenv.mkDerivation {
   pname = "sso-mib";
-  version = "0.10.2";
+  version = "0-unstable-2026-10-16";
 
   src = fetchFromGitHub {
-    owner = "siemens";
+    owner = "michaeladler";
     repo = "sso-mib";
-    rev = "59e77a67aa534deb6ffbf9fbd533b61158b011cd";
-    sha256 = "sha256-yJAmVWQg4+nG8wkigRYd7Lqmj+GlzVhWfsOO0jEDHRI=";
+    rev = "09ea1c8a7af0d6fba8941d7ed25b58121e5a2885";
+    sha256 = "sha256-qOiTFeMmoWt9jKkRsC53ZMsrdC9vrN/dWkBnfW9YO28=";
   };
 
   nativeBuildInputs = [
@@ -34,12 +35,13 @@ stdenv.mkDerivation {
     libuuid
     glib
     json-glib
+    cyrus_sasl
   ];
 
   passthru.updateScript = nix-update-script {
     extraArgs = [
       "--flake"
-      "--version=stable"
+      "--version=branch=feat/sasl-plugin"
     ];
   };
 

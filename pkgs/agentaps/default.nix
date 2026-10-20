@@ -6,6 +6,7 @@
   pkg-config,
   gtk4,
   qt6,
+  alsa-lib,
   fontconfig,
   freetype,
   libxcb,
@@ -15,13 +16,13 @@
   makeWrapper,
 }:
 
-craneLib.buildPackage rec {
+(craneLib.buildPackage rec {
 
   src = fetchFromGitHub {
     owner = "domenkozar";
     repo = "agentaps";
-    rev = "1b1a91825bf4eb633b7b4e4a3569e8375a530912";
-    sha256 = "14l0lw5l35q1hv3ckm9sjg7jq4j5bq2p01y6irq26z5fvq1riivi";
+    rev = "70d537a88a4707ee7b1e26c61339537eaf29f423";
+    sha256 = "0bf75n93pq1jjnldinaq2yhr8aa9p7b72hmg6b70yghw537rck1k";
   };
 
   # glib-sys probes glib-2.0 and native-theme-qt probes Qt6Widgets, so the
@@ -29,6 +30,7 @@ craneLib.buildPackage rec {
   guiDeps = [
     gtk4
     qt6.qtbase
+    alsa-lib
     fontconfig
     freetype
     libxcb
@@ -100,4 +102,9 @@ craneLib.buildPackage rec {
     homepage = "https://github.com/domenkozar/agentaps";
     license = lib.licenses.asl20;
   };
-}
+}).overrideAttrs (_: {
+  # crane derives version from Cargo.toml; redefine it here so nix-update can
+  # locate and bump it inside this flake instead of crane's store path.
+  version = "0.6.0-unstable-2026-10-19";
+  __intentionallyOverridingVersion = true;
+})

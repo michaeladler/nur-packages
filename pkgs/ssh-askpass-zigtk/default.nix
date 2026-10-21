@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromForgejo,
-  zig,
+  zig_0_16,
   pkg-config,
   gtk4,
   nix-update-script,
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    zig
+    zig_0_16
     pkg-config
   ];
 

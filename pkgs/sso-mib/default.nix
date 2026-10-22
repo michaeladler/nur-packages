@@ -15,12 +15,12 @@
 
 stdenv.mkDerivation {
   pname = "sso-mib";
-  version = "0-unstable-2026-10-19";
+  version = "0.10.2-unstable-2026-10-22";
 
   src = fetchFromGitHub {
-    owner = "michaeladler";
+    owner = "siemens";
     repo = "sso-mib";
-    rev = "d2d2ee1f0a20e9eee685e0fbdb268705e0381621";
+    rev = "05a1d1b725651f318bac09faa180d7cf523281d7";
     sha256 = "sha256-TiulhzUkk2J0qTiqbWaveULAhPvY7uqO6GdLkeUVCxY=";
   };
 
@@ -41,7 +41,7 @@ stdenv.mkDerivation {
   passthru.updateScript = nix-update-script {
     extraArgs = [
       "--flake"
-      "--version=branch=feat/sasl-plugin"
+      "--version=branch=main"
     ];
   };
 

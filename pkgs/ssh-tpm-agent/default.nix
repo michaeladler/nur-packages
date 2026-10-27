@@ -9,13 +9,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "ssh-tpm-agent";
-  version = "1.0.0-rc2-unstable-2026-10-02";
+  version = "1.0.0-rc2-unstable-2026-10-26";
 
   src = fetchFromGitHub {
     owner = "Foxboron";
     repo = "ssh-tpm-agent";
-    rev = "5d1974b94bfb5bdc1cde68bb1aa38580a42c6fe1";
-    hash = "sha256-4PAo/r++DIQ7ZZgBoffXH99MzDJfpWr/uyvFwsIINek=";
+    rev = "43795283993ef79015729399bdecf413fb7705d8";
+    hash = "sha256-l6KNW3jgCcIniolyHx1Ijf3cQ0K6iFPdBqbsjcUpjfk=";
   };
 
   proxyVendor = true;

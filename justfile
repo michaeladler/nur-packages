@@ -24,7 +24,15 @@ update FNAME:
     set -euo pipefail
     pkg=$(basename "$(dirname "{{ FNAME }}")")
     echo "{{ FNAME }}: starting update"
-    nix-update --commit --build --flake --version=branch --use-update-script "$pkg"
+    update_script=$(nix eval --json --impure --expr \
+        "let flake = builtins.getFlake (toString ./.); in flake.packages.x86_64-linux.\"$pkg\".updateScript or null")
+    mapfile -t update_cmd < <(jq -r 'if type == "array" then .[] else empty end' <<<"$update_script")
+    if ((${#update_cmd[@]})); then
+        # Run nix-update directly; --use-update-script re-evaluates a stale flake snapshot.
+        "${update_cmd[0]}" --commit --build "${update_cmd[@]:1}" "$pkg"
+    else
+        nix-update --commit --build --flake --version=branch "$pkg"
+    fi
     echo "{{ FNAME }}: done"
 
 update-all:

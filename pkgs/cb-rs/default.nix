@@ -40,7 +40,8 @@
     license = lib.licenses.asl20;
   };
 
-})
-// {
+}).overrideAttrs (_: {
+  # Expose Cargo version in this flake for nix-update.
   version = "0.2.0-unstable-2026-10-23";
-}
+  __intentionallyOverridingVersion = true;
+})

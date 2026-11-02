@@ -5,12 +5,12 @@
   installShellFiles,
 }:
 
-craneLib.buildPackage rec {
+(craneLib.buildPackage rec {
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "72ce654f2fee4c947cfbb3e8e9a95aff2a5b88bc";
-    sha256 = "0jycii9g38wpbyb5cyhd2ccw2z0zdr68yfzfjgc91zrix8f95q75";
+    rev = "ea4df2be2112f70b0a69669226262233246d212a";
+    sha256 = "0w1yc0v5s84vaaszv6y3z6v1fi3kxahr6xyb6qh3wnpignabk4d0";
   };
 
   cargoArtifacts = craneLib.buildDepsOnly {
@@ -40,4 +40,7 @@ craneLib.buildPackage rec {
     license = lib.licenses.asl20;
   };
 
+})
+// {
+  version = "0.2.0-unstable-2026-10-23";
 }

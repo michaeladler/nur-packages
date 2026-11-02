@@ -48,10 +48,6 @@
 
     buildInputs = guiDeps;
 
-    # keep deps-only feature set identical to the final build, otherwise it also
-    # compiles gpui-libghostty (default feature), whose build script needs zig
-    cargoExtraArgs = "--locked --no-default-features";
-
     # deps-only build only needs qtbase for its .pc files, not its wrapping
     dontWrapQtApps = true;
 
@@ -67,9 +63,6 @@
   buildInputs = guiDeps;
 
   doCheck = false;
-
-  # ghostty-terminal needs zig to build its C shim
-  cargoBuildExtraArgs = "--no-default-features";
 
   postInstall = ''
     install -Dm444 ${./agentaps.desktop} $out/share/applications/agentaps.desktop

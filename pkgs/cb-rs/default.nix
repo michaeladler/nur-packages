@@ -9,8 +9,8 @@
   src = fetchFromGitHub {
     owner = "michaeladler";
     repo = "cb-rs";
-    rev = "ea4df2be2112f70b0a69669226262233246d212a";
-    sha256 = "0w1yc0v5s84vaaszv6y3z6v1fi3kxahr6xyb6qh3wnpignabk4d0";
+    rev = "b84135d7abd36306917de8a013145a00c29fdf67";
+    sha256 = "sha256-Y9of7ilupCE8YcTYxix2K3H0Eyss3UXrTowekCqMeko=";
   };
 
   cargoArtifacts = craneLib.buildDepsOnly {
@@ -42,6 +42,6 @@
 
 }).overrideAttrs (_: {
   # Expose Cargo version in this flake for nix-update.
-  version = "0.2.0-unstable-2026-10-23";
+  version = "0.2.0-unstable-2026-11-04";
   __intentionallyOverridingVersion = true;
 })

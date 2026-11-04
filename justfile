@@ -41,10 +41,5 @@ update-all:
     echo "Updating nix flakes..."
     nix flake update
     echo "Updating packages..."
-    find pkgs -name "*.nix" | while read -r fname; do
-        just update "$fname" || {
-            echo "ERROR: failed to update $fname"
-            git checkout -- "$fname"
-        }
-    done
+    find pkgs -name "*.nix" | xargs -n1 just update
     echo "Success!"

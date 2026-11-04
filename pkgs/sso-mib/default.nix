@@ -15,13 +15,13 @@
 
 stdenv.mkDerivation {
   pname = "sso-mib";
-  version = "0.10.2-unstable-2026-10-22";
+  version = "0.11.0-unstable-2026-11-03";
 
   src = fetchFromGitHub {
     owner = "siemens";
     repo = "sso-mib";
-    rev = "05a1d1b725651f318bac09faa180d7cf523281d7";
-    sha256 = "sha256-TiulhzUkk2J0qTiqbWaveULAhPvY7uqO6GdLkeUVCxY=";
+    rev = "c425e481799a3eaf4740d722499f3bb93995b694";
+    sha256 = "sha256-ggBiwPao+QaE5AN7QkyErHclOsGhf0GPfTe9auaZuww=";
   };
 
   nativeBuildInputs = [

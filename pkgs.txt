@@ -9,6 +9,7 @@ hax
 kas-container
 libubootenv
 linux-entra-sso
+open-code-review
 skipcpio
 ssh-askpass-zigtk
 ssh-tpm-agent

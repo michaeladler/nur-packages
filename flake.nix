@@ -83,5 +83,21 @@
         nixpkgs.lib.genAttrs packageNames (n: pkgs.${n})
       );
 
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = mkPkgs system;
+        in
+        {
+          default = pkgs.mkShell {
+            nativeBuildInputs = [
+              pkgs.just
+              pkgs.nixVersions.latest
+              pkgs.nix-update
+            ];
+          };
+        }
+      );
+
     };
 }

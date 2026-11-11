@@ -3,6 +3,7 @@
   craneLib,
   fetchFromGitHub,
   installShellFiles,
+  nix-update-script,
 }:
 
 (craneLib.buildPackage rec {
@@ -34,14 +35,22 @@
   # build-time input, so it is not part of the package's runtime closure.
   passthru.cargoArtifacts = cargoArtifacts;
 
+  passthru.updateScript = nix-update-script {
+    extraArgs = [
+      "--flake"
+      "--version=branch"
+    ];
+  };
+
   meta = {
     description = "a cut/copy/paste tool for the command line";
     homepage = "https://github.com/michaeladler/cb-rs";
     license = lib.licenses.asl20;
   };
 
-}).overrideAttrs (_: {
-  # Expose Cargo version in this flake for nix-update.
-  version = "0.2.0-unstable-2026-11-04";
-  __intentionallyOverridingVersion = true;
-})
+}).overrideAttrs
+  (_: {
+    # Expose Cargo version in this flake for nix-update.
+    version = "0.2.0-unstable-2026-11-04";
+    __intentionallyOverridingVersion = true;
+  })

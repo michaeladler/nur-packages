@@ -12,12 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: cachix/install-nix-action@v31
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
-          extra_nix_config: |
-            experimental-features = nix-command flakes
-            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - uses: DeterminateSystems/nix-installer-action@main
+
       - uses: cachix/cachix-action@v17
         with:
           name: michaeladler
@@ -26,10 +22,8 @@ jobs:
             ./result
 
       - name: build
-        run: |
-          nix-shell \
-            --command "just packagelist build-all" \
-            -p nixVersions.latest just
+        shell: nix develop --command bash --noprofile --norc -eo pipefail {0}
+        run: just packagelist build-all
 
       - name: cachix push
         run: |

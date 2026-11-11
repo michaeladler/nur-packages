@@ -8,9 +8,28 @@ push PKG cache="michaeladler":
 
 build-all:
     #!/usr/bin/env bash
-    set -uo pipefail
+    set -euo pipefail
     mapfile -t pkgs < pkgs.txt
-    printf '.#%s\n' "${pkgs[@]}" | xargs --delimiter='\n' nix build --show-trace -L
+    for pkg in "${pkgs[@]}"; do
+        if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+            echo "::group::Building $pkg"
+        else
+            printf '\n==> Building %s\n' "$pkg"
+        fi
+
+        if nix build --show-trace -L ".#$pkg"; then
+            if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+                echo "::endgroup::"
+            fi
+        else
+            status=$?
+            if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+                echo "::endgroup::"
+            fi
+            printf 'FAILED: %s (exit %d)\n' "$pkg" "$status" >&2
+            exit "$status"
+        fi
+    done
 
 packagelist:
     #!/bin/sh

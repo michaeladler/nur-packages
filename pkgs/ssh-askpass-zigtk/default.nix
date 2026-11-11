@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromForgejo,
-  zig_0_16,
+  zig_0_17,
   pkg-config,
   gtk4,
   nix-update-script,
@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ssh-askpass-zigtk";
-  version = "0.1.0-unstable-2026-07-21";
+  version = "0.2.0-unstable-2026-11-11";
   strictDeps = true;
   __structuredAttrs = true;
 
@@ -18,12 +18,12 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "tty.fail";
     owner = "mrus";
     repo = "ssh-askpass-zigtk";
-    rev = "b459e950acb8a63ef4a855d9b06ff4c305638922";
-    hash = "sha256-2NoM3TLSTJ4Gf+C+qGvq/Y2q9Va+wmmcM9FE9xeunWE=";
+    rev = "4166bdebe3605de6d96e4856aeaa53546e53db1c";
+    hash = "sha256-kqH8WHY0eohZ6lGIsFxX/i/4yhQWke5F9kFa2iYN/Eg=";
   };
 
   nativeBuildInputs = [
-    zig_0_16
+    zig_0_17
     pkg-config
   ];
 

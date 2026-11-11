@@ -24,6 +24,9 @@ update FNAME:
     set -euxo pipefail
     pkg=$(basename "$(dirname "{{ FNAME }}")")
     echo "{{ FNAME }}: starting update"
+    nix-instantiate --show-trace --expr \
+        "let flake = builtins.getFlake (toString ./.); in flake.packages.\${builtins.currentSystem}.\"$pkg\"" \
+        --impure >/dev/null
     update_script=$(nix eval --json --impure --expr \
         "let flake = builtins.getFlake (toString ./.); in flake.packages.x86_64-linux.\"$pkg\".updateScript or null" 2>/dev/null)
     mapfile -t update_cmd < <(jq -r 'if type == "array" then .[] else empty end' <<<"$update_script")
@@ -41,5 +44,25 @@ update-all:
     echo "Updating nix flakes..."
     nix flake update
     echo "Updating packages..."
-    find pkgs -name "*.nix" | xargs -n1 just update
+    mapfile -d '' -t files < <(find pkgs -type f -name "*.nix" -print0 | sort -z)
+    for file in "${files[@]}"; do
+        if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+            echo "::group::Updating $file"
+        else
+            printf '\n==> Updating %s\n' "$file"
+        fi
+
+        if just update "$file"; then
+            if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+                echo "::endgroup::"
+            fi
+        else
+            status=$?
+            if [[ "${GITHUB_ACTIONS:-}" == "true" ]]; then
+                echo "::endgroup::"
+            fi
+            printf 'FAILED: %s (exit %d)\n' "$file" "$status" >&2
+            exit "$status"
+        fi
+    done
     echo "Success!"

@@ -29,11 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: nix develop --command bash --noprofile --norc -eo pipefail {0}
-        run: |
-          nix-instantiate --expr \
-            '(builtins.getFlake (toString ./.)).packages.${builtins.currentSystem}.cb-rs' \
-            --impure
-          just update-all
+        run: just update-all
 
       - name: Commit & Push changes
         uses: benkaiser/rebase-commit-push@v1.3

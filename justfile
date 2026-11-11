@@ -21,11 +21,11 @@ packagelist:
 # Update a single package
 update FNAME:
     #!/usr/bin/env bash
-    set -euo pipefail
+    set -euxo pipefail
     pkg=$(basename "$(dirname "{{ FNAME }}")")
     echo "{{ FNAME }}: starting update"
     update_script=$(nix eval --json --impure --expr \
-        "let flake = builtins.getFlake (toString ./.); in flake.packages.x86_64-linux.\"$pkg\".updateScript or null")
+        "let flake = builtins.getFlake (toString ./.); in flake.packages.x86_64-linux.\"$pkg\".updateScript or null" 2>/dev/null)
     mapfile -t update_cmd < <(jq -r 'if type == "array" then .[] else empty end' <<<"$update_script")
     if ((${#update_cmd[@]})); then
         # Run nix-update directly; --use-update-script re-evaluates a stale flake snapshot.

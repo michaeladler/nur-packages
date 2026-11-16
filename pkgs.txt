@@ -3,6 +3,7 @@ bed
 cargo-clean-all
 cb-rs
 colorized-logs
+dffy
 demo-magic
 efibootguard
 hax

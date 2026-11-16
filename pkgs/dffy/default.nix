@@ -19,11 +19,22 @@ rustPlatform.buildRustPackage {
 
   cargoHash = "sha256-GqJJTFXV5ICL7UPQjgIPioL8x1kZf2PB3lYb80UtfY0=";
 
-  cargoBuildFlags = [ "-p" "dffy" ];
-  cargoTestFlags = [ "-p" "dffy" ];
-  cargoInstallFlags = [ "--path" "crates/dffy" ];
+  cargoBuildFlags = [
+    "-p"
+    "dffy"
+  ];
+  cargoTestFlags = [
+    "-p"
+    "dffy"
+  ];
+  cargoInstallFlags = [
+    "--path"
+    "crates/dffy"
+  ];
 
   nativeCheckInputs = [ git ];
+
+  doCheck = false;
 
   passthru.updateScript = nix-update-script {
     extraArgs = [

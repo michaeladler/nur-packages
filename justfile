@@ -50,10 +50,10 @@ update FNAME:
         "let flake = builtins.getFlake (toString ./.); in flake.packages.x86_64-linux.\"$pkg\".updateScript or null" 2>/dev/null)
     mapfile -t update_cmd < <(jq -r 'if type == "array" then .[] else empty end' <<<"$update_script")
     if ((${#update_cmd[@]})); then
-        # Run nix-update directly; --use-update-script re-evaluates a stale flake snapshot.
-        "${update_cmd[0]}" --commit --build "${update_cmd[@]:1}" "$pkg"
+        # Realize updateScript executable; --use-update-script re-evaluates stale flake.
+        nix develop --command "${update_cmd[0]}" --commit --build "${update_cmd[@]:1}" "$pkg"
     else
-        nix-update --commit --build --flake --version=branch "$pkg"
+        nix develop --command nix-update --commit --build --flake --version=branch "$pkg"
     fi
     echo "{{ FNAME }}: done"
 

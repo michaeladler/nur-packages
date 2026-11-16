@@ -3,8 +3,8 @@ bed
 cargo-clean-all
 cb-rs
 colorized-logs
-dffy
 demo-magic
+dffy
 efibootguard
 hax
 kas-container

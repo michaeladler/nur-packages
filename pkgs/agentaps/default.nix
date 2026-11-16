@@ -19,10 +19,10 @@
 (craneLib.buildPackage rec {
 
   src = fetchFromGitHub {
-    owner = "domenkozar";
+    owner = "cachix";
     repo = "agentaps";
-    rev = "33fe08f9eb1e681d3eefbb88023c1f20a79c35b6";
-    sha256 = "sha256-ENbAIe1U3SneP8wyNfcgSyaHr8JzmwhsnknscO+mgy4=";
+    rev = "56dafd71d3c78bb8af4fac0d818fac77884324fc";
+    sha256 = "sha256-YhOCmjOvMAXlEmfxVozBWmMKGtKvYD3kT9/n6H688PI=";
   };
 
   # glib-sys probes glib-2.0 and native-theme-qt probes Qt6Widgets, so the
@@ -92,12 +92,12 @@
 
   meta = {
     description = "A universal GUI for coding harnesses";
-    homepage = "https://github.com/domenkozar/agentaps";
+    homepage = "https://github.com/cachix/agentaps";
     license = lib.licenses.asl20;
   };
 }).overrideAttrs (_: {
   # crane derives version from Cargo.toml; redefine it here so nix-update can
   # locate and bump it inside this flake instead of crane's store path.
-  version = "0.7.0-unstable-2026-11-05";
+  version = "0.7.0-unstable-2026-11-13";
   __intentionallyOverridingVersion = true;
 })

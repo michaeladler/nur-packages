@@ -15,5 +15,4 @@ skipcpio
 ssh-askpass-zigtk
 ssh-tpm-agent
 sso-mib
-texres
 vcalendar-filter

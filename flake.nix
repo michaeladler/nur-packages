@@ -59,7 +59,19 @@
         let
           callPackage = nixpkgs.lib.callPackageWith (final // { craneLib = crane.mkLib final; });
         in
-        nixpkgs.lib.genAttrs packageNames (n: callPackage pkgPaths.${n} { });
+        {
+          # Work around Nix 2.35 lazy flake sources until nix-update includes this fix.
+          nix-update = prev.nix-update.overrideAttrs (old: {
+            patches = (old.patches or [ ]) ++ [
+              (final.fetchpatch {
+                name = "nix-update-prefetch-lazy-flake-source.patch";
+                url = "https://github.com/Mic92/nix-update/commit/d545c1fad667e573128cad0db55fdc77134a4d3c.patch";
+                hash = "sha256-CVSihQevWIwKSnjKo9ilw1hdi4a1t0xr6DunAUKSBFA=";
+              })
+            ];
+          });
+        }
+        // nixpkgs.lib.genAttrs packageNames (n: callPackage pkgPaths.${n} { });
 
       mkPkgs =
         system:

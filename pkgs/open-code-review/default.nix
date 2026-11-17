@@ -9,17 +9,17 @@
 
 buildGoModule (finalAttrs: {
   pname = "open-code-review";
-  version = "1.13.7";
+  version = "1.13.11";
 
   src = fetchFromGitHub {
     owner = "alibaba";
     repo = "open-code-review";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-UXAy5ULski1VNCBO8Y+XbLO0ti4fjuT/zk/blGxyEq8=";
+    hash = "sha256-DjaBnNb3eX/okXGFYX6QcuLUOtH4HkmGbTpnPPTo+L0=";
   };
 
   subPackages = [ "cmd/opencodereview" ];
-  vendorHash = "sha256-LpqnNp6gxHatHH68pM59ESQICDDSVrkZm7AJLVvYTao=";
+  vendorHash = "sha256-7/cO+9a/jdN4WuYPdwOUKgT3NFDOSM9Byt4AyjSrJfE=";
 
   ldflags = [ "-X main.Version=v${finalAttrs.version}" ];
 

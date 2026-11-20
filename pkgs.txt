@@ -3,6 +3,7 @@ bed
 cargo-clean-all
 cb-rs
 colorized-logs
+debsbom
 demo-magic
 dffy
 efibootguard

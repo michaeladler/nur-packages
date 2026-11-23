@@ -21,8 +21,8 @@
   src = fetchFromGitHub {
     owner = "cachix";
     repo = "agentaps";
-    rev = "f4dd1aa4dfce5472671aabc92bf76af28db67aef";
-    sha256 = "sha256-YSI/6/nbYH9/etvYVwV/zS9PiXRyefpKFhpbUouWQ8c=";
+    rev = "b4641fe6f4e611e1d012177c0d39b97f774f67f5";
+    sha256 = "sha256-vsCnoQGgmPGSA4X/0uKxGXTrKQg+CezXdVChfhwON6Y=";
   };
 
   # glib-sys probes glib-2.0 and native-theme-qt probes Qt6Widgets, so the
@@ -98,6 +98,6 @@
 }).overrideAttrs (_: {
   # crane derives version from Cargo.toml; redefine it here so nix-update can
   # locate and bump it inside this flake instead of crane's store path.
-  version = "0.7.0-unstable-2026-11-18";
+  version = "0.7.0-unstable-2026-11-22";
   __intentionallyOverridingVersion = true;
 })

@@ -9,13 +9,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "open-code-review";
-  version = "1.14.3";
+  version = "1.14.4";
 
   src = fetchFromGitHub {
     owner = "alibaba";
     repo = "open-code-review";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-qtnUIiJ3xeCFa+vDClEdNFwAxK9OhGv9PNbOwTVsBUE=";
+    hash = "sha256-8Se1l4LO8V3Q0qj6UwiuHyT+vK48Zc9EV6gg6fkTGJg=";
   };
 
   subPackages = [ "cmd/opencodereview" ];

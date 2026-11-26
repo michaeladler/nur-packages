@@ -1,5 +1,6 @@
 agentaps
 bed
+bend2-lsp
 cargo-clean-all
 cb-rs
 colorized-logs
